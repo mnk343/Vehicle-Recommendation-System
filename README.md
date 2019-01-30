@@ -14,7 +14,7 @@ Due to the complexity issues, some features have been kept for the version 2 and
 The outline of the project has been finalised and shared.
 
 ##### Contribution : 
-Everyone except Mantri ( 160101041 ) was present today. We also discussed the key features as a team. 
+Everyone except Sandeep Naidu( 160101041 ) was present today. We also discussed the key features as a team. 
 All the five members have given their valuable ideas.
 Signatures of the members has been taken for record.
 
