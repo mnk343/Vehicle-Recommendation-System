@@ -1,4 +1,4 @@
-# Vehicle-Reccomendation-System
+# Vehicle-Recommendation-System
 
 ## Vision :
 To create a software of the campus junta to help them see the location of IITG Buses and E-Rickshaws and also contain all information of the drivers in case someone wants to contact them.
