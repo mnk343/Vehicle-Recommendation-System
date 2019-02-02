@@ -9,3 +9,16 @@ C:\Users\mayan\Desktop\Vehicle-Reccomendation-System\staff\staff\obj\Debug\staff
 C:\Users\mayan\Desktop\Vehicle-Reccomendation-System\staff\staff\obj\Debug\staff.xml
 C:\Users\mayan\Desktop\Vehicle-Reccomendation-System\staff\staff\obj\Debug\staff.pdb
 C:\Users\mayan\Desktop\Vehicle-Reccomendation-System\staff\staff\bin\Debug\Vehicle Recommendation System Database.accdb
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\bin\Debug\staff.exe.config
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff.exe
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff.xml
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff.pdb
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\bin\Debug\Vehicle Recommendation System Database.accdb
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\bin\Debug\staff.exe
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\bin\Debug\staff.pdb
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\bin\Debug\staff.xml
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff.Form1.resources
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff.outCampus.resources
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff.Resources.resources
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff.OutStation.resources
+C:\Users\Lenovo\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff.vbproj.GenerateResource.Cache

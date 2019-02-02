@@ -77,6 +77,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Out Campus.Designer.vb">
+      <DependentUpon>Out Campus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Out Campus.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -92,6 +98,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="OutStation.Designer.vb">
+      <DependentUpon>OutStation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OutStation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vehicle_Recommendation_System_DatabaseDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -102,16 +114,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Vehicle_Recommendation_System_DatabaseDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Out Campus.resx">
+      <DependentUpon>Out Campus.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutStation.resx">
+      <DependentUpon>OutStation.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +169,17 @@
     </None>
     <None Include="Vehicle_Recommendation_System_DatabaseDataSet1.xss">
       <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Vehicle_Recommendation_System_DatabaseDataSet2.xsc">
+      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Vehicle_Recommendation_System_DatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vehicle_Recommendation_System_DatabaseDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Vehicle_Recommendation_System_DatabaseDataSet2.xss">
+      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
