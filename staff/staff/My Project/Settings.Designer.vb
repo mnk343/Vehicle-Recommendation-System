@@ -64,17 +64,6 @@ Namespace My
                 Return CType(Me("Vehicle_Recommendation_System_DatabaseConnectionString"),String)
             End Get
         End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=""C:\Users\mayan\Desktop\Vehicle-Rec"& _ 
-            "comendation-System\Vehicle Recommendation System Database.accdb""")>  _
-        Public ReadOnly Property Vehicle_Recommendation_System_DatabaseConnectionString1() As String
-            Get
-                Return CType(Me("Vehicle_Recommendation_System_DatabaseConnectionString1"),String)
-            End Get
-        End Property
     End Class
 End Namespace
 

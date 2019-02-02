@@ -14,6 +14,10 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
@@ -22,7 +26,11 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.staffDataTable">
+</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -34,6 +42,10 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.CabDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -42,7 +54,11 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.staffRow">
+</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.StaffRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
@@ -54,6 +70,10 @@ Row event argument class
 	<summary>
 Row event argument class
 </summary>
+</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.CabDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
 </member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataRowChangeEvent">
 	<summary>
 Row event argument class
@@ -62,7 +82,11 @@ Row event argument class
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.staffRowChangeEvent">
+</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet.StaffRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -78,6 +102,10 @@ Represents the connection and commands used to retrieve and save data.
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
+</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.CabDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
 </member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.CarHireDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
@@ -86,7 +114,11 @@ Represents the connection and commands used to retrieve and save data.
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.staffTableAdapter">
+</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.InCampusBusDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.StaffTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -119,122 +151,6 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1.BusDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1.staffDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1.BusDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1.staffRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1.BusDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1.staffRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.AmbulanceDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.BusDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.CarHireDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.E_RickshawDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.staffTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(staff.Vehicle_Recommendation_System_DatabaseDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(staff.Vehicle_Recommendation_System_DatabaseDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(staff.Vehicle_Recommendation_System_DatabaseDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateAll(staff.Vehicle_Recommendation_System_DatabaseDataSet1)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:staff.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
