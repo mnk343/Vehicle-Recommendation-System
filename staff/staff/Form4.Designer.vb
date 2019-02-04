@@ -34,6 +34,7 @@ Partial Class Form4
         Me.submit = New System.Windows.Forms.Button()
         Me.info = New System.Windows.Forms.Label()
         Me.showPassword = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'vehicle
@@ -145,11 +146,22 @@ Partial Class Form4
         Me.showPassword.Text = "Show Password"
         Me.showPassword.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(437, 372)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(147, 47)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Back"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(743, 466)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.showPassword)
         Me.Controls.Add(Me.info)
         Me.Controls.Add(Me.submit)
@@ -180,4 +192,5 @@ Partial Class Form4
     Friend WithEvents submit As System.Windows.Forms.Button
     Friend WithEvents info As System.Windows.Forms.Label
     Friend WithEvents showPassword As System.Windows.Forms.CheckBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

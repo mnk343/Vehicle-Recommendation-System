@@ -40,3 +40,4 @@ C:\Users\mayan\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff.Form4.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff.Resources.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff.vbproj.GenerateResource.Cache
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\staff\staff\obj\Debug\staff.Form5.resources

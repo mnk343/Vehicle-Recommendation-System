@@ -95,6 +95,12 @@
     <Compile Include="Form4.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form5.Designer.vb">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -120,6 +126,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Vehicle_Recommendation_System_DatabaseDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -133,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -173,6 +187,17 @@
     </None>
     <None Include="Vehicle_Recommendation_System_DatabaseDataSet1.xss">
       <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Vehicle_Recommendation_System_DatabaseDataSet2.xsc">
+      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Vehicle_Recommendation_System_DatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vehicle_Recommendation_System_DatabaseDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Vehicle_Recommendation_System_DatabaseDataSet2.xss">
+      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

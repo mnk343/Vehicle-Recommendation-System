@@ -58,11 +58,10 @@ Public Class Form4
 
     Private Sub submit_Click(sender As Object, e As EventArgs) Handles submit.Click
 
-
         If txtName.Text = "" Or txtPassword.Text = "" Or txtConfirmPassword.Text = "" Or txtContactNo.Text = "" Then
             MsgBox("Plz Fill All the information")
 
-        Else
+        ElseIf txtPassword.Text = txtConfirmPassword.Text Then
 
             Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='|DataDirectory|\Vehicle Recommendation System Database.accdb'"
             Dim conn = New OleDbConnection(dbsource)
@@ -71,7 +70,7 @@ Public Class Form4
             Dim cmd As New OleDbCommand(querry, conn)
 
             conn.Open()
-            
+
 
             Dim number As Integer = 0
 
@@ -79,6 +78,20 @@ Public Class Form4
             MessageBox.Show(number)
             cmd.Dispose()
             conn.Close()
+
+            conn = New OleDbConnection(dbsource)
+
+            querry = "SELECT Count(*) FROM [E-RickshawData] WHERE UserName =  '" + txtName.Text + "' ;"
+            cmd = New OleDbCommand(querry, conn)
+
+            conn.Open()
+
+            number += cmd.ExecuteScalar()
+            MessageBox.Show(number)
+            cmd.Dispose()
+            conn.Close()
+
+
 
             If number > 0 Then
                 MessageBox.Show("Username already exists. Kindly enter some other value.")
@@ -116,6 +129,10 @@ Public Class Form4
 
             End If
 
+        Else
+
+            MessageBox.Show("Passwords should match")
+
         End If
 
     End Sub
@@ -138,6 +155,12 @@ Public Class Form4
     End Sub
 
     Private Sub txtName_TextChanged(sender As Object, e As EventArgs) Handles txtName.TextChanged
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        Form2.Show()
 
     End Sub
 End Class

@@ -34,4 +34,12 @@ Public Class Form2
 
 
     End Sub
+
+    Private Sub deleteMember_Click(sender As Object, e As EventArgs) Handles deleteMember.Click
+        Me.Hide()
+        Form5.Show()
+
+
+
+    End Sub
 End Class
