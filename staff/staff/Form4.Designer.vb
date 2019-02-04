@@ -61,7 +61,7 @@ Partial Class Form4
         '
         Me.confirmPassword.AutoSize = True
         Me.confirmPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.confirmPassword.Location = New System.Drawing.Point(12, 168)
+        Me.confirmPassword.Location = New System.Drawing.Point(12, 157)
         Me.confirmPassword.Name = "confirmPassword"
         Me.confirmPassword.Size = New System.Drawing.Size(186, 25)
         Me.confirmPassword.TabIndex = 3
@@ -71,7 +71,7 @@ Partial Class Form4
         '
         Me.contactNo.AutoSize = True
         Me.contactNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.contactNo.Location = New System.Drawing.Point(12, 215)
+        Me.contactNo.Location = New System.Drawing.Point(12, 216)
         Me.contactNo.Name = "contactNo"
         Me.contactNo.Size = New System.Drawing.Size(167, 25)
         Me.contactNo.TabIndex = 4
@@ -81,7 +81,7 @@ Partial Class Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(727, 404)
+        Me.ClientSize = New System.Drawing.Size(743, 466)
         Me.Controls.Add(Me.contactNo)
         Me.Controls.Add(Me.confirmPassword)
         Me.Controls.Add(Me.password)
