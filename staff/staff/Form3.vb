@@ -40,7 +40,8 @@ Public Class Form3
             user = Form1.TextBox1.Text
             Dim querry As String = "Update [Staff] Set [Password] = '" & txtPassword.Text & "' Where [Name]= '" & user & "';"
 
-            Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Reccomendation-System\Vehicle Recommendation System Database.accdb'"
+            Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='|DataDirectory|\Vehicle Recommendation System Database.accdb'"
+
             Try
                 Dim conn = New OleDbConnection(dbsource)
                 Dim cmd As New OleDbCommand(querry, conn)

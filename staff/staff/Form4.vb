@@ -14,6 +14,9 @@ Public Class Form4
         txtPassword.Visible = False
         txtConfirmPassword.Visible = False
         txtContactNo.Visible = False
+        showPassword.Visible = False
+        submit.Visible = False
+
 
         vehicle.DropDownStyle = ComboBoxStyle.DropDownList
         vehicle.Items.Clear()
@@ -44,6 +47,9 @@ Public Class Form4
             txtConfirmPassword.Visible = True
             txtContactNo.Visible = True
 
+            showPassword.Visible = True
+            submit.Visible = True
+
         End If
 
 
@@ -58,7 +64,7 @@ Public Class Form4
 
         Else
 
-            Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Reccomendation-System\Vehicle Recommendation System Database.accdb'"
+            Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='|DataDirectory|\Vehicle Recommendation System Database.accdb'"
             Dim conn = New OleDbConnection(dbsource)
 
             Dim querry As String = "SELECT Count(*) FROM CabData WHERE UserName =  '" + txtName.Text + "' ;"
@@ -129,5 +135,9 @@ Public Class Form4
             txtConfirmPassword.PasswordChar = "*"
 
         End If
+    End Sub
+
+    Private Sub txtName_TextChanged(sender As Object, e As EventArgs) Handles txtName.TextChanged
+
     End Sub
 End Class

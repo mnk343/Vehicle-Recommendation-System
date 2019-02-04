@@ -20,7 +20,8 @@ Public Class Form1
             uname = TextBox1.Text
             pword = TextBox2.Text
             Dim querry As String = "Select Password From Staff where Name= '" & uname & "';"
-            Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Reccomendation-System\Vehicle Recommendation System Database.accdb'"
+
+            Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='|DataDirectory|\Vehicle Recommendation System Database.accdb'"
             Dim conn = New OleDbConnection(dbsource)
             Dim cmd As New OleDbCommand(querry, conn)
             conn.Open()
@@ -40,6 +41,10 @@ Public Class Form1
                 TextBox2.Clear()
             End If
         End If
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
     End Sub
 End Class
