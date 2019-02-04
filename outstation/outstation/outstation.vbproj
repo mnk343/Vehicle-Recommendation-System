@@ -146,6 +146,9 @@
     <EmbeddedResource Include="city.resx">
       <DependentUpon>city.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="To_City_Bus.resx">
+      <DependentUpon>To_City_Bus.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="To_City_Cab.resx">
       <DependentUpon>To_City_Cab.vb</DependentUpon>
     </EmbeddedResource>
