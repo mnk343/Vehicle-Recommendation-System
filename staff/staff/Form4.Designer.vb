@@ -27,12 +27,19 @@ Partial Class Form4
         Me.password = New System.Windows.Forms.Label()
         Me.confirmPassword = New System.Windows.Forms.Label()
         Me.contactNo = New System.Windows.Forms.Label()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtConfirmPassword = New System.Windows.Forms.TextBox()
+        Me.txtContactNo = New System.Windows.Forms.TextBox()
+        Me.submit = New System.Windows.Forms.Button()
+        Me.info = New System.Windows.Forms.Label()
+        Me.showPassword = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'vehicle
         '
         Me.vehicle.FormattingEnabled = True
-        Me.vehicle.Location = New System.Drawing.Point(49, 12)
+        Me.vehicle.Location = New System.Drawing.Point(324, 7)
         Me.vehicle.Name = "vehicle"
         Me.vehicle.Size = New System.Drawing.Size(121, 21)
         Me.vehicle.TabIndex = 0
@@ -77,11 +84,79 @@ Partial Class Form4
         Me.contactNo.TabIndex = 4
         Me.contactNo.Text = "Contact Number"
         '
+        'txtName
+        '
+        Me.txtName.Location = New System.Drawing.Point(235, 60)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(349, 20)
+        Me.txtName.TabIndex = 5
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Location = New System.Drawing.Point(235, 110)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(349, 20)
+        Me.txtPassword.TabIndex = 6
+        '
+        'txtConfirmPassword
+        '
+        Me.txtConfirmPassword.AcceptsReturn = True
+        Me.txtConfirmPassword.Location = New System.Drawing.Point(235, 157)
+        Me.txtConfirmPassword.Name = "txtConfirmPassword"
+        Me.txtConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtConfirmPassword.Size = New System.Drawing.Size(349, 20)
+        Me.txtConfirmPassword.TabIndex = 7
+        '
+        'txtContactNo
+        '
+        Me.txtContactNo.Location = New System.Drawing.Point(235, 221)
+        Me.txtContactNo.Name = "txtContactNo"
+        Me.txtContactNo.Size = New System.Drawing.Size(349, 20)
+        Me.txtContactNo.TabIndex = 8
+        '
+        'submit
+        '
+        Me.submit.Location = New System.Drawing.Point(437, 289)
+        Me.submit.Name = "submit"
+        Me.submit.Size = New System.Drawing.Size(147, 47)
+        Me.submit.TabIndex = 9
+        Me.submit.Text = "Submit"
+        Me.submit.UseVisualStyleBackColor = True
+        '
+        'info
+        '
+        Me.info.AutoSize = True
+        Me.info.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.info.Location = New System.Drawing.Point(17, 3)
+        Me.info.Name = "info"
+        Me.info.Size = New System.Drawing.Size(301, 25)
+        Me.info.TabIndex = 10
+        Me.info.Text = "Please Select a vehicle type : "
+        '
+        'showPassword
+        '
+        Me.showPassword.AutoSize = True
+        Me.showPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.showPassword.Location = New System.Drawing.Point(17, 289)
+        Me.showPassword.Name = "showPassword"
+        Me.showPassword.Size = New System.Drawing.Size(184, 29)
+        Me.showPassword.TabIndex = 11
+        Me.showPassword.Text = "Show Password"
+        Me.showPassword.UseVisualStyleBackColor = True
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(743, 466)
+        Me.Controls.Add(Me.showPassword)
+        Me.Controls.Add(Me.info)
+        Me.Controls.Add(Me.submit)
+        Me.Controls.Add(Me.txtContactNo)
+        Me.Controls.Add(Me.txtConfirmPassword)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.contactNo)
         Me.Controls.Add(Me.confirmPassword)
         Me.Controls.Add(Me.password)
@@ -98,4 +173,11 @@ Partial Class Form4
     Friend WithEvents password As System.Windows.Forms.Label
     Friend WithEvents confirmPassword As System.Windows.Forms.Label
     Friend WithEvents contactNo As System.Windows.Forms.Label
+    Friend WithEvents txtName As System.Windows.Forms.TextBox
+    Friend WithEvents txtPassword As System.Windows.Forms.TextBox
+    Friend WithEvents txtConfirmPassword As System.Windows.Forms.TextBox
+    Friend WithEvents txtContactNo As System.Windows.Forms.TextBox
+    Friend WithEvents submit As System.Windows.Forms.Button
+    Friend WithEvents info As System.Windows.Forms.Label
+    Friend WithEvents showPassword As System.Windows.Forms.CheckBox
 End Class

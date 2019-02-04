@@ -27,14 +27,12 @@ Public Class Form1
             Try
                 pass = cmd.ExecuteScalar().ToString
             Catch ex As Exception
-                MsgBox("Username does not exit")
+                MsgBox("Username does not exist")
             End Try
             If (pword = pass) Then
                 MsgBox("Login success")
                 Me.Hide()
                 Form2.Show()
-
-
 
             Else
                 MsgBox("login Failed")
