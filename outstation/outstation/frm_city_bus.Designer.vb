@@ -22,16 +22,30 @@ Partial Class frm_city_bus
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.dgv_from_city_bus = New System.Windows.Forms.DataGridView()
+        CType(Me.dgv_from_city_bus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'dgv_from_city_bus
+        '
+        Me.dgv_from_city_bus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_from_city_bus.Location = New System.Drawing.Point(97, 151)
+        Me.dgv_from_city_bus.Name = "dgv_from_city_bus"
+        Me.dgv_from_city_bus.RowTemplate.Height = 24
+        Me.dgv_from_city_bus.Size = New System.Drawing.Size(828, 296)
+        Me.dgv_from_city_bus.TabIndex = 0
         '
         'frm_city_bus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(719, 512)
+        Me.ClientSize = New System.Drawing.Size(1048, 512)
+        Me.Controls.Add(Me.dgv_from_city_bus)
         Me.Name = "frm_city_bus"
         Me.Text = "frm_city_bus"
+        CType(Me.dgv_from_city_bus, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents dgv_from_city_bus As System.Windows.Forms.DataGridView
 End Class

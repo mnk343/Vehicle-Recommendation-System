@@ -48,9 +48,12 @@ Partial Class To_City_Bus
         '
         'to_city_bus_dgv
         '
+        Me.to_city_bus_dgv.AllowUserToAddRows = False
+        Me.to_city_bus_dgv.AllowUserToDeleteRows = False
         Me.to_city_bus_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.to_city_bus_dgv.Location = New System.Drawing.Point(171, 184)
         Me.to_city_bus_dgv.Name = "to_city_bus_dgv"
+        Me.to_city_bus_dgv.ReadOnly = True
         Me.to_city_bus_dgv.RowTemplate.Height = 24
         Me.to_city_bus_dgv.Size = New System.Drawing.Size(695, 267)
         Me.to_city_bus_dgv.TabIndex = 2

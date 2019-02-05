@@ -36,4 +36,9 @@
     Private Sub to_bus_Click(sender As Object, e As EventArgs) Handles to_bus.Click
         To_City_Bus.Show()
     End Sub
+
+
+    Private Sub frm_bus_Click(sender As Object, e As EventArgs) Handles from_bus.Click
+        frm_city_bus.Show()
+    End Sub
 End Class

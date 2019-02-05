@@ -14,7 +14,7 @@
         Access.AddParam("@day", "%" & day & "%")
 
         ' RUN QUERY
-        Access.ExecQuery("SELECT Source, Destination,WorkingDays FROM BusData WHERE Type=0 AND WorkingDays LIKE @day")
+        Access.ExecQuery("SELECT Source, Destination,WorkingDays,time FROM BusData WHERE Type=0 AND WorkingDays LIKE @day")
         If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
 
         ' FILL DATAGRID
