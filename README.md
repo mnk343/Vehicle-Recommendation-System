@@ -47,14 +47,24 @@ We then dispersed and met in our individual groups to work further.
 
 Mayank and Annanye both decided to maintain the log file for the day. And the signatures were taken by Rohan.
 
-##### Day 4: 4th February:
-The register portal of the staff was created and there were some major discussions on the to city and from city portal. Major revisions in the database. Login Portal for the drivers was created. Classes for query checking were created. Outstation was created. The bus portal is under construction.
+#####Day 4: 4th February:
+The register portal of the staff was created and there were some major discussions on the to city and from city portal. Major revisions in the database. Login Portal for the drivers was created. Classes for query checking were created. Outstation was created. The bus portal is under construction. 
 
+Contribution:
+Everyone except Sandeep Naidu (160101041) was present today. We also discussed the key features as a team.
+There were many major revisions:
 
-##### Contribution : 
-Everyone except Sandeep Naidu( 160101041 ) was present today. We also discussed the key features as a team. 
-All the five members have given their valuable ideas.
-Signatures of the members has been taken for record.
+Aviral: Suggested the change in the form structure. Now the main part will consist of outstation, city and in-campus. Worked on the outstation part of the forms. Worked with Annanya in implementing the query classes and in designing the city part of the forms.
+
+Annanya: Made the cab booking algorithm. Suggested changes in the database. Now the database will consist of a booking table that will 
+hold all the bookings with their ids. This with the help of status check box will help in implementing sharing of cabs. We will also account for the timings and scheduling of the cabs. Now we would also have to delete all the records of the past day. Designed with aviral the layout of the the city part and implemented with aviral the query classes. Created the log file for the day.
+
+Mayank: Created the whole login page for the staff. Handled all the error exceptions in the login page for the staff. Worked on three major parts. Adding the driver to the database. Also worked on updating the profiles. Handled deletion of profiles from the database. He will be responsible for the integration part of the project.
+
+Aranya: Created the login portal for the cab drivers. This will handle all the profile information. This will help the driver in updating his or her info and will also help in updating his or her status. Designed its layout.
+
+Rohan: Helped in designing the forms. Worked with Aviral on the login page. Created the first draft of the database.
+
 
 
 
