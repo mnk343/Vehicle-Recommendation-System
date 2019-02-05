@@ -47,7 +47,7 @@ We then dispersed and met in our individual groups to work further.
 
 Mayank and Annanye both decided to maintain the log file for the day. And the signatures were taken by Rohan.
 
-#####Day 4: 4th February:
+##### Day 4: 4th February:
 The register portal of the staff was created and there were some major discussions on the to city and from city portal. Major revisions in the database. Login Portal for the drivers was created. Classes for query checking were created. Outstation was created. The bus portal is under construction. 
 
 Contribution:
