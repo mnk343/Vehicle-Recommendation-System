@@ -4,8 +4,8 @@
 To create a software of the campus junta to help them see the location of IITG Buses and E-Rickshaws and also contain all information of the drivers in case someone wants to contact them.
 
 ### Technologies that we will use : 
-1. Visual Basic
-2. MySQL ( for backend part )
+1. Visual Basic 2013
+2. MS Access 2016 ( for backend part )
 
 #### Day 1: 30 th January
 We discussed all the feautures that we plan to incorporate in our project.
@@ -18,6 +18,13 @@ Everyone except Sandeep Naidu( 160101041 ) was present today. We also discussed 
 All the five members have given their valuable ideas.
 Signatures of the members has been taken for record.
 
+Mayank : Suggested to incorporate a portal for the staff members. The staff members can update their profile and will be given an oppurtunity to add and delete users ie. cab drivers and e-rickshaw waalas. The staff members will also be allowed to delete a particular user based on his/her name.
+
+Annanye : Annanye suggested that we should have different forms for the people who want to travel within the campus , ie. via e-rickshaws and buses and for those who want to take cabs,etc. He also suggested to have a form for outstation drivers which will display the drivers information according to the place the user wants to visit.
+
+Aviral : Aviral suggested to have forms for the people who wants to travel from/to the campus . The user will be given a chance to select according to  
+Rohan : 
+Aranya : 
 
 ##### Day 2: 31st Januray:
 We distributed the work, initialised the git repositories distributed the work among ourselves
