@@ -59,7 +59,7 @@ Aviral: Suggested the change in the form structure. Now the main part will consi
 Annanya: Made the cab booking algorithm. Suggested changes in the database. Now the database will consist of a booking table that will 
 hold all the bookings with their ids. This with the help of status check box will help in implementing sharing of cabs. We will also account for the timings and scheduling of the cabs. Now we would also have to delete all the records of the past day. Designed with aviral the layout of the the city part and implemented with aviral the query classes. Created the log file for the day.
 
-Mayank: Created the whole login page for the staff. Handled all the error exceptions in the login page for the staff. Worked on three major parts. Adding the driver to the database. Also worked on updating the profiles. Handled deletion of profiles from the database. He will be responsible for the integration part of the project.
+Mayank: Created the whole login page for the staff. Handled all the error exceptions in the login page for the staff. Worked on three major parts. Adding the driver to the database. Also worked on updating the profiles. Handled deletion of profiles from the database. The names to be deleted will be taken as an input and respective querries were executed. He will be responsible for the integration part of the project.
 
 Aranya: Created the login portal for the cab drivers. This will handle all the profile information. This will help the driver in updating his or her info and will also help in updating his or her status. Designed its layout.
 
