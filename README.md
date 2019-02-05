@@ -62,7 +62,7 @@ hold all the bookings with their ids. This with the help of status check box wil
 
 Mayank: Created the whole login page for the staff. Handled all the error exceptions in the login page for the staff. Worked on three major parts. Adding the driver to the database. Also worked on updating the profiles. Handled deletion of profiles from the database. The names to be deleted will be taken as an input and respective querries were executed. He will be responsible for the integration part of the project.
 
-Aranya: Created the login portal for the cab drivers. This will handle all the profile information. This will help the driver in updating his or her info and will also help in updating his or her status. Designed its layout.
+Aranya: Created the login portal for the cab drivers. This will handle all the profile information. This will help the driver in updating his or her info and will also help in updating his or her status. Designed its layout. The Feature of adding/removing places where a cab driver visits out of station has also been added in the form . Also, the feature of ON Duty / OFF Duty has been added in the form which helps the user to tell whether the given cab driver is working currently or not. 
 
 Rohan: Helped in designing the forms. Worked with Aviral on the login page. Created the first draft of the database.
 
