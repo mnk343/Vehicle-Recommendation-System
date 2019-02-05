@@ -67,6 +67,13 @@ Aranya: Created the login portal for the cab drivers. This will handle all the p
 Rohan: Helped in designing the forms. Worked with Aviral on the login page. Created the first draft of the database.
 
 
+## What will we be working on now?
+
+We have decided to work on the front end to improve the UI/UX of the form. 
+We are planning to present a workable model by Thursday-Friday.
+Mayank has taken the responsibility to integrate all the forms into one.
+
+
 
 
 
