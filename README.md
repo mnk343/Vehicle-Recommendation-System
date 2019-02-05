@@ -1,7 +1,9 @@
 # Vehicle-Recommendation-System
 
 ## Vision :
-To create a software of the campus junta to help them see the location of IITG Buses and E-Rickshaws and also contain all information of the drivers in case someone wants to contact them.
+
+To create a software of the campus junta to help them see all the information of IITG Buses and E-Rickshaws and also contain all information of the drivers in case someone wants to contact them.
+We also aim to provide the users a best available option depending on their journey, ie. If  aparticular driver is more experienced in going to Shillong, he will be given an edge over the others in displaying his information.
 
 ### Technologies that we will use : 
 1. Visual Basic 2013
