@@ -47,6 +47,8 @@ We then dispersed and met in our individual groups to work further.
 
 Mayank and Annanye both decided to maintain the log file for the day. And the signatures were taken by Rohan.
 
+Work was started. Everyone successfully connected to the access database and practised how to work with the backend.
+
 ### Day 3: 4th February:
 The register portal of the staff was created and there were some major discussions on the to city and from city portal. Major revisions in the database. Login Portal for the drivers was created. Classes for query checking were created. Outstation was created. The bus portal is under construction. 
 
@@ -55,7 +57,6 @@ Everyone except Sandeep Naidu (160101041) was present today. We also discussed t
 There were many major revisions:
 
 Aviral: Suggested the change in the form structure. Now the main part will consist of outstation, city and in-campus. Worked on the outstation part of the forms. Worked with Annanya in implementing the query classes and in designing the city part of the forms.
-Implemented the bus part of the city form. This will show the next available bus on the basis of the current time and date. Part of the discussionon the database.
 
 Annanya: Made the cab booking algorithm. Suggested changes in the database. Now the database will consist of a booking table that will 
 hold all the bookings with their ids. This with the help of status check box will help in implementing sharing of cabs. We will also account for the timings and scheduling of the cabs. Now we would also have to delete all the records of the past day. Designed with aviral the layout of the the city part and implemented with aviral the query classes. Created the log file for the day.
@@ -65,6 +66,36 @@ Mayank: Created the whole login page for the staff. Handled all the error except
 Aranya: Created the login portal for the cab drivers. This will handle all the profile information. This will help the driver in updating his or her info and will also help in updating his or her status. Designed its layout.
 
 Rohan: Helped in designing the forms. Worked with Aviral on the login page. Created the first draft of the database.
+
+
+## What will we be working on now?
+
+We have decided to work on the front end to improve the UI/UX of the form. 
+We are planning to present a workable model by Thursday-Friday.
+Mayank has taken the responsibility to integrate all the forms into one.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
