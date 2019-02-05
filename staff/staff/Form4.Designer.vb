@@ -40,7 +40,7 @@ Partial Class Form4
         'vehicle
         '
         Me.vehicle.FormattingEnabled = True
-        Me.vehicle.Location = New System.Drawing.Point(324, 7)
+        Me.vehicle.Location = New System.Drawing.Point(357, 21)
         Me.vehicle.Name = "vehicle"
         Me.vehicle.Size = New System.Drawing.Size(121, 21)
         Me.vehicle.TabIndex = 0
@@ -49,7 +49,7 @@ Partial Class Form4
         '
         Me.userName.AutoSize = True
         Me.userName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userName.Location = New System.Drawing.Point(12, 55)
+        Me.userName.Location = New System.Drawing.Point(45, 69)
         Me.userName.Name = "userName"
         Me.userName.Size = New System.Drawing.Size(119, 25)
         Me.userName.TabIndex = 1
@@ -59,7 +59,7 @@ Partial Class Form4
         '
         Me.password.AutoSize = True
         Me.password.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.password.Location = New System.Drawing.Point(12, 105)
+        Me.password.Location = New System.Drawing.Point(45, 119)
         Me.password.Name = "password"
         Me.password.Size = New System.Drawing.Size(106, 25)
         Me.password.TabIndex = 2
@@ -69,7 +69,7 @@ Partial Class Form4
         '
         Me.confirmPassword.AutoSize = True
         Me.confirmPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.confirmPassword.Location = New System.Drawing.Point(12, 157)
+        Me.confirmPassword.Location = New System.Drawing.Point(45, 171)
         Me.confirmPassword.Name = "confirmPassword"
         Me.confirmPassword.Size = New System.Drawing.Size(186, 25)
         Me.confirmPassword.TabIndex = 3
@@ -79,7 +79,7 @@ Partial Class Form4
         '
         Me.contactNo.AutoSize = True
         Me.contactNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.contactNo.Location = New System.Drawing.Point(12, 216)
+        Me.contactNo.Location = New System.Drawing.Point(45, 230)
         Me.contactNo.Name = "contactNo"
         Me.contactNo.Size = New System.Drawing.Size(167, 25)
         Me.contactNo.TabIndex = 4
@@ -87,14 +87,14 @@ Partial Class Form4
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(235, 60)
+        Me.txtName.Location = New System.Drawing.Point(268, 74)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(349, 20)
         Me.txtName.TabIndex = 5
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(235, 110)
+        Me.txtPassword.Location = New System.Drawing.Point(268, 124)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(349, 20)
@@ -103,7 +103,7 @@ Partial Class Form4
         'txtConfirmPassword
         '
         Me.txtConfirmPassword.AcceptsReturn = True
-        Me.txtConfirmPassword.Location = New System.Drawing.Point(235, 157)
+        Me.txtConfirmPassword.Location = New System.Drawing.Point(268, 171)
         Me.txtConfirmPassword.Name = "txtConfirmPassword"
         Me.txtConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtConfirmPassword.Size = New System.Drawing.Size(349, 20)
@@ -111,7 +111,7 @@ Partial Class Form4
         '
         'txtContactNo
         '
-        Me.txtContactNo.Location = New System.Drawing.Point(235, 221)
+        Me.txtContactNo.Location = New System.Drawing.Point(268, 235)
         Me.txtContactNo.Name = "txtContactNo"
         Me.txtContactNo.Size = New System.Drawing.Size(349, 20)
         Me.txtContactNo.TabIndex = 8
@@ -129,7 +129,7 @@ Partial Class Form4
         '
         Me.info.AutoSize = True
         Me.info.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.info.Location = New System.Drawing.Point(17, 3)
+        Me.info.Location = New System.Drawing.Point(50, 17)
         Me.info.Name = "info"
         Me.info.Size = New System.Drawing.Size(301, 25)
         Me.info.TabIndex = 10
