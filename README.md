@@ -7,7 +7,7 @@ To create a software of the campus junta to help them see the location of IITG B
 1. Visual Basic 2013
 2. MS Access 2016 ( for backend part )
 
-#### Day 1: 30 th January
+### Day 1: 30 th January
 We discussed all the feautures that we plan to incorporate in our project.
 Due to the complexity issues, some features have been kept for the version 2 and will be implemented if time permits.
 
@@ -34,28 +34,18 @@ Rohan suggested to have a form for incampus travel and portals in case of emerge
 Aranya suggested to have a different portal for the cab drivers and the e-rickshaw drivers. The drivers will be given a chance to update their profile information like contact details and password, etc. The drivers can also add information if their cab is booked.
 They will add details like source, destiantion and occupancy if their cab is booked.  
 
-##### Day 2: 31st Januray:
-We distributed the work, initialised the git repositories distributed the work among ourselves
-Mayank, Aranya, Rohan: They will develop the the login and register pages and incampus 
-Annanya, Aviral: They will develop the outstation, and city pages
+### Day 2: 1st February:
+We met and discussed the problems that we can face if we use MySQL as the RDBMS. So we came to a conclusion that we should use MS Access as our database management system. We divided all our work into two and formed the respective groups.
 
-##### Contribution : 
-Everyone except Sandeep Naidu( 160101041 ) was present today. We also discussed the key features as a team. 
-All the five members have given their valuable ideas.
-Signatures of the members has been taken for record.
+The first group was given the responsibility of handling the portals for staff, drivers(both cab and e-rickshaws) and in campus travel.
 
+The second group took up the duty for creating forms for displaying all the information for out campus travel, ie, by bus, cabs . This group also decided to work on creating the form for outstation travel.
 
+Rohan, Aranya and Mayank comprised the first group and the latter work was taken up by Annanye and Aviral.
 
-##### Day 3: 1st February:
-We changed the database management system form mysql to ms access. The first draft of the database was created 
+We then dispersed and met in our individual groups to work further.
 
-##### Contribution : 
-Everyone except Sandeep Naidu( 160101041 ) was present today. We also discussed the key features as a team. 
-All the five members have given their valuable ideas.
-Signatures of the members has been taken for record.
-
-
-
+Mayank and Annanye both decided to maintain the log file for the day. And the signatures were taken by Rohan.
 
 ##### Day 4: 4th February:
 The register portal of the staff was created and there were some major discussions on the to city and from city portal. Major revisions in the database. Login Portal for the drivers was created. Classes for query checking were created. Outstation was created. The bus portal is under construction.
