@@ -66,7 +66,7 @@ Mayank: Created the whole login page for the staff. Handled all the error except
 
 Aranya: Created the login portal for the cab drivers. This will handle all the profile information. This will help the driver in updating his or her info and will also help in updating his or her status. Designed its layout. The Feature of adding/removing places where a cab driver visits out of station has also been added in the form . Also, the feature of ON Duty / OFF Duty has been added in the form which helps the user to tell whether the given cab driver is working currently or not. 
 
-Rohan: Helped in designing the forms. Worked with Aviral on the login page. Created the first draft of the database.
+Rohan: Helped in designing the forms. Worked with Aviral on the login page. Created the first draft of the database which includes many tables like cabdata which contains information like username,password,their mobile numbers and so on, offcampus bus data which inccludes timing, working days,source and destination,incampus bus data which includes timing, source and destination and emergency data.
 
 
 ## What will we be working on now?
