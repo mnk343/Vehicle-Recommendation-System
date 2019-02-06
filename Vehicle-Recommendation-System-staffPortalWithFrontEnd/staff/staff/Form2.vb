@@ -62,7 +62,7 @@ Public Class Form2
     End Sub
 
     Private Sub changePassword_MouseLeave(sender As Object, e As EventArgs) Handles changePassword.MouseLeave
-        changePassword.BackColor = Color.Transparent
+        changePassword.BackColor = Color.Black
     End Sub
 
     Private Sub addMember_MouseClick(sender As Object, e As MouseEventArgs) Handles addMember.MouseClick
@@ -75,7 +75,7 @@ Public Class Form2
     End Sub
 
     Private Sub addMember_MouseLeave(sender As Object, e As EventArgs) Handles addMember.MouseLeave
-        addMember.BackColor = Color.Transparent
+        addMember.BackColor = Color.Black
     End Sub
 
     Private Sub deleteMember_MouseClick(sender As Object, e As MouseEventArgs) Handles deleteMember.MouseClick
@@ -88,7 +88,7 @@ Public Class Form2
     End Sub
 
     Private Sub deleteMember_MouseLeave(sender As Object, e As EventArgs) Handles deleteMember.MouseLeave
-        deleteMember.BackColor = Color.Transparent
+        deleteMember.BackColor = Color.Black
     End Sub
 
     Private Sub signOut_MouseClick(sender As Object, e As MouseEventArgs) Handles signOut.MouseClick

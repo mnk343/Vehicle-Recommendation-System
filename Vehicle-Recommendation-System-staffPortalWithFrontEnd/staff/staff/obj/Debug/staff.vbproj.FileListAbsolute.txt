@@ -58,3 +58,19 @@ C:\Users\Dell\Desktop\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staf
 C:\Users\Dell\Desktop\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.Resources.resources
 C:\Users\Dell\Desktop\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.vbproj.GenerateResource.Cache
 C:\Users\Dell\Desktop\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.vbprojResolveAssemblyReference.cache
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\bin\Debug\staff.exe.config
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.exe
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.xml
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.pdb
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\bin\Debug\Vehicle Recommendation System Database.accdb
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\bin\Debug\staff.exe
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\bin\Debug\staff.pdb
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\bin\Debug\staff.xml
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.vbprojResolveAssemblyReference.cache
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.Form1.resources
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.Form2.resources
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.Form3.resources
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.Form4.resources
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.Form5.resources
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.Resources.resources
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-staffPortalWithFrontEnd\staff\staff\obj\Debug\staff.vbproj.GenerateResource.Cache
