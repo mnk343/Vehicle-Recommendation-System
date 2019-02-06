@@ -70,6 +70,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cab_info.Designer.vb">
+      <DependentUpon>Cab_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DBControl.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -88,6 +94,12 @@
       <DependentUpon>From_City_Cab.vb</DependentUpon>
     </Compile>
     <Compile Include="From_City_Cab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maps.Designer.vb">
+      <DependentUpon>Maps.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maps.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -128,6 +140,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Cab_info.resx">
+      <DependentUpon>Cab_info.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From_City_Cab.resx">
       <DependentUpon>From_City_Cab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maps.resx">
+      <DependentUpon>Maps.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
