@@ -75,6 +75,9 @@ We have decided to work on the front end to improve the UI/UX of the form.
 We are planning to present a workable model by Thursday-Friday.
 Mayank has taken the responsibility to integrate all the forms into one.
 
+### Day 4 : 6th February
+
+All the members except Mantri Naidu were present today.
 
 
 
