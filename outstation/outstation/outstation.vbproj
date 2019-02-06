@@ -78,12 +78,6 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_city_bus.Designer.vb">
-      <DependentUpon>frm_city_bus.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frm_city_bus.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="From_City_Cab.Designer.vb">
       <DependentUpon>From_City_Cab.vb</DependentUpon>
     </Compile>
@@ -105,16 +99,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="city.Designer.vb">
-      <DependentUpon>city.vb</DependentUpon>
+    <Compile Include="bus.Designer.vb">
+      <DependentUpon>bus.vb</DependentUpon>
     </Compile>
-    <Compile Include="city.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="To_City_Bus.Designer.vb">
-      <DependentUpon>To_City_Bus.vb</DependentUpon>
-    </Compile>
-    <Compile Include="To_City_Bus.vb">
+    <Compile Include="bus.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="To_City_Cab.Designer.vb">
@@ -131,9 +119,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_city_bus.resx">
-      <DependentUpon>frm_city_bus.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="From_City_Cab.resx">
       <DependentUpon>From_City_Cab.vb</DependentUpon>
     </EmbeddedResource>
@@ -143,11 +128,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="city.resx">
-      <DependentUpon>city.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="To_City_Bus.resx">
-      <DependentUpon>To_City_Bus.vb</DependentUpon>
+    <EmbeddedResource Include="bus.resx">
+      <DependentUpon>bus.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="To_City_Cab.resx">
       <DependentUpon>To_City_Cab.vb</DependentUpon>
