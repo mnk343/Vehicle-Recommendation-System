@@ -96,6 +96,12 @@
     <Compile Include="From_City_Cab.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="inCampusBus.Designer.vb">
+      <DependentUpon>inCampusBus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="inCampusBus.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Maps.Designer.vb">
       <DependentUpon>Maps.vb</DependentUpon>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From_City_Cab.resx">
       <DependentUpon>From_City_Cab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inCampusBus.resx">
+      <DependentUpon>inCampusBus.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maps.resx">
       <DependentUpon>Maps.vb</DependentUpon>
