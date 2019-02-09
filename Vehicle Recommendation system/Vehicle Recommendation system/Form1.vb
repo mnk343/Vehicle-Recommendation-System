@@ -11,4 +11,8 @@
     End Sub
 
 
+    Private Sub login_Click(sender As Object, e As EventArgs) Handles login.Click
+        Me.Hide()
+        loginForm.Show()
+    End Sub
 End Class
