@@ -26,7 +26,9 @@ Partial Class Form1
         Me.profile = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.onDuty = New System.Windows.Forms.CheckBox()
+        Me.chduty = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,17 +64,37 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 20
         Me.PictureBox1.TabStop = False
         '
-        'onDuty
+        'chduty
         '
-        Me.onDuty.AutoSize = True
-        Me.onDuty.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.onDuty.ForeColor = System.Drawing.Color.MediumBlue
-        Me.onDuty.Location = New System.Drawing.Point(403, 439)
-        Me.onDuty.Name = "onDuty"
-        Me.onDuty.Size = New System.Drawing.Size(145, 40)
-        Me.onDuty.TabIndex = 21
-        Me.onDuty.Text = "On Duty"
-        Me.onDuty.UseVisualStyleBackColor = True
+        Me.chduty.AutoSize = True
+        Me.chduty.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
+        Me.chduty.ForeColor = System.Drawing.Color.MediumBlue
+        Me.chduty.Location = New System.Drawing.Point(403, 439)
+        Me.chduty.Name = "chduty"
+        Me.chduty.Size = New System.Drawing.Size(145, 40)
+        Me.chduty.TabIndex = 21
+        Me.chduty.Text = "On Duty"
+        Me.chduty.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
+        Me.Label1.Location = New System.Drawing.Point(295, 170)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(43, 36)
+        Me.Label1.TabIndex = 22
+        Me.Label1.Text = "Hi"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
+        Me.Label2.Location = New System.Drawing.Point(338, 170)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(78, 36)
+        Me.Label2.TabIndex = 23
+        Me.Label2.Text = "User"
         '
         'Form1
         '
@@ -80,7 +102,9 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1077, 579)
-        Me.Controls.Add(Me.onDuty)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.chduty)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.profile)
@@ -95,6 +119,8 @@ Partial Class Form1
     Friend WithEvents profile As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents onDuty As System.Windows.Forms.CheckBox
+    Friend WithEvents chduty As System.Windows.Forms.CheckBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class

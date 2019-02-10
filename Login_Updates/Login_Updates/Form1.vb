@@ -12,15 +12,15 @@ Public Class Form1
 
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles onDuty.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles chduty.CheckedChanged
 
         Dim querry As String = "Update [CabData] SET [Status] ="
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Downloads\database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         conn.Open()
-
-        If onDuty.Checked = False Then
-            querry += "False " + "Where [CabId]=1 ; "
+        Dim username As String = Label2.Text
+        If chduty.Checked = False Then
+            querry += "False " + "Where [UserName]= '" + username + "';"
             Dim cmd As New OleDbCommand(querry, conn)
             cmd.ExecuteNonQuery()
             cmd.Dispose()
@@ -28,7 +28,7 @@ Public Class Form1
 
 
         Else
-            querry += "True " + "Where [CabId]=1 ; "
+            querry += "True " + "Where [UserName]= '" + username + "';"
             Dim cmd As New OleDbCommand(querry, conn)
             cmd.ExecuteNonQuery()
             cmd.Dispose()
@@ -38,21 +38,24 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        Dim querry As String = "SELECT [Status] FROM [CabData] WHERE [CabId] = 1 "
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Downloads\database.accdb'"
+        Label2.Text = Update_Login.TextBox1.Text
+        Dim username As String = Label2.Text
+        Dim querry As String = "Select * From [CabData] Where [UserName]= '" + username + "';"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
-        conn.Open()
         Dim cmd As New OleDbCommand(querry, conn)
+        conn.Open()
 
-        Dim value As String
-        value = cmd.ExecuteScalar().ToString()
-
-        If value = "True" Then
-            onDuty.Checked = True
-
-        End If
+        Dim reader As OleDbDataReader
+        reader = cmd.ExecuteReader()
+        While reader.Read()
+            chduty.Checked = CStr(reader(3))
+        End While
+        cmd.Dispose()
+        conn.Close()
 
 
     End Sub
+
+
 End Class

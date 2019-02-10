@@ -6,7 +6,171 @@ Login_Updates
 </name>
 </assembly>
 <members>
-<member name="P:WindowsApplication1.My.Resources.Resources.ResourceManager">
+<member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.BookingRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.BusDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.CabDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.StaffRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.BookingRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.BusDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.CabDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet.StaffRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.AmbulanceDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.BookingTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.BusDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.CabDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.CarHireDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.E_RickshawDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.InCampusBusDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.StaffTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.TableAdapterManager.UpdateAll(WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:WindowsApplication1.Vehicle_Recommendation_System_DatabaseDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:WindowsApplication1.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
@@ -18,154 +182,6 @@ Login_Updates
 </member><member name="T:WindowsApplication1.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.AmbulanceDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.BusDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.CabDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.CarHireDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet._E_RickshawDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.InCampusBusDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.StaffDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.AmbulanceDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.BusDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.CabDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.CarHireDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet._E_RickshawDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.InCampusBusDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.StaffRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.AmbulanceDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.BusDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.CabDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.CarHireDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet._E_RickshawDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.InCampusBusDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet.StaffRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSet">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSetTableAdapters.AmbulanceDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSetTableAdapters.BusDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSetTableAdapters.CabDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSetTableAdapters.CarHireDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSetTableAdapters.E_RickshawDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSetTableAdapters.InCampusBusDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSetTableAdapters.StaffTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:WindowsApplication1.databaseDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(WindowsApplication1.databaseDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:WindowsApplication1.databaseDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(WindowsApplication1.databaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:WindowsApplication1.databaseDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(WindowsApplication1.databaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:WindowsApplication1.databaseDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:WindowsApplication1.databaseDataSetTableAdapters.TableAdapterManager.UpdateAll(WindowsApplication1.databaseDataSet)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:WindowsApplication1.databaseDataSetTableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
 </member>
 </members>
