@@ -54,9 +54,30 @@
         ' FILL DATAGRID
         to_city_bus_dgv.DataSource = Access.DBDT
 
+
+
+
+        to_city_bus_dgv.BorderStyle = BorderStyle.None
+        to_city_bus_dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
+        to_city_bus_dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        to_city_bus_dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
+        to_city_bus_dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
+        to_city_bus_dgv.BackgroundColor = Color.White
+
+        to_city_bus_dgv.EnableHeadersVisualStyles = False
+        to_city_bus_dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        to_city_bus_dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72)
+        to_city_bus_dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+        to_city_bus_dgv.RowTemplate.Height = 22
+        to_city_bus_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
+        to_city_bus_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
+
         to_city_bus_dgv.Rows(0).DefaultCellStyle.BackColor = Color.Red
         to_city_bus_dgv.Rows(0).DefaultCellStyle.ForeColor = Color.White
         to_city_bus_dgv.ClearSelection()
+
+
+       
 
     End Sub
 
@@ -76,6 +97,32 @@
 
         ' FILL DATAGRID
         dgv_from_city_bus.DataSource = Access.DBDT
+
+
+
+
+
+        dgv_from_city_bus.BorderStyle = BorderStyle.None
+        dgv_from_city_bus.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
+        dgv_from_city_bus.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        dgv_from_city_bus.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
+        dgv_from_city_bus.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
+        dgv_from_city_bus.BackgroundColor = Color.White
+
+        dgv_from_city_bus.EnableHeadersVisualStyles = False
+        dgv_from_city_bus.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        dgv_from_city_bus.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72)
+        dgv_from_city_bus.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+        dgv_from_city_bus.RowTemplate.Height = 22
+        dgv_from_city_bus.DefaultCellStyle.Padding.Bottom.Equals(4)
+        dgv_from_city_bus.DefaultCellStyle.Padding.Bottom.Equals(4)
+
+
+
+
+
+
+
 
         dgv_from_city_bus.Rows(0).DefaultCellStyle.BackColor = Color.Red
         dgv_from_city_bus.Rows(0).DefaultCellStyle.ForeColor = Color.White

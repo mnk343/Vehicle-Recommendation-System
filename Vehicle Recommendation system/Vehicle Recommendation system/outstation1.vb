@@ -22,6 +22,33 @@
 
         ' FILL DATAGRID
         dgvData.DataSource = Access.DBDT
+
+
+
+
+
+        dgvData.BorderStyle = BorderStyle.None
+        dgvData.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
+        dgvData.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        dgvData.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
+        dgvData.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
+        dgvData.BackgroundColor = Color.White
+
+        dgvData.EnableHeadersVisualStyles = False
+        dgvData.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        dgvData.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72)
+        dgvData.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+        dgvData.RowTemplate.Height = 22
+        dgvData.DefaultCellStyle.Padding.Bottom.Equals(4)
+        dgvData.DefaultCellStyle.Padding.Bottom.Equals(4)
+        'dgvData.AutoSizeColumnsMode
+
+
+
+
+
+
+
     End Sub
 
     Private Sub shilong_btn_Click(sender As Object, e As EventArgs) Handles shilong_btn.Click

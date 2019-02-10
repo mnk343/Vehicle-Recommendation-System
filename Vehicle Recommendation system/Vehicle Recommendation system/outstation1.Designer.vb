@@ -39,26 +39,29 @@ Partial Class outstation1
         '
         Me.info.AutoSize = True
         Me.info.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.info.Location = New System.Drawing.Point(300, 273)
+        Me.info.Location = New System.Drawing.Point(400, 336)
+        Me.info.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.info.Name = "info"
-        Me.info.Size = New System.Drawing.Size(327, 24)
+        Me.info.Size = New System.Drawing.Size(413, 29)
         Me.info.TabIndex = 29
         Me.info.Text = "Please Select A City to see results"
         '
         'clear
         '
-        Me.clear.Location = New System.Drawing.Point(521, 141)
+        Me.clear.Location = New System.Drawing.Point(695, 174)
+        Me.clear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.clear.Name = "clear"
-        Me.clear.Size = New System.Drawing.Size(75, 23)
+        Me.clear.Size = New System.Drawing.Size(100, 28)
         Me.clear.TabIndex = 28
         Me.clear.Text = "Clear"
         Me.clear.UseVisualStyleBackColor = True
         '
         'submit
         '
-        Me.submit.Location = New System.Drawing.Point(400, 141)
+        Me.submit.Location = New System.Drawing.Point(533, 174)
+        Me.submit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.submit.Name = "submit"
-        Me.submit.Size = New System.Drawing.Size(75, 23)
+        Me.submit.Size = New System.Drawing.Size(100, 28)
         Me.submit.TabIndex = 27
         Me.submit.Text = "Submit"
         Me.submit.UseVisualStyleBackColor = True
@@ -67,77 +70,79 @@ Partial Class outstation1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(397, 60)
+        Me.Label1.Location = New System.Drawing.Point(529, 74)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(278, 16)
+        Me.Label1.Size = New System.Drawing.Size(348, 20)
         Me.Label1.TabIndex = 26
         Me.Label1.Text = "Please Enter Number of Pasengers (optional)"
         '
         'passengers
         '
-        Me.passengers.Location = New System.Drawing.Point(400, 101)
-        Me.passengers.Margin = New System.Windows.Forms.Padding(2)
+        Me.passengers.Location = New System.Drawing.Point(533, 124)
+        Me.passengers.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.passengers.Name = "passengers"
-        Me.passengers.Size = New System.Drawing.Size(275, 20)
+        Me.passengers.Size = New System.Drawing.Size(365, 22)
         Me.passengers.TabIndex = 25
         '
         'dgvData
         '
         Me.dgvData.AllowUserToAddRows = False
+        Me.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvData.Location = New System.Drawing.Point(66, 213)
-        Me.dgvData.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvData.Location = New System.Drawing.Point(210, 262)
+        Me.dgvData.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvData.Name = "dgvData"
         Me.dgvData.ReadOnly = True
         Me.dgvData.RowTemplate.Height = 24
-        Me.dgvData.Size = New System.Drawing.Size(771, 155)
+        Me.dgvData.Size = New System.Drawing.Size(808, 191)
         Me.dgvData.TabIndex = 24
         '
         'gang_btn
         '
-        Me.gang_btn.Location = New System.Drawing.Point(63, 139)
-        Me.gang_btn.Margin = New System.Windows.Forms.Padding(2)
+        Me.gang_btn.Location = New System.Drawing.Point(84, 171)
+        Me.gang_btn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gang_btn.Name = "gang_btn"
-        Me.gang_btn.Size = New System.Drawing.Size(91, 27)
+        Me.gang_btn.Size = New System.Drawing.Size(121, 33)
         Me.gang_btn.TabIndex = 23
         Me.gang_btn.Text = "Gangtok"
         Me.gang_btn.UseVisualStyleBackColor = True
         '
         'tawang_btn
         '
-        Me.tawang_btn.Location = New System.Drawing.Point(63, 97)
-        Me.tawang_btn.Margin = New System.Windows.Forms.Padding(2)
+        Me.tawang_btn.Location = New System.Drawing.Point(84, 119)
+        Me.tawang_btn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tawang_btn.Name = "tawang_btn"
-        Me.tawang_btn.Size = New System.Drawing.Size(91, 27)
+        Me.tawang_btn.Size = New System.Drawing.Size(121, 33)
         Me.tawang_btn.TabIndex = 22
         Me.tawang_btn.Text = "Tawang"
         Me.tawang_btn.UseVisualStyleBackColor = True
         '
         'shilong_btn
         '
-        Me.shilong_btn.Location = New System.Drawing.Point(66, 55)
-        Me.shilong_btn.Margin = New System.Windows.Forms.Padding(2)
+        Me.shilong_btn.Location = New System.Drawing.Point(88, 68)
+        Me.shilong_btn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.shilong_btn.Name = "shilong_btn"
-        Me.shilong_btn.Size = New System.Drawing.Size(88, 26)
+        Me.shilong_btn.Size = New System.Drawing.Size(117, 32)
         Me.shilong_btn.TabIndex = 21
         Me.shilong_btn.Text = "Shilong"
         Me.shilong_btn.UseVisualStyleBackColor = True
         '
         'back
         '
-        Me.back.Location = New System.Drawing.Point(733, 138)
-        Me.back.Margin = New System.Windows.Forms.Padding(2)
+        Me.back.Location = New System.Drawing.Point(977, 170)
+        Me.back.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(104, 26)
+        Me.back.Size = New System.Drawing.Size(139, 32)
         Me.back.TabIndex = 30
         Me.back.Text = "Home Page"
         Me.back.UseVisualStyleBackColor = True
         '
         'outstation1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(918, 412)
+        Me.ClientSize = New System.Drawing.Size(1224, 507)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.info)
         Me.Controls.Add(Me.clear)
@@ -148,6 +153,7 @@ Partial Class outstation1
         Me.Controls.Add(Me.gang_btn)
         Me.Controls.Add(Me.tawang_btn)
         Me.Controls.Add(Me.shilong_btn)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "outstation1"
         Me.Text = "outstation1"
         CType(Me.dgvData, System.ComponentModel.ISupportInitialize).EndInit()
