@@ -23,6 +23,10 @@
     Private Sub load_btn_Click(sender As Object, e As EventArgs) Handles load_btn.Click
         Dim src As String = src_cb.Text
         Dim dest As String = des_cb.Text
+
+        Dim time As String = DateTime.Now.ToShortTimeString
+        Dim h As Integer = DateTime.Now.TimeOfDay.Hours
+        Dim m As Integer = DateTime.Now.TimeOfDay.Minutes
         If src = "" Then
             MessageBox.Show("Select Source")
         ElseIf dest = "" Then
@@ -39,6 +43,16 @@
             MessageBox.Show("Minute Field is Empty")
         ElseIf CInt(min_tb.Text) > 59 Then
             MessageBox.Show("Minute must be less than 60")
+        ElseIf day_cb.Text = "" Then
+            MessageBox.Show("Select passenger")
+        ElseIf String.Compare(day_cb.Text, "Today") = 0 Then
+            If CInt(hour_tb.Text) < h Then
+                MessageBox.Show("Time selected has already been passed")
+            ElseIf CInt(hour_tb.Text) = h And CInt(min_tb.Text <= m) Then
+                MessageBox.Show("Time selected has already been passed")
+            Else
+                Maps.Show()
+            End If
         Else
             Maps.Show()
         End If
