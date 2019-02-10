@@ -46,6 +46,41 @@ Public Class Booking1
 
         NewBooking_FullData_dgv.DataSource = Access.DBDT
         NewBooking_FullData_dgv.Hide()
+
+
+
+        Dim newCol As New DataGridViewTextBoxColumn
+
+        newCol.HeaderText = "Approx Fare : "
+        newCol.Name = "Approx Fare : "
+        newCol.Visible = True
+        newCol.Width = 80
+
+        NewBooking_dgv.Columns.Add(newCol)
+
+        For row_index As Integer = 0 To NewBooking_dgv.RowCount - 1
+
+            
+            If (row_index < NewBooking_dgv.RowCount) Then
+                Dim factor As Integer = 1
+
+                Dim totFare = CDec(Maps.money.Text)
+
+                If CInt(NewBooking_dgv.Rows(row_index).Cells(3).Value) >= 6 Then
+                    factor = 1.5
+                ElseIf CInt(NewBooking_dgv.Rows(row_index).Cells(3).Value) >= 8 Then
+                    factor = 2.5
+                Else
+                    factor = 1
+
+                End If
+
+                totFare *= factor
+                NewBooking_dgv.Rows(row_index).Cells(5).Value = totFare
+            End If
+
+        Next
+
     End Sub
 
     Private Sub NewBooking_dgv_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles NewBooking_dgv.CellDoubleClick
@@ -74,6 +109,10 @@ Public Class Booking1
             Label1.Hide()
             CabMap.Show()
         End If
+
+    End Sub
+
+    Private Sub NewBooking_dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles NewBooking_dgv.CellContentClick
 
     End Sub
 End Class

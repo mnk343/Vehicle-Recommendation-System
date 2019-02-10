@@ -14,7 +14,6 @@ Public Class Maps
             If dist > 10 Then
                 fare += 8 * 20
                 fare += (dist - 10) * 15
-
             Else
                 fare += (dist - 2) * 20
             End If
@@ -110,6 +109,8 @@ Public Class Maps
             End If
 
             showDist.Text = CStr(distance)
+            CalculateFare(distance)
+            money.Text = fare
 
             query.Append("https://bing.com/maps/default.aspx?rtp=adr.")
 
@@ -144,6 +145,7 @@ Public Class Maps
 
             map_browser.Navigate(query.ToString)
 
+
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
         End Try
@@ -159,5 +161,9 @@ Public Class Maps
     Private Sub Sharebtn_Click(sender As Object, e As EventArgs) Handles Sharebtn.Click
         Share.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub money_Click(sender As Object, e As EventArgs) Handles money.Click
+
     End Sub
 End Class

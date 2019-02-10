@@ -28,6 +28,7 @@ Partial Class Maps
         Me.map_browser = New System.Windows.Forms.WebBrowser()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.showDist = New System.Windows.Forms.Label()
+        Me.money = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Booking
@@ -90,11 +91,22 @@ Partial Class Maps
         Me.showDist.TabIndex = 9
         Me.showDist.Text = "Label2"
         '
+        'money
+        '
+        Me.money.AutoSize = True
+        Me.money.Location = New System.Drawing.Point(710, 419)
+        Me.money.Name = "money"
+        Me.money.Size = New System.Drawing.Size(38, 13)
+        Me.money.TabIndex = 10
+        Me.money.Text = "money"
+        Me.money.Visible = False
+        '
         'Maps
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(899, 462)
+        Me.Controls.Add(Me.money)
         Me.Controls.Add(Me.showDist)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.map_browser)
@@ -113,4 +125,5 @@ Partial Class Maps
     Friend WithEvents map_browser As System.Windows.Forms.WebBrowser
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents showDist As System.Windows.Forms.Label
+    Friend WithEvents money As System.Windows.Forms.Label
 End Class
