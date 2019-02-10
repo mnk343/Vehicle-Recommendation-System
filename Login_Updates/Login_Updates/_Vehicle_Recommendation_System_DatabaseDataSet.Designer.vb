@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("Vehicle_Recommendation_System_DatabaseDataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("_Vehicle_Recommendation_System_DatabaseDataSet"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
+Partial Public Class _Vehicle_Recommendation_System_DatabaseDataSet
     Inherits Global.System.Data.DataSet
     
     Private tableAmbulanceData As AmbulanceDataDataTable
@@ -40,6 +40,8 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
     Private tableInCampusBusData As InCampusBusDataDataTable
     
     Private tableStaff As StaffDataTable
+    
+    Private relationCabDataBooking As Global.System.Data.DataRelation
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -233,7 +235,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As Vehicle_Recommendation_System_DatabaseDataSet = CType(MyBase.Clone,Vehicle_Recommendation_System_DatabaseDataSet)
+        Dim cln As _Vehicle_Recommendation_System_DatabaseDataSet = CType(MyBase.Clone,_Vehicle_Recommendation_System_DatabaseDataSet)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -362,14 +364,15 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
                 Me.tableStaff.InitVars
             End If
         End If
+        Me.relationCabDataBooking = Me.Relations("CabDataBooking")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "Vehicle_Recommendation_System_DatabaseDataSet"
+        Me.DataSetName = "_Vehicle_Recommendation_System_DatabaseDataSet"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/Vehicle_Recommendation_System_DatabaseDataSet.xsd"
+        Me.Namespace = "http://tempuri.org/_Vehicle_Recommendation_System_DatabaseDataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableAmbulanceData = New AmbulanceDataDataTable()
@@ -388,6 +391,8 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         MyBase.Tables.Add(Me.tableInCampusBusData)
         Me.tableStaff = New StaffDataTable()
         MyBase.Tables.Add(Me.tableStaff)
+        Me.relationCabDataBooking = New Global.System.Data.DataRelation("CabDataBooking", New Global.System.Data.DataColumn() {Me.tableCabData.CabIdColumn}, New Global.System.Data.DataColumn() {Me.tableBooking.CabIdColumn}, false)
+        Me.Relations.Add(Me.relationCabDataBooking)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -449,7 +454,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+        Dim ds As _Vehicle_Recommendation_System_DatabaseDataSet = New _Vehicle_Recommendation_System_DatabaseDataSet()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -750,7 +755,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As _Vehicle_Recommendation_System_DatabaseDataSet = New _Vehicle_Recommendation_System_DatabaseDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -820,7 +825,9 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
     Partial Public Class BookingDataTable
         Inherits Global.System.Data.TypedTableBase(Of BookingRow)
         
-        Private columnID As Global.System.Data.DataColumn
+        Private columnBookingID As Global.System.Data.DataColumn
+        
+        Private columnCabId As Global.System.Data.DataColumn
         
         Private columnDriver As Global.System.Data.DataColumn
         
@@ -873,9 +880,17 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property IDColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property BookingIDColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnID
+                Return Me.columnBookingID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CabIdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCabId
             End Get
         End Property
         
@@ -972,9 +987,12 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddBookingRow(ByVal Driver As String, ByVal Occupancy As String, ByVal Source As String, ByVal Destination As String, ByVal Hour As Integer, ByVal Minute As Integer, ByVal Day As Date) As BookingRow
+        Public Overloads Function AddBookingRow(ByVal parentCabDataRowByCabDataBooking As CabDataRow, ByVal Driver As String, ByVal Occupancy As String, ByVal Source As String, ByVal Destination As String, ByVal Hour As Integer, ByVal Minute As Integer, ByVal Day As Date) As BookingRow
             Dim rowBookingRow As BookingRow = CType(Me.NewRow,BookingRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Driver, Occupancy, Source, Destination, Hour, Minute, Day}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Driver, Occupancy, Source, Destination, Hour, Minute, Day}
+            If (Not (parentCabDataRowByCabDataBooking) Is Nothing) Then
+                columnValuesArray(1) = parentCabDataRowByCabDataBooking(0)
+            End If
             rowBookingRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowBookingRow)
             Return rowBookingRow
@@ -982,8 +1000,8 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByID(ByVal ID As Integer) As BookingRow
-            Return CType(Me.Rows.Find(New Object() {ID}),BookingRow)
+        Public Function FindByBookingID(ByVal BookingID As Integer) As BookingRow
+            Return CType(Me.Rows.Find(New Object() {BookingID}),BookingRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1003,7 +1021,8 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnID = MyBase.Columns("ID")
+            Me.columnBookingID = MyBase.Columns("BookingID")
+            Me.columnCabId = MyBase.Columns("CabId")
             Me.columnDriver = MyBase.Columns("Driver")
             Me.columnOccupancy = MyBase.Columns("Occupancy")
             Me.columnSource = MyBase.Columns("Source")
@@ -1016,8 +1035,10 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnID)
+            Me.columnBookingID = New Global.System.Data.DataColumn("BookingID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBookingID)
+            Me.columnCabId = New Global.System.Data.DataColumn("CabId", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCabId)
             Me.columnDriver = New Global.System.Data.DataColumn("Driver", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDriver)
             Me.columnOccupancy = New Global.System.Data.DataColumn("Occupancy", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -1032,12 +1053,12 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
             MyBase.Columns.Add(Me.columnMinute)
             Me.columnDay = New Global.System.Data.DataColumn("Day", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDay)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
-            Me.columnID.AutoIncrement = true
-            Me.columnID.AutoIncrementSeed = -1
-            Me.columnID.AutoIncrementStep = -1
-            Me.columnID.AllowDBNull = false
-            Me.columnID.Unique = true
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnBookingID}, true))
+            Me.columnBookingID.AutoIncrement = true
+            Me.columnBookingID.AutoIncrementSeed = -1
+            Me.columnBookingID.AutoIncrementStep = -1
+            Me.columnBookingID.AllowDBNull = false
+            Me.columnBookingID.Unique = true
             Me.columnDriver.MaxLength = 255
             Me.columnOccupancy.MaxLength = 255
             Me.columnSource.MaxLength = 255
@@ -1109,7 +1130,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As _Vehicle_Recommendation_System_DatabaseDataSet = New _Vehicle_Recommendation_System_DatabaseDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1468,7 +1489,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As _Vehicle_Recommendation_System_DatabaseDataSet = New _Vehicle_Recommendation_System_DatabaseDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1567,6 +1588,10 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Private columnSeater As Global.System.Data.DataColumn
         
         Private columnVehicleName As Global.System.Data.DataColumn
+        
+        Private columnLatitude As Global.System.Data.DataColumn
+        
+        Private columnLongitude As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -1724,6 +1749,22 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property LatitudeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLatitude
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property LongitudeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLongitude
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1760,9 +1801,25 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddCabDataRow(ByVal UserName As String, ByVal Contact As String, ByVal Status As Boolean, ByVal Password As String, ByVal City As Boolean, ByVal Shillong As Boolean, ByVal Gangtok As Boolean, ByVal Tawang As Boolean, ByVal CityTrips As Integer, ByVal ShillongTrips As Integer, ByVal GangtokTrips As Integer, ByVal TawangTrips As Integer, ByVal Seater As Integer, ByVal VehicleName As String) As CabDataRow
+        Public Overloads Function AddCabDataRow( _
+                    ByVal UserName As String,  _
+                    ByVal Contact As String,  _
+                    ByVal Status As Boolean,  _
+                    ByVal Password As String,  _
+                    ByVal City As Boolean,  _
+                    ByVal Shillong As Boolean,  _
+                    ByVal Gangtok As Boolean,  _
+                    ByVal Tawang As Boolean,  _
+                    ByVal CityTrips As Integer,  _
+                    ByVal ShillongTrips As Integer,  _
+                    ByVal GangtokTrips As Integer,  _
+                    ByVal TawangTrips As Integer,  _
+                    ByVal Seater As Integer,  _
+                    ByVal VehicleName As String,  _
+                    ByVal Latitude As Double,  _
+                    ByVal Longitude As Double) As CabDataRow
             Dim rowCabDataRow As CabDataRow = CType(Me.NewRow,CabDataRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, UserName, Contact, Status, Password, City, Shillong, Gangtok, Tawang, CityTrips, ShillongTrips, GangtokTrips, TawangTrips, Seater, VehicleName}
+            Dim columnValuesArray() As Object = New Object() {Nothing, UserName, Contact, Status, Password, City, Shillong, Gangtok, Tawang, CityTrips, ShillongTrips, GangtokTrips, TawangTrips, Seater, VehicleName, Latitude, Longitude}
             rowCabDataRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowCabDataRow)
             Return rowCabDataRow
@@ -1806,6 +1863,8 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
             Me.columnTawangTrips = MyBase.Columns("TawangTrips")
             Me.columnSeater = MyBase.Columns("Seater")
             Me.columnVehicleName = MyBase.Columns("VehicleName")
+            Me.columnLatitude = MyBase.Columns("Latitude")
+            Me.columnLongitude = MyBase.Columns("Longitude")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1841,6 +1900,10 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
             MyBase.Columns.Add(Me.columnSeater)
             Me.columnVehicleName = New Global.System.Data.DataColumn("VehicleName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnVehicleName)
+            Me.columnLatitude = New Global.System.Data.DataColumn("Latitude", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLatitude)
+            Me.columnLongitude = New Global.System.Data.DataColumn("Longitude", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLongitude)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnCabId}, true))
             Me.columnCabId.AutoIncrement = true
             Me.columnCabId.AutoIncrementSeed = -1
@@ -1918,7 +1981,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As _Vehicle_Recommendation_System_DatabaseDataSet = New _Vehicle_Recommendation_System_DatabaseDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2210,7 +2273,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As _Vehicle_Recommendation_System_DatabaseDataSet = New _Vehicle_Recommendation_System_DatabaseDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2557,7 +2620,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As _Vehicle_Recommendation_System_DatabaseDataSet = New _Vehicle_Recommendation_System_DatabaseDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2889,7 +2952,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As _Vehicle_Recommendation_System_DatabaseDataSet = New _Vehicle_Recommendation_System_DatabaseDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -3181,7 +3244,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As _Vehicle_Recommendation_System_DatabaseDataSet = New _Vehicle_Recommendation_System_DatabaseDataSet()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -3341,12 +3404,27 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property ID() As Integer
+        Public Property BookingID() As Integer
             Get
-                Return CType(Me(Me.tableBooking.IDColumn),Integer)
+                Return CType(Me(Me.tableBooking.BookingIDColumn),Integer)
             End Get
             Set
-                Me(Me.tableBooking.IDColumn) = value
+                Me(Me.tableBooking.BookingIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CabId() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableBooking.CabIdColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CabId' in table 'Booking' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableBooking.CabIdColumn) = value
             End Set
         End Property
         
@@ -3454,6 +3532,29 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
                 Me(Me.tableBooking.DayColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CabDataRow() As CabDataRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("CabDataBooking")),CabDataRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("CabDataBooking"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCabIdNull() As Boolean
+            Return Me.IsNull(Me.tableBooking.CabIdColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCabIdNull()
+            Me(Me.tableBooking.CabIdColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -3994,6 +4095,36 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Latitude() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableCabData.LatitudeColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Latitude' in table 'CabData' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCabData.LatitudeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Longitude() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableCabData.LongitudeColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Longitude' in table 'CabData' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCabData.LongitudeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsUserNameNull() As Boolean
             Return Me.IsNull(Me.tableCabData.UserNameColumn)
         End Function
@@ -4159,6 +4290,40 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Sub SetVehicleNameNull()
             Me(Me.tableCabData.VehicleNameColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsLatitudeNull() As Boolean
+            Return Me.IsNull(Me.tableCabData.LatitudeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetLatitudeNull()
+            Me(Me.tableCabData.LatitudeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsLongitudeNull() As Boolean
+            Return Me.IsNull(Me.tableCabData.LongitudeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetLongitudeNull()
+            Me(Me.tableCabData.LongitudeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function GetBookingRows() As BookingRow()
+            If (Me.Table.ChildRelations("CabDataBooking") Is Nothing) Then
+                Return New BookingRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("CabDataBooking")),BookingRow())
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -4963,7 +5128,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
     End Class
 End Class
 
-Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
+Namespace _Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -5131,7 +5296,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString
+            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5148,7 +5313,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -5161,9 +5326,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable
+        Public Overloads Overridable Function GetData() As _Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable()
+            Dim dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable = New _Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -5171,14 +5336,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As _Vehicle_Recommendation_System_DatabaseDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "AmbulanceData")
         End Function
         
@@ -5434,7 +5599,8 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Booking"
-            tableMapping.ColumnMappings.Add("ID", "ID")
+            tableMapping.ColumnMappings.Add("BookingID", "BookingID")
+            tableMapping.ColumnMappings.Add("CabId", "CabId")
             tableMapping.ColumnMappings.Add("Driver", "Driver")
             tableMapping.ColumnMappings.Add("Occupancy", "Occupancy")
             tableMapping.ColumnMappings.Add("Source", "Source")
@@ -5445,14 +5611,16 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Booking` WHERE ((`ID` = ?) AND ((? = 1 AND `Driver` IS NULL) OR (`Dr"& _ 
-                "iver` = ?)) AND ((? = 1 AND `Occupancy` IS NULL) OR (`Occupancy` = ?)) AND ((? ="& _ 
-                " 1 AND `Source` IS NULL) OR (`Source` = ?)) AND ((? = 1 AND `Destination` IS NUL"& _ 
-                "L) OR (`Destination` = ?)) AND ((? = 1 AND `Hour` IS NULL) OR (`Hour` = ?)) AND "& _ 
-                "((? = 1 AND `Minute` IS NULL) OR (`Minute` = ?)) AND ((? = 1 AND `Day` IS NULL) "& _ 
-                "OR (`Day` = ?)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Booking` WHERE ((`BookingID` = ?) AND ((? = 1 AND `CabId` IS NULL) O"& _ 
+                "R (`CabId` = ?)) AND ((? = 1 AND `Driver` IS NULL) OR (`Driver` = ?)) AND ((? = "& _ 
+                "1 AND `Occupancy` IS NULL) OR (`Occupancy` = ?)) AND ((? = 1 AND `Source` IS NUL"& _ 
+                "L) OR (`Source` = ?)) AND ((? = 1 AND `Destination` IS NULL) OR (`Destination` ="& _ 
+                " ?)) AND ((? = 1 AND `Hour` IS NULL) OR (`Hour` = ?)) AND ((? = 1 AND `Minute` I"& _ 
+                "S NULL) OR (`Minute` = ?)) AND ((? = 1 AND `Day` IS NULL) OR (`Day` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BookingID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BookingID", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CabId", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CabId", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CabId", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CabId", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Driver", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Driver", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Driver", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Driver", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Occupancy", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Occupancy", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -5469,9 +5637,10 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Day", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Day", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Booking` (`Driver`, `Occupancy`, `Source`, `Destination`, `Hour`, `M"& _ 
-                "inute`, `Day`) VALUES (?, ?, ?, ?, ?, ?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Booking` (`CabId`, `Driver`, `Occupancy`, `Source`, `Destination`, `"& _ 
+                "Hour`, `Minute`, `Day`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CabId", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CabId", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Driver", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Driver", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Occupancy", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Occupancy", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Source", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Source", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -5481,14 +5650,16 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Day", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Day", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `Booking` SET `Driver` = ?, `Occupancy` = ?, `Source` = ?, `Destination` ="& _ 
-                " ?, `Hour` = ?, `Minute` = ?, `Day` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Drive"& _ 
-                "r` IS NULL) OR (`Driver` = ?)) AND ((? = 1 AND `Occupancy` IS NULL) OR (`Occupan"& _ 
-                "cy` = ?)) AND ((? = 1 AND `Source` IS NULL) OR (`Source` = ?)) AND ((? = 1 AND `"& _ 
-                "Destination` IS NULL) OR (`Destination` = ?)) AND ((? = 1 AND `Hour` IS NULL) OR"& _ 
-                " (`Hour` = ?)) AND ((? = 1 AND `Minute` IS NULL) OR (`Minute` = ?)) AND ((? = 1 "& _ 
-                "AND `Day` IS NULL) OR (`Day` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `Booking` SET `CabId` = ?, `Driver` = ?, `Occupancy` = ?, `Source` = ?, `D"& _ 
+                "estination` = ?, `Hour` = ?, `Minute` = ?, `Day` = ? WHERE ((`BookingID` = ?) AN"& _ 
+                "D ((? = 1 AND `CabId` IS NULL) OR (`CabId` = ?)) AND ((? = 1 AND `Driver` IS NUL"& _ 
+                "L) OR (`Driver` = ?)) AND ((? = 1 AND `Occupancy` IS NULL) OR (`Occupancy` = ?))"& _ 
+                " AND ((? = 1 AND `Source` IS NULL) OR (`Source` = ?)) AND ((? = 1 AND `Destinati"& _ 
+                "on` IS NULL) OR (`Destination` = ?)) AND ((? = 1 AND `Hour` IS NULL) OR (`Hour` "& _ 
+                "= ?)) AND ((? = 1 AND `Minute` IS NULL) OR (`Minute` = ?)) AND ((? = 1 AND `Day`"& _ 
+                " IS NULL) OR (`Day` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CabId", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CabId", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Driver", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Driver", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Occupancy", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Occupancy", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Source", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Source", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -5496,7 +5667,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Hour", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Hour", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Minute", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Minute", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Day", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Day", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_BookingID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BookingID", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_CabId", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CabId", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CabId", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CabId", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Driver", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Driver", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Driver", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Driver", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Occupancy", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Occupancy", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -5517,7 +5690,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString
+            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5526,8 +5699,8 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID, Driver, Occupancy, Source, Destination, [Hour], [Minute], [Day] FROM B"& _ 
-                "ooking"
+            Me._commandCollection(0).CommandText = "SELECT BookingID, CabId, Driver, Occupancy, Source, Destination, [Hour], [Minute]"& _ 
+                ", [Day] FROM Booking"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -5535,7 +5708,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -5548,9 +5721,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable
+        Public Overloads Overridable Function GetData() As _Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable()
+            Dim dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable = New _Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -5558,14 +5731,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As _Vehicle_Recommendation_System_DatabaseDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Booking")
         End Function
         
@@ -5587,56 +5760,63 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_Driver As String, ByVal Original_Occupancy As String, ByVal Original_Source As String, ByVal Original_Destination As String, ByVal Original_Hour As Global.System.Nullable(Of Integer), ByVal Original_Minute As Global.System.Nullable(Of Integer), ByVal Original_Day As Global.System.Nullable(Of Date)) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
-            If (Original_Driver Is Nothing) Then
+        Public Overloads Overridable Function Delete(ByVal Original_BookingID As Integer, ByVal Original_CabId As Global.System.Nullable(Of Integer), ByVal Original_Driver As String, ByVal Original_Occupancy As String, ByVal Original_Source As String, ByVal Original_Destination As String, ByVal Original_Hour As Global.System.Nullable(Of Integer), ByVal Original_Minute As Global.System.Nullable(Of Integer), ByVal Original_Day As Global.System.Nullable(Of Date)) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_BookingID,Integer)
+            If (Original_CabId.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_CabId.Value,Integer)
+            Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Driver,String)
             End If
-            If (Original_Occupancy Is Nothing) Then
+            If (Original_Driver Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Occupancy,String)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Driver,String)
             End If
-            If (Original_Source Is Nothing) Then
+            If (Original_Occupancy Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Source,String)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Occupancy,String)
             End If
-            If (Original_Destination Is Nothing) Then
+            If (Original_Source Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Destination,String)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Source,String)
             End If
-            If (Original_Hour.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Hour.Value,Integer)
-            Else
+            If (Original_Destination Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Destination,String)
             End If
-            If (Original_Minute.HasValue = true) Then
+            If (Original_Hour.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Minute.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Hour.Value,Integer)
             Else
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
-            If (Original_Day.HasValue = true) Then
+            If (Original_Minute.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Day.Value,Date)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Minute.Value,Integer)
             Else
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Day.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Day.Value,Date)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5657,41 +5837,46 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Driver As String, ByVal Occupancy As String, ByVal Source As String, ByVal Destination As String, ByVal Hour As Global.System.Nullable(Of Integer), ByVal Minute As Global.System.Nullable(Of Integer), ByVal Day As Global.System.Nullable(Of Date)) As Integer
-            If (Driver Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+        Public Overloads Overridable Function Insert(ByVal CabId As Global.System.Nullable(Of Integer), ByVal Driver As String, ByVal Occupancy As String, ByVal Source As String, ByVal Destination As String, ByVal Hour As Global.System.Nullable(Of Integer), ByVal Minute As Global.System.Nullable(Of Integer), ByVal Day As Global.System.Nullable(Of Date)) As Integer
+            If (CabId.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(CabId.Value,Integer)
             Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(Driver,String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
-            If (Occupancy Is Nothing) Then
+            If (Driver Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Occupancy,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Driver,String)
             End If
-            If (Source Is Nothing) Then
+            If (Occupancy Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Source,String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Occupancy,String)
             End If
-            If (Destination Is Nothing) Then
+            If (Source Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Destination,String)
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Source,String)
+            End If
+            If (Destination Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Destination,String)
             End If
             If (Hour.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Hour.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Minute.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Minute.Value,Integer)
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Hour.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
-            If (Day.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Day.Value,Date)
+            If (Minute.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Minute.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (Day.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Day.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5712,91 +5897,120 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Driver As String, ByVal Occupancy As String, ByVal Source As String, ByVal Destination As String, ByVal Hour As Global.System.Nullable(Of Integer), ByVal Minute As Global.System.Nullable(Of Integer), ByVal Day As Global.System.Nullable(Of Date), ByVal Original_ID As Integer, ByVal Original_Driver As String, ByVal Original_Occupancy As String, ByVal Original_Source As String, ByVal Original_Destination As String, ByVal Original_Hour As Global.System.Nullable(Of Integer), ByVal Original_Minute As Global.System.Nullable(Of Integer), ByVal Original_Day As Global.System.Nullable(Of Date)) As Integer
-            If (Driver Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
+        Public Overloads Overridable Function Update( _
+                    ByVal CabId As Global.System.Nullable(Of Integer),  _
+                    ByVal Driver As String,  _
+                    ByVal Occupancy As String,  _
+                    ByVal Source As String,  _
+                    ByVal Destination As String,  _
+                    ByVal Hour As Global.System.Nullable(Of Integer),  _
+                    ByVal Minute As Global.System.Nullable(Of Integer),  _
+                    ByVal Day As Global.System.Nullable(Of Date),  _
+                    ByVal Original_BookingID As Integer,  _
+                    ByVal Original_CabId As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_Driver As String,  _
+                    ByVal Original_Occupancy As String,  _
+                    ByVal Original_Source As String,  _
+                    ByVal Original_Destination As String,  _
+                    ByVal Original_Hour As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_Minute As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_Day As Global.System.Nullable(Of Date)) As Integer
+            If (CabId.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(CabId.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Driver,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
-            If (Occupancy Is Nothing) Then
+            If (Driver Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Occupancy,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Driver,String)
             End If
-            If (Source Is Nothing) Then
+            If (Occupancy Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Source,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Occupancy,String)
             End If
-            If (Destination Is Nothing) Then
+            If (Source Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Destination,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Source,String)
+            End If
+            If (Destination Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Destination,String)
             End If
             If (Hour.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Hour.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Minute.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Minute.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Hour.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
-            If (Day.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Day.Value,Date)
+            If (Minute.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Minute.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_ID,Integer)
-            If (Original_Driver Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            If (Day.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Day.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Driver,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_BookingID,Integer)
+            If (Original_CabId.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_CabId.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Driver Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Driver,String)
             End If
             If (Original_Occupancy Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Occupancy,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Occupancy,String)
             End If
             If (Original_Source Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Source,String)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Source,String)
             End If
             If (Original_Destination Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Destination,String)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Destination,String)
             End If
             If (Original_Hour.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Hour.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Hour.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             End If
             If (Original_Minute.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Minute.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Minute.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
             If (Original_Day.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_Day.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Day.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -6024,7 +6238,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString
+            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6042,7 +6256,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6055,9 +6269,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable
+        Public Overloads Overridable Function GetData() As _Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable()
+            Dim dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable = New _Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -6065,14 +6279,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As _Vehicle_Recommendation_System_DatabaseDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "BusData")
         End Function
         
@@ -6457,6 +6671,8 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("TawangTrips", "TawangTrips")
             tableMapping.ColumnMappings.Add("Seater", "Seater")
             tableMapping.ColumnMappings.Add("VehicleName", "VehicleName")
+            tableMapping.ColumnMappings.Add("Latitude", "Latitude")
+            tableMapping.ColumnMappings.Add("Longitude", "Longitude")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -6470,7 +6686,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
                 "ngTrips` IS NULL) OR (`ShillongTrips` = ?)) AND ((? = 1 AND `GangtokTrips` IS NU"& _ 
                 "LL) OR (`GangtokTrips` = ?)) AND ((? = 1 AND `TawangTrips` IS NULL) OR (`TawangT"& _ 
                 "rips` = ?)) AND ((? = 1 AND `Seater` IS NULL) OR (`Seater` = ?)) AND ((? = 1 AND"& _ 
-                " `VehicleName` IS NULL) OR (`VehicleName` = ?)))"
+                " `VehicleName` IS NULL) OR (`VehicleName` = ?)) AND ((? = 1 AND `Latitude` IS NU"& _ 
+                "LL) OR (`Latitude` = ?)) AND ((? = 1 AND `Longitude` IS NULL) OR (`Longitude` = "& _ 
+                "?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CabId", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CabId", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_UserName", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserName", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -6501,12 +6719,16 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Seater", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Seater", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_VehicleName", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VehicleName", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_VehicleName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VehicleName", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Latitude", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Latitude", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Latitude", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Latitude", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Longitude", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Longitude", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Longitude", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Longitude", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `CabData` (`UserName`, `Contact`, `Status`, `Password`, `City`, `Shil"& _ 
                 "long`, `Gangtok`, `Tawang`, `CityTrips`, `ShillongTrips`, `GangtokTrips`, `Tawan"& _ 
-                "gTrips`, `Seater`, `VehicleName`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
-                " ?)"
+                "gTrips`, `Seater`, `VehicleName`, `Latitude`, `Longitude`) VALUES (?, ?, ?, ?, ?"& _ 
+                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("UserName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserName", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Contact", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Contact", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -6522,22 +6744,26 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TawangTrips", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TawangTrips", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Seater", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Seater", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VehicleName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VehicleName", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Latitude", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Latitude", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Longitude", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Longitude", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `CabData` SET `UserName` = ?, `Contact` = ?, `Status` = ?, `Password` = ?,"& _ 
                 " `City` = ?, `Shillong` = ?, `Gangtok` = ?, `Tawang` = ?, `CityTrips` = ?, `Shil"& _ 
                 "longTrips` = ?, `GangtokTrips` = ?, `TawangTrips` = ?, `Seater` = ?, `VehicleNam"& _ 
-                "e` = ? WHERE ((`CabId` = ?) AND ((? = 1 AND `UserName` IS NULL) OR (`UserName` ="& _ 
-                " ?)) AND ((? = 1 AND `Contact` IS NULL) OR (`Contact` = ?)) AND ((? = 1 AND `Sta"& _ 
-                "tus` IS NULL) OR (`Status` = ?)) AND ((? = 1 AND `Password` IS NULL) OR (`Passwo"& _ 
-                "rd` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `Shil"& _ 
-                "long` IS NULL) OR (`Shillong` = ?)) AND ((? = 1 AND `Gangtok` IS NULL) OR (`Gang"& _ 
-                "tok` = ?)) AND ((? = 1 AND `Tawang` IS NULL) OR (`Tawang` = ?)) AND ((? = 1 AND "& _ 
-                "`CityTrips` IS NULL) OR (`CityTrips` = ?)) AND ((? = 1 AND `ShillongTrips` IS NU"& _ 
-                "LL) OR (`ShillongTrips` = ?)) AND ((? = 1 AND `GangtokTrips` IS NULL) OR (`Gangt"& _ 
-                "okTrips` = ?)) AND ((? = 1 AND `TawangTrips` IS NULL) OR (`TawangTrips` = ?)) AN"& _ 
-                "D ((? = 1 AND `Seater` IS NULL) OR (`Seater` = ?)) AND ((? = 1 AND `VehicleName`"& _ 
-                " IS NULL) OR (`VehicleName` = ?)))"
+                "e` = ?, `Latitude` = ?, `Longitude` = ? WHERE ((`CabId` = ?) AND ((? = 1 AND `Us"& _ 
+                "erName` IS NULL) OR (`UserName` = ?)) AND ((? = 1 AND `Contact` IS NULL) OR (`Co"& _ 
+                "ntact` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)) AND ((? = 1 AN"& _ 
+                "D `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`"& _ 
+                "City` = ?)) AND ((? = 1 AND `Shillong` IS NULL) OR (`Shillong` = ?)) AND ((? = 1"& _ 
+                " AND `Gangtok` IS NULL) OR (`Gangtok` = ?)) AND ((? = 1 AND `Tawang` IS NULL) OR"& _ 
+                " (`Tawang` = ?)) AND ((? = 1 AND `CityTrips` IS NULL) OR (`CityTrips` = ?)) AND "& _ 
+                "((? = 1 AND `ShillongTrips` IS NULL) OR (`ShillongTrips` = ?)) AND ((? = 1 AND `"& _ 
+                "GangtokTrips` IS NULL) OR (`GangtokTrips` = ?)) AND ((? = 1 AND `TawangTrips` IS"& _ 
+                " NULL) OR (`TawangTrips` = ?)) AND ((? = 1 AND `Seater` IS NULL) OR (`Seater` = "& _ 
+                "?)) AND ((? = 1 AND `VehicleName` IS NULL) OR (`VehicleName` = ?)) AND ((? = 1 A"& _ 
+                "ND `Latitude` IS NULL) OR (`Latitude` = ?)) AND ((? = 1 AND `Longitude` IS NULL)"& _ 
+                " OR (`Longitude` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("UserName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserName", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Contact", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Contact", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -6553,6 +6779,8 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("TawangTrips", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TawangTrips", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Seater", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Seater", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VehicleName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VehicleName", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Latitude", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Latitude", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Longitude", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Longitude", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_CabId", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CabId", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_UserName", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserName", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_UserName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "UserName", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -6582,13 +6810,17 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Seater", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Seater", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_VehicleName", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VehicleName", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_VehicleName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VehicleName", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Latitude", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Latitude", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Latitude", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Latitude", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Longitude", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Longitude", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Longitude", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Longitude", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString
+            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6598,8 +6830,8 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT CabId, UserName, Contact, Status, [Password], City, Shillong, Gangtok, Taw"& _ 
-                "ang, CityTrips, ShillongTrips, GangtokTrips, TawangTrips, Seater, VehicleName FR"& _ 
-                "OM CabData"
+                "ang, CityTrips, ShillongTrips, GangtokTrips, TawangTrips, Seater, VehicleName, L"& _ 
+                "atitude, Longitude FROM CabData"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -6607,7 +6839,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6620,9 +6852,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable
+        Public Overloads Overridable Function GetData() As _Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable()
+            Dim dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable = New _Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -6630,14 +6862,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As _Vehicle_Recommendation_System_DatabaseDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "CabData")
         End Function
         
@@ -6659,7 +6891,24 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_CabId As Integer, ByVal Original_UserName As String, ByVal Original_Contact As String, ByVal Original_Status As Boolean, ByVal Original_Password As String, ByVal Original_City As Boolean, ByVal Original_Shillong As Boolean, ByVal Original_Gangtok As Boolean, ByVal Original_Tawang As Boolean, ByVal Original_CityTrips As Global.System.Nullable(Of Integer), ByVal Original_ShillongTrips As Global.System.Nullable(Of Integer), ByVal Original_GangtokTrips As Global.System.Nullable(Of Integer), ByVal Original_TawangTrips As Global.System.Nullable(Of Integer), ByVal Original_Seater As Global.System.Nullable(Of Integer), ByVal Original_VehicleName As String) As Integer
+        Public Overloads Overridable Function Delete( _
+                    ByVal Original_CabId As Integer,  _
+                    ByVal Original_UserName As String,  _
+                    ByVal Original_Contact As String,  _
+                    ByVal Original_Status As Boolean,  _
+                    ByVal Original_Password As String,  _
+                    ByVal Original_City As Boolean,  _
+                    ByVal Original_Shillong As Boolean,  _
+                    ByVal Original_Gangtok As Boolean,  _
+                    ByVal Original_Tawang As Boolean,  _
+                    ByVal Original_CityTrips As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_ShillongTrips As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_GangtokTrips As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_TawangTrips As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_Seater As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_VehicleName As String,  _
+                    ByVal Original_Latitude As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Longitude As Global.System.Nullable(Of Double)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_CabId,Integer)
             If (Original_UserName Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -6734,6 +6983,20 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_VehicleName,String)
             End If
+            If (Original_Latitude.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_Latitude.Value,Double)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(30).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Longitude.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = CType(Original_Longitude.Value,Double)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(32).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -6753,7 +7016,23 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal UserName As String, ByVal Contact As String, ByVal Status As Boolean, ByVal Password As String, ByVal City As Boolean, ByVal Shillong As Boolean, ByVal Gangtok As Boolean, ByVal Tawang As Boolean, ByVal CityTrips As Global.System.Nullable(Of Integer), ByVal ShillongTrips As Global.System.Nullable(Of Integer), ByVal GangtokTrips As Global.System.Nullable(Of Integer), ByVal TawangTrips As Global.System.Nullable(Of Integer), ByVal Seater As Global.System.Nullable(Of Integer), ByVal VehicleName As String) As Integer
+        Public Overloads Overridable Function Insert( _
+                    ByVal UserName As String,  _
+                    ByVal Contact As String,  _
+                    ByVal Status As Boolean,  _
+                    ByVal Password As String,  _
+                    ByVal City As Boolean,  _
+                    ByVal Shillong As Boolean,  _
+                    ByVal Gangtok As Boolean,  _
+                    ByVal Tawang As Boolean,  _
+                    ByVal CityTrips As Global.System.Nullable(Of Integer),  _
+                    ByVal ShillongTrips As Global.System.Nullable(Of Integer),  _
+                    ByVal GangtokTrips As Global.System.Nullable(Of Integer),  _
+                    ByVal TawangTrips As Global.System.Nullable(Of Integer),  _
+                    ByVal Seater As Global.System.Nullable(Of Integer),  _
+                    ByVal VehicleName As String,  _
+                    ByVal Latitude As Global.System.Nullable(Of Double),  _
+                    ByVal Longitude As Global.System.Nullable(Of Double)) As Integer
             If (UserName Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -6804,6 +7083,16 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(13).Value = CType(VehicleName,String)
             End If
+            If (Latitude.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(14).Value = CType(Latitude.Value,Double)
+            Else
+                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (Longitude.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(15).Value = CType(Longitude.Value,Double)
+            Else
+                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -6838,6 +7127,8 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
                     ByVal TawangTrips As Global.System.Nullable(Of Integer),  _
                     ByVal Seater As Global.System.Nullable(Of Integer),  _
                     ByVal VehicleName As String,  _
+                    ByVal Latitude As Global.System.Nullable(Of Double),  _
+                    ByVal Longitude As Global.System.Nullable(Of Double),  _
                     ByVal Original_CabId As Integer,  _
                     ByVal Original_UserName As String,  _
                     ByVal Original_Contact As String,  _
@@ -6852,7 +7143,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
                     ByVal Original_GangtokTrips As Global.System.Nullable(Of Integer),  _
                     ByVal Original_TawangTrips As Global.System.Nullable(Of Integer),  _
                     ByVal Original_Seater As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_VehicleName As String) As Integer
+                    ByVal Original_VehicleName As String,  _
+                    ByVal Original_Latitude As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Longitude As Global.System.Nullable(Of Double)) As Integer
             If (UserName Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -6903,79 +7196,103 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(13).Value = CType(VehicleName,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_CabId,Integer)
-            If (Original_UserName Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            If (Latitude.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Latitude.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_UserName,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
-            If (Original_Contact Is Nothing) Then
+            If (Longitude.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Longitude.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_CabId,Integer)
+            If (Original_UserName Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Contact,String)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_UserName,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Status,Boolean)
+            If (Original_Contact Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Contact,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Status,Boolean)
             If (Original_Password Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Password,String)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Password,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_City,Boolean)
             Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_Shillong,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_City,Boolean)
             Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_Gangtok,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_Shillong,Boolean)
             Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_Tawang,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_Gangtok,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_Tawang,Boolean)
             If (Original_CityTrips.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_CityTrips.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
-            End If
-            If (Original_ShillongTrips.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_ShillongTrips.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_CityTrips.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
             End If
-            If (Original_GangtokTrips.HasValue = true) Then
+            If (Original_ShillongTrips.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_GangtokTrips.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_ShillongTrips.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
             End If
-            If (Original_TawangTrips.HasValue = true) Then
+            If (Original_GangtokTrips.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_TawangTrips.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_GangtokTrips.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
             End If
-            If (Original_Seater.HasValue = true) Then
+            If (Original_TawangTrips.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_Seater.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_TawangTrips.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
             End If
-            If (Original_VehicleName Is Nothing) Then
+            If (Original_Seater.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_Seater.Value,Integer)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(41).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
+            End If
+            If (Original_VehicleName Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_VehicleName,String)
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_VehicleName,String)
+            End If
+            If (Original_Latitude.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_Latitude.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Longitude.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Original_Longitude.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -7159,7 +7476,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString
+            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7176,7 +7493,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -7189,9 +7506,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable
+        Public Overloads Overridable Function GetData() As _Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable()
+            Dim dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable = New _Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -7199,14 +7516,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As _Vehicle_Recommendation_System_DatabaseDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "CarHireData")
         End Function
         
@@ -7536,7 +7853,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString
+            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7554,7 +7871,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -7567,9 +7884,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable
+        Public Overloads Overridable Function GetData() As _Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable()
+            Dim dataTable As _Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable = New _Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -7577,14 +7894,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As _Vehicle_Recommendation_System_DatabaseDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "E-RickshawData")
         End Function
         
@@ -7979,7 +8296,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString
+            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7996,7 +8313,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -8009,9 +8326,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable
+        Public Overloads Overridable Function GetData() As _Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable()
+            Dim dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable = New _Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -8019,14 +8336,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As _Vehicle_Recommendation_System_DatabaseDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "InCampusBusData")
         End Function
         
@@ -8388,7 +8705,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString
+            Me._connection.ConnectionString = Global.WindowsApplication1.My.MySettings.Default.Vehicle_Recommendation_System_DatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8405,7 +8722,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -8418,9 +8735,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable
+        Public Overloads Overridable Function GetData() As _Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable()
+            Dim dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable = New _Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -8428,14 +8745,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As _Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As _Vehicle_Recommendation_System_DatabaseDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Staff")
         End Function
         
@@ -8803,8 +9120,17 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As _Vehicle_Recommendation_System_DatabaseDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
+            If (Not (Me._cabDataTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.CabData.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._cabDataTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
             If (Not (Me._ambulanceDataTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.AmbulanceData.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
@@ -8829,15 +9155,6 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
                     result = (result + Me._busDataTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
-            If (Not (Me._cabDataTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.CabData.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._cabDataTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -8885,8 +9202,16 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As _Vehicle_Recommendation_System_DatabaseDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
+            If (Not (Me._cabDataTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.CabData.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._cabDataTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
             If (Not (Me._ambulanceDataTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.AmbulanceData.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
@@ -8908,14 +9233,6 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
                     result = (result + Me._busDataTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
-            If (Not (Me._cabDataTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.CabData.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._cabDataTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -8959,7 +9276,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As _Vehicle_Recommendation_System_DatabaseDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._staffTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.Staff.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
@@ -8993,14 +9310,6 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._cabDataTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.CabData.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
-                If ((Not (deletedRows) Is Nothing)  _
-                            AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._cabDataTableAdapter.Update(deletedRows))
-                    allChangedRows.AddRange(deletedRows)
-                End If
-            End If
             If (Not (Me._busDataTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.BusData.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -9022,6 +9331,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
                     result = (result + Me._ambulanceDataTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._cabDataTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.CabData.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._cabDataTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -9059,7 +9376,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As _Vehicle_Recommendation_System_DatabaseDataSet) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If

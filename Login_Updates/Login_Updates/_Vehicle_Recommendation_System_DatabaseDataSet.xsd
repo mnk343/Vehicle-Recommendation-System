@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="Vehicle_Recommendation_System_DatabaseDataSet" targetNamespace="http://tempuri.org/Vehicle_Recommendation_System_DatabaseDataSet.xsd" xmlns:mstns="http://tempuri.org/Vehicle_Recommendation_System_DatabaseDataSet.xsd" xmlns="http://tempuri.org/Vehicle_Recommendation_System_DatabaseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="_Vehicle_Recommendation_System_DatabaseDataSet" targetNamespace="http://tempuri.org/_Vehicle_Recommendation_System_DatabaseDataSet.xsd" xmlns:mstns="http://tempuri.org/_Vehicle_Recommendation_System_DatabaseDataSet.xsd" xmlns="http://tempuri.org/_Vehicle_Recommendation_System_DatabaseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Vehicle_Recommendation_System_DatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Vehicle_Recommendation_System_DatabaseConnectionString (MySettings)" PropertyReference="ApplicationSettings.WindowsApplication1.My.MySettings.GlobalReference.Default.Vehicle_Recommendation_System_DatabaseConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Vehicle_Recommendation_System_DatabaseConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Vehicle_Recommendation_System_DatabaseConnectionString1 (MySettings)" PropertyReference="ApplicationSettings.WindowsApplication1.My.MySettings.GlobalReference.Default.Vehicle_Recommendation_System_DatabaseConnectionString1" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AmbulanceDataTableAdapter" GeneratorDataComponentClassName="AmbulanceDataTableAdapter" Name="AmbulanceData" UserDataComponentName="AmbulanceDataTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString (MySettings)" DbObjectName="AmbulanceData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString1 (MySettings)" DbObjectName="AmbulanceData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `AmbulanceData` WHERE ((`ID` = ?) AND ((? = 1 AND `Hospital` IS NULL) OR (`Hospital` = ?)) AND ((? = 1 AND `Mobile` IS NULL) OR (`Mobile` = ?)))</CommandText>
@@ -62,12 +62,14 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BookingTableAdapter" GeneratorDataComponentClassName="BookingTableAdapter" Name="Booking" UserDataComponentName="BookingTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString (MySettings)" DbObjectName="Booking" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString1 (MySettings)" DbObjectName="Booking" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `Booking` WHERE ((`ID` = ?) AND ((? = 1 AND `Driver` IS NULL) OR (`Driver` = ?)) AND ((? = 1 AND `Occupancy` IS NULL) OR (`Occupancy` = ?)) AND ((? = 1 AND `Source` IS NULL) OR (`Source` = ?)) AND ((? = 1 AND `Destination` IS NULL) OR (`Destination` = ?)) AND ((? = 1 AND `Hour` IS NULL) OR (`Hour` = ?)) AND ((? = 1 AND `Minute` IS NULL) OR (`Minute` = ?)) AND ((? = 1 AND `Day` IS NULL) OR (`Day` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `Booking` WHERE ((`BookingID` = ?) AND ((? = 1 AND `CabId` IS NULL) OR (`CabId` = ?)) AND ((? = 1 AND `Driver` IS NULL) OR (`Driver` = ?)) AND ((? = 1 AND `Occupancy` IS NULL) OR (`Occupancy` = ?)) AND ((? = 1 AND `Source` IS NULL) OR (`Source` = ?)) AND ((? = 1 AND `Destination` IS NULL) OR (`Destination` = ?)) AND ((? = 1 AND `Hour` IS NULL) OR (`Hour` = ?)) AND ((? = 1 AND `Minute` IS NULL) OR (`Minute` = ?)) AND ((? = 1 AND `Day` IS NULL) OR (`Day` = ?)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_BookingID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="BookingID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_CabId" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="CabId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_CabId" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="CabId" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Driver" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Driver" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Driver" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Driver" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Occupancy" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Occupancy" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -87,8 +89,9 @@
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `Booking` (`Driver`, `Occupancy`, `Source`, `Destination`, `Hour`, `Minute`, `Day`) VALUES (?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `Booking` (`CabId`, `Driver`, `Occupancy`, `Source`, `Destination`, `Hour`, `Minute`, `Day`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="CabId" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="CabId" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Driver" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Driver" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Occupancy" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Occupancy" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Source" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Source" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -101,14 +104,15 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, Driver, Occupancy, Source, Destination, [Hour], [Minute], [Day] FROM Booking</CommandText>
+                    <CommandText>SELECT BookingID, CabId, Driver, Occupancy, Source, Destination, [Hour], [Minute], [Day] FROM Booking</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `Booking` SET `Driver` = ?, `Occupancy` = ?, `Source` = ?, `Destination` = ?, `Hour` = ?, `Minute` = ?, `Day` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Driver` IS NULL) OR (`Driver` = ?)) AND ((? = 1 AND `Occupancy` IS NULL) OR (`Occupancy` = ?)) AND ((? = 1 AND `Source` IS NULL) OR (`Source` = ?)) AND ((? = 1 AND `Destination` IS NULL) OR (`Destination` = ?)) AND ((? = 1 AND `Hour` IS NULL) OR (`Hour` = ?)) AND ((? = 1 AND `Minute` IS NULL) OR (`Minute` = ?)) AND ((? = 1 AND `Day` IS NULL) OR (`Day` = ?)))</CommandText>
+                    <CommandText>UPDATE `Booking` SET `CabId` = ?, `Driver` = ?, `Occupancy` = ?, `Source` = ?, `Destination` = ?, `Hour` = ?, `Minute` = ?, `Day` = ? WHERE ((`BookingID` = ?) AND ((? = 1 AND `CabId` IS NULL) OR (`CabId` = ?)) AND ((? = 1 AND `Driver` IS NULL) OR (`Driver` = ?)) AND ((? = 1 AND `Occupancy` IS NULL) OR (`Occupancy` = ?)) AND ((? = 1 AND `Source` IS NULL) OR (`Source` = ?)) AND ((? = 1 AND `Destination` IS NULL) OR (`Destination` = ?)) AND ((? = 1 AND `Hour` IS NULL) OR (`Hour` = ?)) AND ((? = 1 AND `Minute` IS NULL) OR (`Minute` = ?)) AND ((? = 1 AND `Day` IS NULL) OR (`Day` = ?)))</CommandText>
                     <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="CabId" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="CabId" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Driver" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Driver" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Occupancy" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Occupancy" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Source" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Source" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -116,7 +120,9 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Hour" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Hour" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Minute" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Minute" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="Day" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="Day" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_BookingID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="BookingID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_CabId" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="CabId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_CabId" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="CabId" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Driver" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Driver" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Driver" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Driver" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Occupancy" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Occupancy" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -137,7 +143,8 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="BookingID" DataSetColumn="BookingID" />
+              <Mapping SourceColumn="CabId" DataSetColumn="CabId" />
               <Mapping SourceColumn="Driver" DataSetColumn="Driver" />
               <Mapping SourceColumn="Occupancy" DataSetColumn="Occupancy" />
               <Mapping SourceColumn="Source" DataSetColumn="Source" />
@@ -150,7 +157,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BusDataTableAdapter" GeneratorDataComponentClassName="BusDataTableAdapter" Name="BusData" UserDataComponentName="BusDataTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString (MySettings)" DbObjectName="BusData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString1 (MySettings)" DbObjectName="BusData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `BusData` WHERE ((`BusId` = ?) AND ((? = 1 AND `Source` IS NULL) OR (`Source` = ?)) AND ((? = 1 AND `Destination` IS NULL) OR (`Destination` = ?)) AND ((? = 1 AND `time` IS NULL) OR (`time` = ?)) AND ((? = 1 AND `WorkingDays` IS NULL) OR (`WorkingDays` = ?)) AND ((? = 1 AND `Type` IS NULL) OR (`Type` = ?)) AND ((? = 1 AND `Hour` IS NULL) OR (`Hour` = ?)) AND ((? = 1 AND `Minute` IS NULL) OR (`Minute` = ?)))</CommandText>
@@ -238,10 +245,10 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CabDataTableAdapter" GeneratorDataComponentClassName="CabDataTableAdapter" Name="CabData" UserDataComponentName="CabDataTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString (MySettings)" DbObjectName="CabData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString1 (MySettings)" DbObjectName="CabData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `CabData` WHERE ((`CabId` = ?) AND ((? = 1 AND `UserName` IS NULL) OR (`UserName` = ?)) AND ((? = 1 AND `Contact` IS NULL) OR (`Contact` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `Shillong` IS NULL) OR (`Shillong` = ?)) AND ((? = 1 AND `Gangtok` IS NULL) OR (`Gangtok` = ?)) AND ((? = 1 AND `Tawang` IS NULL) OR (`Tawang` = ?)) AND ((? = 1 AND `CityTrips` IS NULL) OR (`CityTrips` = ?)) AND ((? = 1 AND `ShillongTrips` IS NULL) OR (`ShillongTrips` = ?)) AND ((? = 1 AND `GangtokTrips` IS NULL) OR (`GangtokTrips` = ?)) AND ((? = 1 AND `TawangTrips` IS NULL) OR (`TawangTrips` = ?)) AND ((? = 1 AND `Seater` IS NULL) OR (`Seater` = ?)) AND ((? = 1 AND `VehicleName` IS NULL) OR (`VehicleName` = ?)))</CommandText>
+                    <CommandText>DELETE FROM `CabData` WHERE ((`CabId` = ?) AND ((? = 1 AND `UserName` IS NULL) OR (`UserName` = ?)) AND ((? = 1 AND `Contact` IS NULL) OR (`Contact` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `Shillong` IS NULL) OR (`Shillong` = ?)) AND ((? = 1 AND `Gangtok` IS NULL) OR (`Gangtok` = ?)) AND ((? = 1 AND `Tawang` IS NULL) OR (`Tawang` = ?)) AND ((? = 1 AND `CityTrips` IS NULL) OR (`CityTrips` = ?)) AND ((? = 1 AND `ShillongTrips` IS NULL) OR (`ShillongTrips` = ?)) AND ((? = 1 AND `GangtokTrips` IS NULL) OR (`GangtokTrips` = ?)) AND ((? = 1 AND `TawangTrips` IS NULL) OR (`TawangTrips` = ?)) AND ((? = 1 AND `Seater` IS NULL) OR (`Seater` = ?)) AND ((? = 1 AND `VehicleName` IS NULL) OR (`VehicleName` = ?)) AND ((? = 1 AND `Latitude` IS NULL) OR (`Latitude` = ?)) AND ((? = 1 AND `Longitude` IS NULL) OR (`Longitude` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_CabId" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="CabId" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_UserName" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -272,12 +279,16 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Seater" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Seater" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_VehicleName" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="VehicleName" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_VehicleName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VehicleName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Latitude" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Latitude" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_Latitude" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Latitude" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Longitude" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Longitude" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_Longitude" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Longitude" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `CabData` (`UserName`, `Contact`, `Status`, `Password`, `City`, `Shillong`, `Gangtok`, `Tawang`, `CityTrips`, `ShillongTrips`, `GangtokTrips`, `TawangTrips`, `Seater`, `VehicleName`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <CommandText>INSERT INTO `CabData` (`UserName`, `Contact`, `Status`, `Password`, `City`, `Shillong`, `Gangtok`, `Tawang`, `CityTrips`, `ShillongTrips`, `GangtokTrips`, `TawangTrips`, `Seater`, `VehicleName`, `Latitude`, `Longitude`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="UserName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Contact" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Contact" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -293,18 +304,20 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="TawangTrips" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="TawangTrips" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Seater" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Seater" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="VehicleName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VehicleName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Latitude" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Latitude" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Longitude" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Longitude" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT CabId, UserName, Contact, Status, [Password], City, Shillong, Gangtok, Tawang, CityTrips, ShillongTrips, GangtokTrips, TawangTrips, Seater, VehicleName FROM CabData</CommandText>
+                    <CommandText>SELECT CabId, UserName, Contact, Status, [Password], City, Shillong, Gangtok, Tawang, CityTrips, ShillongTrips, GangtokTrips, TawangTrips, Seater, VehicleName, Latitude, Longitude FROM CabData</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `CabData` SET `UserName` = ?, `Contact` = ?, `Status` = ?, `Password` = ?, `City` = ?, `Shillong` = ?, `Gangtok` = ?, `Tawang` = ?, `CityTrips` = ?, `ShillongTrips` = ?, `GangtokTrips` = ?, `TawangTrips` = ?, `Seater` = ?, `VehicleName` = ? WHERE ((`CabId` = ?) AND ((? = 1 AND `UserName` IS NULL) OR (`UserName` = ?)) AND ((? = 1 AND `Contact` IS NULL) OR (`Contact` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `Shillong` IS NULL) OR (`Shillong` = ?)) AND ((? = 1 AND `Gangtok` IS NULL) OR (`Gangtok` = ?)) AND ((? = 1 AND `Tawang` IS NULL) OR (`Tawang` = ?)) AND ((? = 1 AND `CityTrips` IS NULL) OR (`CityTrips` = ?)) AND ((? = 1 AND `ShillongTrips` IS NULL) OR (`ShillongTrips` = ?)) AND ((? = 1 AND `GangtokTrips` IS NULL) OR (`GangtokTrips` = ?)) AND ((? = 1 AND `TawangTrips` IS NULL) OR (`TawangTrips` = ?)) AND ((? = 1 AND `Seater` IS NULL) OR (`Seater` = ?)) AND ((? = 1 AND `VehicleName` IS NULL) OR (`VehicleName` = ?)))</CommandText>
+                    <CommandText>UPDATE `CabData` SET `UserName` = ?, `Contact` = ?, `Status` = ?, `Password` = ?, `City` = ?, `Shillong` = ?, `Gangtok` = ?, `Tawang` = ?, `CityTrips` = ?, `ShillongTrips` = ?, `GangtokTrips` = ?, `TawangTrips` = ?, `Seater` = ?, `VehicleName` = ?, `Latitude` = ?, `Longitude` = ? WHERE ((`CabId` = ?) AND ((? = 1 AND `UserName` IS NULL) OR (`UserName` = ?)) AND ((? = 1 AND `Contact` IS NULL) OR (`Contact` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `Shillong` IS NULL) OR (`Shillong` = ?)) AND ((? = 1 AND `Gangtok` IS NULL) OR (`Gangtok` = ?)) AND ((? = 1 AND `Tawang` IS NULL) OR (`Tawang` = ?)) AND ((? = 1 AND `CityTrips` IS NULL) OR (`CityTrips` = ?)) AND ((? = 1 AND `ShillongTrips` IS NULL) OR (`ShillongTrips` = ?)) AND ((? = 1 AND `GangtokTrips` IS NULL) OR (`GangtokTrips` = ?)) AND ((? = 1 AND `TawangTrips` IS NULL) OR (`TawangTrips` = ?)) AND ((? = 1 AND `Seater` IS NULL) OR (`Seater` = ?)) AND ((? = 1 AND `VehicleName` IS NULL) OR (`VehicleName` = ?)) AND ((? = 1 AND `Latitude` IS NULL) OR (`Latitude` = ?)) AND ((? = 1 AND `Longitude` IS NULL) OR (`Longitude` = ?)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="UserName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Contact" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Contact" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -320,6 +333,8 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="TawangTrips" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="TawangTrips" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Seater" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Seater" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="VehicleName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VehicleName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Latitude" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Latitude" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Longitude" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Longitude" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_CabId" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="CabId" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_UserName" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_UserName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -349,6 +364,10 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_Seater" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Seater" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_VehicleName" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="VehicleName" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_VehicleName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="VehicleName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Latitude" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Latitude" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_Latitude" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Latitude" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Longitude" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Longitude" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Original_Longitude" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Longitude" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -370,12 +389,14 @@
               <Mapping SourceColumn="TawangTrips" DataSetColumn="TawangTrips" />
               <Mapping SourceColumn="Seater" DataSetColumn="Seater" />
               <Mapping SourceColumn="VehicleName" DataSetColumn="VehicleName" />
+              <Mapping SourceColumn="Latitude" DataSetColumn="Latitude" />
+              <Mapping SourceColumn="Longitude" DataSetColumn="Longitude" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CarHireDataTableAdapter" GeneratorDataComponentClassName="CarHireDataTableAdapter" Name="CarHireData" UserDataComponentName="CarHireDataTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString (MySettings)" DbObjectName="CarHireData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString1 (MySettings)" DbObjectName="CarHireData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `CarHireData` WHERE ((`ID` = ?) AND ((? = 1 AND `Owner Name` IS NULL) OR (`Owner Name` = ?)) AND ((? = 1 AND `Mobile` IS NULL) OR (`Mobile` = ?)))</CommandText>
@@ -428,7 +449,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="E-RickshawDataTableAdapter" GeneratorDataComponentClassName="E_RickshawDataTableAdapter" Name="E-RickshawData" UserDataComponentName="E-RickshawDataTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString (MySettings)" DbObjectName="E-RickshawData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString1 (MySettings)" DbObjectName="E-RickshawData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `E-RickshawData` WHERE ((`ERID` = ?) AND ((? = 1 AND `UserName` IS NULL) OR (`UserName` = ?)) AND ((? = 1 AND `Contact` IS NULL) OR (`Contact` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `Latitude` IS NULL) OR (`Latitude` = ?)) AND ((? = 1 AND `Longitude` IS NULL) OR (`Longitude` = ?)))</CommandText>
@@ -509,7 +530,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="InCampusBusDataTableAdapter" GeneratorDataComponentClassName="InCampusBusDataTableAdapter" Name="InCampusBusData" UserDataComponentName="InCampusBusDataTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString (MySettings)" DbObjectName="InCampusBusData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString1 (MySettings)" DbObjectName="InCampusBusData" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `InCampusBusData` WHERE ((`BusId` = ?) AND ((? = 1 AND `Source` IS NULL) OR (`Source` = ?)) AND ((? = 1 AND `Destination` IS NULL) OR (`Destination` = ?)) AND ((? = 1 AND `Time` IS NULL) OR (`Time` = ?)) AND ((? = 1 AND `Hour` IS NULL) OR (`Hour` = ?)) AND ((? = 1 AND `Minute` IS NULL) OR (`Minute` = ?)))</CommandText>
@@ -583,7 +604,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StaffTableAdapter" GeneratorDataComponentClassName="StaffTableAdapter" Name="Staff" UserDataComponentName="StaffTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString (MySettings)" DbObjectName="Staff" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Vehicle_Recommendation_System_DatabaseConnectionString1 (MySettings)" DbObjectName="Staff" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `Staff` WHERE ((`ID` = ?) AND ((? = 1 AND `Name` IS NULL) OR (`Name` = ?)))</CommandText>
@@ -635,7 +656,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="Vehicle_Recommendation_System_DatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Vehicle_Recommendation_System_DatabaseDataSet" msprop:Generator_UserDSName="Vehicle_Recommendation_System_DatabaseDataSet">
+  <xs:element name="_Vehicle_Recommendation_System_DatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_Vehicle_Recommendation_System_DatabaseDataSet" msprop:Generator_UserDSName="_Vehicle_Recommendation_System_DatabaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="AmbulanceData" msprop:Generator_TableClassName="AmbulanceDataDataTable" msprop:Generator_TableVarName="tableAmbulanceData" msprop:Generator_TablePropName="AmbulanceData" msprop:Generator_RowDeletingName="AmbulanceDataRowDeleting" msprop:Generator_RowChangingName="AmbulanceDataRowChanging" msprop:Generator_RowEvHandlerName="AmbulanceDataRowChangeEventHandler" msprop:Generator_RowDeletedName="AmbulanceDataRowDeleted" msprop:Generator_UserTableName="AmbulanceData" msprop:Generator_RowChangedName="AmbulanceDataRowChanged" msprop:Generator_RowEvArgName="AmbulanceDataRowChangeEvent" msprop:Generator_RowClassName="AmbulanceDataRow">
@@ -662,7 +683,8 @@
         <xs:element name="Booking" msprop:Generator_TableClassName="BookingDataTable" msprop:Generator_TableVarName="tableBooking" msprop:Generator_TablePropName="Booking" msprop:Generator_RowDeletingName="BookingRowDeleting" msprop:Generator_RowChangingName="BookingRowChanging" msprop:Generator_RowEvHandlerName="BookingRowChangeEventHandler" msprop:Generator_RowDeletedName="BookingRowDeleted" msprop:Generator_UserTableName="Booking" msprop:Generator_RowChangedName="BookingRowChanged" msprop:Generator_RowEvArgName="BookingRowChangeEvent" msprop:Generator_RowClassName="BookingRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="BookingID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBookingID" msprop:Generator_ColumnPropNameInRow="BookingID" msprop:Generator_ColumnPropNameInTable="BookingIDColumn" msprop:Generator_UserColumnName="BookingID" type="xs:int" />
+              <xs:element name="CabId" msprop:Generator_ColumnVarNameInTable="columnCabId" msprop:Generator_ColumnPropNameInRow="CabId" msprop:Generator_ColumnPropNameInTable="CabIdColumn" msprop:Generator_UserColumnName="CabId" type="xs:int" minOccurs="0" />
               <xs:element name="Driver" msprop:Generator_ColumnVarNameInTable="columnDriver" msprop:Generator_ColumnPropNameInRow="Driver" msprop:Generator_ColumnPropNameInTable="DriverColumn" msprop:Generator_UserColumnName="Driver" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -777,6 +799,8 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Latitude" msprop:Generator_ColumnVarNameInTable="columnLatitude" msprop:Generator_ColumnPropNameInRow="Latitude" msprop:Generator_ColumnPropNameInTable="LatitudeColumn" msprop:Generator_UserColumnName="Latitude" type="xs:double" minOccurs="0" />
+              <xs:element name="Longitude" msprop:Generator_ColumnVarNameInTable="columnLongitude" msprop:Generator_ColumnPropNameInRow="Longitude" msprop:Generator_ColumnPropNameInTable="LongitudeColumn" msprop:Generator_UserColumnName="Longitude" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -891,7 +915,7 @@
     </xs:unique>
     <xs:unique name="Booking_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Booking" />
-      <xs:field xpath="mstns:ID" />
+      <xs:field xpath="mstns:BookingID" />
     </xs:unique>
     <xs:unique name="BusData_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:BusData" />
@@ -918,4 +942,9 @@
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="CabDataBooking" msdata:parent="CabData" msdata:child="Booking" msdata:parentkey="CabId" msdata:childkey="CabId" msprop:Generator_UserChildTable="Booking" msprop:Generator_ChildPropName="GetBookingRows" msprop:Generator_UserRelationName="CabDataBooking" msprop:Generator_RelationVarName="relationCabDataBooking" msprop:Generator_UserParentTable="CabData" msprop:Generator_ParentPropName="CabDataRow" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>

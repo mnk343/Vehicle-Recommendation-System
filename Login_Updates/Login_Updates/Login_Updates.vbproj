@@ -70,23 +70,23 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="updateData.Designer.vb">
+      <DependentUpon>updateData.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="updateData.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="ChangePassword.Designer.vb">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
+    <Compile Include="ChangePassword.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -110,21 +110,21 @@
     <Compile Include="Update_Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vehicle_Recommendation_System_DatabaseDataSet.Designer.vb">
+    <Compile Include="_Vehicle_Recommendation_System_DatabaseDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
+      <DependentUpon>_Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="updateData.resx">
+      <DependentUpon>updateData.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -147,20 +147,20 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="Vehicle_Recommendation_System_DatabaseDataSet.xsc">
-      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
+    <None Include="_Vehicle_Recommendation_System_DatabaseDataSet.xsc">
+      <DependentUpon>_Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Vehicle_Recommendation_System_DatabaseDataSet.xsd">
+    <None Include="_Vehicle_Recommendation_System_DatabaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Vehicle_Recommendation_System_DatabaseDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>_Vehicle_Recommendation_System_DatabaseDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Vehicle_Recommendation_System_DatabaseDataSet.xss">
-      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
+    <None Include="_Vehicle_Recommendation_System_DatabaseDataSet.xss">
+      <DependentUpon>_Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Vehicle Recommendation System Database.accdb">
+    <Content Include="Vehicle-Recommendation-System-Database.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
