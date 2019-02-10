@@ -31,6 +31,7 @@ Partial Class loginForm
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.back = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -56,9 +57,9 @@ Partial Class loginForm
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.8!, System.Drawing.FontStyle.Bold)
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(76, 318)
+        Me.Button1.Location = New System.Drawing.Point(303, 323)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(353, 41)
+        Me.Button1.Size = New System.Drawing.Size(210, 41)
         Me.Button1.TabIndex = 13
         Me.Button1.Text = "Login"
         Me.Button1.UseVisualStyleBackColor = True
@@ -125,11 +126,23 @@ Partial Class loginForm
         Me.Panel1.Size = New System.Drawing.Size(526, 179)
         Me.Panel1.TabIndex = 14
         '
+        'back
+        '
+        Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.8!, System.Drawing.FontStyle.Bold)
+        Me.back.ForeColor = System.Drawing.Color.Black
+        Me.back.Location = New System.Drawing.Point(41, 323)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(210, 41)
+        Me.back.TabIndex = 17
+        Me.back.Text = "Home Page"
+        Me.back.UseVisualStyleBackColor = True
+        '
         'loginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(525, 388)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TextBox3)
@@ -151,4 +164,5 @@ Partial Class loginForm
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents back As System.Windows.Forms.Button
 End Class

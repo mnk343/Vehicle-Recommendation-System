@@ -82,4 +82,8 @@
         dgv_from_city_bus.ClearSelection()
     End Sub
 
+    Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
+        Me.Close()
+        Form1.Show()
+    End Sub
 End Class

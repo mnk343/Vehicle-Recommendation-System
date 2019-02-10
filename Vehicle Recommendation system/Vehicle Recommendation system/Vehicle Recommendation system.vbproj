@@ -114,6 +114,12 @@
     <Compile Include="memberDelete.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="memberUpdate.Designer.vb">
+      <DependentUpon>memberUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memberUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="memberDelete.resx">
       <DependentUpon>memberDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memberUpdate.resx">
+      <DependentUpon>memberUpdate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

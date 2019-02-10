@@ -121,7 +121,7 @@ Partial Class memberAdd
         '
         Me.info.AutoSize = True
         Me.info.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.info.Location = New System.Drawing.Point(60, 9)
+        Me.info.Location = New System.Drawing.Point(14, 15)
         Me.info.Name = "info"
         Me.info.Size = New System.Drawing.Size(334, 26)
         Me.info.TabIndex = 16
@@ -143,7 +143,7 @@ Partial Class memberAdd
         '
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.submit)
-        Me.Panel1.Location = New System.Drawing.Point(19, 335)
+        Me.Panel1.Location = New System.Drawing.Point(19, 329)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(742, 110)
@@ -192,7 +192,7 @@ Partial Class memberAdd
         Me.Panel2.Controls.Add(Me.confirmPassword)
         Me.Panel2.Controls.Add(Me.contactNo)
         Me.Panel2.Controls.Add(Me.txtConfirmPassword)
-        Me.Panel2.Location = New System.Drawing.Point(19, 67)
+        Me.Panel2.Location = New System.Drawing.Point(19, 61)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(742, 268)

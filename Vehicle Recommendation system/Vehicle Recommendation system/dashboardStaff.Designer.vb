@@ -29,6 +29,7 @@ Partial Class dashboardStaff
         Me.signOut = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.update = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -38,7 +39,7 @@ Partial Class dashboardStaff
         Me.deleteMember.BackColor = System.Drawing.Color.Black
         Me.deleteMember.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.2!, System.Drawing.FontStyle.Bold)
         Me.deleteMember.ForeColor = System.Drawing.Color.White
-        Me.deleteMember.Location = New System.Drawing.Point(217, 271)
+        Me.deleteMember.Location = New System.Drawing.Point(217, 249)
         Me.deleteMember.Name = "deleteMember"
         Me.deleteMember.Size = New System.Drawing.Size(197, 64)
         Me.deleteMember.TabIndex = 10
@@ -72,7 +73,7 @@ Partial Class dashboardStaff
         'prevPage
         '
         Me.prevPage.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.prevPage.Location = New System.Drawing.Point(10, 147)
+        Me.prevPage.Location = New System.Drawing.Point(3, 182)
         Me.prevPage.Name = "prevPage"
         Me.prevPage.Size = New System.Drawing.Size(153, 70)
         Me.prevPage.TabIndex = 3
@@ -82,7 +83,7 @@ Partial Class dashboardStaff
         'signOut
         '
         Me.signOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.signOut.Location = New System.Drawing.Point(11, 147)
+        Me.signOut.Location = New System.Drawing.Point(23, 182)
         Me.signOut.Name = "signOut"
         Me.signOut.Size = New System.Drawing.Size(157, 70)
         Me.signOut.TabIndex = 5
@@ -93,10 +94,10 @@ Partial Class dashboardStaff
         '
         Me.Panel1.BackColor = System.Drawing.Color.Black
         Me.Panel1.Controls.Add(Me.signOut)
-        Me.Panel1.Location = New System.Drawing.Point(452, 0)
+        Me.Panel1.Location = New System.Drawing.Point(441, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(178, 362)
+        Me.Panel1.Size = New System.Drawing.Size(277, 462)
         Me.Panel1.TabIndex = 11
         '
         'Panel2
@@ -106,14 +107,27 @@ Partial Class dashboardStaff
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(176, 362)
+        Me.Panel2.Size = New System.Drawing.Size(176, 462)
         Me.Panel2.TabIndex = 12
+        '
+        'update
+        '
+        Me.update.BackColor = System.Drawing.Color.Black
+        Me.update.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.2!, System.Drawing.FontStyle.Bold)
+        Me.update.ForeColor = System.Drawing.Color.White
+        Me.update.Location = New System.Drawing.Point(217, 347)
+        Me.update.Name = "update"
+        Me.update.Size = New System.Drawing.Size(197, 64)
+        Me.update.TabIndex = 13
+        Me.update.Text = "Update Member"
+        Me.update.UseVisualStyleBackColor = False
         '
         'dashboardStaff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(630, 361)
+        Me.ClientSize = New System.Drawing.Size(633, 459)
+        Me.Controls.Add(Me.update)
         Me.Controls.Add(Me.deleteMember)
         Me.Controls.Add(Me.addMember)
         Me.Controls.Add(Me.changePassword)
@@ -133,4 +147,5 @@ Partial Class dashboardStaff
     Friend WithEvents signOut As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents update As System.Windows.Forms.Button
 End Class

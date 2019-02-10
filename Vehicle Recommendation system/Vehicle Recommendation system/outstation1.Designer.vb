@@ -31,6 +31,7 @@ Partial Class outstation1
         Me.gang_btn = New System.Windows.Forms.Button()
         Me.tawang_btn = New System.Windows.Forms.Button()
         Me.shilong_btn = New System.Windows.Forms.Button()
+        Me.back = New System.Windows.Forms.Button()
         CType(Me.dgvData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -122,11 +123,22 @@ Partial Class outstation1
         Me.shilong_btn.Text = "Shilong"
         Me.shilong_btn.UseVisualStyleBackColor = True
         '
+        'back
+        '
+        Me.back.Location = New System.Drawing.Point(733, 138)
+        Me.back.Margin = New System.Windows.Forms.Padding(2)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(104, 26)
+        Me.back.TabIndex = 30
+        Me.back.Text = "Home Page"
+        Me.back.UseVisualStyleBackColor = True
+        '
         'outstation1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(918, 412)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.info)
         Me.Controls.Add(Me.clear)
         Me.Controls.Add(Me.submit)
@@ -152,4 +164,5 @@ Partial Class outstation1
     Friend WithEvents gang_btn As System.Windows.Forms.Button
     Friend WithEvents tawang_btn As System.Windows.Forms.Button
     Friend WithEvents shilong_btn As System.Windows.Forms.Button
+    Friend WithEvents back As System.Windows.Forms.Button
 End Class

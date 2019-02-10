@@ -102,4 +102,10 @@ Public Class dashboardStaff
     Private Sub signOut_MouseLeave(sender As Object, e As EventArgs) Handles signOut.MouseLeave
         signOut.BackColor = Color.Transparent
     End Sub
+
+    Private Sub update_Click(sender As Object, e As EventArgs) Handles update.Click
+        memberUpdate.show()
+        Me.Hide()
+
+    End Sub
 End Class
