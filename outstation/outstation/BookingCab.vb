@@ -14,29 +14,29 @@ Public Class BookingCab
 
     Private Sub BookingCab_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'Dim hours As Integer = CInt(Cab_info.hour_tb.Text)
-        Dim hours As Integer = 15
+        Dim hours As Integer = CInt(Cab_info.hour_tb.Text)
+        'Dim hours As Integer = 15
         Dim dat As String
-        'Dim Day As String
+        Dim Day As String
 
 
-        'Day = Cab_info.day_cb.Text
+        Day = Cab_info.day_cb.Text
 
 
-        'If Day = "Today" Then
+        If Day = "Today" Then
 
-        '    dat = DateAndTime.Now.ToShortDateString
+            dat = DateAndTime.Now.ToShortDateString
 
 
-        'ElseIf Day = "Tomorrow" Then
-        '    dat = DateAndTime.Now.AddDays(1).ToShortDateString
+        ElseIf Day = "Tomorrow" Then
+            dat = DateAndTime.Now.AddDays(1).ToShortDateString
 
-        'Else
+        Else
 
-        '    dat = DateAndTime.Now.AddDays(2).ToShortDateString
+            dat = DateAndTime.Now.AddDays(2).ToShortDateString
 
-        'End If
-        dat = "10-02-2019"
+        End If
+        'dat = "10-02-2019"
         Access.ExecQuery("SELECT CabData.CabId, CabData.UserName, CabData.Contact, CabData.Seater, CabData.VehicleName FROM CabData WHERE CabData.City = TRUE AND CabData.CabId NOT IN ( SELECT Booking.CabId FROM Booking WHERE " + CStr(hours) + " BETWEEN Booking.Hour - 1 AND Booking.Hour + 1 AND Format(Booking.Day, 'Short Date') = '" + dat + "') ;")
 
 

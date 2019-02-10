@@ -6,511 +6,167 @@ outstation
 </name>
 </assembly>
 <members>
-<member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataDataTable">
+<member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.AmbulanceDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.BookingDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BusDataDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.BusDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.CabDataDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.CabDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.CarHireDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2._E_RickshawDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.InCampusBusDataDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.InCampusBusDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.StaffDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.StaffDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.AmbulanceDataRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BookingRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.BookingRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BusDataRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.BusDataRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.CabDataRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.CabDataRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.CarHireDataRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2._E_RickshawDataRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.InCampusBusDataRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.InCampusBusDataRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.StaffRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.StaffRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.AmbulanceDataRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BookingRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.BookingRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BusDataRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.BusDataRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.CabDataRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.CabDataRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.CarHireDataRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2._E_RickshawDataRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.InCampusBusDataRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.InCampusBusDataRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.StaffRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.StaffRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.AmbulanceDataTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.AmbulanceDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.BookingTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.BookingTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.BusDataTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.BusDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.CabDataTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.CabDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.CarHireDataTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.CarHireDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.E_RickshawDataTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.E_RickshawDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.InCampusBusDataTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.InCampusBusDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.StaffTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.StaffTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.BookingDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.UpdateUpdatedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet2,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Update rows in top-down order.
 </summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.UpdateInsertedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Insert rows in top-down order.
 </summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.UpdateDeletedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Delete rows in bottom-up order.
 </summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateAll(outstation.Vehicle_Recommendation_System_DatabaseDataSet1)">
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.UpdateAll(outstation.Vehicle_Recommendation_System_DatabaseDataSet2)">
 	<summary>
 Update all changes to the dataset.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption">
 	<summary>
 Update Order Option
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.SelfReferenceComparer">
 	<summary>
 Used to sort self-referenced table's rows
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.AmbulanceDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.BookingDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.BusDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.CabDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.CarHireDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4._E_RickshawDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.InCampusBusDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.StaffDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.AmbulanceDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.BookingRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.BusDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.CabDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.CarHireDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4._E_RickshawDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.InCampusBusDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.StaffRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.AmbulanceDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.BookingRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.BusDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.CabDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.CarHireDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4._E_RickshawDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.InCampusBusDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.StaffRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.AmbulanceDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.BookingTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.BusDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.CabDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.CarHireDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.E_RickshawDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.InCampusBusDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.StaffTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.UpdateUpdatedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet4,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.UpdateInsertedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet4,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.UpdateDeletedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet4,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.UpdateAll(outstation.Vehicle_Recommendation_System_DatabaseDataSet4)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.AmbulanceDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.BookingDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.BusDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.CabDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.CarHireDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3._E_RickshawDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.InCampusBusDataDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.StaffDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.AmbulanceDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.BookingRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.BusDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.CabDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.CarHireDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3._E_RickshawDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.InCampusBusDataRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.StaffRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.AmbulanceDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.BookingRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.BusDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.CabDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.CarHireDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3._E_RickshawDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.InCampusBusDataRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.StaffRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.AmbulanceDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.BookingTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.BusDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.CabDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.CarHireDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.E_RickshawDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.InCampusBusDataTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.StaffTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.UpdateUpdatedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet3,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.UpdateInsertedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.UpdateDeletedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.UpdateAll(outstation.Vehicle_Recommendation_System_DatabaseDataSet3)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
@@ -694,167 +350,347 @@ Used to sort self-referenced table's rows
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.AmbulanceDataDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.AmbulanceDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.BookingDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.BookingDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.BusDataDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.BusDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.CabDataDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.CabDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.CarHireDataDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.CarHireDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2._E_RickshawDataDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4._E_RickshawDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.InCampusBusDataDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.InCampusBusDataDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.StaffDataTable">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.StaffDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.AmbulanceDataRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.AmbulanceDataRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.BookingRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.BookingRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.BusDataRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.BusDataRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.CabDataRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.CabDataRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.CarHireDataRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.CarHireDataRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2._E_RickshawDataRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4._E_RickshawDataRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.InCampusBusDataRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.InCampusBusDataRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.StaffRow">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.StaffRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.AmbulanceDataRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.AmbulanceDataRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.BookingRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.BookingRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.BusDataRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.BusDataRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.CabDataRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.CabDataRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.CarHireDataRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.CarHireDataRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2._E_RickshawDataRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4._E_RickshawDataRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.InCampusBusDataRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.InCampusBusDataRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2.StaffRowChangeEvent">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4.StaffRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.AmbulanceDataTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.AmbulanceDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.BookingTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.BookingTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.BusDataTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.BusDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.CabDataTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.CabDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.CarHireDataTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.CarHireDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.E_RickshawDataTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.E_RickshawDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.InCampusBusDataTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.InCampusBusDataTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.StaffTableAdapter">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.StaffTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.UpdateUpdatedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet2,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.UpdateUpdatedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet4,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Update rows in top-down order.
 </summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.UpdateInsertedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.UpdateInsertedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet4,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Insert rows in top-down order.
 </summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.UpdateDeletedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.UpdateDeletedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet4,System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Delete rows in bottom-up order.
 </summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 	<summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
-</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.UpdateAll(outstation.Vehicle_Recommendation_System_DatabaseDataSet2)">
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.UpdateAll(outstation.Vehicle_Recommendation_System_DatabaseDataSet4)">
 	<summary>
 Update all changes to the dataset.
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.UpdateOrderOption">
 	<summary>
 Update Order Option
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager.SelfReferenceComparer">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager.SelfReferenceComparer">
 	<summary>
 Used to sort self-referenced table's rows
 </summary>
-</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet2TableAdapters.TableAdapterManager">
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet4TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BusDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.CabDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.InCampusBusDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.StaffDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BookingRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BusDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.CabDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.InCampusBusDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.StaffRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BookingRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BusDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.CabDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.InCampusBusDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.StaffRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.AmbulanceDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.BookingTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.BusDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.CabDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.CarHireDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.E_RickshawDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.InCampusBusDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.StaffTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.BookingDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateAll(outstation.Vehicle_Recommendation_System_DatabaseDataSet1)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
@@ -870,6 +706,170 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 </member><member name="T:outstation.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.AmbulanceDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.BookingDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.BusDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.CabDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.CarHireDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3._E_RickshawDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.InCampusBusDataDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.StaffDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.AmbulanceDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.BookingRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.BusDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.CabDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.CarHireDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3._E_RickshawDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.InCampusBusDataRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.StaffRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.AmbulanceDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.BookingRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.BusDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.CabDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.CarHireDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3._E_RickshawDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.InCampusBusDataRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3.StaffRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.AmbulanceDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.BookingTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.BusDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.CabDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.CarHireDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.E_RickshawDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.InCampusBusDataTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.StaffTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.UpdateUpdatedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet3,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.UpdateInsertedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.UpdateDeletedRows(outstation.Vehicle_Recommendation_System_DatabaseDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.UpdateAll(outstation.Vehicle_Recommendation_System_DatabaseDataSet3)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:outstation.Vehicle_Recommendation_System_DatabaseDataSet3TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
 </member>
 </members>
