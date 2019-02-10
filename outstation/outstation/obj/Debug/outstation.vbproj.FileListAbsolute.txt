@@ -1,18 +1,2 @@
+C:\Users\Lenovo\Desktop\buffer\resetting\Vehicle-Recommendation-System-7ee9690be2f4f0d820950b320da71861184c3a0e\outstation\outstation\bin\Debug\outstation.exe.config
 C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\bin\Debug\outstation.exe.config
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\bin\Debug\Vehicle Recommendation System Database.accdb
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\bin\Debug\outstation.exe
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\bin\Debug\outstation.pdb
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\bin\Debug\outstation.xml
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.Cab_info.resources
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.frm_city_bus.resources
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.From_City_Cab.resources
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.Maps.resources
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.Resources.resources
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.city.resources
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.Share.resources
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.To_City_Bus.resources
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.To_City_Cab.resources
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.vbproj.GenerateResource.Cache
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.exe
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.xml
-C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.pdb
