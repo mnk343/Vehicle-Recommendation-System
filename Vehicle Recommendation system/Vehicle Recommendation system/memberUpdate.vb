@@ -119,32 +119,35 @@ Public Class memberUpdate
 
     Private Sub update_Click(sender As Object, e As EventArgs) Handles update.Click
 
+        Dim querry As String = " Update [CabData] Set  [Contact] ='" + CStr(txtContactNo.Text) + "' "
 
+        querry += " , [City] = " + CStr(City.Checked) + " , [Shillong] = " + CStr(shillong.Checked) + " , [Gangtok] = "
+        querry += CStr(gangtok.Checked) + " , [Tawang] = " + CStr(tawang.Checked) + " , [CityTrips] = " + CStr(txtCityTrips.Text)
+        querry += " , [ShillongTrips] = " + CStr(txtShillongTrips.Text) + " , [TawangTrips] = " + CStr(txtTawangTrips.Text) + " , [GangtokTrips] = " + CStr(txtGangtokTrips.Text)
+        querry += " , [Seater] = " + CStr(txtSeater.Text) + " , [VehicleName] = ' " + CStr(txtVehicleName.Text) + " ' "
+        querry += " WHERE [UserName] = '" + usrName.Text + "' ;"
 
+        ' [Password] = '" + txtPassword.Text + "' AND
 
+        MessageBox.Show(querry)
 
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
 
+        Try
+            Dim conn = New OleDbConnection(dbsource)
+            Dim cmd As New OleDbCommand(querry, conn)
+            conn.Open()
+            cmd.ExecuteNonQuery()
+            cmd.Dispose()
+            conn.Close()
 
+            Me.Hide()
+            dashboardStaff.Show()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
     End Sub
+
 End Class
