@@ -55,4 +55,12 @@ Public Class Dashboard
     End Sub
 
 
+
+    Private Sub update_btn_Click(sender As Object, e As EventArgs) Handles update_btn.Click
+
+    End Sub
+
+    Private Sub newbook_Click(sender As Object, e As EventArgs) Handles newbook.Click
+
+    End Sub
 End Class

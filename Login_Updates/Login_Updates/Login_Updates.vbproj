@@ -77,6 +77,12 @@
       <DependentUpon>Dashboard.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UpdateBookings.Designer.vb">
+      <DependentUpon>UpdateBookings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBookings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="updateData.Designer.vb">
       <DependentUpon>updateData.vb</DependentUpon>
     </Compile>
@@ -114,6 +120,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBookings.resx">
+      <DependentUpon>UpdateBookings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="updateData.resx">
       <DependentUpon>updateData.vb</DependentUpon>
