@@ -70,6 +70,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Booking.Designer.vb">
+      <DependentUpon>Booking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Booking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking1.Designer.vb">
+      <DependentUpon>Booking1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Booking1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CabMap.Designer.vb">
+      <DependentUpon>CabMap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CabMap.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="cab_info.Designer.vb">
       <DependentUpon>cab_info.vb</DependentUpon>
     </Compile>
@@ -171,6 +189,12 @@
     <Compile Include="rickshaw_map.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Share.Designer.vb">
+      <DependentUpon>Share.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Share.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="toCampus.Designer.vb">
       <DependentUpon>toCampus.vb</DependentUpon>
     </Compile>
@@ -184,6 +208,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Booking.resx">
+      <DependentUpon>Booking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking1.resx">
+      <DependentUpon>Booking1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CabMap.resx">
+      <DependentUpon>CabMap.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cab_info.resx">
       <DependentUpon>cab_info.vb</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="rickshaw_map.resx">
       <DependentUpon>rickshaw_map.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share.resx">
+      <DependentUpon>Share.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="toCampus.resx">
       <DependentUpon>toCampus.vb</DependentUpon>

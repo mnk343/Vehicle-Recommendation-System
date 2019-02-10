@@ -1,7 +1,7 @@
 ﻿Imports System.Text
 Public Class Maps
 
-    Private Sub map_browser_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles map_browser.DocumentCompleted
+    Private Sub map_browser_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs)
 
     End Sub
 
@@ -132,4 +132,14 @@ Public Class Maps
 
     End Sub
 
+    Private Sub Booking_Click(sender As Object, e As EventArgs) Handles Booking.Click
+        Booking1.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub Sharebtn_Click(sender As Object, e As EventArgs) Handles Sharebtn.Click
+        Share.Show()
+        Me.Hide()
+    End Sub
 End Class
