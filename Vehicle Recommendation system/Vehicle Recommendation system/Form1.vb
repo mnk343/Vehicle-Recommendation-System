@@ -19,4 +19,11 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub inCampus_Click(sender As Object, e As EventArgs) Handles inCampus.Click
+
+        Me.Hide()
+        toCampus.Show()
+
+    End Sub
 End Class

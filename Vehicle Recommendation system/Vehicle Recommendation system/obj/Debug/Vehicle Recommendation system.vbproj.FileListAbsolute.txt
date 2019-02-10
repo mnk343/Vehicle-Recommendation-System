@@ -80,3 +80,5 @@ C:\Users\Admin\Desktop\try\Vehicle-Recommendation-System\Vehicle Recommendation 
 C:\Users\Admin\Desktop\try\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.outstation1.resources
 C:\Users\Admin\Desktop\try\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.passwordChange.resources
 C:\Users\Admin\Desktop\try\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.vbproj.GenerateResource.Cache
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.rickshaw_map.resources
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.toCampus.resources

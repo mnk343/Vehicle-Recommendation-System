@@ -159,6 +159,18 @@
     <Compile Include="passwordChange.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="rickshaw_map.Designer.vb">
+      <DependentUpon>rickshaw_map.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rickshaw_map.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="toCampus.Designer.vb">
+      <DependentUpon>toCampus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="toCampus.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vehicle_Recommendation_System_DatabaseDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -207,6 +219,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="passwordChange.resx">
       <DependentUpon>passwordChange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rickshaw_map.resx">
+      <DependentUpon>rickshaw_map.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="toCampus.resx">
+      <DependentUpon>toCampus.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
