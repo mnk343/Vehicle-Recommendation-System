@@ -15,13 +15,13 @@
 
     Private Sub Share_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'source = Cab_info.src_cb.Text
-        'destination = Cab_info.des_cb.Text
-        'numofpassengers = CInt(Cab_info.no_pass.Text)
-        'hours = CInt(Cab_info.hour_tb.Text)
-        'minutes = CInt(Cab_info.min_tb.Text)
-        'day = Cab_info.day_cb.Text
-        Dim darray() As String
+        source = Cab_info.src_cb.Text
+        destination = Cab_info.des_cb.Text
+        numofpassengers = CInt(Cab_info.no_pass.Text)
+        hours = CInt(Cab_info.hour_tb.Text)
+        minutes = CInt(Cab_info.min_tb.Text)
+        day = Cab_info.day_cb.Text
+        'Dim darray() As String
 
         Dim dat As String
         If day = "Today" Then
@@ -37,16 +37,16 @@
             dat = DateAndTime.Now.AddDays(2).ToShortDateString
 
         End If
-        source = "IIT Guwahati"
-        destination = "Airport"
-        hours = 10
-        minutes = 45
-        dat = "10-02-2019"
+        'source = "IIT Guwahati"
+        'destination = "Airport"
+        'hours = 10
+        'minutes = 45
+        'dat = "10-02-2019"
 
 
-        numofpassengers = 1
-        darray = dat.Split("-")
-        date_lbl.Text = darray(2)
+        'numofpassengers = 1
+        'darray = dat.Split("-")
+        'date_lbl.Text = darray(2)
 
 
         'Access.ExecQuery(";")
