@@ -26,6 +26,8 @@ Partial Class Maps
         Me.Sharebtn = New System.Windows.Forms.Button()
         Me.Distance_lbl = New System.Windows.Forms.Label()
         Me.map_browser = New System.Windows.Forms.WebBrowser()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.showDist = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Booking
@@ -52,12 +54,12 @@ Partial Class Maps
         '
         Me.Distance_lbl.AutoSize = True
         Me.Distance_lbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Distance_lbl.Location = New System.Drawing.Point(737, 75)
+        Me.Distance_lbl.Location = New System.Drawing.Point(677, 68)
         Me.Distance_lbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Distance_lbl.Name = "Distance_lbl"
-        Me.Distance_lbl.Size = New System.Drawing.Size(51, 17)
+        Me.Distance_lbl.Size = New System.Drawing.Size(202, 17)
         Me.Distance_lbl.TabIndex = 4
-        Me.Distance_lbl.Text = "Label1"
+        Me.Distance_lbl.Text = "Total Distance to be covered : "
         '
         'map_browser
         '
@@ -70,11 +72,31 @@ Partial Class Maps
         Me.map_browser.Size = New System.Drawing.Size(646, 472)
         Me.map_browser.TabIndex = 7
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Label1"
+        '
+        'showDist
+        '
+        Me.showDist.AutoSize = True
+        Me.showDist.Location = New System.Drawing.Point(740, 104)
+        Me.showDist.Name = "showDist"
+        Me.showDist.Size = New System.Drawing.Size(39, 13)
+        Me.showDist.TabIndex = 9
+        Me.showDist.Text = "Label2"
+        '
         'Maps
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(899, 462)
+        Me.Controls.Add(Me.showDist)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.map_browser)
         Me.Controls.Add(Me.Booking)
         Me.Controls.Add(Me.Sharebtn)
@@ -89,4 +111,6 @@ Partial Class Maps
     Friend WithEvents Sharebtn As System.Windows.Forms.Button
     Friend WithEvents Distance_lbl As System.Windows.Forms.Label
     Friend WithEvents map_browser As System.Windows.Forms.WebBrowser
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents showDist As System.Windows.Forms.Label
 End Class

@@ -32,14 +32,14 @@ Partial Class CabMap
         Me.WebBrowser1.Margin = New System.Windows.Forms.Padding(2)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(15, 16)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(361, 266)
+        Me.WebBrowser1.Size = New System.Drawing.Size(692, 266)
         Me.WebBrowser1.TabIndex = 2
         '
         'CabMap
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(361, 266)
+        Me.ClientSize = New System.Drawing.Size(692, 266)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Name = "CabMap"
         Me.Text = "CabMap"

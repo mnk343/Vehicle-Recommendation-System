@@ -42,7 +42,7 @@ Partial Class Booking1
         'NewBooking_FullData_dgv
         '
         Me.NewBooking_FullData_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.NewBooking_FullData_dgv.Location = New System.Drawing.Point(421, 117)
+        Me.NewBooking_FullData_dgv.Location = New System.Drawing.Point(507, 119)
         Me.NewBooking_FullData_dgv.Margin = New System.Windows.Forms.Padding(2)
         Me.NewBooking_FullData_dgv.Name = "NewBooking_FullData_dgv"
         Me.NewBooking_FullData_dgv.RowTemplate.Height = 24
@@ -52,11 +52,12 @@ Partial Class Booking1
         'NewBooking_dgv
         '
         Me.NewBooking_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.NewBooking_dgv.Location = New System.Drawing.Point(-59, 116)
+        Me.NewBooking_dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.NewBooking_dgv.Location = New System.Drawing.Point(11, 119)
         Me.NewBooking_dgv.Margin = New System.Windows.Forms.Padding(2)
         Me.NewBooking_dgv.Name = "NewBooking_dgv"
         Me.NewBooking_dgv.RowTemplate.Height = 24
-        Me.NewBooking_dgv.Size = New System.Drawing.Size(352, 186)
+        Me.NewBooking_dgv.Size = New System.Drawing.Size(492, 186)
         Me.NewBooking_dgv.TabIndex = 6
         '
         'Booking1

@@ -10,7 +10,7 @@ Public Class Booking1
     Private Access As New DBControl
 
     Private Sub Booking1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+11:
         Dim hours As Integer = CInt(cab_info.hour_tb.Text)
         'Dim hours As Integer = 15
         Dim dat As String
@@ -41,14 +41,14 @@ Public Class Booking1
         NewBooking_dgv.DataSource = Access.DBDT
 
 
-        Access.ExecQuery("SELECT CabData.Longitude, CabData.Latitude, CabData.UserName FROM CabData WHERE CabData.City = TRUE AND CabData.CabId NOT IN ( SELECT Booking.CabId FROM Booking WHERE " + CStr(hours) + " BETWEEN Booking.Hour - 1 AND Booking.Hour + 1 AND Format(Booking.Day, 'Short Date') = '" + dat + "') ;")
+        Access.ExecQuery("SELECT CabData.Longitude, CabData.Latitude, CabData.UserName FROM CabData WHERE CabData.City = TRUE  AND CabData.Seater >= " + CStr(numofpassengers) + "   AND CabData.CabId NOT IN ( SELECT Booking.CabId FROM Booking WHERE " + CStr(hours) + " BETWEEN Booking.Hour - 1 AND Booking.Hour + 1 AND Format(Booking.Day, 'Short Date') = '" + dat + "') ;")
         If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
 
         NewBooking_FullData_dgv.DataSource = Access.DBDT
         NewBooking_FullData_dgv.Hide()
     End Sub
 
-    Private Sub NewBooking_dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles NewBooking_dgv.CellContentClick
+    Private Sub NewBooking_dgv_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles NewBooking_dgv.CellDoubleClick
         Dim row_index As Integer
         Dim query As New StringBuilder
 

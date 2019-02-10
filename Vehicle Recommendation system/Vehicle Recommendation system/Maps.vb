@@ -1,9 +1,27 @@
 ﻿Imports System.Text
 Public Class Maps
 
+    Dim fare As Decimal
+
     Private Sub map_browser_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs)
 
     End Sub
+
+    Private Sub CalculateFare(dist As Decimal)
+
+        fare = 50
+        If dist > 2 Then
+            If dist > 10 Then
+                fare += 8 * 20
+                fare += (dist - 10) * 15
+
+            Else
+                fare += (dist - 2) * 20
+            End If
+
+        End If
+    End Sub
+
 
     Private Sub Maps_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -19,40 +37,10 @@ Public Class Maps
             Dim air As String = "Airport"
             Dim pb As String = "Pan Bazar"
             Dim rail As String = "Railway"
+            Dim distance As Decimal
 
             src = cab_info.src_cb.Text
             des = cab_info.des_cb.Text
-
-            query.Append("https://bing.com/maps/default.aspx?rtp=adr.")
-
-            If String.Compare(des, iitg) = 0 Then
-                des = "IIT%20Guwahati"
-            End If
-
-            If String.Compare(des, pb) = 0 Then
-                des = "Pan%20Bazzar"
-            End If
-
-            If String.Compare(des, rail) = 0 Then
-                des = "Guwahati%20Railway%20Station"
-            End If
-
-
-            If String.Compare(src, iitg) = 0 Then
-                src = "IIT%20Guwahati"
-            End If
-
-            If String.Compare(src, pb) = 0 Then
-                src = "Pan%20Bazzar"
-            End If
-
-
-
-            If String.Compare(src, rail) = 0 Then
-                src = "Guwahati%20Railway%20Station"
-            End If
-
-            Dim distance As Decimal
 
             If String.Compare(src, iitg) = 0 Or String.Compare(des, iitg) = 0 Then
                 If String.Compare(src, kam) = 0 Or String.Compare(des, kam) = 0 Then
@@ -120,6 +108,36 @@ Public Class Maps
                 End If
 
             End If
+
+            showDist.Text = CStr(distance)
+
+            query.Append("https://bing.com/maps/default.aspx?rtp=adr.")
+
+            If String.Compare(des, iitg) = 0 Then
+                des = "IIT%20Guwahati"
+            End If
+
+            If String.Compare(des, pb) = 0 Then
+                des = "Pan%20Bazzar"
+            End If
+
+            If String.Compare(des, rail) = 0 Then
+                des = "Guwahati%20Railway%20Station"
+            End If
+
+
+            If String.Compare(src, iitg) = 0 Then
+                src = "IIT%20Guwahati"
+            End If
+
+            If String.Compare(src, pb) = 0 Then
+                src = "Pan%20Bazzar"
+            End If
+
+            If String.Compare(src, rail) = 0 Then
+                src = "Guwahati%20Railway%20Station"
+            End If
+
             query.Append(src)
             query.Append("~adr.")
             query.Append(des)
