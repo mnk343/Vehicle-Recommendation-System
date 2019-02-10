@@ -50,8 +50,8 @@
 
 
         'Access.ExecQuery(";")
-        Access.ExecQuery("SELECT Booking.BookingID, Booking.CabId, Booking.Driver, Booking.Occupancy, CabData.Seater, CabData.Seater - Booking.Occupancy AS SeatsLeft, Booking.Source, Booking.Destination, Booking.Hour, Booking.Minute, Booking.Date,  CabData.VehicleName FROM CabData RIGHT JOIN Booking ON CabData.CabId = Booking.CabId" + " WHERE Source = '" + source + "' AND Destination = '" + destination + "' AND Hour >= " + CStr(hours) + " AND NOT ( Hour = " + CStr(hours) + " AND Minute <" + CStr(minutes) + " )" + "AND (CabData.Seater - Booking.Occupancy) >= " + CStr(numofpassengers) + " ;")
-        ' 
+        Access.ExecQuery("SELECT Booking.BookingID, Booking.CabId, Booking.Driver, Booking.Occupancy, CabData.Seater, CabData.Seater - Booking.Occupancy AS SeatsLeft, Booking.Source, Booking.Destination, Booking.Hour, Booking.Minute, Booking.Day,  CabData.VehicleName FROM CabData RIGHT JOIN Booking ON CabData.CabId = Booking.CabId" + " WHERE Source = '" + source + "' AND Destination = '" + destination + "' AND Hour >= " + CStr(hours) + " AND NOT ( Hour = " + CStr(hours) + " AND Minute <" + CStr(minutes) + " )" + "AND (CabData.Seater - Booking.Occupancy) >= " + CStr(numofpassengers) + "AND Format(Booking.Day, 'Short Date') = '" + dat + "' ;")
+        '"AND Booking.Da = " + CStr(CInt(darray(0))) + " AND Booking.Mon = " + CStr(CInt(darray(1))) + " AND Booking.Yea = " + CStr(CInt(darray(2))) 
 
         If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
 
