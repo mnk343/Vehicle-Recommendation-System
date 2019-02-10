@@ -21,7 +21,6 @@ C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\
 C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\bin\Debug\Login_Updates.exe
 C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\bin\Debug\Login_Updates.pdb
 C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\bin\Debug\Login_Updates.xml
-C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\bin\Debug\Vehicle-Recommendation-System-Database.accdb
 C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.ChangePassword.resources
 C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.Dashboard.resources
 C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.updateData.resources

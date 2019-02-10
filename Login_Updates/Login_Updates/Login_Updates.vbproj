@@ -110,11 +110,6 @@
     <Compile Include="Update_Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="_Vehicle_Recommendation_System_DatabaseDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
@@ -147,22 +142,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="_Vehicle_Recommendation_System_DatabaseDataSet.xsc">
-      <DependentUpon>_Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_Vehicle_Recommendation_System_DatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_Vehicle_Recommendation_System_DatabaseDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_Vehicle_Recommendation_System_DatabaseDataSet.xss">
-      <DependentUpon>_Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Vehicle-Recommendation-System-Database.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
