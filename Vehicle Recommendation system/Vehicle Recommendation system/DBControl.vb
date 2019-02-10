@@ -3,7 +3,7 @@
 Public Class DBControl
     ' CREATE YOUR DB CONNECTION
     Private DBCon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" & _
-                                          "Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'")
+                                          "Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Admin\Desktop\hoho\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'")
 
     ' PREPARE DB COMMAND
     Private DBCmd As OleDbCommand
