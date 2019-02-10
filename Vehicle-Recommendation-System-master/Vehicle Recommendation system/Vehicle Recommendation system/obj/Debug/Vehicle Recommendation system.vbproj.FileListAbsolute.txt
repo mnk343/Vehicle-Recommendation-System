@@ -58,3 +58,25 @@ E:\COA\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicl
 E:\COA\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.outstation1.resources
 E:\COA\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.passwordChange.resources
 E:\COA\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.vbproj.GenerateResource.Cache
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation system.exe.config
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.exe
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.xml
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.pdb
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation System Database.accdb
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation system.exe
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation system.pdb
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation system.xml
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.cab_info.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.dashboardStaff.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Form1.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.loginForm.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Maps.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.memberAdd.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.memberDelete.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.memberUpdate.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Resources.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.outBus.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.OutCampus1.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.outstation1.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.passwordChange.resources
+F:\Vehicle-Recommendation-System-master\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.vbproj.GenerateResource.Cache
