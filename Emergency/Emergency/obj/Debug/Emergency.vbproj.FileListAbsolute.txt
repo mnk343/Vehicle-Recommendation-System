@@ -1,0 +1,10 @@
+C:\Users\Dell\AppData\Local\Temporary Projects\Emergency\bin\Debug\Emergency.exe.config
+C:\Users\Dell\AppData\Local\Temporary Projects\Emergency\bin\Debug\Emergency.exe
+C:\Users\Dell\AppData\Local\Temporary Projects\Emergency\bin\Debug\Emergency.pdb
+C:\Users\Dell\AppData\Local\Temporary Projects\Emergency\bin\Debug\Emergency.xml
+C:\Users\Dell\AppData\Local\Temporary Projects\Emergency\obj\Debug\Emergency.Form1.resources
+C:\Users\Dell\AppData\Local\Temporary Projects\Emergency\obj\Debug\Emergency.Resources.resources
+C:\Users\Dell\AppData\Local\Temporary Projects\Emergency\obj\Debug\Emergency.vbproj.GenerateResource.Cache
+C:\Users\Dell\AppData\Local\Temporary Projects\Emergency\obj\Debug\Emergency.exe
+C:\Users\Dell\AppData\Local\Temporary Projects\Emergency\obj\Debug\Emergency.xml
+C:\Users\Dell\AppData\Local\Temporary Projects\Emergency\obj\Debug\Emergency.pdb
