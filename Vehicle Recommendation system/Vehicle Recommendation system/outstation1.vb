@@ -9,46 +9,18 @@
     End Function
 
 
-    Private Sub outstation1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dgvData.Visible = False
-        info.Visible = True
+    Private Sub SearchMember(Name As String)
+        ' ADD PARAMETERS & RUN QUERY
+        Access.AddParam("@user", "%" & Name & "%")
+        Access.ExecQuery("SELECT CabId, UserName, Contact " & _
+                         "FROM CabData " & _
+                         "WHERE UserName LIKE @user AND Status = TRUE")
 
-        check = 1
-        NoPassengers = 0
-
-        ' RUN QUERY
-        Access.ExecQuery("SELECT CabId, UserName, Contact FROM CabData WHERE Status = TRUE;")
+        ' REPORT & ABORT ON ERRORS
         If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
 
-        ' FILL DATAGRID
+        ' FILL DATAGRIDVIEW
         dgvData.DataSource = Access.DBDT
-
-
-
-
-
-        dgvData.BorderStyle = BorderStyle.None
-        dgvData.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
-        dgvData.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        dgvData.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
-        dgvData.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
-        dgvData.BackgroundColor = Color.White
-
-        dgvData.EnableHeadersVisualStyles = False
-        dgvData.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        dgvData.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72)
-        dgvData.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
-        dgvData.RowTemplate.Height = 22
-        dgvData.DefaultCellStyle.Padding.Bottom.Equals(4)
-        dgvData.DefaultCellStyle.Padding.Bottom.Equals(4)
-        'dgvData.AutoSizeColumnsMode
-
-
-
-
-
-
-
     End Sub
 
     Private Sub shilong_btn_Click(sender As Object, e As EventArgs) Handles shilong_btn.Click
@@ -64,6 +36,7 @@
 
         ' FILL DATAGRID
         dgvData.DataSource = Access.DBDT
+
     End Sub
 
     Private Sub tawang_btn_Click(sender As Object, e As EventArgs) Handles tawang_btn.Click
@@ -95,25 +68,43 @@
 
         ' FILL DATAGRID
         dgvData.DataSource = Access.DBDT
+
     End Sub
 
+    Private Sub outstation1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dgvData.Visible = False
+        info.Visible = True
 
-    Private Sub SearchMember(Name As String)
-        ' ADD PARAMETERS & RUN QUERY
-        Access.AddParam("@user", "%" & Name & "%")
-        Access.ExecQuery("SELECT CabId, UserName, Contact " & _
-                         "FROM CabData " & _
-                         "WHERE UserName LIKE @user AND Status = TRUE")
+        check = 1
+        NoPassengers = 0
 
-        ' REPORT & ABORT ON ERRORS
+        ' RUN QUERY
+        Access.ExecQuery("SELECT CabId, UserName, Contact FROM CabData WHERE Status = TRUE;")
         If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
 
-        ' FILL DATAGRIDVIEW
+        ' FILL DATAGRID
         dgvData.DataSource = Access.DBDT
+
+        dgvData.BorderStyle = BorderStyle.None
+        dgvData.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
+        dgvData.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        dgvData.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
+        dgvData.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
+        dgvData.BackgroundColor = Color.White
+
+        dgvData.EnableHeadersVisualStyles = False
+        dgvData.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        dgvData.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72)
+        dgvData.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+        dgvData.RowTemplate.Height = 22
+        dgvData.DefaultCellStyle.Padding.Bottom.Equals(4)
+        dgvData.DefaultCellStyle.Padding.Bottom.Equals(4)
+        'dgvData.AutoSizeColumnsMode
+
+
     End Sub
 
     Private Sub clear_Click(sender As Object, e As EventArgs) Handles clear.Click
-
         passengers.Text = ""
         NoPassengers = 0
         submit_Click(sender, e)
@@ -139,17 +130,15 @@
         ElseIf check = 3 Then
             gang_btn_Click(sender, e)
         End If
-
     End Sub
 
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         Me.Close()
         Form1.Show()
-
     End Sub
 
-    Private Sub passengers_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles passengers.KeyPress
 
+    Private Sub passengers_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
 
         '97 - 122 = Ascii codes for simple letters
         '65 - 90  = Ascii codes for capital letters
@@ -163,5 +152,6 @@
 
     End Sub
 
-
 End Class
+
+
