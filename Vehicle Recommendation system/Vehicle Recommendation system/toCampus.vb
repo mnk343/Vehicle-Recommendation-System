@@ -18,7 +18,7 @@ Public Class toCampus
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        Label5.Hide()
         Dim day As String = DateAndTime.Now.DayOfWeek
         Dim hour As Integer = DateAndTime.Now.Hour
         Dim minute As Integer = DateAndTime.Now.Minute
@@ -26,21 +26,50 @@ Public Class toCampus
         Dim src As String = s_cb.Text
         Dim des As String = de_cb.Text
 
-        'hour = 20
-        'minute = 33
-        ' RUN QUERY
-        Access.AddParam("@src", "%" & src & "%")
-        Access.AddParam("@des", "%" & des & "%")
-        Access.ExecQuery("SELECT Source, Destination,Time FROM InCampusBusData WHERE Source LIKE @src AND Destination LIKE @des AND Hour >= " + CStr(hour) + " AND NOT ( Hour = " + CStr(hour) + " AND Minute <" + CStr(minute) + ");")
-        If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
+        If String.Compare(src, des) = 0 Then
+            MessageBox.Show("source and destination must be diffrent")
+        ElseIf String.Compare(src, "") = 0 Then
+            MessageBox.Show("Select Source")
 
-        ' FILL DATAGRID
-        bus_dgv.DataSource = Access.DBDT
+        ElseIf String.Compare("", des) = 0 Then
+            MessageBox.Show("Select Destination")
+        Else
+            Access.AddParam("@src", "%" & src & "%")
+            Access.AddParam("@des", "%" & des & "%")
+            Access.ExecQuery("SELECT Source, Destination,Time FROM InCampusBusData WHERE Source LIKE @src AND Destination LIKE @des AND Hour >= " + CStr(hour) + " AND NOT ( Hour = " + CStr(hour) + " AND Minute <" + CStr(minute) + ");")
+            If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
 
-        bus_dgv.Rows(0).DefaultCellStyle.BackColor = Color.Red
-        bus_dgv.Rows(0).DefaultCellStyle.ForeColor = Color.White
-        bus_dgv.ClearSelection()
+            ' FILL DATAGRID
+            bus_dgv.DataSource = Access.DBDT
 
+
+
+            bus_dgv.BorderStyle = BorderStyle.None
+            bus_dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
+            bus_dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+            bus_dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
+            bus_dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
+            bus_dgv.BackgroundColor = Color.White
+
+            bus_dgv.EnableHeadersVisualStyles = False
+            bus_dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+            bus_dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72)
+            bus_dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+            bus_dgv.RowTemplate.Height = 22
+            bus_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
+            bus_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
+
+            If bus_dgv.RowCount = 1 Then
+                bus_dgv.Hide()
+                Label5.Show()
+            End If
+
+
+            bus_dgv.Rows(0).DefaultCellStyle.BackColor = Color.Red
+            bus_dgv.Rows(0).DefaultCellStyle.ForeColor = Color.White
+            bus_dgv.ClearSelection()
+
+        End If
     End Sub
 
 
@@ -61,7 +90,7 @@ Public Class toCampus
 
         Panel2.Show()
         Panel3.Hide()
-
+        Label5.Hide()
     End Sub
 
     Private Sub erickshaw_Click(sender As Object, e As EventArgs) Handles erickshaw.Click
@@ -135,28 +164,30 @@ Public Class toCampus
         If row_of_driver >= 0 And row_of_driver < e_dgv.RowCount Then
             Dim sug As String = "Closest Driver from you is " + driver + " at distance " + e_dgv.Rows(row_of_driver).Cells(2).Value + " meters"
             Label2.Text = sug
+
+
+            e_dgv.BorderStyle = BorderStyle.None
+            e_dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
+            e_dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+            e_dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
+            e_dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
+            e_dgv.BackgroundColor = Color.White
+
+            e_dgv.EnableHeadersVisualStyles = False
+            e_dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+            e_dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72)
+            e_dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+            e_dgv.RowTemplate.Height = 22
+            e_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
+            e_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
+
+
+
+
             e_dgv.Rows(row_of_driver).DefaultCellStyle.BackColor = Color.Red
             e_dgv.Rows(row_of_driver).DefaultCellStyle.ForeColor = Color.White
         End If
 
-    End Sub
-
-    Private Sub SearchMember(Name As String)
-        ' ADD PARAMETERS & RUN QUERY
-        Access.AddParam("@user", "%" & Name & "%")
-        Access.ExecQuery("SELECT UserName,Contact " & _
-                         "FROM [E-RickshawData] " & _
-                         "WHERE username LIKE @user AND Status=TRUE ")
-
-        ' REPORT & ABORT ON ERRORS
-        If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
-
-        ' FILL DATAGRIDVIEW
-        e_dgv.DataSource = Access.DBDT
-    End Sub
-
-    Private Sub cmdFind_Click(sender As System.Object, e As System.EventArgs) Handles cmdFind.Click
-        SearchMember(txtFind.Text)
     End Sub
 
 

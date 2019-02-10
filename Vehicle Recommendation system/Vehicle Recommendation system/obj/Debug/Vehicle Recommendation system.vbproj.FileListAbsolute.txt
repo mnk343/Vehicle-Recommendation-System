@@ -107,3 +107,4 @@ C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommend
 C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.toCampus.resources
 C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.vbproj.GenerateResource.Cache
 C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.emergencyService.resources
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.emergencyService.resources
