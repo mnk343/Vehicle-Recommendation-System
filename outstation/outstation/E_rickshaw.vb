@@ -112,7 +112,7 @@ Public Class E_rickshaw
         Dim sug As String = "Closest Driver from you is " + driver + " at distance " + e_dgv.Rows(row_of_driver).Cells(2).Value + " meters"
        
 
-        Label1.Text = sug
+        Label2.Text = sug
         e_dgv.Rows(row_of_driver).DefaultCellStyle.BackColor = Color.Red
         e_dgv.Rows(row_of_driver).DefaultCellStyle.ForeColor = Color.White
 
@@ -127,17 +127,17 @@ Public Class E_rickshaw
 
             Dim lat As String = row.Cells(0).Value.ToString
             Dim longi As String = row.Cells(1).Value.ToString
-            'lbl.Text = row.Cells(2).Value.ToString
 
-            ' query.Append("https://bing.com/maps/default.aspx?rtp=adr.")
-            query.Append("https://bing.com/maps/default.aspx?sp=point.")
+            'rtp=pos.42.2_-122.3~pos.55.2_-127.0
+            query.Append("https://bing.com/maps/default.aspx?rtp=pos.26.192824_91.695249~pos.")
+            'query.Append("https://bing.com/maps/default.aspx?sp=point.")
             query.Append(lat)
             query.Append("_")
             query.Append(longi)
-            query.Append("_")
-            query.Append(row.Cells(2).Value.ToString)
+            'query.Append("_")
+            'query.Append(row.Cells(2).Value.ToString)
             query.Append("&lvl=15")
-
+            Label1.Text = query.ToString
 
             
             rickshaw_map.Show()

@@ -27,6 +27,7 @@ Partial Class E_rickshaw
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmdFind = New System.Windows.Forms.Button()
         Me.txtFind = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.e_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.e_fullData_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,11 +57,12 @@ Partial Class E_rickshaw
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(78, 93)
+        Me.Label1.Location = New System.Drawing.Point(43, 480)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(51, 17)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Label1"
+        Me.Label1.Visible = False
         '
         'cmdFind
         '
@@ -78,11 +80,21 @@ Partial Class E_rickshaw
         Me.txtFind.Size = New System.Drawing.Size(208, 22)
         Me.txtFind.TabIndex = 5
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(212, 93)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(51, 17)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Label2"
+        '
         'E_rickshaw
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1010, 502)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtFind)
         Me.Controls.Add(Me.cmdFind)
         Me.Controls.Add(Me.Label1)
@@ -101,4 +113,5 @@ Partial Class E_rickshaw
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents cmdFind As System.Windows.Forms.Button
     Friend WithEvents txtFind As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class
