@@ -82,3 +82,28 @@ C:\Users\Admin\Desktop\try\Vehicle-Recommendation-System\Vehicle Recommendation 
 C:\Users\Admin\Desktop\try\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.vbproj.GenerateResource.Cache
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.rickshaw_map.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.toCampus.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation system.exe.config
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.exe
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.xml
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.pdb
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation System Database.accdb
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation system.exe
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation system.pdb
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation system.xml
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.cab_info.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.dashboardStaff.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Form1.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.loginForm.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Maps.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.memberAdd.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.memberDelete.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.memberUpdate.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Resources.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.outBus.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.OutCampus1.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.outstation1.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.passwordChange.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.rickshaw_map.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.toCampus.resources
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.vbproj.GenerateResource.Cache
+C:\Users\mayan\Desktop\emergency\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.emergencyService.resources

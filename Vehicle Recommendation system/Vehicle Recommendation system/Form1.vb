@@ -26,4 +26,10 @@
         toCampus.Show()
 
     End Sub
+
+    Private Sub emergency_Click(sender As Object, e As EventArgs) Handles emergency.Click
+        emergencyService.show()
+        Me.Hide()
+
+    End Sub
 End Class

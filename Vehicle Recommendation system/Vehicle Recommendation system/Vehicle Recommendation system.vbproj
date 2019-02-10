@@ -83,6 +83,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBControl.vb" />
+    <Compile Include="emergencyService.Designer.vb">
+      <DependentUpon>emergencyService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="emergencyService.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dashboardStaff.resx">
       <DependentUpon>dashboardStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emergencyService.resx">
+      <DependentUpon>emergencyService.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
