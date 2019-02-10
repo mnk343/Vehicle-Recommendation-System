@@ -1,5 +1,4 @@
 ﻿Imports System.Net.Mail
-Imports System.Data.SqlClient
 Public Class Form1
 
     Private Sub Send_Click(sender As Object, e As EventArgs) Handles Send.Click
@@ -17,8 +16,8 @@ Public Class Form1
             txtto.Text = "avira170101014@iitg.ac.in"
         ElseIf choose.Text = "Police" Then
             txtto.Text = "arany170101011@iitg.ac.in"
-        Else
-            MessageBox.Show("Choose Atleast 1 from the above", "Error")
+            'Else
+            ' MessageBox.Show("Choose Atleast 1 from the above", "Error")
         End If
         Try
             Dim Smtp_Server As New SmtpClient
@@ -29,9 +28,9 @@ Public Class Form1
             Smtp_Server.EnableSsl = True
             Smtp_Server.Host = "smtp.gmail.com"
             email = New MailMessage
-            email.From = New MailAddress(txtfrom.Text)
-            email.To.Add(txtto.Text)
-            email.Subject = txtsub.Text
+            email.From = New MailAddress("softwarelab25@gmail.com")
+            email.To.Add("arany170101011@iitg.ac.in")
+            email.Subject = "YO,IT's Working!"
             email.IsBodyHtml = True
             email.Body = txtaddress.Text
             Smtp_Server.Send(email)
