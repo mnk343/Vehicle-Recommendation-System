@@ -70,10 +70,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookingCab.Designer.vb">
+      <DependentUpon>BookingCab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BookingCab.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Cab_info.Designer.vb">
       <DependentUpon>Cab_info.vb</DependentUpon>
     </Compile>
     <Compile Include="Cab_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cab_Map.Designer.vb">
+      <DependentUpon>Cab_Map.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cab_Map.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBControl.vb" />
@@ -159,8 +171,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BookingCab.resx">
+      <DependentUpon>BookingCab.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cab_info.resx">
       <DependentUpon>Cab_info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cab_Map.resx">
+      <DependentUpon>Cab_Map.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_city_bus.resx">
       <DependentUpon>frm_city_bus.vb</DependentUpon>

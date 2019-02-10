@@ -17,3 +17,5 @@ C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstati
 C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.exe
 C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.xml
 C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.pdb
+C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.BookingCab.resources
+C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\outstation\outstation\obj\Debug\outstation.Cab_Map.resources

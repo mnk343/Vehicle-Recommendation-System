@@ -24,7 +24,7 @@ Partial Class Maps
     Private Sub InitializeComponent()
         Me.map_browser = New System.Windows.Forms.WebBrowser()
         Me.Distance_lbl = New System.Windows.Forms.Label()
-        Me.Share = New System.Windows.Forms.Button()
+        Me.Sharebtn = New System.Windows.Forms.Button()
         Me.Booking = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -48,14 +48,14 @@ Partial Class Maps
         Me.Distance_lbl.TabIndex = 1
         Me.Distance_lbl.Text = "Label1"
         '
-        'Share
+        'Sharebtn
         '
-        Me.Share.Location = New System.Drawing.Point(1082, 215)
-        Me.Share.Name = "Share"
-        Me.Share.Size = New System.Drawing.Size(126, 69)
-        Me.Share.TabIndex = 2
-        Me.Share.Text = "Share "
-        Me.Share.UseVisualStyleBackColor = True
+        Me.Sharebtn.Location = New System.Drawing.Point(1082, 215)
+        Me.Sharebtn.Name = "Sharebtn"
+        Me.Sharebtn.Size = New System.Drawing.Size(126, 69)
+        Me.Sharebtn.TabIndex = 2
+        Me.Sharebtn.Text = "Share "
+        Me.Sharebtn.UseVisualStyleBackColor = True
         '
         'Booking
         '
@@ -72,7 +72,7 @@ Partial Class Maps
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1268, 581)
         Me.Controls.Add(Me.Booking)
-        Me.Controls.Add(Me.Share)
+        Me.Controls.Add(Me.Sharebtn)
         Me.Controls.Add(Me.Distance_lbl)
         Me.Controls.Add(Me.map_browser)
         Me.Name = "Maps"
@@ -83,6 +83,6 @@ Partial Class Maps
     End Sub
     Friend WithEvents map_browser As System.Windows.Forms.WebBrowser
     Friend WithEvents Distance_lbl As System.Windows.Forms.Label
-    Friend WithEvents Share As System.Windows.Forms.Button
+    Friend WithEvents Sharebtn As System.Windows.Forms.Button
     Friend WithEvents Booking As System.Windows.Forms.Button
 End Class

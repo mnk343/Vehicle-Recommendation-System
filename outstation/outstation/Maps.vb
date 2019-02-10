@@ -169,7 +169,11 @@ Public Class Maps
 
     End Sub
 
-    Private Sub Share_Click(sender As Object, e As EventArgs) Handles Share.Click
+    Private Sub Share_Click(sender As Object, e As EventArgs) Handles Sharebtn.Click
+        Share.Show()
+    End Sub
 
+    Private Sub Booking_Click(sender As Object, e As EventArgs) Handles Booking.Click
+        BookingCab.Show()
     End Sub
 End Class
