@@ -77,11 +77,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBControl.vb" />
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
+    <Compile Include="Share.Designer.vb">
+      <DependentUpon>Share.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Share.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_city_bus.Designer.vb">
@@ -138,13 +137,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Vehicle_Recommendation_System_DatabaseDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Cab_info.resx">
       <DependentUpon>Cab_info.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_city_bus.resx">
       <DependentUpon>frm_city_bus.vb</DependentUpon>
@@ -163,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="city.resx">
       <DependentUpon>city.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Share.resx">
+      <DependentUpon>Share.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="To_City_Bus.resx">
       <DependentUpon>To_City_Bus.vb</DependentUpon>
@@ -192,6 +196,17 @@
     </None>
     <None Include="Vehicle_Recommendation_System_DatabaseDataSet.xss">
       <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Vehicle_Recommendation_System_DatabaseDataSet1.xsc">
+      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Vehicle_Recommendation_System_DatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vehicle_Recommendation_System_DatabaseDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Vehicle_Recommendation_System_DatabaseDataSet1.xss">
+      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

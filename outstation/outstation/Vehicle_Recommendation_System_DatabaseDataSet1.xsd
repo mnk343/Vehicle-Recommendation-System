@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="Vehicle_Recommendation_System_DatabaseDataSet" targetNamespace="http://tempuri.org/Vehicle_Recommendation_System_DatabaseDataSet.xsd" xmlns:mstns="http://tempuri.org/Vehicle_Recommendation_System_DatabaseDataSet.xsd" xmlns="http://tempuri.org/Vehicle_Recommendation_System_DatabaseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="Vehicle_Recommendation_System_DatabaseDataSet1" targetNamespace="http://tempuri.org/Vehicle_Recommendation_System_DatabaseDataSet1.xsd" xmlns:mstns="http://tempuri.org/Vehicle_Recommendation_System_DatabaseDataSet1.xsd" xmlns="http://tempuri.org/Vehicle_Recommendation_System_DatabaseDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -661,7 +661,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="Vehicle_Recommendation_System_DatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Vehicle_Recommendation_System_DatabaseDataSet" msprop:Generator_UserDSName="Vehicle_Recommendation_System_DatabaseDataSet">
+  <xs:element name="Vehicle_Recommendation_System_DatabaseDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Vehicle_Recommendation_System_DatabaseDataSet1" msprop:Generator_UserDSName="Vehicle_Recommendation_System_DatabaseDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="AmbulanceData" msprop:Generator_TableClassName="AmbulanceDataDataTable" msprop:Generator_TableVarName="tableAmbulanceData" msprop:Generator_TablePropName="AmbulanceData" msprop:Generator_RowDeletingName="AmbulanceDataRowDeleting" msprop:Generator_RowChangingName="AmbulanceDataRowChanging" msprop:Generator_RowEvHandlerName="AmbulanceDataRowChangeEventHandler" msprop:Generator_RowDeletedName="AmbulanceDataRowDeleted" msprop:Generator_UserTableName="AmbulanceData" msprop:Generator_RowChangedName="AmbulanceDataRowChanged" msprop:Generator_RowEvArgName="AmbulanceDataRowChangeEvent" msprop:Generator_RowClassName="AmbulanceDataRow">

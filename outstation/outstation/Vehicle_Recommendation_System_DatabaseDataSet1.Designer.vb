@@ -20,9 +20,9 @@ Option Explicit On
  Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
  Global.System.ComponentModel.ToolboxItem(true),  _
  Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema"),  _
- Global.System.Xml.Serialization.XmlRootAttribute("Vehicle_Recommendation_System_DatabaseDataSet"),  _
+ Global.System.Xml.Serialization.XmlRootAttribute("Vehicle_Recommendation_System_DatabaseDataSet1"),  _
  Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")>  _
-Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
+Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet1
     Inherits Global.System.Data.DataSet
     
     Private tableAmbulanceData As AmbulanceDataDataTable
@@ -250,7 +250,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
-        Dim cln As Vehicle_Recommendation_System_DatabaseDataSet = CType(MyBase.Clone,Vehicle_Recommendation_System_DatabaseDataSet)
+        Dim cln As Vehicle_Recommendation_System_DatabaseDataSet1 = CType(MyBase.Clone,Vehicle_Recommendation_System_DatabaseDataSet1)
         cln.InitVars
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
@@ -394,9 +394,9 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Sub InitClass()
-        Me.DataSetName = "Vehicle_Recommendation_System_DatabaseDataSet"
+        Me.DataSetName = "Vehicle_Recommendation_System_DatabaseDataSet1"
         Me.Prefix = ""
-        Me.Namespace = "http://tempuri.org/Vehicle_Recommendation_System_DatabaseDataSet.xsd"
+        Me.Namespace = "http://tempuri.org/Vehicle_Recommendation_System_DatabaseDataSet1.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
         Me.tableAmbulanceData = New AmbulanceDataDataTable()
@@ -486,7 +486,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-        Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+        Dim ds As Vehicle_Recommendation_System_DatabaseDataSet1 = New Vehicle_Recommendation_System_DatabaseDataSet1()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
         Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
         Dim any As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
@@ -790,7 +790,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet1 = New Vehicle_Recommendation_System_DatabaseDataSet1()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1181,7 +1181,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet1 = New Vehicle_Recommendation_System_DatabaseDataSet1()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1540,7 +1540,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet1 = New Vehicle_Recommendation_System_DatabaseDataSet1()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -1990,7 +1990,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet1 = New Vehicle_Recommendation_System_DatabaseDataSet1()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2282,7 +2282,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet1 = New Vehicle_Recommendation_System_DatabaseDataSet1()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2603,7 +2603,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet1 = New Vehicle_Recommendation_System_DatabaseDataSet1()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -2935,7 +2935,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet1 = New Vehicle_Recommendation_System_DatabaseDataSet1()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -3227,7 +3227,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet1 = New Vehicle_Recommendation_System_DatabaseDataSet1()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -3620,7 +3620,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet = New Vehicle_Recommendation_System_DatabaseDataSet()
+            Dim ds As Vehicle_Recommendation_System_DatabaseDataSet1 = New Vehicle_Recommendation_System_DatabaseDataSet1()
             Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
             any1.Namespace = "http://www.w3.org/2001/XMLSchema"
             any1.MinOccurs = New Decimal(0)
@@ -5772,7 +5772,7 @@ Partial Public Class Vehicle_Recommendation_System_DatabaseDataSet
     End Class
 End Class
 
-Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
+Namespace Vehicle_Recommendation_System_DatabaseDataSet1TableAdapters
     
     '''<summary>
     '''Represents the connection and commands used to retrieve and save data.
@@ -5957,7 +5957,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -5970,9 +5970,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable
+        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable()
+            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -5980,14 +5980,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.AmbulanceDataDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.AmbulanceDataDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet1) As Integer
             Return Me.Adapter.Update(dataSet, "AmbulanceData")
         End Function
         
@@ -6361,7 +6361,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6374,9 +6374,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable
+        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable()
+            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataTable = New Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -6384,14 +6384,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BookingDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet1) As Integer
             Return Me.Adapter.Update(dataSet, "Booking")
         End Function
         
@@ -6935,7 +6935,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.BusDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -6948,9 +6948,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable
+        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet1.BusDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable()
+            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.BusDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet1.BusDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -6958,14 +6958,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BusDataDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.BusDataDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet1) As Integer
             Return Me.Adapter.Update(dataSet, "BusData")
         End Function
         
@@ -7500,7 +7500,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.CabDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -7513,9 +7513,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable
+        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet1.CabDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable()
+            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.CabDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet1.CabDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -7523,14 +7523,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.CabDataDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.CabDataDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet1) As Integer
             Return Me.Adapter.Update(dataSet, "CabData")
         End Function
         
@@ -8069,7 +8069,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -8082,9 +8082,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable
+        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable()
+            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -8092,14 +8092,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.CarHireDataDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.CarHireDataDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet1) As Integer
             Return Me.Adapter.Update(dataSet, "CarHireData")
         End Function
         
@@ -8430,7 +8430,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -8443,9 +8443,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable
+        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable()
+            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -8453,14 +8453,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet._E_RickshawDataDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1._E_RickshawDataDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet1) As Integer
             Return Me.Adapter.Update(dataSet, "E-RickshawData")
         End Function
         
@@ -8824,7 +8824,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.InCampusBusDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -8837,9 +8837,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable
+        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet1.InCampusBusDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable()
+            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.InCampusBusDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet1.InCampusBusDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -8847,14 +8847,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.InCampusBusDataDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.InCampusBusDataDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet1) As Integer
             Return Me.Adapter.Update(dataSet, "InCampusBusData")
         End Function
         
@@ -9233,7 +9233,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.StaffDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -9246,9 +9246,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable
+        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet1.StaffDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable()
+            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.StaffDataTable = New Vehicle_Recommendation_System_DatabaseDataSet1.StaffDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -9256,14 +9256,14 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.StaffDataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.StaffDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overloads Overridable Function Update(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet1) As Integer
             Return Me.Adapter.Update(dataSet, "Staff")
         End Function
         
@@ -9541,7 +9541,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BookingDataDataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -9554,9 +9554,9 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet.BookingDataDataTable
+        Public Overloads Overridable Function GetData() As Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet.BookingDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet.BookingDataDataTable()
+            Dim dataTable As Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataDataTable = New Vehicle_Recommendation_System_DatabaseDataSet1.BookingDataDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -9815,7 +9815,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateUpdatedRows(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateUpdatedRows(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._cabDataTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.CabData.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
@@ -9897,7 +9897,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateInsertedRows(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateInsertedRows(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet1, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._cabDataTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.CabData.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
@@ -9971,7 +9971,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Function UpdateDeletedRows(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
+        Private Function UpdateDeletedRows(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
             If (Not (Me._staffTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.Staff.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
@@ -10071,7 +10071,7 @@ Namespace Vehicle_Recommendation_System_DatabaseDataSetTableAdapters
         '''</summary>
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overridable Function UpdateAll(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet) As Integer
+        Public Overridable Function UpdateAll(ByVal dataSet As Vehicle_Recommendation_System_DatabaseDataSet1) As Integer
             If (dataSet Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("dataSet")
             End If

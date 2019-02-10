@@ -1,4 +1,5 @@
 ﻿Public Class Cab_info
+    
 
     Private Sub Cab_info_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -24,6 +25,8 @@
     Private Sub load_btn_Click(sender As Object, e As EventArgs) Handles load_btn.Click
         Dim src As String = src_cb.Text
         Dim dest As String = des_cb.Text
+        Dim currenthour As Integer = DateAndTime.Now.Hour
+        Dim currentminutes As Integer = DateAndTime.Now.Minute
         If src = "" Then
             MessageBox.Show("Select Source")
         ElseIf dest = "" Then
@@ -40,7 +43,13 @@
             MessageBox.Show("Minute Field is Empty")
         ElseIf CInt(min_tb.Text) > 59 Then
             MessageBox.Show("Minute must be less than 60")
+        ElseIf day_cb.Text = "Today" And (CInt(hour_tb.Text) * 100 + CInt(min_tb.Text)) < (currenthour * 100 + currentminutes) Then
+            MessageBox.Show("Use the correct date time value")
         Else
+            
+
+
+
             Maps.Show()
         End If
 

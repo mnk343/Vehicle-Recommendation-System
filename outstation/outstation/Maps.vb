@@ -137,7 +137,7 @@ Public Class Maps
 
 
 
-
+            Distance_lbl.Text = distance
 
 
 
@@ -149,7 +149,7 @@ Public Class Maps
             query.Append("~adr.")
             query.Append(des)
 
-
+            Distance_lbl.Text = distance
 
             map_browser.Navigate(query.ToString)
 
@@ -165,4 +165,11 @@ Public Class Maps
     End Sub
 
     
+    Private Sub map_browser_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles map_browser.DocumentCompleted
+
+    End Sub
+
+    Private Sub Share_Click(sender As Object, e As EventArgs) Handles Share.Click
+
+    End Sub
 End Class
