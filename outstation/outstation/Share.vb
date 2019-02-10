@@ -50,14 +50,16 @@
 
 
         'Access.ExecQuery(";")
-        Access.ExecQuery("SELECT Booking.BookingID, Booking.CabId, Booking.Driver, Booking.Occupancy, CabData.Seater, CabData.Seater - Booking.Occupancy AS SeatsLeft, Booking.Source, Booking.Destination, Booking.Hour, Booking.Minute, Booking.Day,  CabData.VehicleName FROM CabData RIGHT JOIN Booking ON CabData.CabId = Booking.CabId" + " WHERE Source = '" + source + "' AND Destination = '" + destination + "' AND Hour >= " + CStr(hours) + " AND NOT ( Hour = " + CStr(hours) + " AND Minute <" + CStr(minutes) + " )" + "AND (CabData.Seater - Booking.Occupancy) >= " + CStr(numofpassengers) + "AND Format(Booking.Day, 'Short Date') = '" + dat + "' ;")
+        Access.ExecQuery("SELECT Booking.BookingID, Booking.CabId, Booking.Driver, Booking.Occupancy, CabData.Seater, CabData.Seater - Booking.Occupancy AS SeatsLeft, Booking.Source, Booking.Destination, Booking.Hour, Booking.Minute, Booking.Day,  CabData.VehicleName FROM CabData RIGHT JOIN Booking ON CabData.CabId = Booking.CabId" + " WHERE Source = '" + source + "' AND Destination = '" + destination + "' AND Hour >= " + CStr(hours) + " AND NOT ( Hour = " + CStr(hours) + " AND Minute <" + CStr(minutes) + " )" + "AND (CabData.Seater - Booking.Occupancy) >= " + CStr(numofpassengers) + "AND Format(Booking.Day, 'Short Date') = '" + dat + "' " + "ORDER BY (100*Booking.Hour + Booking.Minute) Asc" + ";")
         '"AND Booking.Da = " + CStr(CInt(darray(0))) + " AND Booking.Mon = " + CStr(CInt(darray(1))) + " AND Booking.Yea = " + CStr(CInt(darray(2))) 
 
         If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
 
         Share_dgv.DataSource = Access.DBDT
 
-
+        Share_dgv.Rows(0).DefaultCellStyle.BackColor = Color.Red
+        Share_dgv.Rows(0).DefaultCellStyle.ForeColor = Color.White
+        Share_dgv.ClearSelection()
 
     End Sub
 End Class

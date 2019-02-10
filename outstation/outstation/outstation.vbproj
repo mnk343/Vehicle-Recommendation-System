@@ -152,6 +152,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Vehicle_Recommendation_System_DatabaseDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet4.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Cab_info.resx">
@@ -239,6 +244,17 @@
     </None>
     <None Include="Vehicle_Recommendation_System_DatabaseDataSet3.xss">
       <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Vehicle_Recommendation_System_DatabaseDataSet4.xsc">
+      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Vehicle_Recommendation_System_DatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Vehicle_Recommendation_System_DatabaseDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Vehicle_Recommendation_System_DatabaseDataSet4.xss">
+      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
