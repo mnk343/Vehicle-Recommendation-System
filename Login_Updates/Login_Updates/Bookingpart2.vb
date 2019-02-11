@@ -22,17 +22,17 @@ Public Class Bookingpart2
         des_cb.Items.Add("Pan Bazar")
 
         day_cb.Items.Add("Today")
-        day_cb.Items.Add("Tommorow")
-        day_cb.Items.Add("Day after Tommorow")
+        day_cb.Items.Add("Tomorrow")
+        day_cb.Items.Add("Day after Tomorrow")
 
 
         Dim bookid = updatebooking.bid_lbl.Text
         Dim querry As String = "Select * From [Booking] Where [BookingID]= " + bookid + ";"
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         Dim cmd As New OleDbCommand(querry, conn)
         conn.Open()
-        MessageBox.Show(querry)
+        'MessageBox.Show(querry)
         Dim reader As OleDbDataReader
         reader = cmd.ExecuteReader()
         While reader.Read()
@@ -45,10 +45,10 @@ Public Class Bookingpart2
             If dat = DateAndTime.Now.ToShortDateString Then
                 day_cb.Text = "Today"
             ElseIf dat = DateAndTime.Now.AddDays(1).ToShortDateString Then
-                day_cb.Text = "Tommorow"
+                day_cb.Text = "Tomorrow"
 
             ElseIf dat = DateAndTime.Now.AddDays(2).ToShortDateString Then
-                day_cb.Text = "Day after Tommorow"
+                day_cb.Text = "Day after Tomorrow"
             End If
         End While
         cmd.Dispose()
@@ -72,7 +72,7 @@ Public Class Bookingpart2
         Dim seater As String = ""
         Dim username = Update_Login.TextBox1.Text
         Dim querry As String = "Select * From [CabData] Where [UserName]= '" + username + "';"
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         Dim cmd As New OleDbCommand(querry, conn)
         conn.Open()
@@ -138,21 +138,41 @@ Public Class Bookingpart2
             'dat = "10-02-2019"
 
 
-            Access.ExecQuery("SELECT Booking.CabId FROM Booking WHERE " + CStr(hours) + " BETWEEN Booking.Hour - 1 AND Booking.Hour + 1 AND Format(Booking.Day, 'Short Date') = '" + dat + "' AND Booking.CabId = " + cid + " AND Booking.BookingID <> " + bid + ";")
-            Dim count2_dgv As New DataGridView
-            If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
-            count2_dgv.DataSource = Access.DBDT
+            'Access.ExecQuery("SELECT Booking.CabId FROM Booking WHERE " + CStr(hours) + " BETWEEN Booking.Hour - 1 AND Booking.Hour + 1 AND Format(Booking.Day, 'Short Date') = '" + dat + "' AND Booking.CabId = " + cid + " AND Booking.BookingID <> " + bid + ";")
+            'Dim count2_dgv As New DataGridView
+            'If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
+            'count2_dgv.DataSource = Access.DBDT
 
-            Dim row_count As Integer = count2_dgv.RowCount
-            MessageBox.Show(row_count)
-            If row_count = 0 Then
-                MessageBox.Show("Hello")
+            'Dim row_count As Integer = count2_dgv.RowCount
+            'MessageBox.Show(row_count)
+
+            querry = "SELECT Booking.CabId FROM Booking WHERE " + " Booking.BookingID <> " + updatebooking.bid_lbl.Text + " AND " + CStr(hours) + " BETWEEN Booking.Hour - 1 AND Booking.Hour + 1 AND Format(Booking.Day, 'Short Date') = '" + dat + "' AND Booking.CabId = " + cid + ";"
+            conn = New OleDbConnection(dbsource)
+            cmd = New OleDbCommand(querry, conn)
+            'MessageBox.Show(querry)
+            Dim flag As Object = Nothing
+            Try
+                conn.Open()
+                flag = cmd.ExecuteScalar()
+                cmd.Dispose()
+                conn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+            'If flag = Nothing Then
+            '    MessageBox.Show("nothing you can update now")
+            'End If
+
+
+            If flag = Nothing Then
+
                 If numofpassengers <= CInt(seater) Then
                     ' insertion query
 
-                    querry = "UPDATE [Booking] SET [Source]= '" + src_cb.Text + "', [Destination] = '" + des_cb.Text + "' , [Occupancy] = " + no_pass.Text + ", [Hour] = " + hour_tb.Text + ", [Minute]= " + min_tb.Text + ", [Date] = '" + dat + "' Where [BookingID] = " + updatebooking.bid_lbl.Text + ";"
-
+                    querry = "UPDATE Booking SET [Source] = '" + src_cb.Text + "', [Destination] = '" + des_cb.Text + "' , [Occupancy] = " + no_pass.Text + ", [Hour] = " + hour_tb.Text + ", [Minute]= " + min_tb.Text + ", [Day] = #" + dat + "# Where [BookingID] = " + updatebooking.bid_lbl.Text + " ;"
+                    MessageBox.Show(querry)
                     'conn = New OleDbConnection(dbsource)
+                    conn = New OleDbConnection(dbsource)
                     Dim cmdup As New OleDbCommand(querry, conn)
                     'cmdup.Parameters.Add(New OleDbParameter("CabId", CType(cid, String)))
                     'cmdup.Parameters.Add(New OleDbParameter("Driver", CType(username, String)))
@@ -170,6 +190,10 @@ Public Class Bookingpart2
                         cmdup.Dispose()
                         conn.Close()
                         MessageBox.Show("Updated Success")
+                        updatebooking.Close()
+                        Dashboard.Show()
+                        Me.Close()
+
                     Catch ex As Exception
                         MessageBox.Show(ex.Message)
                     End Try
@@ -181,7 +205,7 @@ Public Class Bookingpart2
 
                 End If
             Else
-                MessageBox.Show("You are already overbooked", "Error")
+                MessageBox.Show("You are violating the booking time conditions", "Error")
             End If
         End If
     End Sub

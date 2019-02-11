@@ -63,7 +63,7 @@ Public Class updateData
         usertxt.Text = Update_Login.TextBox1.Text
         Dim username As String = usertxt.Text
         Dim querry As String = "Select * From [CabData] Where [UserName]= '" + username + "';"
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         Dim cmd As New OleDbCommand(querry, conn)
         conn.Open()
@@ -83,7 +83,7 @@ Public Class updateData
 
     Private Sub chcity_CheckedChanged(sender As Object, e As EventArgs) Handles chcity.CheckedChanged
         Dim querry As String = "Update [CabData] SET [City] ="
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         conn.Open()
         Dim username As String = usertxt.Text
@@ -107,7 +107,7 @@ Public Class updateData
 
     Private Sub chshillong_CheckedChanged(sender As Object, e As EventArgs) Handles chshillong.CheckedChanged
         Dim querry As String = "Update [CabData] SET [Shillong] ="
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         conn.Open()
         Dim username As String = usertxt.Text
@@ -131,7 +131,7 @@ Public Class updateData
 
     Private Sub chtawang_CheckedChanged(sender As Object, e As EventArgs) Handles chtawang.CheckedChanged
         Dim querry As String = "Update [CabData] SET [Tawang] ="
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         conn.Open()
         Dim username As String = usertxt.Text
@@ -155,7 +155,7 @@ Public Class updateData
 
     Private Sub chgangtok_CheckedChanged(sender As Object, e As EventArgs) Handles chgangtok.CheckedChanged
         Dim querry As String = "Update [CabData] SET [Gangtok] ="
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         conn.Open()
         Dim username As String = usertxt.Text

@@ -19,8 +19,8 @@ Public Class NewBooking
         des_cb.Items.Add("Pan Bazar")
 
         day_cb.Items.Add("Today")
-        day_cb.Items.Add("Tommorow")
-        day_cb.Items.Add("Day after Tommorow")
+        day_cb.Items.Add("Tomorrow")
+        day_cb.Items.Add("Day after Tomorrow")
 
     End Sub
 
@@ -35,7 +35,7 @@ Public Class NewBooking
         Dim seater As String = ""
         Dim username = Update_Login.TextBox1.Text
         Dim querry As String = "Select * From [CabData] Where [UserName]= '" + username + "';"
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         Dim cmd As New OleDbCommand(querry, conn)
         conn.Open()
@@ -101,13 +101,22 @@ Public Class NewBooking
             'dat = "10-02-2019"
 
 
-            Access.ExecQuery("SELECT Booking.CabId FROM Booking WHERE " + CStr(hours) + " BETWEEN Booking.Hour - 1 AND Booking.Hour + 1 AND Format(Booking.Day, 'Short Date') = '" + dat + "' AND Booking.CabId = " + cid + ";")
-            Dim count_dgv As New DataGridView
-            If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
-            count_dgv.DataSource = Access.DBDT
+            querry = "SELECT Booking.CabId FROM Booking WHERE " + CStr(hours) + " BETWEEN Booking.Hour - 1 AND Booking.Hour + 1 AND Format(Booking.Day, 'Short Date') = '" + dat + "' AND Booking.CabId = " + cid + ";"
+            conn = New OleDbConnection(dbsource)
+            cmd = New OleDbCommand(querry, conn)
+            conn.Open()
+            Dim flag As Object = cmd.ExecuteScalar()
+            cmd.Dispose()
+            conn.Close()
 
-            Dim row_count As Integer = count_dgv.RowCount
-            If row_count = 1 Then
+
+            'Access.ExecQuery("SELECT Booking.CabId FROM Booking WHERE " + CStr(hours) + " BETWEEN Booking.Hour - 1 AND Booking.Hour + 1 AND Format(Booking.Day, 'Short Date') = '" + dat + "' AND Booking.CabId = " + cid + ";")
+            'Dim count_dgv As New DataGridView
+            'If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
+            'count_dgv.DataSource = Access.DBDT
+
+            'Dim row_count As Integer = count_dgv.RowCount
+            If flag = Nothing Then
 
                 If numofpassengers <= CInt(seater) Then
                     ' insertion query
@@ -131,18 +140,21 @@ Public Class NewBooking
                         cmdup.ExecuteNonQuery()
                         cmdup.Dispose()
                         conn.Close()
+                        MessageBox.Show("Success")
+                        Dashboard.Show()
+                        Me.Close()
 
                     Catch ex As Exception
                         MessageBox.Show(querry)
                     End Try
-                    MessageBox.Show("Success")
+
 
                 Else
                     MessageBox.Show("Enter the Correct number of passengers", "Error")
 
                 End If
             Else
-                MessageBox.Show("You are already overbooked", "Error")
+                MessageBox.Show("You are violating the booking time conditions", "Error")
             End If
         End If
 
