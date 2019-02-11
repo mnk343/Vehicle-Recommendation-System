@@ -8,17 +8,17 @@ Public Class toCampus
         Return Not String.IsNullOrEmpty(text)
     End Function
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles panelBus.Paint
 
     End Sub
 
     Private Sub toCampus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Panel2.Hide()
-        Panel3.Hide()
+        panelBus.Hide()
+        panelERickshaw.Hide()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Label5.Hide()
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnSubmitBus.Click
+        lblInfoBus.Hide()
         Dim day As String = DateAndTime.Now.DayOfWeek
         Dim hour As Integer = DateAndTime.Now.Hour
         Dim minute As Integer = DateAndTime.Now.Minute
@@ -61,7 +61,7 @@ Public Class toCampus
 
             If bus_dgv.RowCount = 1 Then
                 bus_dgv.Hide()
-                Label5.Show()
+                lblInfoBus.Show()
             End If
 
 
@@ -88,17 +88,17 @@ Public Class toCampus
         de_cb.Items.Add("Core 1")
         de_cb.Items.Add("KV")
 
-        Panel2.Show()
-        Panel3.Hide()
-        Label5.Hide()
+        panelBus.Show()
+        panelERickshaw.Hide()
+        lblInfoBus.Hide()
     End Sub
 
     Private Sub erickshaw_Click(sender As Object, e As EventArgs) Handles erickshaw.Click
         Access.ExecQuery("SELECT UserName,Contact FROM [E-RickshawData] WHERE Status=TRUE")
         If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
 
-        Panel2.Hide()
-        Panel3.Show()
+        panelBus.Hide()
+        panelERickshaw.Show()
 
 
         ' FILL DATAGRID
@@ -163,7 +163,7 @@ Public Class toCampus
         Next
         If row_of_driver >= 0 And row_of_driver < e_dgv.RowCount Then
             Dim sug As String = "Closest Driver from you is " + driver + " at distance " + e_dgv.Rows(row_of_driver).Cells(2).Value + " meters"
-            Label2.Text = sug
+            lblSugg.Text = sug
 
 
             e_dgv.BorderStyle = BorderStyle.None
@@ -211,8 +211,7 @@ Public Class toCampus
             'query.Append("_")
             'query.Append(row.Cells(2).Value.ToString)
             query.Append("&lvl=15")
-            Label3.Text = query.ToString
-
+            lblTemp.Text = query.ToString
 
             rickshaw_map.Show()
 
@@ -220,7 +219,7 @@ Public Class toCampus
     End Sub
 
 
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles panelERickshaw.Paint
 
     End Sub
 End Class

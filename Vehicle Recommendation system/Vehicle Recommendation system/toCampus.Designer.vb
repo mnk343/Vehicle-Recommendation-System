@@ -22,42 +22,42 @@ Partial Class toCampus
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.doubleClick = New System.Windows.Forms.Label()
         Me.e_fullData_dgv = New System.Windows.Forms.DataGridView()
         Me.erickshaw = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblSugg = New System.Windows.Forms.Label()
         Me.bus = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblInfoBus = New System.Windows.Forms.Label()
+        Me.btnSubmitBus = New System.Windows.Forms.Button()
         Me.s_cb = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblSource = New System.Windows.Forms.Label()
         Me.bus_dgv = New System.Windows.Forms.DataGridView()
         Me.t_lbl = New System.Windows.Forms.Label()
         Me.e_dgv = New System.Windows.Forms.DataGridView()
         Me.de_cb = New System.Windows.Forms.ComboBox()
         Me.d_cb = New System.Windows.Forms.Label()
         Me.time_lbl = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.panelERickshaw = New System.Windows.Forms.Panel()
+        Me.lblTemp = New System.Windows.Forms.Label()
+        Me.panelBus = New System.Windows.Forms.Panel()
         Me.panel1 = New System.Windows.Forms.Panel()
         CType(Me.e_fullData_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bus_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.e_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.panelERickshaw.SuspendLayout()
+        Me.panelBus.SuspendLayout()
         Me.panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label4
+        'doubleClick
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(62, 320)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(190, 13)
-        Me.Label4.TabIndex = 13
-        Me.Label4.Text = "* Double click on Cell to Get Directions"
+        Me.doubleClick.AutoSize = True
+        Me.doubleClick.Location = New System.Drawing.Point(62, 320)
+        Me.doubleClick.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.doubleClick.Name = "doubleClick"
+        Me.doubleClick.Size = New System.Drawing.Size(190, 13)
+        Me.doubleClick.TabIndex = 13
+        Me.doubleClick.Text = "* Double click on Cell to Get Directions"
         '
         'e_fullData_dgv
         '
@@ -80,15 +80,15 @@ Partial Class toCampus
         Me.erickshaw.Text = "E - Rickshaw"
         Me.erickshaw.UseVisualStyleBackColor = True
         '
-        'Label2
+        'lblSugg
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(75, 25)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 12
-        Me.Label2.Text = "Label2"
+        Me.lblSugg.AutoSize = True
+        Me.lblSugg.Location = New System.Drawing.Point(75, 25)
+        Me.lblSugg.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSugg.Name = "lblSugg"
+        Me.lblSugg.Size = New System.Drawing.Size(42, 13)
+        Me.lblSugg.TabIndex = 12
+        Me.lblSugg.Text = "lblSugg"
         '
         'bus
         '
@@ -100,25 +100,25 @@ Partial Class toCampus
         Me.bus.Text = "Bus"
         Me.bus.UseVisualStyleBackColor = True
         '
-        'Label5
+        'lblInfoBus
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(158, 314)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(126, 13)
-        Me.Label5.TabIndex = 16
-        Me.Label5.Text = "No Bus Aviable right now"
+        Me.lblInfoBus.AutoSize = True
+        Me.lblInfoBus.Location = New System.Drawing.Point(158, 314)
+        Me.lblInfoBus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblInfoBus.Name = "lblInfoBus"
+        Me.lblInfoBus.Size = New System.Drawing.Size(126, 13)
+        Me.lblInfoBus.TabIndex = 16
+        Me.lblInfoBus.Text = "No Bus Aviable right now"
         '
-        'Button1
+        'btnSubmitBus
         '
-        Me.Button1.Location = New System.Drawing.Point(226, 129)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(56, 19)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Sumbit"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSubmitBus.Location = New System.Drawing.Point(226, 129)
+        Me.btnSubmitBus.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSubmitBus.Name = "btnSubmitBus"
+        Me.btnSubmitBus.Size = New System.Drawing.Size(56, 19)
+        Me.btnSubmitBus.TabIndex = 15
+        Me.btnSubmitBus.Text = "Sumbit"
+        Me.btnSubmitBus.UseVisualStyleBackColor = True
         '
         's_cb
         '
@@ -129,15 +129,15 @@ Partial Class toCampus
         Me.s_cb.Size = New System.Drawing.Size(92, 21)
         Me.s_cb.TabIndex = 13
         '
-        'Label1
+        'lblSource
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(61, 75)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(41, 13)
-        Me.Label1.TabIndex = 11
-        Me.Label1.Text = "Source"
+        Me.lblSource.AutoSize = True
+        Me.lblSource.Location = New System.Drawing.Point(61, 75)
+        Me.lblSource.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSource.Name = "lblSource"
+        Me.lblSource.Size = New System.Drawing.Size(41, 13)
+        Me.lblSource.TabIndex = 11
+        Me.lblSource.Text = "Source"
         '
         'bus_dgv
         '
@@ -201,44 +201,44 @@ Partial Class toCampus
         Me.time_lbl.TabIndex = 9
         Me.time_lbl.Text = "Label1"
         '
-        'Panel3
+        'panelERickshaw
         '
-        Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Controls.Add(Me.e_fullData_dgv)
-        Me.Panel3.Controls.Add(Me.e_dgv)
-        Me.Panel3.Location = New System.Drawing.Point(241, 1)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(449, 439)
-        Me.Panel3.TabIndex = 5
+        Me.panelERickshaw.Controls.Add(Me.doubleClick)
+        Me.panelERickshaw.Controls.Add(Me.lblSugg)
+        Me.panelERickshaw.Controls.Add(Me.lblTemp)
+        Me.panelERickshaw.Controls.Add(Me.e_fullData_dgv)
+        Me.panelERickshaw.Controls.Add(Me.e_dgv)
+        Me.panelERickshaw.Location = New System.Drawing.Point(790, 436)
+        Me.panelERickshaw.Name = "panelERickshaw"
+        Me.panelERickshaw.Size = New System.Drawing.Size(24, 31)
+        Me.panelERickshaw.TabIndex = 5
         '
-        'Label3
+        'lblTemp
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(99, 388)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Label3"
-        Me.Label3.Visible = False
+        Me.lblTemp.AutoSize = True
+        Me.lblTemp.Location = New System.Drawing.Point(99, 388)
+        Me.lblTemp.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblTemp.Name = "lblTemp"
+        Me.lblTemp.Size = New System.Drawing.Size(44, 13)
+        Me.lblTemp.TabIndex = 9
+        Me.lblTemp.Text = "lblTemp"
+        Me.lblTemp.Visible = False
         '
-        'Panel2
+        'panelBus
         '
-        Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Controls.Add(Me.de_cb)
-        Me.Panel2.Controls.Add(Me.s_cb)
-        Me.Panel2.Controls.Add(Me.d_cb)
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.bus_dgv)
-        Me.Panel2.Controls.Add(Me.time_lbl)
-        Me.Panel2.Controls.Add(Me.t_lbl)
-        Me.Panel2.Location = New System.Drawing.Point(229, 6)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(454, 433)
-        Me.Panel2.TabIndex = 4
+        Me.panelBus.Controls.Add(Me.lblInfoBus)
+        Me.panelBus.Controls.Add(Me.btnSubmitBus)
+        Me.panelBus.Controls.Add(Me.de_cb)
+        Me.panelBus.Controls.Add(Me.s_cb)
+        Me.panelBus.Controls.Add(Me.d_cb)
+        Me.panelBus.Controls.Add(Me.lblSource)
+        Me.panelBus.Controls.Add(Me.bus_dgv)
+        Me.panelBus.Controls.Add(Me.time_lbl)
+        Me.panelBus.Controls.Add(Me.t_lbl)
+        Me.panelBus.Location = New System.Drawing.Point(229, 6)
+        Me.panelBus.Name = "panelBus"
+        Me.panelBus.Size = New System.Drawing.Size(516, 461)
+        Me.panelBus.TabIndex = 4
         '
         'panel1
         '
@@ -255,39 +255,39 @@ Partial Class toCampus
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(919, 558)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.panelERickshaw)
+        Me.Controls.Add(Me.panelBus)
         Me.Controls.Add(Me.panel1)
         Me.Name = "toCampus"
         Me.Text = "toCampus"
         CType(Me.e_fullData_dgv, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bus_dgv, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.e_dgv, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.panelERickshaw.ResumeLayout(False)
+        Me.panelERickshaw.PerformLayout()
+        Me.panelBus.ResumeLayout(False)
+        Me.panelBus.PerformLayout()
         Me.panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents doubleClick As System.Windows.Forms.Label
     Friend WithEvents e_fullData_dgv As System.Windows.Forms.DataGridView
     Friend WithEvents erickshaw As System.Windows.Forms.Button
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents lblSugg As System.Windows.Forms.Label
     Friend WithEvents bus As System.Windows.Forms.Button
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents lblInfoBus As System.Windows.Forms.Label
+    Friend WithEvents btnSubmitBus As System.Windows.Forms.Button
     Friend WithEvents s_cb As System.Windows.Forms.ComboBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblSource As System.Windows.Forms.Label
     Friend WithEvents bus_dgv As System.Windows.Forms.DataGridView
     Friend WithEvents t_lbl As System.Windows.Forms.Label
     Friend WithEvents e_dgv As System.Windows.Forms.DataGridView
     Friend WithEvents de_cb As System.Windows.Forms.ComboBox
     Friend WithEvents d_cb As System.Windows.Forms.Label
     Friend WithEvents time_lbl As System.Windows.Forms.Label
-    Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents panelERickshaw As System.Windows.Forms.Panel
+    Friend WithEvents lblTemp As System.Windows.Forms.Label
+    Friend WithEvents panelBus As System.Windows.Forms.Panel
     Friend WithEvents panel1 As System.Windows.Forms.Panel
 End Class

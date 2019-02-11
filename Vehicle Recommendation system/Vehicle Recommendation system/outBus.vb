@@ -34,8 +34,8 @@
         Dim minute As Integer = DateAndTime.Now.Minute
         Access.AddParam("@day", "%" & day & "%")
 
-        hour = 20
-        minute = 33
+        'hour = 20
+        ' minute = 33
         ' RUN QUERY
         Access.ExecQuery("SELECT TOP 5 Source, Destination,time FROM BusData WHERE Type=0 AND WorkingDays LIKE @day AND Hour >= " + CStr(hour) + " AND NOT ( Hour = " + CStr(hour) + " AND Minute <" + CStr(minute) + ");")
         If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
@@ -87,8 +87,8 @@
 
 
 
-        hour = 20
-        minute = 33
+        'hour = 20
+        'minute = 33
         ' RUN QUERY
         Access.ExecQuery("SELECT TOP 5 Source, Destination,time FROM BusData WHERE Type=1 AND WorkingDays LIKE @day AND Hour >= " + CStr(hour) + " AND NOT ( Hour = " + CStr(hour) + " AND Minute <" + CStr(minute) + ") ")
         If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
