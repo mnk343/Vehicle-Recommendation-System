@@ -55,9 +55,9 @@ Partial Class E_RickshawUpdate
         '
         Me.butback.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
         Me.butback.ForeColor = System.Drawing.Color.MediumBlue
-        Me.butback.Location = New System.Drawing.Point(721, 434)
+        Me.butback.Location = New System.Drawing.Point(707, 445)
         Me.butback.Name = "butback"
-        Me.butback.Size = New System.Drawing.Size(263, 48)
+        Me.butback.Size = New System.Drawing.Size(263, 57)
         Me.butback.TabIndex = 39
         Me.butback.Text = "BACK"
         Me.butback.UseVisualStyleBackColor = True
@@ -138,9 +138,9 @@ Partial Class E_RickshawUpdate
         '
         Me.butupd.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
         Me.butupd.ForeColor = System.Drawing.Color.MediumBlue
-        Me.butupd.Location = New System.Drawing.Point(346, 445)
+        Me.butupd.Location = New System.Drawing.Point(347, 445)
         Me.butupd.Name = "butupd"
-        Me.butupd.Size = New System.Drawing.Size(263, 48)
+        Me.butupd.Size = New System.Drawing.Size(263, 57)
         Me.butupd.TabIndex = 29
         Me.butupd.Text = "UPDATE"
         Me.butupd.UseVisualStyleBackColor = True
@@ -270,9 +270,9 @@ Partial Class E_RickshawUpdate
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
         Me.Button1.ForeColor = System.Drawing.Color.MediumBlue
-        Me.Button1.Location = New System.Drawing.Point(766, 42)
+        Me.Button1.Location = New System.Drawing.Point(780, 23)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(204, 32)
+        Me.Button1.Size = New System.Drawing.Size(204, 67)
         Me.Button1.TabIndex = 45
         Me.Button1.Text = "NEW PASSWORD"
         Me.Button1.UseVisualStyleBackColor = True

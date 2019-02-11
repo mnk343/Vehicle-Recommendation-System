@@ -105,9 +105,7 @@ Public Class E_RickshawUpdate
 
     Private Sub butclear_Click(sender As Object, e As EventArgs) Handles butclear.Click
         Me.txtpass.Text = ""
-        Me.long_txt.Text = ""
-        Me.lat_txt.Text = ""
-        Me.txtcontact.Text = ""
+
 
 
     End Sub
