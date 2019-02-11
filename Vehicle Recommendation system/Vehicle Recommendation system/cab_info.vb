@@ -1,5 +1,10 @@
 ﻿Public Class cab_info
 
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
     Private Sub cab_info_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         src_cb.Items.Add("IIT Guwahati")
@@ -15,15 +20,13 @@
         des_cb.Items.Add("Pan Bazar")
 
         day_cb.Items.Add("Today")
-        day_cb.Items.Add("Tommorow")
-        day_cb.Items.Add("Day after Tommorow")
-
-
+        day_cb.Items.Add("Tomorrow")
+        day_cb.Items.Add("Day after Tomorrow")
 
 
     End Sub
 
-    Private Sub load_btn_Click(sender As Object, e As EventArgs)
+    Private Sub load_btn_Click(sender As Object, e As EventArgs) Handles load_btn.Click
         Dim src As String = src_cb.Text
         Dim dest As String = des_cb.Text
 
@@ -47,7 +50,9 @@
         ElseIf CInt(min_tb.Text) > 59 Then
             MessageBox.Show("Minute must be less than 60")
         ElseIf day_cb.Text = "" Then
-            MessageBox.Show("Select passenger")
+            MessageBox.Show("Select Day")
+        ElseIf no_pass.Text = "" Then
+            MessageBox.Show("Select Passenger")
         ElseIf String.Compare(day_cb.Text, "Today") = 0 Then
             If CInt(hour_tb.Text) < h Then
                 MessageBox.Show("Time selected has already been passed")
@@ -59,12 +64,9 @@
         Else
             Maps.Show()
         End If
-
-
-
     End Sub
 
-    Private Sub no_pass_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+    Private Sub no_pass_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles no_pass.KeyPress, hour_tb.KeyPress, min_tb.KeyPress
 
 
         '97 - 122 = Ascii codes for simple letters
@@ -79,4 +81,10 @@
 
     End Sub
 
+    Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
+        Me.Hide()
+        Form1.Show()
+    End Sub
 End Class
+
+

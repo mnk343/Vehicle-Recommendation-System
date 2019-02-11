@@ -137,7 +137,6 @@ C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendati
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Share.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.CabMap.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Booking1.resources
-C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Booking.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Booking1.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.CabMap.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Share.resources

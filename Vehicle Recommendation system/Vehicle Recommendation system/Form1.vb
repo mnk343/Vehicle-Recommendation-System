@@ -283,19 +283,6 @@ Public Class Form1
     End Sub
 
 
-    Private Sub passengers_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
-
-        '97 - 122 = Ascii codes for simple letters
-        '65 - 90  = Ascii codes for capital letters
-        '48 - 57  = Ascii codes for numbers
-
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                e.Handled = True
-            End If
-        End If
-
-    End Sub
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
 
@@ -399,7 +386,7 @@ Public Class Form1
             e_dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
             e_dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
             e_dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
-            e_dgv.BackgroundColor = Color.White
+
 
             e_dgv.EnableHeadersVisualStyles = False
             e_dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
@@ -548,11 +535,32 @@ Public Class Form1
 
     End Sub
 
-    Private Sub dgvData_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvData.CellContentClick
+    Private Sub passengers_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles passengers.KeyPress
+
+
+        '97 - 122 = Ascii codes for simple letters
+        '65 - 90  = Ascii codes for capital letters
+        '48 - 57  = Ascii codes for numbers
+
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
 
     End Sub
 
-    Private Sub lblError_Click(sender As Object, e As EventArgs) Handles lblError.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Label5_Click(sender, e)
 
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Label4_Click(sender,e)
+    End Sub
+
+    Private Sub Panel10_Paint(sender As Object, e As PaintEventArgs) Handles Panel10.Paint
+
+    End Sub
+
 End Class

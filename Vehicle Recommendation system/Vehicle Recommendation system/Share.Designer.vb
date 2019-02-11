@@ -30,7 +30,7 @@ Partial Class Share
         'date_lbl
         '
         Me.date_lbl.AutoSize = True
-        Me.date_lbl.Location = New System.Drawing.Point(385, 95)
+        Me.date_lbl.Location = New System.Drawing.Point(472, 85)
         Me.date_lbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.date_lbl.Name = "date_lbl"
         Me.date_lbl.Size = New System.Drawing.Size(39, 13)

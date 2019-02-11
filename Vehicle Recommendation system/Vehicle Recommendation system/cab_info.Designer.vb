@@ -38,6 +38,7 @@ Partial Class cab_info
         Me.Label6 = New System.Windows.Forms.Label()
         Me.des_cb = New System.Windows.Forms.ComboBox()
         Me.no_pass = New System.Windows.Forms.TextBox()
+        Me.back = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,6 +46,7 @@ Partial Class cab_info
         '
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.back)
         Me.Panel1.Controls.Add(Me.load_btn)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.min_tb)
@@ -68,7 +70,7 @@ Partial Class cab_info
         '
         Me.load_btn.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.load_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.load_btn.Location = New System.Drawing.Point(353, 367)
+        Me.load_btn.Location = New System.Drawing.Point(498, 367)
         Me.load_btn.Margin = New System.Windows.Forms.Padding(2)
         Me.load_btn.Name = "load_btn"
         Me.load_btn.Size = New System.Drawing.Size(92, 35)
@@ -98,6 +100,7 @@ Partial Class cab_info
         '
         'day_cb
         '
+        Me.day_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.day_cb.FormattingEnabled = True
         Me.day_cb.Location = New System.Drawing.Point(235, 178)
         Me.day_cb.Margin = New System.Windows.Forms.Padding(2)
@@ -176,6 +179,7 @@ Partial Class cab_info
         '
         'src_cb
         '
+        Me.src_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.src_cb.FormattingEnabled = True
         Me.src_cb.Location = New System.Drawing.Point(235, 78)
         Me.src_cb.Margin = New System.Windows.Forms.Padding(2)
@@ -197,6 +201,7 @@ Partial Class cab_info
         '
         'des_cb
         '
+        Me.des_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.des_cb.FormattingEnabled = True
         Me.des_cb.Location = New System.Drawing.Point(607, 81)
         Me.des_cb.Margin = New System.Windows.Forms.Padding(2)
@@ -211,6 +216,18 @@ Partial Class cab_info
         Me.no_pass.Name = "no_pass"
         Me.no_pass.Size = New System.Drawing.Size(92, 20)
         Me.no_pass.TabIndex = 18
+        '
+        'back
+        '
+        Me.back.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.back.Location = New System.Drawing.Point(294, 367)
+        Me.back.Margin = New System.Windows.Forms.Padding(2)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(92, 35)
+        Me.back.TabIndex = 28
+        Me.back.Text = "Back"
+        Me.back.UseVisualStyleBackColor = False
         '
         'cab_info
         '
@@ -240,4 +257,5 @@ Partial Class cab_info
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents des_cb As System.Windows.Forms.ComboBox
     Friend WithEvents no_pass As System.Windows.Forms.TextBox
+    Friend WithEvents back As System.Windows.Forms.Button
 End Class

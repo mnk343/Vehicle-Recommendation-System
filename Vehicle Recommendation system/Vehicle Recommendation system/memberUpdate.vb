@@ -18,14 +18,12 @@ Public Class memberUpdate
         vehicle.DropDownStyle = ComboBoxStyle.DropDownList
         vehicle.Items.Clear()
         vehicle.Items.Add("Cab Driver")
-        vehicle.Items.Add("E-Rickshaw")
         vehicle.Text = "Kindly select the vehicle type : "
     End Sub
 
     Private Sub submit1_Click(sender As Object, e As EventArgs) Handles submit1.Click
 
         If vehicle.Text = "Cab Driver" Or vehicle.Text = "E-Rickshaw" Then
-            Panel2.Visible = True
         End If
 
         If usrName.Text = "" Or vehicle.Text = "" Then
@@ -37,7 +35,6 @@ Public Class memberUpdate
             If vehicle.Text = "Cab Driver" Then
                 vehData = "CabData"
 
-
                 Dim querry As String = " Select * from [CabData] where [UserName] = '" + usrName.Text + "';"
                 'Dim querry As String = "Update [" + vehData + "] Set [Password] = '" & txtPassword.Text & "' Where [UserName]= '" & user & "';"
 
@@ -46,31 +43,33 @@ Public Class memberUpdate
                 Dim conn = New OleDbConnection(dbsource)
                 Dim cmd As New OleDbCommand(querry, conn)
                 conn.Open()
-
                 Dim reader As OleDbDataReader
 
                 reader = cmd.ExecuteReader()
 
-                While reader.Read()
-                    'txtPassword.Text = CStr(reader(4))
-                    txtContactNo.Text = CStr(reader(2))
-                    City.Checked = CStr(reader(5))
-                    shillong.Checked = CStr(reader(6))
-                    gangtok.Checked = CStr(reader(7))
-                    tawang.Checked = CStr(reader(8))
+                If reader.HasRows Then
+                    While reader.Read()
 
-                    txtCityTrips.Text = CStr(reader(9))
-                    txtShillongTrips.Text = CStr(reader(10))
-                    txtGangtokTrips.Text = CStr(reader(11))
-                    txtTawangTrips.Text = CStr(reader(12))
+                        Panel2.Show()
+                        'txtPassword.Text = CStr(reader(4))
+                        txtContactNo.Text = CStr(reader(2))
+                        City.Checked = CStr(reader(5))
+                        shillong.Checked = CStr(reader(6))
+                        gangtok.Checked = CStr(reader(7))
+                        tawang.Checked = CStr(reader(8))
 
-                    txtSeater.Text = CStr(reader(13))
-                    txtVehicleName.Text = CStr(reader(14))
+                        txtCityTrips.Text = CStr(reader(9))
+                        txtShillongTrips.Text = CStr(reader(10))
+                        txtGangtokTrips.Text = CStr(reader(11))
+                        txtTawangTrips.Text = CStr(reader(12))
 
-                End While
+                        txtSeater.Text = CStr(reader(13))
+                        txtVehicleName.Text = CStr(reader(14))
 
-                cmd.Dispose()
-                conn.Close()
+                    End While
+                    cmd.Dispose()
+                    conn.Close()
+                End If
 
             End If
 
@@ -150,4 +149,9 @@ Public Class memberUpdate
 
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        dashboardStaff.Show()
+        Me.Close()
+
+    End Sub
 End Class

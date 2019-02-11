@@ -71,7 +71,9 @@ Public Class newBooking
         ElseIf CInt(min_tb.Text) > 59 Then
             MessageBox.Show("Minute must be less than 60")
         ElseIf day_cb.Text = "" Then
-            MessageBox.Show("Select passenger")
+            MessageBox.Show("Select Day")
+        ElseIf no_pass.Text = "" Then
+            MessageBox.Show("Select No of Passengers")
         ElseIf String.Compare(day_cb.Text, "Today") = 0 And ((CInt(hour_tb.Text) < h) Or (CInt(hour_tb.Text) = h And CInt(min_tb.Text <= m))) Then
             MessageBox.Show("Time selected has already been passed")
 

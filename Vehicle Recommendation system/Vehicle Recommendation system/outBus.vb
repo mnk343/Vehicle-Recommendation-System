@@ -10,22 +10,12 @@
 
         from_pnl.Hide()
         to_pnl.Show()
-        to_city_lbl.BackColor = Color.Blue
-        from_city_lbl.BackColor = Color.White
-
-        to_city_lbl.ForeColor = Color.White
-        from_city_lbl.ForeColor = Color.Black
     End Sub
 
     Private Sub from_city_lbl_Click(sender As Object, e As EventArgs) Handles from_city_lbl.Click
         to_pnl.Hide()
         from_pnl.Show()
 
-        to_city_lbl.BackColor = Color.White
-        from_city_lbl.BackColor = Color.Blue
-
-        to_city_lbl.ForeColor = Color.Black
-        from_city_lbl.ForeColor = Color.White
     End Sub
 
     Private Sub to_pnl_Paint(sender As Object, e As PaintEventArgs) Handles to_pnl.Paint
@@ -51,7 +41,6 @@
             to_city_bus_dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
             to_city_bus_dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
             to_city_bus_dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
-            to_city_bus_dgv.BackgroundColor = Color.White
 
             to_city_bus_dgv.EnableHeadersVisualStyles = False
             to_city_bus_dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
@@ -104,7 +93,6 @@
             dgv_from_city_bus.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
             dgv_from_city_bus.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
             dgv_from_city_bus.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
-            dgv_from_city_bus.BackgroundColor = Color.White
 
             dgv_from_city_bus.EnableHeadersVisualStyles = False
             dgv_from_city_bus.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
@@ -132,6 +120,16 @@
     Private Sub back_Click(sender As Object, e As EventArgs)
         Me.Close()
         Form1.Show()
+    End Sub
+
+    Private Sub back_Click_1(sender As Object, e As EventArgs) Handles back.Click
+        Me.Hide()
+        Form1.Show()
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class
 

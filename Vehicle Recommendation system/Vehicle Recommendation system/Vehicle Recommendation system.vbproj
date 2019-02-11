@@ -70,12 +70,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Booking.Designer.vb">
-      <DependentUpon>Booking.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Booking.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Booking1.Designer.vb">
       <DependentUpon>Booking1.vb</DependentUpon>
     </Compile>
@@ -244,9 +238,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Booking.resx">
-      <DependentUpon>Booking.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Booking1.resx">
       <DependentUpon>Booking1.vb</DependentUpon>
     </EmbeddedResource>
