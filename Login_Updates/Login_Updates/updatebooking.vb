@@ -58,7 +58,7 @@ Public Class updatebooking
 
             Dim bid As String = row.Cells(0).Value.ToString
             bid_lbl.Text = bid
-            MessageBox.Show(bid_lbl.Text)
+            'MessageBox.Show(bid_lbl.Text)
             Bookingpart2.Show()
 
             Me.Hide()

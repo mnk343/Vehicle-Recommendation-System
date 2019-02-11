@@ -170,7 +170,7 @@ Public Class Bookingpart2
                     ' insertion query
 
                     querry = "UPDATE Booking SET [Source] = '" + src_cb.Text + "', [Destination] = '" + des_cb.Text + "' , [Occupancy] = " + no_pass.Text + ", [Hour] = " + hour_tb.Text + ", [Minute]= " + min_tb.Text + ", [Day] = #" + dat + "# Where [BookingID] = " + updatebooking.bid_lbl.Text + " ;"
-                    MessageBox.Show(querry)
+                    'MessageBox.Show(querry)
                     'conn = New OleDbConnection(dbsource)
                     conn = New OleDbConnection(dbsource)
                     Dim cmdup As New OleDbCommand(querry, conn)
@@ -208,6 +208,34 @@ Public Class Bookingpart2
                 MessageBox.Show("You are violating the booking time conditions", "Error")
             End If
         End If
+    End Sub
+
+
+
+    Private Sub del_btn_Click(sender As Object, e As EventArgs) Handles del_btn.Click
+
+
+        Dim querry As String = "DELETE From [Booking] Where [BookingID]= " + updatebooking.bid_lbl.Text + " ;"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim conn As New OleDbConnection(dbsource)
+        Dim cmd As New OleDbCommand(querry, conn)
+
+        Try
+            conn.Open()
+            cmd.ExecuteNonQuery()
+            cmd.Dispose()
+            conn.Close()
+            MessageBox.Show("Deleted")
+            updatebooking.Close()
+            Dashboard.Show()
+            Me.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+
+
     End Sub
 
 

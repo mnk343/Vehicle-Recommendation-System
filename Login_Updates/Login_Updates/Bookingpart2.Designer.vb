@@ -36,6 +36,7 @@ Partial Class Bookingpart2
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.load_btn = New System.Windows.Forms.Button()
+        Me.del_btn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'day_cb
@@ -163,11 +164,21 @@ Partial Class Bookingpart2
         Me.load_btn.Text = "Update"
         Me.load_btn.UseVisualStyleBackColor = True
         '
+        'del_btn
+        '
+        Me.del_btn.Location = New System.Drawing.Point(844, 452)
+        Me.del_btn.Name = "del_btn"
+        Me.del_btn.Size = New System.Drawing.Size(97, 40)
+        Me.del_btn.TabIndex = 55
+        Me.del_btn.Text = "Delete"
+        Me.del_btn.UseVisualStyleBackColor = True
+        '
         'Bookingpart2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1011, 569)
+        Me.Controls.Add(Me.del_btn)
         Me.Controls.Add(Me.day_cb)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -202,4 +213,5 @@ Partial Class Bookingpart2
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents load_btn As System.Windows.Forms.Button
+    Friend WithEvents del_btn As System.Windows.Forms.Button
 End Class
