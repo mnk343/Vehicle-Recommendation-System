@@ -9,7 +9,7 @@ Public Class Dashboard
     End Sub
 
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles chduty.CheckedChanged
+    Private Sub chduty_CheckedChanged(sender As Object, e As EventArgs) Handles chduty.CheckedChanged
 
         Dim querry As String = "Update [CabData] SET [Status] ="
         Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"

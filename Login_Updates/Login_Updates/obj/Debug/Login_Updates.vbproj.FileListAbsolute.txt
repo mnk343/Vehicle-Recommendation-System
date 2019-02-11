@@ -45,3 +45,7 @@ C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Login_Updates\Login
 C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.Resources.resources
 C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.Update_Login.resources
 C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\Login_Updates.vbproj.GenerateResource.Cache
+C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.Erickshawlogin.resources
+C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.E_RickshawChangePassword.resources
+C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.E_Rickshawdashboard.resources
+C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.E_RickshawUpdate.resources

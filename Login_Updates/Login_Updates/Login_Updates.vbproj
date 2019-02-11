@@ -84,6 +84,30 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBControl.vb" />
+    <Compile Include="E-RickshawChangePassword.Designer.vb">
+      <DependentUpon>E-RickshawChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="E-RickshawChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E-Rickshawdashboard.Designer.vb">
+      <DependentUpon>E-Rickshawdashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="E-Rickshawdashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E-RickshawUpdate.Designer.vb">
+      <DependentUpon>E-RickshawUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="E-RickshawUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Erickshawlogin.Designer.vb">
+      <DependentUpon>Erickshawlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Erickshawlogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NewBooking.Designer.vb">
       <DependentUpon>NewBooking.vb</DependentUpon>
     </Compile>
@@ -141,6 +165,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E-RickshawChangePassword.resx">
+      <DependentUpon>E-RickshawChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E-Rickshawdashboard.resx">
+      <DependentUpon>E-Rickshawdashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E-RickshawUpdate.resx">
+      <DependentUpon>E-RickshawUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Erickshawlogin.resx">
+      <DependentUpon>Erickshawlogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewBooking.resx">
       <DependentUpon>NewBooking.vb</DependentUpon>
