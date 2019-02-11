@@ -126,17 +126,19 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(194, 605)
+        Me.Panel1.Size = New System.Drawing.Size(259, 745)
         Me.Panel1.TabIndex = 6
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(55, Byte), Integer))
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel4.Location = New System.Drawing.Point(0, 505)
+        Me.Panel4.Location = New System.Drawing.Point(0, 622)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(194, 100)
+        Me.Panel4.Size = New System.Drawing.Size(259, 123)
         Me.Panel4.TabIndex = 8
         '
         'emergency_btn
@@ -147,9 +149,10 @@ Partial Class Form1
         Me.emergency_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.emergency_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.emergency_btn.ForeColor = System.Drawing.Color.LightGray
-        Me.emergency_btn.Location = New System.Drawing.Point(0, 177)
+        Me.emergency_btn.Location = New System.Drawing.Point(0, 217)
+        Me.emergency_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.emergency_btn.Name = "emergency_btn"
-        Me.emergency_btn.Size = New System.Drawing.Size(194, 36)
+        Me.emergency_btn.Size = New System.Drawing.Size(259, 44)
         Me.emergency_btn.TabIndex = 11
         Me.emergency_btn.Text = "Emergency"
         Me.emergency_btn.UseVisualStyleBackColor = False
@@ -162,9 +165,10 @@ Partial Class Form1
         Me.incampus_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.incampus_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.incampus_btn.ForeColor = System.Drawing.Color.LightGray
-        Me.incampus_btn.Location = New System.Drawing.Point(0, 141)
+        Me.incampus_btn.Location = New System.Drawing.Point(0, 173)
+        Me.incampus_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.incampus_btn.Name = "incampus_btn"
-        Me.incampus_btn.Size = New System.Drawing.Size(194, 36)
+        Me.incampus_btn.Size = New System.Drawing.Size(259, 44)
         Me.incampus_btn.TabIndex = 10
         Me.incampus_btn.Text = "Incampus"
         Me.incampus_btn.UseVisualStyleBackColor = False
@@ -177,9 +181,10 @@ Partial Class Form1
         Me.outcampus_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.outcampus_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.outcampus_btn.ForeColor = System.Drawing.Color.LightGray
-        Me.outcampus_btn.Location = New System.Drawing.Point(0, 105)
+        Me.outcampus_btn.Location = New System.Drawing.Point(0, 129)
+        Me.outcampus_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.outcampus_btn.Name = "outcampus_btn"
-        Me.outcampus_btn.Size = New System.Drawing.Size(194, 36)
+        Me.outcampus_btn.Size = New System.Drawing.Size(259, 44)
         Me.outcampus_btn.TabIndex = 9
         Me.outcampus_btn.Text = "Outcampus"
         Me.outcampus_btn.UseVisualStyleBackColor = False
@@ -192,9 +197,10 @@ Partial Class Form1
         Me.outstation_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.outstation_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.outstation_btn.ForeColor = System.Drawing.Color.LightGray
-        Me.outstation_btn.Location = New System.Drawing.Point(0, 69)
+        Me.outstation_btn.Location = New System.Drawing.Point(0, 85)
+        Me.outstation_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.outstation_btn.Name = "outstation_btn"
-        Me.outstation_btn.Size = New System.Drawing.Size(194, 36)
+        Me.outstation_btn.Size = New System.Drawing.Size(259, 44)
         Me.outstation_btn.TabIndex = 8
         Me.outstation_btn.Text = "Outstation"
         Me.outstation_btn.UseVisualStyleBackColor = False
@@ -205,17 +211,19 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.PictureBox3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(194, 69)
+        Me.Panel2.Size = New System.Drawing.Size(259, 85)
         Me.Panel2.TabIndex = 6
         '
         'PictureBox3
         '
         Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(70, 12)
+        Me.PictureBox3.Location = New System.Drawing.Point(93, 15)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(53, 48)
+        Me.PictureBox3.Size = New System.Drawing.Size(71, 59)
         Me.PictureBox3.TabIndex = 11
         Me.PictureBox3.TabStop = False
         '
@@ -227,27 +235,30 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.login_btn)
         Me.Panel3.Controls.Add(Me.PictureBox1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(194, 0)
+        Me.Panel3.Location = New System.Drawing.Point(259, 0)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1108, 69)
+        Me.Panel3.Size = New System.Drawing.Size(1477, 85)
         Me.Panel3.TabIndex = 8
         '
         'PictureBox2
         '
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(38, 21)
+        Me.PictureBox2.Location = New System.Drawing.Point(51, 26)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(35, 31)
+        Me.PictureBox2.Size = New System.Drawing.Size(47, 38)
         Me.PictureBox2.TabIndex = 10
         Me.PictureBox2.TabStop = False
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 16.0!)
-        Me.Label1.Location = New System.Drawing.Point(79, 21)
+        Me.Label1.Location = New System.Drawing.Point(105, 26)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 31)
+        Me.Label1.Size = New System.Drawing.Size(192, 38)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Dashboard"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -258,9 +269,10 @@ Partial Class Form1
         Me.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.login_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.login_btn.ForeColor = System.Drawing.Color.White
-        Me.login_btn.Location = New System.Drawing.Point(652, 19)
+        Me.login_btn.Location = New System.Drawing.Point(869, 23)
+        Me.login_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.login_btn.Name = "login_btn"
-        Me.login_btn.Size = New System.Drawing.Size(86, 36)
+        Me.login_btn.Size = New System.Drawing.Size(115, 44)
         Me.login_btn.TabIndex = 8
         Me.login_btn.Text = "Log In"
         Me.login_btn.UseVisualStyleBackColor = False
@@ -269,9 +281,10 @@ Partial Class Form1
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(605, 19)
+        Me.PictureBox1.Location = New System.Drawing.Point(807, 23)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(41, 36)
+        Me.PictureBox1.Size = New System.Drawing.Size(55, 44)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
@@ -281,9 +294,10 @@ Partial Class Form1
         Me.bus.BackgroundImage = CType(resources.GetObject("bus.BackgroundImage"), System.Drawing.Image)
         Me.bus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.bus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bus.Location = New System.Drawing.Point(30, 29)
+        Me.bus.Location = New System.Drawing.Point(40, 36)
+        Me.bus.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bus.Name = "bus"
-        Me.bus.Size = New System.Drawing.Size(116, 93)
+        Me.bus.Size = New System.Drawing.Size(155, 114)
         Me.bus.TabIndex = 0
         Me.bus.UseVisualStyleBackColor = False
         '
@@ -291,18 +305,20 @@ Partial Class Form1
         '
         Me.Panel6.Controls.Add(Me.Label2)
         Me.Panel6.Controls.Add(Me.bus)
-        Me.Panel6.Location = New System.Drawing.Point(211, 3)
+        Me.Panel6.Location = New System.Drawing.Point(281, 4)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(167, 122)
+        Me.Panel6.Size = New System.Drawing.Size(223, 150)
         Me.Panel6.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Bahnschrift Light", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(63, 1)
+        Me.Label2.Location = New System.Drawing.Point(84, 1)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 25)
+        Me.Label2.Size = New System.Drawing.Size(61, 33)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Bus"
         '
@@ -318,18 +334,20 @@ Partial Class Form1
         Me.outstation_panel.Controls.Add(Me.Panel8)
         Me.outstation_panel.Controls.Add(Me.Panel11)
         Me.outstation_panel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.outstation_panel.Location = New System.Drawing.Point(1918, 69)
+        Me.outstation_panel.Location = New System.Drawing.Point(2558, 85)
+        Me.outstation_panel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.outstation_panel.Name = "outstation_panel"
-        Me.outstation_panel.Size = New System.Drawing.Size(974, 536)
+        Me.outstation_panel.Size = New System.Drawing.Size(1299, 660)
         Me.outstation_panel.TabIndex = 4
         '
         'info
         '
         Me.info.AutoSize = True
         Me.info.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.info.Location = New System.Drawing.Point(355, 451)
+        Me.info.Location = New System.Drawing.Point(473, 555)
+        Me.info.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.info.Name = "info"
-        Me.info.Size = New System.Drawing.Size(327, 24)
+        Me.info.Size = New System.Drawing.Size(413, 29)
         Me.info.TabIndex = 39
         Me.info.Text = "Please Select A City to see results"
         '
@@ -338,9 +356,10 @@ Partial Class Form1
         Me.clear.BackColor = System.Drawing.Color.Black
         Me.clear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clear.ForeColor = System.Drawing.Color.White
-        Me.clear.Location = New System.Drawing.Point(509, 355)
+        Me.clear.Location = New System.Drawing.Point(679, 437)
+        Me.clear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.clear.Name = "clear"
-        Me.clear.Size = New System.Drawing.Size(96, 29)
+        Me.clear.Size = New System.Drawing.Size(128, 36)
         Me.clear.TabIndex = 38
         Me.clear.Text = "Clear"
         Me.clear.UseVisualStyleBackColor = False
@@ -350,9 +369,10 @@ Partial Class Form1
         Me.submit.BackColor = System.Drawing.Color.Black
         Me.submit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.submit.ForeColor = System.Drawing.Color.White
-        Me.submit.Location = New System.Drawing.Point(409, 355)
+        Me.submit.Location = New System.Drawing.Point(545, 437)
+        Me.submit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.submit.Name = "submit"
-        Me.submit.Size = New System.Drawing.Size(85, 29)
+        Me.submit.Size = New System.Drawing.Size(113, 36)
         Me.submit.TabIndex = 37
         Me.submit.Text = "Submit"
         Me.submit.UseVisualStyleBackColor = False
@@ -363,30 +383,31 @@ Partial Class Form1
         Me.Label6.BackColor = System.Drawing.Color.White
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(311, 283)
+        Me.Label6.Location = New System.Drawing.Point(415, 348)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(371, 20)
+        Me.Label6.Size = New System.Drawing.Size(447, 25)
         Me.Label6.TabIndex = 36
         Me.Label6.Text = "Please Enter Number of Pasengers (optional)"
         '
         'passengers
         '
-        Me.passengers.Location = New System.Drawing.Point(359, 320)
-        Me.passengers.Margin = New System.Windows.Forms.Padding(2)
+        Me.passengers.Location = New System.Drawing.Point(479, 394)
+        Me.passengers.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.passengers.Name = "passengers"
-        Me.passengers.Size = New System.Drawing.Size(275, 20)
+        Me.passengers.Size = New System.Drawing.Size(365, 22)
         Me.passengers.TabIndex = 35
         '
         'dgvData
         '
         Me.dgvData.AllowUserToAddRows = False
         Me.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvData.Location = New System.Drawing.Point(115, 400)
-        Me.dgvData.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgvData.Location = New System.Drawing.Point(153, 492)
+        Me.dgvData.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvData.Name = "dgvData"
         Me.dgvData.ReadOnly = True
         Me.dgvData.RowTemplate.Height = 24
-        Me.dgvData.Size = New System.Drawing.Size(771, 155)
+        Me.dgvData.Size = New System.Drawing.Size(1028, 191)
         Me.dgvData.TabIndex = 34
         '
         'Panel5
@@ -395,9 +416,10 @@ Partial Class Form1
         Me.Panel5.BackgroundImage = CType(resources.GetObject("Panel5.BackgroundImage"), System.Drawing.Image)
         Me.Panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel5.Controls.Add(Me.gang_btn)
-        Me.Panel5.Location = New System.Drawing.Point(643, 130)
+        Me.Panel5.Location = New System.Drawing.Point(857, 160)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(287, 141)
+        Me.Panel5.Size = New System.Drawing.Size(383, 174)
         Me.Panel5.TabIndex = 42
         '
         'gang_btn
@@ -405,10 +427,10 @@ Partial Class Form1
         Me.gang_btn.BackColor = System.Drawing.Color.White
         Me.gang_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gang_btn.ForeColor = System.Drawing.Color.Black
-        Me.gang_btn.Location = New System.Drawing.Point(95, 8)
-        Me.gang_btn.Margin = New System.Windows.Forms.Padding(2)
+        Me.gang_btn.Location = New System.Drawing.Point(127, 10)
+        Me.gang_btn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gang_btn.Name = "gang_btn"
-        Me.gang_btn.Size = New System.Drawing.Size(91, 38)
+        Me.gang_btn.Size = New System.Drawing.Size(121, 47)
         Me.gang_btn.TabIndex = 14
         Me.gang_btn.Text = "Gangtok"
         Me.gang_btn.UseVisualStyleBackColor = False
@@ -418,9 +440,10 @@ Partial Class Form1
         Me.Panel8.BackColor = System.Drawing.Color.Black
         Me.Panel8.BackgroundImage = CType(resources.GetObject("Panel8.BackgroundImage"), System.Drawing.Image)
         Me.Panel8.Controls.Add(Me.tawang_btn)
-        Me.Panel8.Location = New System.Drawing.Point(331, 130)
+        Me.Panel8.Location = New System.Drawing.Point(441, 160)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(314, 141)
+        Me.Panel8.Size = New System.Drawing.Size(419, 174)
         Me.Panel8.TabIndex = 41
         '
         'tawang_btn
@@ -428,10 +451,10 @@ Partial Class Form1
         Me.tawang_btn.BackColor = System.Drawing.Color.White
         Me.tawang_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tawang_btn.ForeColor = System.Drawing.Color.Black
-        Me.tawang_btn.Location = New System.Drawing.Point(90, 8)
-        Me.tawang_btn.Margin = New System.Windows.Forms.Padding(2)
+        Me.tawang_btn.Location = New System.Drawing.Point(120, 10)
+        Me.tawang_btn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tawang_btn.Name = "tawang_btn"
-        Me.tawang_btn.Size = New System.Drawing.Size(112, 38)
+        Me.tawang_btn.Size = New System.Drawing.Size(149, 47)
         Me.tawang_btn.TabIndex = 13
         Me.tawang_btn.Text = "Tawang"
         Me.tawang_btn.UseVisualStyleBackColor = False
@@ -441,9 +464,10 @@ Partial Class Form1
         Me.Panel11.BackColor = System.Drawing.Color.Black
         Me.Panel11.BackgroundImage = CType(resources.GetObject("Panel11.BackgroundImage"), System.Drawing.Image)
         Me.Panel11.Controls.Add(Me.shilong_btn)
-        Me.Panel11.Location = New System.Drawing.Point(43, 130)
+        Me.Panel11.Location = New System.Drawing.Point(57, 160)
+        Me.Panel11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(292, 141)
+        Me.Panel11.Size = New System.Drawing.Size(389, 174)
         Me.Panel11.TabIndex = 40
         '
         'shilong_btn
@@ -452,16 +476,17 @@ Partial Class Form1
         Me.shilong_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.shilong_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.shilong_btn.ForeColor = System.Drawing.Color.Black
-        Me.shilong_btn.Location = New System.Drawing.Point(72, 8)
+        Me.shilong_btn.Location = New System.Drawing.Point(96, 10)
         Me.shilong_btn.Margin = New System.Windows.Forms.Padding(0)
         Me.shilong_btn.Name = "shilong_btn"
-        Me.shilong_btn.Size = New System.Drawing.Size(108, 38)
+        Me.shilong_btn.Size = New System.Drawing.Size(144, 47)
         Me.shilong_btn.TabIndex = 12
         Me.shilong_btn.Text = "Shilong"
         Me.shilong_btn.UseVisualStyleBackColor = False
         '
         'emergency_panel
         '
+        Me.emergency_panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(91, Byte), Integer))
         Me.emergency_panel.Controls.Add(Me.Label8)
         Me.emergency_panel.Controls.Add(Me.txtsub)
         Me.emergency_panel.Controls.Add(Me.Send)
@@ -470,36 +495,36 @@ Partial Class Form1
         Me.emergency_panel.Controls.Add(Me.choose)
         Me.emergency_panel.Controls.Add(Me.txtaddress)
         Me.emergency_panel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.emergency_panel.Location = New System.Drawing.Point(1246, 69)
+        Me.emergency_panel.Location = New System.Drawing.Point(1662, 85)
+        Me.emergency_panel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.emergency_panel.Name = "emergency_panel"
-        Me.emergency_panel.Size = New System.Drawing.Size(672, 536)
+        Me.emergency_panel.Size = New System.Drawing.Size(896, 660)
         Me.emergency_panel.TabIndex = 1
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(126, 183)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Location = New System.Drawing.Point(168, 225)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(43, 13)
+        Me.Label8.Size = New System.Drawing.Size(55, 17)
         Me.Label8.TabIndex = 28
         Me.Label8.Text = "Subject"
         '
         'txtsub
         '
-        Me.txtsub.Location = New System.Drawing.Point(203, 180)
-        Me.txtsub.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtsub.Location = New System.Drawing.Point(271, 222)
+        Me.txtsub.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtsub.Name = "txtsub"
-        Me.txtsub.Size = New System.Drawing.Size(310, 25)
+        Me.txtsub.Size = New System.Drawing.Size(412, 30)
         Me.txtsub.TabIndex = 27
         Me.txtsub.Text = "Emergency"
         '
         'Send
         '
-        Me.Send.Location = New System.Drawing.Point(412, 458)
-        Me.Send.Margin = New System.Windows.Forms.Padding(2)
+        Me.Send.Location = New System.Drawing.Point(549, 564)
+        Me.Send.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Send.Name = "Send"
-        Me.Send.Size = New System.Drawing.Size(103, 48)
+        Me.Send.Size = New System.Drawing.Size(137, 59)
         Me.Send.TabIndex = 26
         Me.Send.Text = "Send"
         Me.Send.UseVisualStyleBackColor = True
@@ -507,20 +532,18 @@ Partial Class Form1
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(126, 266)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Location = New System.Drawing.Point(168, 327)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(45, 13)
+        Me.Label9.Size = New System.Drawing.Size(60, 17)
         Me.Label9.TabIndex = 25
         Me.Label9.Text = "Address"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(126, 130)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Location = New System.Drawing.Point(168, 160)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(43, 13)
+        Me.Label10.Size = New System.Drawing.Size(56, 17)
         Me.Label10.TabIndex = 24
         Me.Label10.Text = "Choose"
         '
@@ -530,19 +553,19 @@ Partial Class Form1
         Me.choose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.choose.FormattingEnabled = True
         Me.choose.Items.AddRange(New Object() {"Hospital", "Fire Station", "Police"})
-        Me.choose.Location = New System.Drawing.Point(203, 128)
-        Me.choose.Margin = New System.Windows.Forms.Padding(2)
+        Me.choose.Location = New System.Drawing.Point(271, 158)
+        Me.choose.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.choose.Name = "choose"
-        Me.choose.Size = New System.Drawing.Size(310, 21)
+        Me.choose.Size = New System.Drawing.Size(412, 24)
         Me.choose.TabIndex = 23
         '
         'txtaddress
         '
         Me.txtaddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtaddress.Location = New System.Drawing.Point(203, 241)
-        Me.txtaddress.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtaddress.Location = New System.Drawing.Point(271, 297)
+        Me.txtaddress.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtaddress.Name = "txtaddress"
-        Me.txtaddress.Size = New System.Drawing.Size(310, 130)
+        Me.txtaddress.Size = New System.Drawing.Size(412, 159)
         Me.txtaddress.TabIndex = 22
         Me.txtaddress.Text = "I need urgent help!!"
         '
@@ -550,9 +573,10 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Bahnschrift Light", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(25, 1)
+        Me.Label3.Location = New System.Drawing.Point(33, 1)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(125, 25)
+        Me.Label3.Size = New System.Drawing.Size(160, 33)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "E-Rickshaw"
         '
@@ -562,9 +586,10 @@ Partial Class Form1
         Me.erickshaw.BackgroundImage = CType(resources.GetObject("erickshaw.BackgroundImage"), System.Drawing.Image)
         Me.erickshaw.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.erickshaw.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.erickshaw.Location = New System.Drawing.Point(30, 29)
+        Me.erickshaw.Location = New System.Drawing.Point(40, 36)
+        Me.erickshaw.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.erickshaw.Name = "erickshaw"
-        Me.erickshaw.Size = New System.Drawing.Size(113, 93)
+        Me.erickshaw.Size = New System.Drawing.Size(151, 114)
         Me.erickshaw.TabIndex = 1
         Me.erickshaw.UseVisualStyleBackColor = False
         '
@@ -572,27 +597,30 @@ Partial Class Form1
         '
         Me.Panel7.Controls.Add(Me.Label3)
         Me.Panel7.Controls.Add(Me.erickshaw)
-        Me.Panel7.Location = New System.Drawing.Point(460, 3)
+        Me.Panel7.Location = New System.Drawing.Point(613, 4)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(162, 122)
+        Me.Panel7.Size = New System.Drawing.Size(216, 150)
         Me.Panel7.TabIndex = 1
         '
         'Panel9
         '
         Me.Panel9.Controls.Add(Me.Label4)
         Me.Panel9.Controls.Add(Me.Button3)
-        Me.Panel9.Location = New System.Drawing.Point(331, 230)
+        Me.Panel9.Location = New System.Drawing.Point(441, 283)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(344, 141)
+        Me.Panel9.Size = New System.Drawing.Size(459, 174)
         Me.Panel9.TabIndex = 3
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Bahnschrift Light", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(74, 59)
+        Me.Label4.Location = New System.Drawing.Point(99, 73)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(47, 25)
+        Me.Label4.Size = New System.Drawing.Size(61, 33)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Cab"
         '
@@ -602,9 +630,10 @@ Partial Class Form1
         Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(190, 30)
+        Me.Button3.Location = New System.Drawing.Point(253, 37)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(104, 90)
+        Me.Button3.Size = New System.Drawing.Size(139, 111)
         Me.Button3.TabIndex = 1
         Me.Button3.UseVisualStyleBackColor = False
         '
@@ -616,38 +645,36 @@ Partial Class Form1
         Me.panelERickshaw.Controls.Add(Me.e_fullData_dgv)
         Me.panelERickshaw.Controls.Add(Me.e_dgv)
         Me.panelERickshaw.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelERickshaw.Location = New System.Drawing.Point(0, 206)
+        Me.panelERickshaw.Location = New System.Drawing.Point(0, -236)
+        Me.panelERickshaw.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelERickshaw.Name = "panelERickshaw"
-        Me.panelERickshaw.Size = New System.Drawing.Size(1052, 320)
+        Me.panelERickshaw.Size = New System.Drawing.Size(1403, 394)
         Me.panelERickshaw.TabIndex = 0
         '
         'doubleClick
         '
         Me.doubleClick.AutoSize = True
-        Me.doubleClick.Location = New System.Drawing.Point(408, 329)
-        Me.doubleClick.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.doubleClick.Location = New System.Drawing.Point(544, 405)
         Me.doubleClick.Name = "doubleClick"
-        Me.doubleClick.Size = New System.Drawing.Size(190, 13)
+        Me.doubleClick.Size = New System.Drawing.Size(250, 17)
         Me.doubleClick.TabIndex = 18
         Me.doubleClick.Text = "* Double click on Cell to Get Directions"
         '
         'lblSugg
         '
         Me.lblSugg.AutoSize = True
-        Me.lblSugg.Location = New System.Drawing.Point(415, 42)
-        Me.lblSugg.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSugg.Location = New System.Drawing.Point(264, 46)
         Me.lblSugg.Name = "lblSugg"
-        Me.lblSugg.Size = New System.Drawing.Size(42, 13)
+        Me.lblSugg.Size = New System.Drawing.Size(55, 17)
         Me.lblSugg.TabIndex = 17
         Me.lblSugg.Text = "lblSugg"
         '
         'lblTemp
         '
         Me.lblTemp.AutoSize = True
-        Me.lblTemp.Location = New System.Drawing.Point(445, 397)
-        Me.lblTemp.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblTemp.Location = New System.Drawing.Point(593, 489)
         Me.lblTemp.Name = "lblTemp"
-        Me.lblTemp.Size = New System.Drawing.Size(44, 13)
+        Me.lblTemp.Size = New System.Drawing.Size(58, 17)
         Me.lblTemp.TabIndex = 16
         Me.lblTemp.Text = "lblTemp"
         Me.lblTemp.Visible = False
@@ -655,11 +682,11 @@ Partial Class Form1
         'e_fullData_dgv
         '
         Me.e_fullData_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.e_fullData_dgv.Location = New System.Drawing.Point(407, 401)
-        Me.e_fullData_dgv.Margin = New System.Windows.Forms.Padding(2)
+        Me.e_fullData_dgv.Location = New System.Drawing.Point(543, 494)
+        Me.e_fullData_dgv.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.e_fullData_dgv.Name = "e_fullData_dgv"
         Me.e_fullData_dgv.RowTemplate.Height = 24
-        Me.e_fullData_dgv.Size = New System.Drawing.Size(8, 10)
+        Me.e_fullData_dgv.Size = New System.Drawing.Size(11, 12)
         Me.e_fullData_dgv.TabIndex = 15
         Me.e_fullData_dgv.Visible = False
         '
@@ -668,12 +695,12 @@ Partial Class Form1
         Me.e_dgv.AllowUserToAddRows = False
         Me.e_dgv.AllowUserToDeleteRows = False
         Me.e_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.e_dgv.Location = New System.Drawing.Point(407, 112)
-        Me.e_dgv.Margin = New System.Windows.Forms.Padding(2)
+        Me.e_dgv.Location = New System.Drawing.Point(254, 132)
+        Me.e_dgv.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.e_dgv.Name = "e_dgv"
         Me.e_dgv.ReadOnly = True
         Me.e_dgv.RowTemplate.Height = 24
-        Me.e_dgv.Size = New System.Drawing.Size(346, 192)
+        Me.e_dgv.Size = New System.Drawing.Size(461, 236)
         Me.e_dgv.TabIndex = 14
         '
         'panelBus
@@ -688,27 +715,27 @@ Partial Class Form1
         Me.panelBus.Controls.Add(Me.time_lbl)
         Me.panelBus.Controls.Add(Me.t_lbl)
         Me.panelBus.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelBus.Location = New System.Drawing.Point(0, 526)
+        Me.panelBus.Location = New System.Drawing.Point(0, 158)
+        Me.panelBus.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelBus.Name = "panelBus"
-        Me.panelBus.Size = New System.Drawing.Size(1052, 10)
+        Me.panelBus.Size = New System.Drawing.Size(1403, 502)
         Me.panelBus.TabIndex = 2
         '
         'lblInfoBus
         '
         Me.lblInfoBus.AutoSize = True
-        Me.lblInfoBus.Location = New System.Drawing.Point(231, 326)
-        Me.lblInfoBus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblInfoBus.Location = New System.Drawing.Point(308, 401)
         Me.lblInfoBus.Name = "lblInfoBus"
-        Me.lblInfoBus.Size = New System.Drawing.Size(126, 13)
+        Me.lblInfoBus.Size = New System.Drawing.Size(165, 17)
         Me.lblInfoBus.TabIndex = 25
         Me.lblInfoBus.Text = "No Bus Aviable right now"
         '
         'btnSubmitBus
         '
-        Me.btnSubmitBus.Location = New System.Drawing.Point(299, 141)
-        Me.btnSubmitBus.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSubmitBus.Location = New System.Drawing.Point(399, 174)
+        Me.btnSubmitBus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSubmitBus.Name = "btnSubmitBus"
-        Me.btnSubmitBus.Size = New System.Drawing.Size(56, 19)
+        Me.btnSubmitBus.Size = New System.Drawing.Size(75, 23)
         Me.btnSubmitBus.TabIndex = 24
         Me.btnSubmitBus.Text = "Sumbit"
         Me.btnSubmitBus.UseVisualStyleBackColor = True
@@ -716,68 +743,64 @@ Partial Class Form1
         'de_cb
         '
         Me.de_cb.FormattingEnabled = True
-        Me.de_cb.Location = New System.Drawing.Point(418, 82)
-        Me.de_cb.Margin = New System.Windows.Forms.Padding(2)
+        Me.de_cb.Location = New System.Drawing.Point(557, 101)
+        Me.de_cb.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.de_cb.Name = "de_cb"
-        Me.de_cb.Size = New System.Drawing.Size(92, 21)
+        Me.de_cb.Size = New System.Drawing.Size(121, 24)
         Me.de_cb.TabIndex = 23
         '
         's_cb
         '
         Me.s_cb.FormattingEnabled = True
-        Me.s_cb.Location = New System.Drawing.Point(200, 87)
-        Me.s_cb.Margin = New System.Windows.Forms.Padding(2)
+        Me.s_cb.Location = New System.Drawing.Point(267, 107)
+        Me.s_cb.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.s_cb.Name = "s_cb"
-        Me.s_cb.Size = New System.Drawing.Size(92, 21)
+        Me.s_cb.Size = New System.Drawing.Size(121, 24)
         Me.s_cb.TabIndex = 22
         '
         'd_cb
         '
         Me.d_cb.AutoSize = True
-        Me.d_cb.Location = New System.Drawing.Point(338, 84)
-        Me.d_cb.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.d_cb.Location = New System.Drawing.Point(451, 103)
         Me.d_cb.Name = "d_cb"
-        Me.d_cb.Size = New System.Drawing.Size(60, 13)
+        Me.d_cb.Size = New System.Drawing.Size(79, 17)
         Me.d_cb.TabIndex = 21
         Me.d_cb.Text = "Destination"
         '
         'lblSource
         '
         Me.lblSource.AutoSize = True
-        Me.lblSource.Location = New System.Drawing.Point(134, 87)
-        Me.lblSource.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblSource.Location = New System.Drawing.Point(179, 107)
         Me.lblSource.Name = "lblSource"
-        Me.lblSource.Size = New System.Drawing.Size(41, 13)
+        Me.lblSource.Size = New System.Drawing.Size(53, 17)
         Me.lblSource.TabIndex = 20
         Me.lblSource.Text = "Source"
         '
         'bus_dgv
         '
         Me.bus_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.bus_dgv.Location = New System.Drawing.Point(107, 263)
-        Me.bus_dgv.Margin = New System.Windows.Forms.Padding(2)
+        Me.bus_dgv.Location = New System.Drawing.Point(143, 324)
+        Me.bus_dgv.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.bus_dgv.Name = "bus_dgv"
         Me.bus_dgv.RowTemplate.Height = 24
-        Me.bus_dgv.Size = New System.Drawing.Size(387, 122)
+        Me.bus_dgv.Size = New System.Drawing.Size(516, 150)
         Me.bus_dgv.TabIndex = 19
         '
         'time_lbl
         '
         Me.time_lbl.AutoSize = True
-        Me.time_lbl.Location = New System.Drawing.Point(456, 34)
-        Me.time_lbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.time_lbl.Location = New System.Drawing.Point(608, 42)
         Me.time_lbl.Name = "time_lbl"
-        Me.time_lbl.Size = New System.Drawing.Size(39, 13)
+        Me.time_lbl.Size = New System.Drawing.Size(51, 17)
         Me.time_lbl.TabIndex = 18
         Me.time_lbl.Text = "Label1"
         '
         't_lbl
         '
         Me.t_lbl.AutoSize = True
-        Me.t_lbl.Location = New System.Drawing.Point(404, 34)
-        Me.t_lbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.t_lbl.Location = New System.Drawing.Point(539, 42)
         Me.t_lbl.Name = "t_lbl"
-        Me.t_lbl.Size = New System.Drawing.Size(30, 13)
+        Me.t_lbl.Size = New System.Drawing.Size(39, 17)
         Me.t_lbl.TabIndex = 17
         Me.t_lbl.Text = "Time"
         '
@@ -787,9 +810,10 @@ Partial Class Form1
         Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(20, 27)
+        Me.Button4.Location = New System.Drawing.Point(27, 33)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(116, 93)
+        Me.Button4.Size = New System.Drawing.Size(155, 114)
         Me.Button4.TabIndex = 0
         Me.Button4.UseVisualStyleBackColor = False
         '
@@ -797,18 +821,20 @@ Partial Class Form1
         '
         Me.Panel10.Controls.Add(Me.Label5)
         Me.Panel10.Controls.Add(Me.Button4)
-        Me.Panel10.Location = New System.Drawing.Point(58, 37)
+        Me.Panel10.Location = New System.Drawing.Point(77, 46)
+        Me.Panel10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(284, 141)
+        Me.Panel10.Size = New System.Drawing.Size(379, 174)
         Me.Panel10.TabIndex = 2
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Bahnschrift Light", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(203, 57)
+        Me.Label5.Location = New System.Drawing.Point(271, 70)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(49, 25)
+        Me.Label5.Size = New System.Drawing.Size(61, 33)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "Bus"
         '
@@ -817,9 +843,10 @@ Partial Class Form1
         Me.outcampus_panel.Controls.Add(Me.Panel9)
         Me.outcampus_panel.Controls.Add(Me.Panel10)
         Me.outcampus_panel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.outcampus_panel.Location = New System.Drawing.Point(2892, 69)
+        Me.outcampus_panel.Location = New System.Drawing.Point(3857, 85)
+        Me.outcampus_panel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.outcampus_panel.Name = "outcampus_panel"
-        Me.outcampus_panel.Size = New System.Drawing.Size(1012, 536)
+        Me.outcampus_panel.Size = New System.Drawing.Size(1349, 660)
         Me.outcampus_panel.TabIndex = 2
         '
         'incampus_panel
@@ -829,9 +856,10 @@ Partial Class Form1
         Me.incampus_panel.Controls.Add(Me.Panel7)
         Me.incampus_panel.Controls.Add(Me.Panel6)
         Me.incampus_panel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.incampus_panel.Location = New System.Drawing.Point(194, 69)
+        Me.incampus_panel.Location = New System.Drawing.Point(259, 85)
+        Me.incampus_panel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.incampus_panel.Name = "incampus_panel"
-        Me.incampus_panel.Size = New System.Drawing.Size(1052, 536)
+        Me.incampus_panel.Size = New System.Drawing.Size(1403, 660)
         Me.incampus_panel.TabIndex = 9
         '
         'CabDataBindingSource
@@ -840,15 +868,16 @@ Partial Class Form1
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1302, 605)
+        Me.ClientSize = New System.Drawing.Size(1736, 745)
         Me.Controls.Add(Me.outcampus_panel)
         Me.Controls.Add(Me.outstation_panel)
         Me.Controls.Add(Me.emergency_panel)
         Me.Controls.Add(Me.incampus_panel)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
