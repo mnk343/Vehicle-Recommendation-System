@@ -23,7 +23,7 @@
 
     End Sub
 
-    Private Sub load_btn_Click(sender As Object, e As EventArgs) Handles load_btn.Click
+    Private Sub load_btn_Click(sender As Object, e As EventArgs)
         Dim src As String = src_cb.Text
         Dim dest As String = des_cb.Text
 
@@ -64,7 +64,7 @@
 
     End Sub
 
-    Private Sub no_pass_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles no_pass.KeyPress, hour_tb.KeyPress, min_tb.KeyPress
+    Private Sub no_pass_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
 
 
         '97 - 122 = Ascii codes for simple letters
