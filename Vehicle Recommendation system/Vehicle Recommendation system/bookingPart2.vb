@@ -41,8 +41,12 @@ Public Class bookingPart2
             Dim dat As String = CStr(reader(8))
             If dat = DateAndTime.Now.ToShortDateString Then
                 day_cb.Text = "Today"
+
+
             ElseIf dat = DateAndTime.Now.AddDays(1).ToShortDateString Then
                 day_cb.Text = "Tomorrow"
+
+
 
             ElseIf dat = DateAndTime.Now.AddDays(2).ToShortDateString Then
                 day_cb.Text = "Day after Tomorrow"
@@ -137,7 +141,7 @@ Public Class bookingPart2
             If flag = Nothing Then
 
                 If numofpassengers <= CInt(seater) Then
-                    querry = "UPDATE Booking SET [Source] = '" + src_cb.Text + "', [Destination] = '" + des_cb.Text + "' , [Occupancy] = " + no_pass.Text + ", [Hour] = " + hour_tb.Text + ", [Minute]= " + min_tb.Text + ", [Day] = #" + dat + "# Where [BookingID] = " + updateBooking.bid_lbl.Text + " ;"
+                    querry = "UPDATE Booking SET [Source] = '" + src_cb.Text + "', [Destination] = '" + des_cb.Text + "' , [Occupancy] = " + no_pass.Text + ", [Hour] = " + hour_tb.Text + ", [Minute]= " + min_tb.Text + ", [Day] = '" + dat + "' Where [BookingID] = " + updateBooking.bid_lbl.Text + " ;"
                     MessageBox.Show(querry)
                     conn = New OleDbConnection(dbsource)
                     Dim cmdup As New OleDbCommand(querry, conn)
