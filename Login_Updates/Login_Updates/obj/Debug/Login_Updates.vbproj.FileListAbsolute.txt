@@ -25,4 +25,6 @@ C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\
 C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.ChangePassword.resources
 C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.Dashboard.resources
 C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.updateData.resources
-C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.UpdateBookings.resources
+C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.NewBooking.resources
+C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.Bookingpart2.resources
+C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Login_Updates\Login_Updates\obj\Debug\WindowsApplication1.updatebooking.resources

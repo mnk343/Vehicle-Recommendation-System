@@ -70,6 +70,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bookingpart2.Designer.vb">
+      <DependentUpon>Bookingpart2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bookingpart2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -77,10 +83,17 @@
       <DependentUpon>Dashboard.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateBookings.Designer.vb">
-      <DependentUpon>UpdateBookings.vb</DependentUpon>
+    <Compile Include="DBControl.vb" />
+    <Compile Include="NewBooking.Designer.vb">
+      <DependentUpon>NewBooking.vb</DependentUpon>
     </Compile>
-    <Compile Include="UpdateBookings.vb">
+    <Compile Include="NewBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatebooking.Designer.vb">
+      <DependentUpon>updatebooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updatebooking.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="updateData.Designer.vb">
@@ -123,11 +136,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Bookingpart2.resx">
+      <DependentUpon>Bookingpart2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateBookings.resx">
-      <DependentUpon>UpdateBookings.vb</DependentUpon>
+    <EmbeddedResource Include="NewBooking.resx">
+      <DependentUpon>NewBooking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatebooking.resx">
+      <DependentUpon>updatebooking.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="updateData.resx">
       <DependentUpon>updateData.vb</DependentUpon>

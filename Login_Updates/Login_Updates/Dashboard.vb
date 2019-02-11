@@ -57,10 +57,12 @@ Public Class Dashboard
 
 
     Private Sub update_btn_Click(sender As Object, e As EventArgs) Handles update_btn.Click
-
+        updatebooking.Show()
+        Me.Hide()
     End Sub
 
     Private Sub newbook_Click(sender As Object, e As EventArgs) Handles newbook.Click
-
+        NewBooking.Show()
+        Me.Hide()
     End Sub
 End Class

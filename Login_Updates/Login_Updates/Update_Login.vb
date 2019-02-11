@@ -43,4 +43,8 @@ Public Class Update_Login
             TextBox2.PasswordChar = "*"
         End If
     End Sub
+
+    Private Sub Update_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
