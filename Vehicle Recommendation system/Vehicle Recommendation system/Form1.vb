@@ -88,7 +88,7 @@ Public Class Form1
     End Sub
 
     Private Sub outstation_btn_Click(sender As Object, e As EventArgs) Handles outstation_btn.Click
-
+        lblError.Hide()
 
         incampus_panel.Hide()
         outstation_panel.Show()
@@ -114,8 +114,7 @@ Public Class Form1
         dgvData.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
         dgvData.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
         dgvData.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
-        dgvData.BackgroundColor = Color.White
-
+       
         dgvData.EnableHeadersVisualStyles = False
         dgvData.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
         dgvData.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72)
@@ -178,6 +177,8 @@ Public Class Form1
 
     Private Sub submit_Click(sender As Object, e As EventArgs) Handles submit.Click
 
+        lblError.Hide()
+
         dgvData.Visible = True
         info.Visible = False
 
@@ -201,8 +202,13 @@ Public Class Form1
     Private Sub shilong_btn_Click(sender As Object, e As EventArgs) Handles shilong_btn.Click
         dgvData.Visible = True
         info.Visible = False
+        lblError.Hide()
 
         check = 1
+
+        If (passengers.Text.Length > 0) Then
+            NoPassengers = CInt(passengers.Text)
+        End If
 
         ' RUN QUERY
         Access.ExecQuery("SELECT CabId, UserName, Contact, ShillongTrips , VehicleName, Seater FROM CabData WHERE Shillong = TRUE AND Status = TRUE AND Seater >= " + CStr(NoPassengers) + " ORDER BY ShillongTrips DESC;")
@@ -210,13 +216,25 @@ Public Class Form1
 
         ' FILL DATAGRID
         dgvData.DataSource = Access.DBDT
+
+        If dgvData.RowCount = 0 Then
+            dgvData.Hide()
+            lblError.Show()
+            '
+        End If
     End Sub
 
     Private Sub tawang_btn_Click(sender As Object, e As EventArgs) Handles tawang_btn.Click
         dgvData.Visible = True
         info.Visible = False
+        lblError.Hide()
 
         check = 2
+
+        If (passengers.Text.Length > 0) Then
+            NoPassengers = CInt(passengers.Text)
+        End If
+
 
         ' RUN QUERY
 
@@ -225,13 +243,24 @@ Public Class Form1
 
         ' FILL DATAGRID
         dgvData.DataSource = Access.DBDT
+
+
+        If dgvData.RowCount = 0 Then
+            dgvData.Hide()
+            lblError.Show()
+        End If
     End Sub
 
     Private Sub gang_btn_Click(sender As Object, e As EventArgs) Handles gang_btn.Click
         dgvData.Visible = True
         info.Visible = False
+        lblError.Hide()
 
         check = 3
+        If (passengers.Text.Length > 0) Then
+            NoPassengers = CInt(passengers.Text)
+        End If
+
 
         ' RUN QUERY
         Access.ExecQuery("SELECT CabId, UserName, Contact, GangtokTrips, VehicleName,Seater FROM CabData WHERE Gangtok = TRUE AND Status = TRUE AND Seater >= " + CStr(NoPassengers) + " ORDER BY GangtokTrips DESC;")
@@ -239,6 +268,12 @@ Public Class Form1
 
         ' FILL DATAGRID
         dgvData.DataSource = Access.DBDT
+
+        
+        If dgvData.RowCount = 0 Then
+            dgvData.Hide()
+            lblError.Show()
+        End If
     End Sub
 
     Private Sub clear_Click(sender As Object, e As EventArgs) Handles clear.Click
@@ -510,6 +545,14 @@ Public Class Form1
     Private Sub login_btn_Click(sender As Object, e As EventArgs) Handles login_btn.Click
         Me.Hide()
         loginForm.Show()
+
+    End Sub
+
+    Private Sub dgvData_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvData.CellContentClick
+
+    End Sub
+
+    Private Sub lblError_Click(sender As Object, e As EventArgs) Handles lblError.Click
 
     End Sub
 End Class
