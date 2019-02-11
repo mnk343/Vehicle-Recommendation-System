@@ -25,6 +25,7 @@ Partial Class updateBooking
         Me.cid_lbl = New System.Windows.Forms.Label()
         Me.bid_lbl = New System.Windows.Forms.Label()
         Me.book_dgv = New System.Windows.Forms.DataGridView()
+        Me.back = New System.Windows.Forms.Button()
         CType(Me.book_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,11 +61,24 @@ Partial Class updateBooking
         Me.book_dgv.Size = New System.Drawing.Size(410, 183)
         Me.book_dgv.TabIndex = 3
         '
+        'back
+        '
+        Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
+        Me.back.ForeColor = System.Drawing.Color.MediumBlue
+        Me.back.Location = New System.Drawing.Point(42, 265)
+        Me.back.Margin = New System.Windows.Forms.Padding(2)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(142, 38)
+        Me.back.TabIndex = 26
+        Me.back.Text = "Back"
+        Me.back.UseVisualStyleBackColor = True
+        '
         'updateBooking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(531, 327)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.cid_lbl)
         Me.Controls.Add(Me.bid_lbl)
         Me.Controls.Add(Me.book_dgv)
@@ -78,4 +92,5 @@ Partial Class updateBooking
     Friend WithEvents cid_lbl As System.Windows.Forms.Label
     Friend WithEvents bid_lbl As System.Windows.Forms.Label
     Friend WithEvents book_dgv As System.Windows.Forms.DataGridView
+    Friend WithEvents back As System.Windows.Forms.Button
 End Class

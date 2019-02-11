@@ -65,7 +65,8 @@ Public Class updateData
     End Sub
 
     Private Sub butback_Click(sender As Object, e As EventArgs) Handles butback.Click
-
+        Me.Hide()
+        dashboardCab.Show()
     End Sub
 
     Private Sub chcity_CheckedChanged(sender As Object, e As EventArgs) Handles chcity.CheckedChanged

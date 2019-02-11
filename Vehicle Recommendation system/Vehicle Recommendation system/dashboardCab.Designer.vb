@@ -30,6 +30,7 @@ Partial Class dashboardCab
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.update_btn = New System.Windows.Forms.Button()
         Me.profile = New System.Windows.Forms.Button()
+        Me.back = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -115,11 +116,24 @@ Partial Class dashboardCab
         Me.profile.Text = "UPDATE PROFILE"
         Me.profile.UseVisualStyleBackColor = True
         '
+        'back
+        '
+        Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
+        Me.back.ForeColor = System.Drawing.Color.MediumBlue
+        Me.back.Location = New System.Drawing.Point(558, 224)
+        Me.back.Margin = New System.Windows.Forms.Padding(2)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(174, 38)
+        Me.back.TabIndex = 32
+        Me.back.Text = "Back"
+        Me.back.UseVisualStyleBackColor = True
+        '
         'dashboardCab
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(743, 440)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.newbook)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -141,4 +155,5 @@ Partial Class dashboardCab
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents update_btn As System.Windows.Forms.Button
     Friend WithEvents profile As System.Windows.Forms.Button
+    Friend WithEvents back As System.Windows.Forms.Button
 End Class

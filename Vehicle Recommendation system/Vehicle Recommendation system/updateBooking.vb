@@ -47,4 +47,10 @@ Public Class updateBooking
         End If
 
     End Sub
+
+    Private Sub profile_Click(sender As Object, e As EventArgs) Handles back.Click
+        Me.Hide()
+        dashboardCab.Show()
+
+    End Sub
 End Class
