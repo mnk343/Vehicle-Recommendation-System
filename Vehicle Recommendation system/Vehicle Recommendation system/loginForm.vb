@@ -12,13 +12,13 @@ Public Class loginForm
 
 
         Dim count_checkbox As Integer = 0
-        If staff_chkbox.Checked Then
+        If staff.Checked Then
             count_checkbox += 1
         End If
-        If rickshaw_chkbox.Checked Then
+        If er.Checked Then
             count_checkbox += 1
         End If
-        If cab_chkbox.Checked Then
+        If cab.Checked Then
             count_checkbox += 1
         End If
 
@@ -64,28 +64,32 @@ Public Class loginForm
         Me.Hide()
     End Sub
 
-    Private Sub cab_chkbox_CheckedChanged(sender As Object, e As EventArgs) Handles cab_chkbox.CheckedChanged
-        If cab_chkbox.Checked = True Then
-            cab_chkbox.Checked = True
-            staff_chkbox.Checked = False
-            rickshaw_chkbox.Checked = False
+    Private Sub cab_chkbox_CheckedChanged(sender As Object, e As EventArgs) Handles cab.CheckedChanged
+        If cab.Checked = True Then
+            cab.Checked = True
+            staff.Checked = False
+            er.Checked = False
         End If
     End Sub
 
-    Private Sub rickshaw_chkbox_CheckedChanged(sender As Object, e As EventArgs) Handles rickshaw_chkbox.CheckedChanged
-        If rickshaw_chkbox.Checked = True Then
-            staff_chkbox.Checked = False
-            cab_chkbox.Checked = False
-            rickshaw_chkbox.Checked = True
+    Private Sub rickshaw_chkbox_CheckedChanged(sender As Object, e As EventArgs) Handles er.CheckedChanged
+        If er.Checked = True Then
+            staff.Checked = False
+            cab.Checked = False
+            er.Checked = True
         End If
     End Sub
 
-    Private Sub staff_chkbox_CheckedChanged(sender As Object, e As EventArgs) Handles staff_chkbox.CheckedChanged
-        If staff_chkbox.Checked = True Then
-            cab_chkbox.Checked = False
-            rickshaw_chkbox.Checked = False
-            staff_chkbox.Checked = True
+    Private Sub staff_chkbox_CheckedChanged(sender As Object, e As EventArgs) Handles staff.CheckedChanged
+        If staff.Checked = True Then
+            cab.Checked = False
+            er.Checked = False
+            staff.Checked = True
         End If
+    End Sub
+
+    Private Sub loginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
 

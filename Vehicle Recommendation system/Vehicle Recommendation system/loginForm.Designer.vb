@@ -31,9 +31,9 @@ Partial Class loginForm
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.back = New System.Windows.Forms.Button()
-        Me.staff_chkbox = New System.Windows.Forms.CheckBox()
-        Me.rickshaw_chkbox = New System.Windows.Forms.CheckBox()
-        Me.cab_chkbox = New System.Windows.Forms.CheckBox()
+        Me.staff = New System.Windows.Forms.CheckBox()
+        Me.er = New System.Windows.Forms.CheckBox()
+        Me.cab = New System.Windows.Forms.CheckBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,9 +44,10 @@ Partial Class loginForm
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(110, 189)
+        Me.PictureBox1.Location = New System.Drawing.Point(82, 154)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(26, 27)
+        Me.PictureBox1.Size = New System.Drawing.Size(20, 22)
         Me.PictureBox1.TabIndex = 18
         Me.PictureBox1.TabStop = False
         '
@@ -56,26 +57,29 @@ Partial Class loginForm
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(153, 196)
+        Me.TextBox1.Location = New System.Drawing.Point(115, 159)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(241, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(181, 16)
         Me.TextBox1.TabIndex = 19
-        Me.TextBox1.Text = "Usename"
+        Me.TextBox1.Text = "Username"
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Location = New System.Drawing.Point(110, 222)
+        Me.Panel2.Location = New System.Drawing.Point(82, 180)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(300, 1)
+        Me.Panel2.Size = New System.Drawing.Size(225, 1)
         Me.Panel2.TabIndex = 20
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Location = New System.Drawing.Point(110, 284)
+        Me.Panel3.Location = New System.Drawing.Point(82, 231)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(300, 1)
+        Me.Panel3.Size = New System.Drawing.Size(225, 1)
         Me.Panel3.TabIndex = 23
         '
         'TextBox2
@@ -84,19 +88,22 @@ Partial Class loginForm
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.ForeColor = System.Drawing.Color.White
-        Me.TextBox2.Location = New System.Drawing.Point(153, 258)
+        Me.TextBox2.Location = New System.Drawing.Point(115, 210)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(241, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(181, 16)
         Me.TextBox2.TabIndex = 22
+        Me.TextBox2.Text = "******"
         '
         'PictureBox2
         '
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(110, 251)
+        Me.PictureBox2.Location = New System.Drawing.Point(82, 204)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(26, 27)
+        Me.PictureBox2.Size = New System.Drawing.Size(20, 22)
         Me.PictureBox2.TabIndex = 21
         Me.PictureBox2.TabStop = False
         '
@@ -106,9 +113,10 @@ Partial Class loginForm
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(174, 365)
+        Me.Button1.Location = New System.Drawing.Point(130, 297)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(142, 45)
+        Me.Button1.Size = New System.Drawing.Size(106, 37)
         Me.Button1.TabIndex = 24
         Me.Button1.Text = "Log In"
         Me.Button1.UseVisualStyleBackColor = False
@@ -119,66 +127,71 @@ Partial Class loginForm
         Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.back.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.back.ForeColor = System.Drawing.Color.White
-        Me.back.Location = New System.Drawing.Point(174, 441)
+        Me.back.Location = New System.Drawing.Point(130, 358)
+        Me.back.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(142, 45)
+        Me.back.Size = New System.Drawing.Size(106, 37)
         Me.back.TabIndex = 25
         Me.back.Text = "Home"
         Me.back.UseVisualStyleBackColor = False
         '
-        'staff_chkbox
+        'staff
         '
-        Me.staff_chkbox.AutoSize = True
-        Me.staff_chkbox.ForeColor = System.Drawing.Color.White
-        Me.staff_chkbox.Location = New System.Drawing.Point(64, 321)
-        Me.staff_chkbox.Name = "staff_chkbox"
-        Me.staff_chkbox.Size = New System.Drawing.Size(59, 21)
-        Me.staff_chkbox.TabIndex = 26
-        Me.staff_chkbox.Text = "Staff"
-        Me.staff_chkbox.UseVisualStyleBackColor = True
+        Me.staff.AutoSize = True
+        Me.staff.ForeColor = System.Drawing.Color.White
+        Me.staff.Location = New System.Drawing.Point(48, 261)
+        Me.staff.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.staff.Name = "staff"
+        Me.staff.Size = New System.Drawing.Size(48, 17)
+        Me.staff.TabIndex = 26
+        Me.staff.Text = "Staff"
+        Me.staff.UseVisualStyleBackColor = True
         '
-        'rickshaw_chkbox
+        'er
         '
-        Me.rickshaw_chkbox.AutoSize = True
-        Me.rickshaw_chkbox.ForeColor = System.Drawing.Color.White
-        Me.rickshaw_chkbox.Location = New System.Drawing.Point(194, 321)
-        Me.rickshaw_chkbox.Name = "rickshaw_chkbox"
-        Me.rickshaw_chkbox.Size = New System.Drawing.Size(103, 21)
-        Me.rickshaw_chkbox.TabIndex = 27
-        Me.rickshaw_chkbox.Text = "E-Rickshaw"
-        Me.rickshaw_chkbox.UseVisualStyleBackColor = True
+        Me.er.AutoSize = True
+        Me.er.ForeColor = System.Drawing.Color.White
+        Me.er.Location = New System.Drawing.Point(146, 261)
+        Me.er.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.er.Name = "er"
+        Me.er.Size = New System.Drawing.Size(83, 17)
+        Me.er.TabIndex = 27
+        Me.er.Text = "E-Rickshaw"
+        Me.er.UseVisualStyleBackColor = True
         '
-        'cab_chkbox
+        'cab
         '
-        Me.cab_chkbox.AutoSize = True
-        Me.cab_chkbox.ForeColor = System.Drawing.Color.White
-        Me.cab_chkbox.Location = New System.Drawing.Point(327, 321)
-        Me.cab_chkbox.Name = "cab_chkbox"
-        Me.cab_chkbox.Size = New System.Drawing.Size(55, 21)
-        Me.cab_chkbox.TabIndex = 28
-        Me.cab_chkbox.Text = "Cab"
-        Me.cab_chkbox.UseVisualStyleBackColor = True
+        Me.cab.AutoSize = True
+        Me.cab.ForeColor = System.Drawing.Color.White
+        Me.cab.Location = New System.Drawing.Point(245, 261)
+        Me.cab.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cab.Name = "cab"
+        Me.cab.Size = New System.Drawing.Size(45, 17)
+        Me.cab.TabIndex = 28
+        Me.cab.Text = "Cab"
+        Me.cab.UseVisualStyleBackColor = True
         '
         'PictureBox3
         '
         Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox3.Location = New System.Drawing.Point(172, 49)
+        Me.PictureBox3.Location = New System.Drawing.Point(129, 40)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(144, 86)
+        Me.PictureBox3.Size = New System.Drawing.Size(108, 70)
         Me.PictureBox3.TabIndex = 29
         Me.PictureBox3.TabStop = False
         '
         'loginForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(499, 573)
+        Me.ClientSize = New System.Drawing.Size(374, 466)
         Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.cab_chkbox)
-        Me.Controls.Add(Me.rickshaw_chkbox)
-        Me.Controls.Add(Me.staff_chkbox)
+        Me.Controls.Add(Me.cab)
+        Me.Controls.Add(Me.er)
+        Me.Controls.Add(Me.staff)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel3)
@@ -187,7 +200,6 @@ Partial Class loginForm
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "loginForm"
         Me.Text = "loginForm"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -205,8 +217,8 @@ Partial Class loginForm
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents back As System.Windows.Forms.Button
-    Friend WithEvents staff_chkbox As System.Windows.Forms.CheckBox
-    Friend WithEvents rickshaw_chkbox As System.Windows.Forms.CheckBox
-    Friend WithEvents cab_chkbox As System.Windows.Forms.CheckBox
+    Friend WithEvents staff As System.Windows.Forms.CheckBox
+    Friend WithEvents er As System.Windows.Forms.CheckBox
+    Friend WithEvents cab As System.Windows.Forms.CheckBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
 End Class
