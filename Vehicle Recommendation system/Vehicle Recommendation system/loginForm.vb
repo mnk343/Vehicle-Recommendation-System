@@ -3,8 +3,29 @@ Imports System.Data
 
 Public Class loginForm
 
-    Private Sub loginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    Private Sub cab_CheckedChanged(sender As Object, e As EventArgs) Handles cab.CheckedChanged
+        If cab.Checked = True Then
+            cab.Checked = True
+            staff.Checked = False
+            er.Checked = False
+        End If
+    End Sub
+
+    Private Sub er_CheckedChanged(sender As Object, e As EventArgs) Handles er.CheckedChanged
+        If er.Checked = True Then
+            staff.Checked = False
+            cab.Checked = False
+            er.Checked = True
+        End If
+    End Sub
+
+    Private Sub staff_CheckedChanged(sender As Object, e As EventArgs) Handles staff.CheckedChanged
+        If staff.Checked = True Then
+            cab.Checked = False
+            er.Checked = False
+            staff.Checked = True
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -77,43 +98,9 @@ Public Class loginForm
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
-    End Sub
-
-
-    Private Sub Button1_MouseClick(sender As Object, e As MouseEventArgs) Handles Button1.MouseClick
-        Button1.BackColor = Color.LightSeaGreen
-    End Sub
-
-
-    Private Sub Button1_MouseHover(sender As Object, e As EventArgs) Handles Button1.MouseHover
-        Button1.BackColor = Color.LightGray
-    End Sub
-
-    Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
-        Button1.BackColor = Color.Transparent
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
-
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         Form1.Show()
         Me.Hide()
-
-    End Sub
-
-    Private Sub staff_CheckedChanged(sender As Object, e As EventArgs) Handles staff.CheckedChanged
-
     End Sub
 End Class
+
