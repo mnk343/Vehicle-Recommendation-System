@@ -74,12 +74,6 @@ Partial Class Form1
         Me.e_fullData_dgv = New System.Windows.Forms.DataGridView()
         Me.e_dgv = New System.Windows.Forms.DataGridView()
         Me.panelBus = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.outcampus_panel = New System.Windows.Forms.Panel()
-        Me.incampus_panel = New System.Windows.Forms.Panel()
-        Me.CabDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblInfoBus = New System.Windows.Forms.Label()
         Me.btnSubmitBus = New System.Windows.Forms.Button()
         Me.de_cb = New System.Windows.Forms.ComboBox()
@@ -89,6 +83,12 @@ Partial Class Form1
         Me.bus_dgv = New System.Windows.Forms.DataGridView()
         Me.time_lbl = New System.Windows.Forms.Label()
         Me.t_lbl = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.outcampus_panel = New System.Windows.Forms.Panel()
+        Me.incampus_panel = New System.Windows.Forms.Panel()
+        Me.CabDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,11 +108,11 @@ Partial Class Form1
         CType(Me.e_fullData_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.e_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelBus.SuspendLayout()
+        CType(Me.bus_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
         Me.outcampus_panel.SuspendLayout()
         Me.incampus_panel.SuspendLayout()
         CType(Me.CabDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bus_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -693,63 +693,6 @@ Partial Class Form1
         Me.panelBus.Size = New System.Drawing.Size(1052, 10)
         Me.panelBus.TabIndex = 2
         '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.White
-        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(20, 27)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(116, 93)
-        Me.Button4.TabIndex = 0
-        Me.Button4.UseVisualStyleBackColor = False
-        '
-        'Panel10
-        '
-        Me.Panel10.Controls.Add(Me.Label5)
-        Me.Panel10.Controls.Add(Me.Button4)
-        Me.Panel10.Location = New System.Drawing.Point(58, 37)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(284, 141)
-        Me.Panel10.TabIndex = 2
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Bahnschrift Light", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(203, 57)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(49, 25)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Bus"
-        '
-        'outcampus_panel
-        '
-        Me.outcampus_panel.Controls.Add(Me.Panel9)
-        Me.outcampus_panel.Controls.Add(Me.Panel10)
-        Me.outcampus_panel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.outcampus_panel.Location = New System.Drawing.Point(2892, 69)
-        Me.outcampus_panel.Name = "outcampus_panel"
-        Me.outcampus_panel.Size = New System.Drawing.Size(1012, 536)
-        Me.outcampus_panel.TabIndex = 2
-        '
-        'incampus_panel
-        '
-        Me.incampus_panel.Controls.Add(Me.panelERickshaw)
-        Me.incampus_panel.Controls.Add(Me.panelBus)
-        Me.incampus_panel.Controls.Add(Me.Panel7)
-        Me.incampus_panel.Controls.Add(Me.Panel6)
-        Me.incampus_panel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.incampus_panel.Location = New System.Drawing.Point(194, 69)
-        Me.incampus_panel.Name = "incampus_panel"
-        Me.incampus_panel.Size = New System.Drawing.Size(1052, 536)
-        Me.incampus_panel.TabIndex = 9
-        '
-        'CabDataBindingSource
-        '
-        Me.CabDataBindingSource.DataMember = "CabData"
-        '
         'lblInfoBus
         '
         Me.lblInfoBus.AutoSize = True
@@ -838,6 +781,63 @@ Partial Class Form1
         Me.t_lbl.TabIndex = 17
         Me.t_lbl.Text = "Time"
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.White
+        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Location = New System.Drawing.Point(20, 27)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(116, 93)
+        Me.Button4.TabIndex = 0
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Panel10
+        '
+        Me.Panel10.Controls.Add(Me.Label5)
+        Me.Panel10.Controls.Add(Me.Button4)
+        Me.Panel10.Location = New System.Drawing.Point(58, 37)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(284, 141)
+        Me.Panel10.TabIndex = 2
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Bahnschrift Light", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(203, 57)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(49, 25)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "Bus"
+        '
+        'outcampus_panel
+        '
+        Me.outcampus_panel.Controls.Add(Me.Panel9)
+        Me.outcampus_panel.Controls.Add(Me.Panel10)
+        Me.outcampus_panel.Dock = System.Windows.Forms.DockStyle.Left
+        Me.outcampus_panel.Location = New System.Drawing.Point(2892, 69)
+        Me.outcampus_panel.Name = "outcampus_panel"
+        Me.outcampus_panel.Size = New System.Drawing.Size(1012, 536)
+        Me.outcampus_panel.TabIndex = 2
+        '
+        'incampus_panel
+        '
+        Me.incampus_panel.Controls.Add(Me.panelERickshaw)
+        Me.incampus_panel.Controls.Add(Me.panelBus)
+        Me.incampus_panel.Controls.Add(Me.Panel7)
+        Me.incampus_panel.Controls.Add(Me.Panel6)
+        Me.incampus_panel.Dock = System.Windows.Forms.DockStyle.Left
+        Me.incampus_panel.Location = New System.Drawing.Point(194, 69)
+        Me.incampus_panel.Name = "incampus_panel"
+        Me.incampus_panel.Size = New System.Drawing.Size(1052, 536)
+        Me.incampus_panel.TabIndex = 9
+        '
+        'CabDataBindingSource
+        '
+        Me.CabDataBindingSource.DataMember = "CabData"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -877,12 +877,12 @@ Partial Class Form1
         CType(Me.e_dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelBus.ResumeLayout(False)
         Me.panelBus.PerformLayout()
+        CType(Me.bus_dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
         Me.outcampus_panel.ResumeLayout(False)
         Me.incampus_panel.ResumeLayout(False)
         CType(Me.CabDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bus_dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

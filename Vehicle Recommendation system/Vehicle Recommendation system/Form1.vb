@@ -506,4 +506,9 @@ Public Class Form1
     Private Sub outstation_panel_Paint(sender As Object, e As PaintEventArgs) Handles outstation_panel.Paint
 
     End Sub
+
+    Private Sub login_btn_Click(sender As Object, e As EventArgs) Handles login_btn.Click
+        Me.Hide()
+        loginForm.Show()
+    End Sub
 End Class
