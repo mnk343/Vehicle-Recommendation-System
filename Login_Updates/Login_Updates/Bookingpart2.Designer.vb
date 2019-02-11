@@ -159,7 +159,7 @@ Partial Class Bookingpart2
         Me.load_btn.Location = New System.Drawing.Point(678, 451)
         Me.load_btn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.load_btn.Name = "load_btn"
-        Me.load_btn.Size = New System.Drawing.Size(75, 23)
+        Me.load_btn.Size = New System.Drawing.Size(100, 41)
         Me.load_btn.TabIndex = 54
         Me.load_btn.Text = "Update"
         Me.load_btn.UseVisualStyleBackColor = True

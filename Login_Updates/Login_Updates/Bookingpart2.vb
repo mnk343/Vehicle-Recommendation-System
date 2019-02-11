@@ -28,7 +28,7 @@ Public Class Bookingpart2
 
         Dim bookid = updatebooking.bid_lbl.Text
         Dim querry As String = "Select * From [Booking] Where [BookingID]= " + bookid + ";"
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         Dim cmd As New OleDbCommand(querry, conn)
         conn.Open()
@@ -72,7 +72,7 @@ Public Class Bookingpart2
         Dim seater As String = ""
         Dim username = Update_Login.TextBox1.Text
         Dim querry As String = "Select * From [CabData] Where [UserName]= '" + username + "';"
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         Dim cmd As New OleDbCommand(querry, conn)
         conn.Open()
@@ -169,7 +169,7 @@ Public Class Bookingpart2
                 If numofpassengers <= CInt(seater) Then
                     ' insertion query
 
-                    querry = "UPDATE Booking SET [Source] = '" + src_cb.Text + "', [Destination] = '" + des_cb.Text + "' , [Occupancy] = " + no_pass.Text + ", [Hour] = " + hour_tb.Text + ", [Minute]= " + min_tb.Text + ", [Day] = #" + dat + "# Where [BookingID] = " + updatebooking.bid_lbl.Text + " ;"
+                    querry = "UPDATE Booking SET [Source] = '" + src_cb.Text + "', [Destination] = '" + des_cb.Text + "' , [Occupancy] = " + no_pass.Text + ", [Hour] = " + hour_tb.Text + ", [Minute]= " + min_tb.Text + ", [Day] = '" + dat + "' Where [BookingID] = " + updatebooking.bid_lbl.Text + " ;"
                     'MessageBox.Show(querry)
                     'conn = New OleDbConnection(dbsource)
                     conn = New OleDbConnection(dbsource)
@@ -216,7 +216,7 @@ Public Class Bookingpart2
 
 
         Dim querry As String = "DELETE From [Booking] Where [BookingID]= " + updatebooking.bid_lbl.Text + " ;"
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         Dim cmd As New OleDbCommand(querry, conn)
 

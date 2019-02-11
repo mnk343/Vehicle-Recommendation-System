@@ -3,7 +3,7 @@
 Public Class DBControl
     ' CREATE YOUR DB CONNECTION
     Private DBCon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" & _
-                                         "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'")
+                                         "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'")
 
     ' PREPARE DB COMMAND
     Private DBCmd As OleDbCommand

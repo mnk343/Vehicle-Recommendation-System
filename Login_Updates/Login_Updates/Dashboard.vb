@@ -12,7 +12,7 @@ Public Class Dashboard
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles chduty.CheckedChanged
 
         Dim querry As String = "Update [CabData] SET [Status] ="
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         conn.Open()
         Dim username As String = Label2.Text
@@ -38,7 +38,7 @@ Public Class Dashboard
         Label2.Text = Update_Login.TextBox1.Text
         Dim username As String = Label2.Text
         Dim querry As String = "Select * From [CabData] Where [UserName]= '" + username + "';"
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Dell\Desktop\Vehicle-Recommendation-System\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
         Dim conn As New OleDbConnection(dbsource)
         Dim cmd As New OleDbCommand(querry, conn)
         conn.Open()
