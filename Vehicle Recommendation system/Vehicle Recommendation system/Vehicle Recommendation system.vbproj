@@ -82,6 +82,12 @@
     <Compile Include="Booking1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="bookingPart2.Designer.vb">
+      <DependentUpon>bookingPart2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bookingPart2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CabMap.Designer.vb">
       <DependentUpon>CabMap.vb</DependentUpon>
     </Compile>
@@ -92,6 +98,18 @@
       <DependentUpon>cab_info.vb</DependentUpon>
     </Compile>
     <Compile Include="cab_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changePassword.Designer.vb">
+      <DependentUpon>changePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="changePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboardCab.Designer.vb">
+      <DependentUpon>dashboardCab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardCab.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="dashboardStaff.Designer.vb">
@@ -159,6 +177,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="newBooking.Designer.vb">
+      <DependentUpon>newBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="newBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="outBus.Designer.vb">
       <DependentUpon>outBus.vb</DependentUpon>
     </Compile>
@@ -201,6 +225,18 @@
     <Compile Include="toCampus.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="updateBooking.Designer.vb">
+      <DependentUpon>updateBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updateBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateData.Designer.vb">
+      <DependentUpon>updateData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updateData.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vehicle_Recommendation_System_DatabaseDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -214,11 +250,20 @@
     <EmbeddedResource Include="Booking1.resx">
       <DependentUpon>Booking1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="bookingPart2.resx">
+      <DependentUpon>bookingPart2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CabMap.resx">
       <DependentUpon>CabMap.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cab_info.resx">
       <DependentUpon>cab_info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changePassword.resx">
+      <DependentUpon>changePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboardCab.resx">
+      <DependentUpon>dashboardCab.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashboardStaff.resx">
       <DependentUpon>dashboardStaff.vb</DependentUpon>
@@ -250,6 +295,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="newBooking.resx">
+      <DependentUpon>newBooking.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="outBus.resx">
       <DependentUpon>outBus.vb</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +318,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="toCampus.resx">
       <DependentUpon>toCampus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateBooking.resx">
+      <DependentUpon>updateBooking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateData.resx">
+      <DependentUpon>updateData.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

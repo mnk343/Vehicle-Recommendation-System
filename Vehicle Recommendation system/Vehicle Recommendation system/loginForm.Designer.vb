@@ -32,6 +32,9 @@ Partial Class loginForm
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.back = New System.Windows.Forms.Button()
+        Me.staff = New System.Windows.Forms.CheckBox()
+        Me.cab = New System.Windows.Forms.CheckBox()
+        Me.er = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -137,11 +140,44 @@ Partial Class loginForm
         Me.back.Text = "Home Page"
         Me.back.UseVisualStyleBackColor = True
         '
+        'staff
+        '
+        Me.staff.AutoSize = True
+        Me.staff.Location = New System.Drawing.Point(123, 301)
+        Me.staff.Name = "staff"
+        Me.staff.Size = New System.Drawing.Size(48, 17)
+        Me.staff.TabIndex = 5
+        Me.staff.Text = "Staff"
+        Me.staff.UseVisualStyleBackColor = True
+        '
+        'cab
+        '
+        Me.cab.AutoSize = True
+        Me.cab.Location = New System.Drawing.Point(210, 300)
+        Me.cab.Name = "cab"
+        Me.cab.Size = New System.Drawing.Size(45, 17)
+        Me.cab.TabIndex = 18
+        Me.cab.Text = "Cab"
+        Me.cab.UseVisualStyleBackColor = True
+        '
+        'er
+        '
+        Me.er.AutoSize = True
+        Me.er.Location = New System.Drawing.Point(303, 300)
+        Me.er.Name = "er"
+        Me.er.Size = New System.Drawing.Size(83, 17)
+        Me.er.TabIndex = 19
+        Me.er.Text = "E-Rickshaw"
+        Me.er.UseVisualStyleBackColor = True
+        '
         'loginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(525, 388)
+        Me.Controls.Add(Me.er)
+        Me.Controls.Add(Me.cab)
+        Me.Controls.Add(Me.staff)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
@@ -165,4 +201,7 @@ Partial Class loginForm
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents back As System.Windows.Forms.Button
+    Friend WithEvents staff As System.Windows.Forms.CheckBox
+    Friend WithEvents cab As System.Windows.Forms.CheckBox
+    Friend WithEvents er As System.Windows.Forms.CheckBox
 End Class
