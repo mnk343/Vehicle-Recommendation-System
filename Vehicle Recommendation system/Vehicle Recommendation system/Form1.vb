@@ -55,7 +55,6 @@ Public Class Form1
         cmd.ExecuteNonQuery()
         cmd.Dispose()
         conn.Close()
-        MessageBox.Show(querry)
 
 
 
