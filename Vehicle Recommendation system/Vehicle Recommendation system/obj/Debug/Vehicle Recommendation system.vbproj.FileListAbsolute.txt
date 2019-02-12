@@ -18,7 +18,6 @@ C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation syst
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.exe
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.xml
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.pdb
-C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation System Database.accdb
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation system.exe
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation system.pdb
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\bin\Debug\Vehicle Recommendation system.xml
@@ -261,3 +260,4 @@ C:\Users\Admin\Desktop\lala\Vehicle-Recommendation-System\Vehicle Recommendation
 C:\Users\Admin\Desktop\lala\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.updateData.resources
 C:\Users\Admin\Desktop\lala\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.vbproj.GenerateResource.Cache
 C:\Users\Admin\Desktop\lala\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.vbprojResolveAssemblyReference.cache
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.vbprojResolveAssemblyReference.cache
