@@ -82,8 +82,9 @@
     End Sub
 
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
-        Me.Hide()
         Form1.Show()
+        Me.hide()
+
     End Sub
 End Class
 

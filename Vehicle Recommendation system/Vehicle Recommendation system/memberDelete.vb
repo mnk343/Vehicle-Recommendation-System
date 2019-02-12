@@ -59,8 +59,9 @@ Public Class memberDelete
                 conn.Close()
                 MessageBox.Show("The user has been deleted successfully!!")
 
-                Me.Hide()
                 dashboardStaff.Show()
+                Me.Close()
+
             End If
         End If
 

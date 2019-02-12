@@ -118,13 +118,15 @@
 
 
     Private Sub back_Click(sender As Object, e As EventArgs)
-        Me.Close()
         Form1.Show()
+        Me.Close()
+
     End Sub
 
     Private Sub back_Click_1(sender As Object, e As EventArgs) Handles back.Click
-        Me.Hide()
         Form1.Show()
+        Me.Close()
+
 
     End Sub
 

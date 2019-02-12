@@ -171,8 +171,8 @@ Public Class memberAdd
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
         dashboardStaff.Show()
+        Me.Close()
 
     End Sub
 
@@ -187,5 +187,9 @@ Public Class memberAdd
 
     Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
         Button1.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

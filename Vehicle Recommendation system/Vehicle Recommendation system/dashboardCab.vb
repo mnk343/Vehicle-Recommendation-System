@@ -60,8 +60,8 @@ Public Class dashboardCab
     End Sub
 
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
-        Me.Hide()
         loginForm.Show()
+        Me.Close()
 
     End Sub
 End Class

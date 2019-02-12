@@ -23,8 +23,8 @@ Public Class passwordChange
 
     Private Sub prevPage_Click(sender As Object, e As EventArgs) Handles prevPage.Click
 
-        Me.Hide()
         dashboardStaff.Show()
+        Me.Close()
 
     End Sub
 

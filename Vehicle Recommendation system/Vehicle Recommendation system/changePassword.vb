@@ -57,7 +57,7 @@ Public Class changePassword
     End Sub
 
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
-        Me.Hide()
+        Me.Close()
         updateData.Show()
     End Sub
 

@@ -10,8 +10,9 @@ Public Class newBooking
    
 
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
-        Me.Close()
         dashboardCab.Show()
+        Me.Close()
+
     End Sub
 
     Private Sub newBooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -172,6 +173,10 @@ Public Class newBooking
                 e.Handled = True
             End If
         End If
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class
