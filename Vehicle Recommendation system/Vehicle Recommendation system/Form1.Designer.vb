@@ -90,6 +90,9 @@ Partial Class Form1
         Me.outcampus_panel = New System.Windows.Forms.Panel()
         Me.incampus_panel = New System.Windows.Forms.Panel()
         Me.CabDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ambulance = New System.Windows.Forms.Label()
+        Me.fireStation = New System.Windows.Forms.Label()
+        Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -114,6 +117,7 @@ Partial Class Form1
         Me.outcampus_panel.SuspendLayout()
         Me.incampus_panel.SuspendLayout()
         CType(Me.CabDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel12.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -128,7 +132,7 @@ Partial Class Form1
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(189, 605)
+        Me.Panel1.Size = New System.Drawing.Size(221, 605)
         Me.Panel1.TabIndex = 6
         '
         'Panel4
@@ -137,7 +141,7 @@ Partial Class Form1
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel4.Location = New System.Drawing.Point(0, 505)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(189, 100)
+        Me.Panel4.Size = New System.Drawing.Size(221, 100)
         Me.Panel4.TabIndex = 8
         '
         'emergency_btn
@@ -150,7 +154,7 @@ Partial Class Form1
         Me.emergency_btn.ForeColor = System.Drawing.Color.LightGray
         Me.emergency_btn.Location = New System.Drawing.Point(0, 177)
         Me.emergency_btn.Name = "emergency_btn"
-        Me.emergency_btn.Size = New System.Drawing.Size(189, 36)
+        Me.emergency_btn.Size = New System.Drawing.Size(221, 36)
         Me.emergency_btn.TabIndex = 11
         Me.emergency_btn.Text = "Emergency"
         Me.emergency_btn.UseVisualStyleBackColor = False
@@ -165,7 +169,7 @@ Partial Class Form1
         Me.incampus_btn.ForeColor = System.Drawing.Color.LightGray
         Me.incampus_btn.Location = New System.Drawing.Point(0, 141)
         Me.incampus_btn.Name = "incampus_btn"
-        Me.incampus_btn.Size = New System.Drawing.Size(189, 36)
+        Me.incampus_btn.Size = New System.Drawing.Size(221, 36)
         Me.incampus_btn.TabIndex = 10
         Me.incampus_btn.Text = "Incampus"
         Me.incampus_btn.UseVisualStyleBackColor = False
@@ -180,7 +184,7 @@ Partial Class Form1
         Me.outcampus_btn.ForeColor = System.Drawing.Color.LightGray
         Me.outcampus_btn.Location = New System.Drawing.Point(0, 105)
         Me.outcampus_btn.Name = "outcampus_btn"
-        Me.outcampus_btn.Size = New System.Drawing.Size(189, 36)
+        Me.outcampus_btn.Size = New System.Drawing.Size(221, 36)
         Me.outcampus_btn.TabIndex = 9
         Me.outcampus_btn.Text = "Outcampus"
         Me.outcampus_btn.UseVisualStyleBackColor = False
@@ -195,7 +199,7 @@ Partial Class Form1
         Me.outstation_btn.ForeColor = System.Drawing.Color.LightGray
         Me.outstation_btn.Location = New System.Drawing.Point(0, 69)
         Me.outstation_btn.Name = "outstation_btn"
-        Me.outstation_btn.Size = New System.Drawing.Size(189, 36)
+        Me.outstation_btn.Size = New System.Drawing.Size(221, 36)
         Me.outstation_btn.TabIndex = 8
         Me.outstation_btn.Text = "Outstation"
         Me.outstation_btn.UseVisualStyleBackColor = False
@@ -207,7 +211,7 @@ Partial Class Form1
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(189, 69)
+        Me.Panel2.Size = New System.Drawing.Size(221, 69)
         Me.Panel2.TabIndex = 6
         '
         'PictureBox3
@@ -228,9 +232,9 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.login_btn)
         Me.Panel3.Controls.Add(Me.PictureBox1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(189, 0)
+        Me.Panel3.Location = New System.Drawing.Point(221, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1010, 69)
+        Me.Panel3.Size = New System.Drawing.Size(967, 69)
         Me.Panel3.TabIndex = 8
         '
         'PictureBox2
@@ -320,9 +324,9 @@ Partial Class Form1
         Me.outstation_panel.Controls.Add(Me.Panel8)
         Me.outstation_panel.Controls.Add(Me.Panel11)
         Me.outstation_panel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.outstation_panel.Location = New System.Drawing.Point(1754, 69)
+        Me.outstation_panel.Location = New System.Drawing.Point(1715, 69)
         Me.outstation_panel.Name = "outstation_panel"
-        Me.outstation_panel.Size = New System.Drawing.Size(740, 536)
+        Me.outstation_panel.Size = New System.Drawing.Size(1002, 536)
         Me.outstation_panel.TabIndex = 4
         '
         'lblError
@@ -476,6 +480,8 @@ Partial Class Form1
         '
         'emergency_panel
         '
+        Me.emergency_panel.Controls.Add(Me.fireStation)
+        Me.emergency_panel.Controls.Add(Me.ambulance)
         Me.emergency_panel.Controls.Add(Me.Label8)
         Me.emergency_panel.Controls.Add(Me.txtsub)
         Me.emergency_panel.Controls.Add(Me.Send)
@@ -484,36 +490,39 @@ Partial Class Form1
         Me.emergency_panel.Controls.Add(Me.choose)
         Me.emergency_panel.Controls.Add(Me.txtaddress)
         Me.emergency_panel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.emergency_panel.Location = New System.Drawing.Point(1199, 69)
+        Me.emergency_panel.Location = New System.Drawing.Point(1106, 69)
         Me.emergency_panel.Name = "emergency_panel"
-        Me.emergency_panel.Size = New System.Drawing.Size(555, 536)
+        Me.emergency_panel.Size = New System.Drawing.Size(609, 536)
         Me.emergency_panel.TabIndex = 1
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(126, 183)
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(83, 214)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(43, 13)
+        Me.Label8.Size = New System.Drawing.Size(78, 22)
         Me.Label8.TabIndex = 28
         Me.Label8.Text = "Subject"
         '
         'txtsub
         '
-        Me.txtsub.Location = New System.Drawing.Point(203, 180)
+        Me.txtsub.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtsub.Location = New System.Drawing.Point(201, 206)
         Me.txtsub.Margin = New System.Windows.Forms.Padding(2)
         Me.txtsub.Name = "txtsub"
-        Me.txtsub.Size = New System.Drawing.Size(310, 25)
+        Me.txtsub.Size = New System.Drawing.Size(310, 38)
         Me.txtsub.TabIndex = 27
         Me.txtsub.Text = "Emergency"
         '
         'Send
         '
-        Me.Send.Location = New System.Drawing.Point(412, 458)
+        Me.Send.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Send.Location = New System.Drawing.Point(395, 425)
         Me.Send.Margin = New System.Windows.Forms.Padding(2)
         Me.Send.Name = "Send"
-        Me.Send.Size = New System.Drawing.Size(103, 48)
+        Me.Send.Size = New System.Drawing.Size(116, 48)
         Me.Send.TabIndex = 26
         Me.Send.Text = "Send"
         Me.Send.UseVisualStyleBackColor = True
@@ -521,20 +530,22 @@ Partial Class Form1
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(126, 266)
+        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(83, 303)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(45, 13)
+        Me.Label9.Size = New System.Drawing.Size(83, 22)
         Me.Label9.TabIndex = 25
         Me.Label9.Text = "Address"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(126, 130)
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(83, 153)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(43, 13)
+        Me.Label10.Size = New System.Drawing.Size(80, 22)
         Me.Label10.TabIndex = 24
         Me.Label10.Text = "Choose"
         '
@@ -544,7 +555,7 @@ Partial Class Form1
         Me.choose.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.choose.FormattingEnabled = True
         Me.choose.Items.AddRange(New Object() {"Hospital", "Fire Station", "Police"})
-        Me.choose.Location = New System.Drawing.Point(203, 128)
+        Me.choose.Location = New System.Drawing.Point(201, 154)
         Me.choose.Margin = New System.Windows.Forms.Padding(2)
         Me.choose.Name = "choose"
         Me.choose.Size = New System.Drawing.Size(310, 21)
@@ -552,8 +563,8 @@ Partial Class Form1
         '
         'txtaddress
         '
-        Me.txtaddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtaddress.Location = New System.Drawing.Point(203, 241)
+        Me.txtaddress.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtaddress.Location = New System.Drawing.Point(201, 267)
         Me.txtaddress.Margin = New System.Windows.Forms.Padding(2)
         Me.txtaddress.Name = "txtaddress"
         Me.txtaddress.Size = New System.Drawing.Size(310, 130)
@@ -632,14 +643,16 @@ Partial Class Form1
         Me.panelERickshaw.Controls.Add(Me.e_fullData_dgv)
         Me.panelERickshaw.Controls.Add(Me.e_dgv)
         Me.panelERickshaw.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelERickshaw.Location = New System.Drawing.Point(0, -216)
+        Me.panelERickshaw.Location = New System.Drawing.Point(0, -236)
         Me.panelERickshaw.Name = "panelERickshaw"
-        Me.panelERickshaw.Size = New System.Drawing.Size(1010, 366)
+        Me.panelERickshaw.Size = New System.Drawing.Size(885, 389)
         Me.panelERickshaw.TabIndex = 0
         '
         'doubleClick
         '
         Me.doubleClick.AutoSize = True
+        Me.doubleClick.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.doubleClick.ForeColor = System.Drawing.Color.White
         Me.doubleClick.Location = New System.Drawing.Point(214, 326)
         Me.doubleClick.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.doubleClick.Name = "doubleClick"
@@ -695,84 +708,90 @@ Partial Class Form1
         '
         'panelBus
         '
-        Me.panelBus.Controls.Add(Me.lblInfoBus)
+        Me.panelBus.Controls.Add(Me.Panel12)
         Me.panelBus.Controls.Add(Me.btnSubmitBus)
         Me.panelBus.Controls.Add(Me.de_cb)
         Me.panelBus.Controls.Add(Me.s_cb)
         Me.panelBus.Controls.Add(Me.d_cb)
         Me.panelBus.Controls.Add(Me.lblSource)
-        Me.panelBus.Controls.Add(Me.bus_dgv)
         Me.panelBus.Controls.Add(Me.time_lbl)
         Me.panelBus.Controls.Add(Me.t_lbl)
         Me.panelBus.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelBus.Location = New System.Drawing.Point(0, 150)
+        Me.panelBus.Location = New System.Drawing.Point(0, 153)
         Me.panelBus.Name = "panelBus"
-        Me.panelBus.Size = New System.Drawing.Size(1010, 386)
+        Me.panelBus.Size = New System.Drawing.Size(885, 383)
         Me.panelBus.TabIndex = 2
         '
         'lblInfoBus
         '
         Me.lblInfoBus.AutoSize = True
-        Me.lblInfoBus.Location = New System.Drawing.Point(289, 240)
+        Me.lblInfoBus.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfoBus.ForeColor = System.Drawing.Color.Snow
+        Me.lblInfoBus.Location = New System.Drawing.Point(140, 87)
         Me.lblInfoBus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblInfoBus.Name = "lblInfoBus"
-        Me.lblInfoBus.Size = New System.Drawing.Size(126, 13)
+        Me.lblInfoBus.Size = New System.Drawing.Size(239, 22)
         Me.lblInfoBus.TabIndex = 25
         Me.lblInfoBus.Text = "No Bus Aviable right now"
         '
         'btnSubmitBus
         '
-        Me.btnSubmitBus.Location = New System.Drawing.Point(299, 141)
+        Me.btnSubmitBus.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSubmitBus.Location = New System.Drawing.Point(300, 147)
         Me.btnSubmitBus.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSubmitBus.Name = "btnSubmitBus"
-        Me.btnSubmitBus.Size = New System.Drawing.Size(56, 19)
+        Me.btnSubmitBus.Size = New System.Drawing.Size(90, 29)
         Me.btnSubmitBus.TabIndex = 24
-        Me.btnSubmitBus.Text = "Sumbit"
+        Me.btnSubmitBus.Text = "Submit"
         Me.btnSubmitBus.UseVisualStyleBackColor = True
         '
         'de_cb
         '
+        Me.de_cb.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.de_cb.FormattingEnabled = True
-        Me.de_cb.Location = New System.Drawing.Point(418, 82)
+        Me.de_cb.Location = New System.Drawing.Point(530, 84)
         Me.de_cb.Margin = New System.Windows.Forms.Padding(2)
         Me.de_cb.Name = "de_cb"
-        Me.de_cb.Size = New System.Drawing.Size(92, 21)
+        Me.de_cb.Size = New System.Drawing.Size(128, 30)
         Me.de_cb.TabIndex = 23
         '
         's_cb
         '
+        Me.s_cb.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.s_cb.FormattingEnabled = True
-        Me.s_cb.Location = New System.Drawing.Point(200, 87)
+        Me.s_cb.Location = New System.Drawing.Point(224, 84)
         Me.s_cb.Margin = New System.Windows.Forms.Padding(2)
         Me.s_cb.Name = "s_cb"
-        Me.s_cb.Size = New System.Drawing.Size(92, 21)
+        Me.s_cb.Size = New System.Drawing.Size(92, 30)
         Me.s_cb.TabIndex = 22
         '
         'd_cb
         '
         Me.d_cb.AutoSize = True
-        Me.d_cb.Location = New System.Drawing.Point(338, 84)
+        Me.d_cb.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.d_cb.Location = New System.Drawing.Point(403, 88)
         Me.d_cb.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.d_cb.Name = "d_cb"
-        Me.d_cb.Size = New System.Drawing.Size(60, 13)
+        Me.d_cb.Size = New System.Drawing.Size(112, 22)
         Me.d_cb.TabIndex = 21
         Me.d_cb.Text = "Destination"
         '
         'lblSource
         '
         Me.lblSource.AutoSize = True
+        Me.lblSource.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSource.Location = New System.Drawing.Point(134, 87)
         Me.lblSource.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSource.Name = "lblSource"
-        Me.lblSource.Size = New System.Drawing.Size(41, 13)
+        Me.lblSource.Size = New System.Drawing.Size(73, 22)
         Me.lblSource.TabIndex = 20
         Me.lblSource.Text = "Source"
         '
         'bus_dgv
         '
-        Me.bus_dgv.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.bus_dgv.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.bus_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.bus_dgv.Location = New System.Drawing.Point(184, 192)
+        Me.bus_dgv.Location = New System.Drawing.Point(77, 52)
         Me.bus_dgv.Margin = New System.Windows.Forms.Padding(2)
         Me.bus_dgv.Name = "bus_dgv"
         Me.bus_dgv.RowTemplate.Height = 24
@@ -782,20 +801,22 @@ Partial Class Form1
         'time_lbl
         '
         Me.time_lbl.AutoSize = True
-        Me.time_lbl.Location = New System.Drawing.Point(456, 34)
+        Me.time_lbl.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.time_lbl.Location = New System.Drawing.Point(486, 32)
         Me.time_lbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.time_lbl.Name = "time_lbl"
-        Me.time_lbl.Size = New System.Drawing.Size(39, 13)
+        Me.time_lbl.Size = New System.Drawing.Size(71, 22)
         Me.time_lbl.TabIndex = 18
         Me.time_lbl.Text = "Label1"
         '
         't_lbl
         '
         Me.t_lbl.AutoSize = True
+        Me.t_lbl.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.t_lbl.Location = New System.Drawing.Point(404, 34)
         Me.t_lbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.t_lbl.Name = "t_lbl"
-        Me.t_lbl.Size = New System.Drawing.Size(30, 13)
+        Me.t_lbl.Size = New System.Drawing.Size(50, 22)
         Me.t_lbl.TabIndex = 17
         Me.t_lbl.Text = "Time"
         '
@@ -837,7 +858,7 @@ Partial Class Form1
         Me.outcampus_panel.Controls.Add(Me.Panel9)
         Me.outcampus_panel.Controls.Add(Me.Panel10)
         Me.outcampus_panel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.outcampus_panel.Location = New System.Drawing.Point(2494, 69)
+        Me.outcampus_panel.Location = New System.Drawing.Point(2717, 69)
         Me.outcampus_panel.Name = "outcampus_panel"
         Me.outcampus_panel.Size = New System.Drawing.Size(1012, 536)
         Me.outcampus_panel.TabIndex = 2
@@ -849,20 +870,50 @@ Partial Class Form1
         Me.incampus_panel.Controls.Add(Me.Panel7)
         Me.incampus_panel.Controls.Add(Me.Panel6)
         Me.incampus_panel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.incampus_panel.Location = New System.Drawing.Point(189, 69)
+        Me.incampus_panel.Location = New System.Drawing.Point(221, 69)
         Me.incampus_panel.Name = "incampus_panel"
-        Me.incampus_panel.Size = New System.Drawing.Size(1010, 536)
+        Me.incampus_panel.Size = New System.Drawing.Size(885, 536)
         Me.incampus_panel.TabIndex = 9
         '
         'CabDataBindingSource
         '
         Me.CabDataBindingSource.DataMember = "CabData"
         '
+        'ambulance
+        '
+        Me.ambulance.AutoSize = True
+        Me.ambulance.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ambulance.Location = New System.Drawing.Point(198, 41)
+        Me.ambulance.Name = "ambulance"
+        Me.ambulance.Size = New System.Drawing.Size(295, 25)
+        Me.ambulance.TabIndex = 29
+        Me.ambulance.Text = "Ambulance : 0361 258 2099"
+        '
+        'fireStation
+        '
+        Me.fireStation.AutoSize = True
+        Me.fireStation.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fireStation.Location = New System.Drawing.Point(202, 83)
+        Me.fireStation.Name = "fireStation"
+        Me.fireStation.Size = New System.Drawing.Size(283, 25)
+        Me.fireStation.TabIndex = 30
+        Me.fireStation.Text = "Fire Station : 0361 258 5987"
+        '
+        'Panel12
+        '
+        Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel12.Controls.Add(Me.bus_dgv)
+        Me.Panel12.Controls.Add(Me.lblInfoBus)
+        Me.Panel12.Location = New System.Drawing.Point(122, 198)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(536, 196)
+        Me.Panel12.TabIndex = 26
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1199, 605)
+        Me.ClientSize = New System.Drawing.Size(1188, 605)
         Me.Controls.Add(Me.outcampus_panel)
         Me.Controls.Add(Me.outstation_panel)
         Me.Controls.Add(Me.emergency_panel)
@@ -903,6 +954,8 @@ Partial Class Form1
         Me.outcampus_panel.ResumeLayout(False)
         Me.incampus_panel.ResumeLayout(False)
         CType(Me.CabDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel12.ResumeLayout(False)
+        Me.Panel12.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -972,5 +1025,8 @@ Partial Class Form1
     Friend WithEvents time_lbl As System.Windows.Forms.Label
     Friend WithEvents t_lbl As System.Windows.Forms.Label
     Friend WithEvents lblError As System.Windows.Forms.Label
+    Friend WithEvents fireStation As System.Windows.Forms.Label
+    Friend WithEvents ambulance As System.Windows.Forms.Label
+    Friend WithEvents Panel12 As System.Windows.Forms.Panel
 
 End Class

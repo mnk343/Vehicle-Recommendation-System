@@ -69,6 +69,8 @@ Public Class memberUpdate
                     End While
                     cmd.Dispose()
                     conn.Close()
+                Else
+                    MessageBox.Show("The user does not exist in our Database!!")
                 End If
 
             End If

@@ -68,6 +68,8 @@ Public Class Form1
 
     Private Sub incampus_btn_Click(sender As Object, e As EventArgs) Handles incampus_btn.Click
 
+        Panel12.Hide()
+
         incampus_panel.Show()
         outstation_panel.Hide()
         outcampus_panel.Hide()
@@ -463,6 +465,7 @@ Public Class Form1
     End Sub
 
     Private Sub btnSubmitBus_Click(sender As Object, e As EventArgs) Handles btnSubmitBus.Click
+        Panel12.Show()
 
         bus_dgv.Show()
 
@@ -497,7 +500,6 @@ Public Class Form1
             bus_dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
             bus_dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
             bus_dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
-            bus_dgv.BackgroundColor = Color.White
 
             bus_dgv.EnableHeadersVisualStyles = False
             bus_dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
@@ -563,4 +565,7 @@ Public Class Form1
 
     End Sub
 
+    Private Sub bus_dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles bus_dgv.CellContentClick
+
+    End Sub
 End Class
