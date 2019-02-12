@@ -24,6 +24,7 @@ Partial Class cab_info
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(cab_info))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.back = New System.Windows.Forms.Button()
         Me.load_btn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.min_tb = New System.Windows.Forms.TextBox()
@@ -38,7 +39,6 @@ Partial Class cab_info
         Me.Label6 = New System.Windows.Forms.Label()
         Me.des_cb = New System.Windows.Forms.ComboBox()
         Me.no_pass = New System.Windows.Forms.TextBox()
-        Me.back = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,6 +65,18 @@ Partial Class cab_info
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(810, 461)
         Me.Panel1.TabIndex = 29
+        '
+        'back
+        '
+        Me.back.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.back.Location = New System.Drawing.Point(294, 367)
+        Me.back.Margin = New System.Windows.Forms.Padding(2)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(92, 35)
+        Me.back.TabIndex = 28
+        Me.back.Text = "Back"
+        Me.back.UseVisualStyleBackColor = False
         '
         'load_btn
         '
@@ -213,21 +225,10 @@ Partial Class cab_info
         '
         Me.no_pass.Location = New System.Drawing.Point(235, 128)
         Me.no_pass.Margin = New System.Windows.Forms.Padding(2)
+        Me.no_pass.MaxLength = 6
         Me.no_pass.Name = "no_pass"
         Me.no_pass.Size = New System.Drawing.Size(92, 20)
         Me.no_pass.TabIndex = 18
-        '
-        'back
-        '
-        Me.back.BackColor = System.Drawing.Color.MediumSeaGreen
-        Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.back.Location = New System.Drawing.Point(294, 367)
-        Me.back.Margin = New System.Windows.Forms.Padding(2)
-        Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(92, 35)
-        Me.back.TabIndex = 28
-        Me.back.Text = "Back"
-        Me.back.UseVisualStyleBackColor = False
         '
         'cab_info
         '

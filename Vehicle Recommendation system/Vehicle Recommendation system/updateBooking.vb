@@ -28,6 +28,22 @@ Public Class updateBooking
         Access.ExecQuery("SELECT Booking.* FROM Booking WHERE Booking.CabId = " + cid + ";")
         book_dgv.DataSource = Access.DBDT
 
+        book_dgv.BorderStyle = BorderStyle.None
+        book_dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
+        book_dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        book_dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
+        book_dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
+
+        book_dgv.EnableHeadersVisualStyles = False
+        book_dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        book_dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72)
+        book_dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+        book_dgv.RowTemplate.Height = 22
+        book_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
+        book_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
+
+
+
     End Sub
 
     Private Sub book_dgv_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles book_dgv.CellDoubleClick
@@ -53,4 +69,6 @@ Public Class updateBooking
         Me.Close()
 
     End Sub
+
+    
 End Class

@@ -47,13 +47,16 @@ Partial Class E_RickshawUpdate
         Me.ImageList5 = New System.Windows.Forms.ImageList(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ImageList6 = New System.Windows.Forms.ImageList(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
         '
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
-        Me.Button1.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(628, 35)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
@@ -88,7 +91,7 @@ Partial Class E_RickshawUpdate
         '
         'long_txt
         '
-        Me.long_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.8!)
+        Me.long_txt.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.long_txt.Location = New System.Drawing.Point(377, 263)
         Me.long_txt.Margin = New System.Windows.Forms.Padding(2)
         Me.long_txt.Multiline = True
@@ -98,7 +101,7 @@ Partial Class E_RickshawUpdate
         '
         'lat_txt
         '
-        Me.lat_txt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.8!)
+        Me.lat_txt.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lat_txt.Location = New System.Drawing.Point(377, 215)
         Me.lat_txt.Margin = New System.Windows.Forms.Padding(2)
         Me.lat_txt.Multiline = True
@@ -109,12 +112,12 @@ Partial Class E_RickshawUpdate
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.8!)
-        Me.Label5.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(118, 262)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(98, 25)
+        Me.Label5.Size = New System.Drawing.Size(106, 23)
         Me.Label5.TabIndex = 60
         Me.Label5.Text = "Longitude"
         Me.Label5.UseMnemonic = False
@@ -122,12 +125,12 @@ Partial Class E_RickshawUpdate
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.8!)
-        Me.Label4.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(118, 215)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 25)
+        Me.Label4.Size = New System.Drawing.Size(89, 23)
         Me.Label4.TabIndex = 59
         Me.Label4.Text = "Latitude"
         Me.Label4.UseMnemonic = False
@@ -135,7 +138,7 @@ Partial Class E_RickshawUpdate
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(130, 225)
+        Me.Label1.Location = New System.Drawing.Point(51, 199)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(0, 13)
@@ -143,9 +146,10 @@ Partial Class E_RickshawUpdate
         '
         'butback
         '
+        Me.butback.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.butback.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.butback.ForeColor = System.Drawing.Color.MediumBlue
-        Me.butback.Location = New System.Drawing.Point(573, 378)
+        Me.butback.ForeColor = System.Drawing.Color.White
+        Me.butback.Location = New System.Drawing.Point(666, 29)
         Me.butback.Margin = New System.Windows.Forms.Padding(2)
         Me.butback.Name = "butback"
         Me.butback.Size = New System.Drawing.Size(197, 46)
@@ -155,9 +159,10 @@ Partial Class E_RickshawUpdate
         '
         'butclear
         '
+        Me.butclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.butclear.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.butclear.ForeColor = System.Drawing.Color.MediumBlue
-        Me.butclear.Location = New System.Drawing.Point(43, 385)
+        Me.butclear.ForeColor = System.Drawing.Color.White
+        Me.butclear.Location = New System.Drawing.Point(56, 29)
         Me.butclear.Margin = New System.Windows.Forms.Padding(2)
         Me.butclear.Name = "butclear"
         Me.butclear.Size = New System.Drawing.Size(197, 39)
@@ -179,19 +184,21 @@ Partial Class E_RickshawUpdate
         'chshow
         '
         Me.chshow.AutoSize = True
+        Me.chshow.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chshow.Location = New System.Drawing.Point(638, 301)
         Me.chshow.Margin = New System.Windows.Forms.Padding(2)
         Me.chshow.Name = "chshow"
-        Me.chshow.Size = New System.Drawing.Size(53, 17)
+        Me.chshow.Size = New System.Drawing.Size(82, 27)
         Me.chshow.TabIndex = 56
         Me.chshow.Text = "Show"
         Me.chshow.UseVisualStyleBackColor = True
         '
         'butupd
         '
+        Me.butupd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.butupd.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.butupd.ForeColor = System.Drawing.Color.MediumBlue
-        Me.butupd.Location = New System.Drawing.Point(303, 378)
+        Me.butupd.ForeColor = System.Drawing.Color.White
+        Me.butupd.Location = New System.Drawing.Point(377, 29)
         Me.butupd.Margin = New System.Windows.Forms.Padding(2)
         Me.butupd.Name = "butupd"
         Me.butupd.Size = New System.Drawing.Size(197, 46)
@@ -202,12 +209,12 @@ Partial Class E_RickshawUpdate
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.8!)
-        Me.Label6.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(118, 301)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(149, 25)
+        Me.Label6.Size = New System.Drawing.Size(158, 23)
         Me.Label6.TabIndex = 51
         Me.Label6.Text = "Enter Password"
         Me.Label6.UseMnemonic = False
@@ -215,19 +222,19 @@ Partial Class E_RickshawUpdate
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.8!)
-        Me.Label3.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(118, 164)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(154, 25)
+        Me.Label3.Size = New System.Drawing.Size(177, 23)
         Me.Label3.TabIndex = 50
         Me.Label3.Text = "Contact Number"
         Me.Label3.UseMnemonic = False
         '
         'txtpass
         '
-        Me.txtpass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.8!)
+        Me.txtpass.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtpass.Location = New System.Drawing.Point(377, 301)
         Me.txtpass.Margin = New System.Windows.Forms.Padding(2)
         Me.txtpass.Multiline = True
@@ -238,7 +245,7 @@ Partial Class E_RickshawUpdate
         '
         'txtcontact
         '
-        Me.txtcontact.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.8!)
+        Me.txtcontact.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtcontact.Location = New System.Drawing.Point(377, 165)
         Me.txtcontact.Margin = New System.Windows.Forms.Padding(2)
         Me.txtcontact.Multiline = True
@@ -248,7 +255,7 @@ Partial Class E_RickshawUpdate
         '
         'usertxt
         '
-        Me.usertxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.8!)
+        Me.usertxt.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.usertxt.Location = New System.Drawing.Point(377, 123)
         Me.usertxt.Margin = New System.Windows.Forms.Padding(2)
         Me.usertxt.Multiline = True
@@ -266,12 +273,12 @@ Partial Class E_RickshawUpdate
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.8!)
-        Me.Label2.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(118, 123)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 25)
+        Me.Label2.Size = New System.Drawing.Size(108, 23)
         Me.Label2.TabIndex = 49
         Me.Label2.Text = "Username"
         Me.Label2.UseMnemonic = False
@@ -282,22 +289,33 @@ Partial Class E_RickshawUpdate
         Me.ImageList6.ImageSize = New System.Drawing.Size(16, 16)
         Me.ImageList6.TransparentColor = System.Drawing.Color.Transparent
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.butupd)
+        Me.Panel1.Controls.Add(Me.butback)
+        Me.Panel1.Controls.Add(Me.butclear)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(0, 361)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(893, 97)
+        Me.Panel1.TabIndex = 64
+        '
         'E_RickshawUpdate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(893, 587)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(893, 458)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.long_txt)
         Me.Controls.Add(Me.lat_txt)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.butback)
-        Me.Controls.Add(Me.butclear)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.chshow)
-        Me.Controls.Add(Me.butupd)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtpass)
@@ -307,6 +325,7 @@ Partial Class E_RickshawUpdate
         Me.Name = "E_RickshawUpdate"
         Me.Text = "E_RickshawUpdate"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -334,4 +353,5 @@ Partial Class E_RickshawUpdate
     Friend WithEvents ImageList5 As System.Windows.Forms.ImageList
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents ImageList6 As System.Windows.Forms.ImageList
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class

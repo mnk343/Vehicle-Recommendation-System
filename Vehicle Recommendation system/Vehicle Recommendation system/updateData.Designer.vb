@@ -47,32 +47,38 @@ Partial Class updateData
         Me.txtcontact = New System.Windows.Forms.TextBox()
         Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
         Me.usertxt = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'butback
         '
-        Me.butback.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.butback.ForeColor = System.Drawing.Color.MediumBlue
-        Me.butback.Location = New System.Drawing.Point(583, 457)
+        Me.butback.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.butback.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.butback.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.butback.ForeColor = System.Drawing.Color.White
+        Me.butback.Location = New System.Drawing.Point(600, 34)
         Me.butback.Margin = New System.Windows.Forms.Padding(2)
         Me.butback.Name = "butback"
         Me.butback.Size = New System.Drawing.Size(197, 39)
         Me.butback.TabIndex = 39
         Me.butback.Text = "BACK"
-        Me.butback.UseVisualStyleBackColor = True
+        Me.butback.UseVisualStyleBackColor = False
         '
         'butclear
         '
-        Me.butclear.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.butclear.ForeColor = System.Drawing.Color.MediumBlue
-        Me.butclear.Location = New System.Drawing.Point(11, 457)
+        Me.butclear.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.butclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.butclear.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.butclear.ForeColor = System.Drawing.Color.White
+        Me.butclear.Location = New System.Drawing.Point(45, 34)
         Me.butclear.Margin = New System.Windows.Forms.Padding(2)
         Me.butclear.Name = "butclear"
         Me.butclear.Size = New System.Drawing.Size(197, 39)
         Me.butclear.TabIndex = 37
         Me.butclear.Text = "CLEAR"
-        Me.butclear.UseVisualStyleBackColor = True
+        Me.butclear.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -88,6 +94,7 @@ Partial Class updateData
         'chcity
         '
         Me.chcity.AutoSize = True
+        Me.chcity.ForeColor = System.Drawing.Color.White
         Me.chcity.Location = New System.Drawing.Point(377, 340)
         Me.chcity.Margin = New System.Windows.Forms.Padding(2)
         Me.chcity.Name = "chcity"
@@ -99,6 +106,7 @@ Partial Class updateData
         'chtawang
         '
         Me.chtawang.AutoSize = True
+        Me.chtawang.ForeColor = System.Drawing.Color.White
         Me.chtawang.Location = New System.Drawing.Point(535, 342)
         Me.chtawang.Margin = New System.Windows.Forms.Padding(2)
         Me.chtawang.Name = "chtawang"
@@ -110,6 +118,7 @@ Partial Class updateData
         'chgangtok
         '
         Me.chgangtok.AutoSize = True
+        Me.chgangtok.ForeColor = System.Drawing.Color.White
         Me.chgangtok.Location = New System.Drawing.Point(629, 342)
         Me.chgangtok.Margin = New System.Windows.Forms.Padding(2)
         Me.chgangtok.Name = "chgangtok"
@@ -121,6 +130,7 @@ Partial Class updateData
         'chshillong
         '
         Me.chshillong.AutoSize = True
+        Me.chshillong.ForeColor = System.Drawing.Color.White
         Me.chshillong.Location = New System.Drawing.Point(449, 342)
         Me.chshillong.Margin = New System.Windows.Forms.Padding(2)
         Me.chshillong.Name = "chshillong"
@@ -150,6 +160,7 @@ Partial Class updateData
         'chshow
         '
         Me.chshow.AutoSize = True
+        Me.chshow.ForeColor = System.Drawing.Color.White
         Me.chshow.Location = New System.Drawing.Point(645, 275)
         Me.chshow.Margin = New System.Windows.Forms.Padding(2)
         Me.chshow.Name = "chshow"
@@ -173,20 +184,21 @@ Partial Class updateData
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.8!)
-        Me.Label4.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(117, 334)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(71, 25)
+        Me.Label4.Size = New System.Drawing.Size(75, 23)
         Me.Label4.TabIndex = 31
         Me.Label4.Text = "Places"
         Me.Label4.UseMnemonic = False
         '
         'Button2
         '
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!)
-        Me.Button2.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Location = New System.Drawing.Point(668, 10)
         Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
@@ -197,25 +209,27 @@ Partial Class updateData
         '
         'butupd
         '
-        Me.butupd.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.butupd.ForeColor = System.Drawing.Color.MediumBlue
-        Me.butupd.Location = New System.Drawing.Point(289, 457)
+        Me.butupd.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.butupd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.butupd.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.butupd.ForeColor = System.Drawing.Color.White
+        Me.butupd.Location = New System.Drawing.Point(328, 34)
         Me.butupd.Margin = New System.Windows.Forms.Padding(2)
         Me.butupd.Name = "butupd"
         Me.butupd.Size = New System.Drawing.Size(197, 39)
         Me.butupd.TabIndex = 29
         Me.butupd.Text = "UPDATE"
-        Me.butupd.UseVisualStyleBackColor = True
+        Me.butupd.UseVisualStyleBackColor = False
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.8!)
-        Me.Label5.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(117, 268)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(168, 25)
+        Me.Label5.Size = New System.Drawing.Size(181, 23)
         Me.Label5.TabIndex = 28
         Me.Label5.Text = "Current Password"
         Me.Label5.UseMnemonic = False
@@ -223,12 +237,12 @@ Partial Class updateData
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.8!)
-        Me.Label3.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(117, 206)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(154, 25)
+        Me.Label3.Size = New System.Drawing.Size(177, 23)
         Me.Label3.TabIndex = 27
         Me.Label3.Text = "Contact Number"
         Me.Label3.UseMnemonic = False
@@ -236,12 +250,12 @@ Partial Class updateData
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.8!)
-        Me.Label2.ForeColor = System.Drawing.Color.MediumBlue
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(117, 147)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 25)
+        Me.Label2.Size = New System.Drawing.Size(108, 23)
         Me.Label2.TabIndex = 26
         Me.Label2.Text = "Username"
         Me.Label2.UseMnemonic = False
@@ -284,13 +298,25 @@ Partial Class updateData
         Me.usertxt.Size = New System.Drawing.Size(257, 24)
         Me.usertxt.TabIndex = 23
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.butupd)
+        Me.Panel1.Controls.Add(Me.butclear)
+        Me.Panel1.Controls.Add(Me.butback)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(0, 406)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(833, 100)
+        Me.Panel1.TabIndex = 40
+        '
         'updateData
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(833, 506)
-        Me.Controls.Add(Me.butback)
-        Me.Controls.Add(Me.butclear)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.chcity)
         Me.Controls.Add(Me.chtawang)
@@ -299,7 +325,6 @@ Partial Class updateData
         Me.Controls.Add(Me.chshow)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.butupd)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -309,6 +334,7 @@ Partial Class updateData
         Me.Name = "updateData"
         Me.Text = "updateData"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -336,4 +362,5 @@ Partial Class updateData
     Friend WithEvents txtcontact As System.Windows.Forms.TextBox
     Friend WithEvents ImageList2 As System.Windows.Forms.ImageList
     Friend WithEvents usertxt As System.Windows.Forms.TextBox
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class

@@ -73,29 +73,4 @@ Public Class memberDelete
 
     End Sub
 
-    Private Sub delete_MouseClick(sender As Object, e As MouseEventArgs) Handles delete.MouseClick
-        delete.BackColor = Color.LightSeaGreen
-    End Sub
-
-
-    Private Sub delete_MouseHover(sender As Object, e As EventArgs) Handles delete.MouseHover
-        delete.BackColor = Color.LightGray
-    End Sub
-
-    Private Sub delete_MouseLeave(sender As Object, e As EventArgs) Handles delete.MouseLeave
-        delete.BackColor = Color.Transparent
-    End Sub
-
-    Private Sub Button1_MouseClick(sender As Object, e As MouseEventArgs) Handles Button1.MouseClick
-        Button1.BackColor = Color.LightSeaGreen
-    End Sub
-
-
-    Private Sub Button1_MouseHover(sender As Object, e As EventArgs) Handles Button1.MouseHover
-        Button1.BackColor = Color.LightGray
-    End Sub
-
-    Private Sub Button1_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave
-        Button1.BackColor = Color.Transparent
-    End Sub
 End Class

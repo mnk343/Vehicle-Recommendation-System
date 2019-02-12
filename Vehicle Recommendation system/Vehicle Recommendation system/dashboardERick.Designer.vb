@@ -36,7 +36,7 @@ Partial Class dashboardERick
         '
         Me.chduty.AutoSize = True
         Me.chduty.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.chduty.ForeColor = System.Drawing.Color.MediumBlue
+        Me.chduty.ForeColor = System.Drawing.Color.White
         Me.chduty.Location = New System.Drawing.Point(211, 284)
         Me.chduty.Margin = New System.Windows.Forms.Padding(2)
         Me.chduty.Name = "chduty"
@@ -47,8 +47,9 @@ Partial Class dashboardERick
         '
         'profile
         '
+        Me.profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.profile.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.profile.ForeColor = System.Drawing.Color.MediumBlue
+        Me.profile.ForeColor = System.Drawing.Color.White
         Me.profile.Location = New System.Drawing.Point(39, 197)
         Me.profile.Margin = New System.Windows.Forms.Padding(2)
         Me.profile.Name = "profile"
@@ -61,6 +62,7 @@ Partial Class dashboardERick
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(211, 136)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
@@ -83,6 +85,7 @@ Partial Class dashboardERick
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(171, 136)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
@@ -92,8 +95,9 @@ Partial Class dashboardERick
         '
         'back
         '
+        Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.back.ForeColor = System.Drawing.Color.MediumBlue
+        Me.back.ForeColor = System.Drawing.Color.White
         Me.back.Location = New System.Drawing.Point(380, 197)
         Me.back.Margin = New System.Windows.Forms.Padding(2)
         Me.back.Name = "back"
@@ -106,6 +110,7 @@ Partial Class dashboardERick
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(55, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(573, 360)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.chduty)

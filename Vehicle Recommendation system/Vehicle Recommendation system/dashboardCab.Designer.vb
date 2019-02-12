@@ -36,47 +36,51 @@ Partial Class dashboardCab
         '
         'newbook
         '
-        Me.newbook.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.newbook.ForeColor = System.Drawing.Color.MediumBlue
+        Me.newbook.BackColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.newbook.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.newbook.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.newbook.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.newbook.Location = New System.Drawing.Point(198, 243)
         Me.newbook.Margin = New System.Windows.Forms.Padding(2)
         Me.newbook.Name = "newbook"
         Me.newbook.Size = New System.Drawing.Size(321, 38)
         Me.newbook.TabIndex = 31
         Me.newbook.Text = "NEW BOOKING"
-        Me.newbook.UseVisualStyleBackColor = True
+        Me.newbook.UseVisualStyleBackColor = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.Label2.Location = New System.Drawing.Point(246, 111)
+        Me.Label2.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(347, 129)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 29)
+        Me.Label2.Size = New System.Drawing.Size(62, 27)
         Me.Label2.TabIndex = 30
         Me.Label2.Text = "User"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.Label1.Location = New System.Drawing.Point(209, 111)
+        Me.Label1.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(289, 129)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(36, 29)
+        Me.Label1.Size = New System.Drawing.Size(34, 27)
         Me.Label1.TabIndex = 29
         Me.Label1.Text = "Hi"
         '
         'chduty
         '
         Me.chduty.AutoSize = True
-        Me.chduty.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.chduty.ForeColor = System.Drawing.Color.MediumBlue
+        Me.chduty.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chduty.ForeColor = System.Drawing.Color.White
         Me.chduty.Location = New System.Drawing.Point(294, 375)
         Me.chduty.Margin = New System.Windows.Forms.Padding(2)
         Me.chduty.Name = "chduty"
-        Me.chduty.Size = New System.Drawing.Size(117, 33)
+        Me.chduty.Size = New System.Drawing.Size(121, 31)
         Me.chduty.TabIndex = 28
         Me.chduty.Text = "On Duty"
         Me.chduty.UseVisualStyleBackColor = True
@@ -94,44 +98,51 @@ Partial Class dashboardCab
         '
         'update_btn
         '
-        Me.update_btn.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.update_btn.ForeColor = System.Drawing.Color.MediumBlue
+        Me.update_btn.BackColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.update_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.update_btn.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.update_btn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.update_btn.Location = New System.Drawing.Point(198, 309)
         Me.update_btn.Margin = New System.Windows.Forms.Padding(2)
         Me.update_btn.Name = "update_btn"
         Me.update_btn.Size = New System.Drawing.Size(321, 38)
         Me.update_btn.TabIndex = 26
         Me.update_btn.Text = "UPDATE BOOKING"
-        Me.update_btn.UseVisualStyleBackColor = True
+        Me.update_btn.UseVisualStyleBackColor = False
         '
         'profile
         '
-        Me.profile.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.profile.ForeColor = System.Drawing.Color.MediumBlue
+        Me.profile.BackColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.profile.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.profile.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.profile.Location = New System.Drawing.Point(198, 181)
         Me.profile.Margin = New System.Windows.Forms.Padding(2)
         Me.profile.Name = "profile"
         Me.profile.Size = New System.Drawing.Size(321, 38)
         Me.profile.TabIndex = 25
         Me.profile.Text = "UPDATE PROFILE"
-        Me.profile.UseVisualStyleBackColor = True
+        Me.profile.UseVisualStyleBackColor = False
         '
         'back
         '
-        Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.back.ForeColor = System.Drawing.Color.MediumBlue
+        Me.back.BackColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.back.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.back.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.back.Location = New System.Drawing.Point(558, 224)
         Me.back.Margin = New System.Windows.Forms.Padding(2)
         Me.back.Name = "back"
         Me.back.Size = New System.Drawing.Size(174, 38)
         Me.back.TabIndex = 32
         Me.back.Text = "Back"
-        Me.back.UseVisualStyleBackColor = True
+        Me.back.UseVisualStyleBackColor = False
         '
         'dashboardCab
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(743, 440)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.newbook)

@@ -26,13 +26,16 @@ Partial Class updateBooking
         Me.bid_lbl = New System.Windows.Forms.Label()
         Me.book_dgv = New System.Windows.Forms.DataGridView()
         Me.back = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dc_lbl = New System.Windows.Forms.Label()
         CType(Me.book_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'cid_lbl
         '
         Me.cid_lbl.AutoSize = True
-        Me.cid_lbl.Location = New System.Drawing.Point(391, 254)
+        Me.cid_lbl.Location = New System.Drawing.Point(100, 380)
         Me.cid_lbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.cid_lbl.Name = "cid_lbl"
         Me.cid_lbl.Size = New System.Drawing.Size(39, 13)
@@ -43,7 +46,7 @@ Partial Class updateBooking
         'bid_lbl
         '
         Me.bid_lbl.AutoSize = True
-        Me.bid_lbl.Location = New System.Drawing.Point(255, 265)
+        Me.bid_lbl.Location = New System.Drawing.Point(23, 380)
         Me.bid_lbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.bid_lbl.Name = "bid_lbl"
         Me.bid_lbl.Size = New System.Drawing.Size(39, 13)
@@ -53,8 +56,9 @@ Partial Class updateBooking
         '
         'book_dgv
         '
+        Me.book_dgv.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.book_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.book_dgv.Location = New System.Drawing.Point(53, 47)
+        Me.book_dgv.Location = New System.Drawing.Point(39, 71)
         Me.book_dgv.Margin = New System.Windows.Forms.Padding(2)
         Me.book_dgv.Name = "book_dgv"
         Me.book_dgv.RowTemplate.Height = 24
@@ -63,28 +67,52 @@ Partial Class updateBooking
         '
         'back
         '
-        Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.back.ForeColor = System.Drawing.Color.MediumBlue
-        Me.back.Location = New System.Drawing.Point(42, 265)
+        Me.back.BackColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(206, Byte), Integer))
+        Me.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.back.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.back.ForeColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.back.Location = New System.Drawing.Point(183, 326)
         Me.back.Margin = New System.Windows.Forms.Padding(2)
         Me.back.Name = "back"
         Me.back.Size = New System.Drawing.Size(142, 38)
         Me.back.TabIndex = 26
         Me.back.Text = "Back"
-        Me.back.UseVisualStyleBackColor = True
+        Me.back.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.dc_lbl)
+        Me.Panel1.Controls.Add(Me.book_dgv)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(535, 303)
+        Me.Panel1.TabIndex = 27
+        '
+        'dc_lbl
+        '
+        Me.dc_lbl.AutoSize = True
+        Me.dc_lbl.Location = New System.Drawing.Point(39, 36)
+        Me.dc_lbl.Name = "dc_lbl"
+        Me.dc_lbl.Size = New System.Drawing.Size(297, 13)
+        Me.dc_lbl.TabIndex = 4
+        Me.dc_lbl.Text = "*Double Click on the cell to update the coresponding booking"
         '
         'updateBooking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(531, 327)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(531, 413)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.cid_lbl)
         Me.Controls.Add(Me.bid_lbl)
-        Me.Controls.Add(Me.book_dgv)
         Me.Name = "updateBooking"
         Me.Text = "updateBooking"
         CType(Me.book_dgv, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -93,4 +121,6 @@ Partial Class updateBooking
     Friend WithEvents bid_lbl As System.Windows.Forms.Label
     Friend WithEvents book_dgv As System.Windows.Forms.DataGridView
     Friend WithEvents back As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents dc_lbl As System.Windows.Forms.Label
 End Class

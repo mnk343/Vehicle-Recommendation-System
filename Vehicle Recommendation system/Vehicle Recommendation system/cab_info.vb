@@ -53,6 +53,8 @@
             MessageBox.Show("Select Day")
         ElseIf no_pass.Text = "" Then
             MessageBox.Show("Select Passenger")
+        ElseIf CInt(no_pass.Text) = 0 Then
+            MessageBox.Show("Passenger cannot be zero")
         ElseIf String.Compare(day_cb.Text, "Today") = 0 Then
             If CInt(hour_tb.Text) < h Then
                 MessageBox.Show("Time selected has already been passed")

@@ -387,12 +387,12 @@ Public Class Maps
     Private Sub NewBooking_dgv_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles NewBooking_dgv.CellDoubleClick
         Dim row_index As Integer
         Dim query As New StringBuilder
-        NewBooking_FullData_dgv.DataSource = Nothing
-        NewBooking_dgv.DataSource = Nothing
+        ' NewBooking_FullData_dgv.DataSource = Nothing
+        ' NewBooking_dgv.DataSource = Nothing
         row_index = e.RowIndex
 
         row_index = e.RowIndex
-        If row_index >= 0 Then
+        If row_index >= 0 And row_index < NewBooking_dgv.RowCount Then
             Dim row As DataGridViewRow = NewBooking_FullData_dgv.Rows([row_index])
 
             Dim lat As String = row.Cells(1).Value.ToString
@@ -407,8 +407,8 @@ Public Class Maps
             query.Append("_")
             query.Append(row.Cells(2).Value.ToString)
             query.Append("&lvl=15")
-            Label1.Text = query.ToString()
-            Label1.Hide()
+            hidLabel.Text = query.ToString()
+            hidLabel.Hide()
             CabMap.Show()
         End If
 

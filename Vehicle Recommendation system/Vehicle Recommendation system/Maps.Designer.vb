@@ -30,6 +30,7 @@ Partial Class Maps
         Me.money = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.back = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.NewBooking_FullData_dgv = New System.Windows.Forms.DataGridView()
@@ -37,7 +38,7 @@ Partial Class Maps
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.date_lbl = New System.Windows.Forms.Label()
         Me.Share_dgv = New System.Windows.Forms.DataGridView()
-        Me.back = New System.Windows.Forms.Button()
+        Me.hidLabel = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -134,9 +135,21 @@ Partial Class Maps
         Me.Panel2.Size = New System.Drawing.Size(421, 184)
         Me.Panel2.TabIndex = 12
         '
+        'back
+        '
+        Me.back.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.back.Location = New System.Drawing.Point(165, 114)
+        Me.back.Margin = New System.Windows.Forms.Padding(2)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(136, 54)
+        Me.back.TabIndex = 14
+        Me.back.Text = "Back"
+        Me.back.UseVisualStyleBackColor = True
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.hidLabel)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.NewBooking_FullData_dgv)
         Me.Panel3.Controls.Add(Me.NewBooking_dgv)
@@ -174,6 +187,7 @@ Partial Class Maps
         Me.NewBooking_dgv.Location = New System.Drawing.Point(44, 73)
         Me.NewBooking_dgv.Margin = New System.Windows.Forms.Padding(2)
         Me.NewBooking_dgv.Name = "NewBooking_dgv"
+        Me.NewBooking_dgv.ReadOnly = True
         Me.NewBooking_dgv.RowTemplate.Height = 24
         Me.NewBooking_dgv.Size = New System.Drawing.Size(784, 154)
         Me.NewBooking_dgv.TabIndex = 9
@@ -206,20 +220,20 @@ Partial Class Maps
         Me.Share_dgv.Location = New System.Drawing.Point(174, 81)
         Me.Share_dgv.Margin = New System.Windows.Forms.Padding(2)
         Me.Share_dgv.Name = "Share_dgv"
+        Me.Share_dgv.ReadOnly = True
         Me.Share_dgv.RowTemplate.Height = 24
         Me.Share_dgv.Size = New System.Drawing.Size(559, 145)
         Me.Share_dgv.TabIndex = 4
         '
-        'back
+        'hidLabel
         '
-        Me.back.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.back.Location = New System.Drawing.Point(165, 114)
-        Me.back.Margin = New System.Windows.Forms.Padding(2)
-        Me.back.Name = "back"
-        Me.back.Size = New System.Drawing.Size(136, 54)
-        Me.back.TabIndex = 14
-        Me.back.Text = "Back"
-        Me.back.UseVisualStyleBackColor = True
+        Me.hidLabel.AutoSize = True
+        Me.hidLabel.Location = New System.Drawing.Point(650, 239)
+        Me.hidLabel.Name = "hidLabel"
+        Me.hidLabel.Size = New System.Drawing.Size(39, 13)
+        Me.hidLabel.TabIndex = 12
+        Me.hidLabel.Text = "Label2"
+        Me.hidLabel.Visible = False
         '
         'Maps
         '
@@ -263,4 +277,5 @@ Partial Class Maps
     Friend WithEvents date_lbl As System.Windows.Forms.Label
     Friend WithEvents Share_dgv As System.Windows.Forms.DataGridView
     Friend WithEvents back As System.Windows.Forms.Button
+    Friend WithEvents hidLabel As System.Windows.Forms.Label
 End Class
