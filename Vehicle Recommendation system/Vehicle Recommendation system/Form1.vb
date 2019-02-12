@@ -314,7 +314,6 @@ Public Class Form1
         Access.ExecQuery("SELECT UserName,Contact FROM [E-RickshawData] WHERE Status=TRUE")
         If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
 
-        Panel2.Hide()
         panelERickshaw.Show()
         panelBus.Hide()
 
