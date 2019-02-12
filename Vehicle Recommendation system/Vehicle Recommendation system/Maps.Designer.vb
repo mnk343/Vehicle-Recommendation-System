@@ -32,13 +32,15 @@ Partial Class Maps
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.back = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.hidLabel = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.NewBooking_FullData_dgv = New System.Windows.Forms.DataGridView()
         Me.NewBooking_dgv = New System.Windows.Forms.DataGridView()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.date_lbl = New System.Windows.Forms.Label()
         Me.Share_dgv = New System.Windows.Forms.DataGridView()
-        Me.hidLabel = New System.Windows.Forms.Label()
+        Me.sc_noDatalbl = New System.Windows.Forms.Label()
+        Me.nb_noDatalbl = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -149,6 +151,7 @@ Partial Class Maps
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.nb_noDatalbl)
         Me.Panel3.Controls.Add(Me.hidLabel)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.NewBooking_FullData_dgv)
@@ -158,6 +161,16 @@ Partial Class Maps
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(890, 283)
         Me.Panel3.TabIndex = 13
+        '
+        'hidLabel
+        '
+        Me.hidLabel.AutoSize = True
+        Me.hidLabel.Location = New System.Drawing.Point(650, 239)
+        Me.hidLabel.Name = "hidLabel"
+        Me.hidLabel.Size = New System.Drawing.Size(39, 13)
+        Me.hidLabel.TabIndex = 12
+        Me.hidLabel.Text = "Label2"
+        Me.hidLabel.Visible = False
         '
         'Label1
         '
@@ -195,6 +208,7 @@ Partial Class Maps
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.sc_noDatalbl)
         Me.Panel4.Controls.Add(Me.date_lbl)
         Me.Panel4.Controls.Add(Me.Share_dgv)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Right
@@ -225,15 +239,23 @@ Partial Class Maps
         Me.Share_dgv.Size = New System.Drawing.Size(559, 145)
         Me.Share_dgv.TabIndex = 4
         '
-        'hidLabel
+        'sc_noDatalbl
         '
-        Me.hidLabel.AutoSize = True
-        Me.hidLabel.Location = New System.Drawing.Point(650, 239)
-        Me.hidLabel.Name = "hidLabel"
-        Me.hidLabel.Size = New System.Drawing.Size(39, 13)
-        Me.hidLabel.TabIndex = 12
-        Me.hidLabel.Text = "Label2"
-        Me.hidLabel.Visible = False
+        Me.sc_noDatalbl.AutoSize = True
+        Me.sc_noDatalbl.Location = New System.Drawing.Point(282, 132)
+        Me.sc_noDatalbl.Name = "sc_noDatalbl"
+        Me.sc_noDatalbl.Size = New System.Drawing.Size(115, 13)
+        Me.sc_noDatalbl.TabIndex = 6
+        Me.sc_noDatalbl.Text = "No Share cabs till Now"
+        '
+        'nb_noDatalbl
+        '
+        Me.nb_noDatalbl.AutoSize = True
+        Me.nb_noDatalbl.Location = New System.Drawing.Point(580, 131)
+        Me.nb_noDatalbl.Name = "nb_noDatalbl"
+        Me.nb_noDatalbl.Size = New System.Drawing.Size(102, 13)
+        Me.nb_noDatalbl.TabIndex = 13
+        Me.nb_noDatalbl.Text = "No bookings till now"
         '
         'Maps
         '
@@ -278,4 +300,6 @@ Partial Class Maps
     Friend WithEvents Share_dgv As System.Windows.Forms.DataGridView
     Friend WithEvents back As System.Windows.Forms.Button
     Friend WithEvents hidLabel As System.Windows.Forms.Label
+    Friend WithEvents nb_noDatalbl As System.Windows.Forms.Label
+    Friend WithEvents sc_noDatalbl As System.Windows.Forms.Label
 End Class

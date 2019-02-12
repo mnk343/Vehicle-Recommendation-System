@@ -244,6 +244,11 @@ Public Class Maps
         NewBooking_dgv.RowTemplate.Height = 22
         NewBooking_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
         NewBooking_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
+        nb_noDatalbl.Hide()
+        If NewBooking_dgv.RowCount = 1 Then
+            NewBooking_dgv.Hide()
+            nb_noDatalbl.Show()
+        End If
     End Sub
 
     Private Sub Booking_Click(sender As Object, e As EventArgs) Handles Booking.Click
@@ -253,6 +258,11 @@ Public Class Maps
 
         NewBooking_FullData_dgv.Hide()
 
+        nb_noDatalbl.Hide()
+        If NewBooking_dgv.RowCount = 1 Then
+            NewBooking_dgv.Hide()
+            nb_noDatalbl.Show()
+        End If
         
 
     End Sub
@@ -377,6 +387,12 @@ Public Class Maps
             Share_dgv.Rows(0).DefaultCellStyle.ForeColor = Color.White
             Share_dgv.ClearSelection()
 
+
+            sc_noDatalbl.Hide()
+            If Share_dgv.RowCount = 1 Then
+                Share_dgv.Hide()
+                sc_noDatalbl.Show()
+            End If
 
 
         Next
