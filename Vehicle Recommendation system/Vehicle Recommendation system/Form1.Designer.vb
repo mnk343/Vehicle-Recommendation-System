@@ -643,7 +643,7 @@ Partial Class Form1
         Me.panelERickshaw.Controls.Add(Me.e_fullData_dgv)
         Me.panelERickshaw.Controls.Add(Me.e_dgv)
         Me.panelERickshaw.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelERickshaw.Location = New System.Drawing.Point(0, -236)
+        Me.panelERickshaw.Location = New System.Drawing.Point(0, -251)
         Me.panelERickshaw.Name = "panelERickshaw"
         Me.panelERickshaw.Size = New System.Drawing.Size(885, 389)
         Me.panelERickshaw.TabIndex = 0
@@ -652,21 +652,23 @@ Partial Class Form1
         '
         Me.doubleClick.AutoSize = True
         Me.doubleClick.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.doubleClick.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.doubleClick.ForeColor = System.Drawing.Color.White
         Me.doubleClick.Location = New System.Drawing.Point(214, 326)
         Me.doubleClick.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.doubleClick.Name = "doubleClick"
-        Me.doubleClick.Size = New System.Drawing.Size(190, 13)
+        Me.doubleClick.Size = New System.Drawing.Size(360, 22)
         Me.doubleClick.TabIndex = 18
         Me.doubleClick.Text = "* Double click on Cell to Get Directions"
         '
         'lblSugg
         '
         Me.lblSugg.AutoSize = True
+        Me.lblSugg.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSugg.Location = New System.Drawing.Point(221, 39)
         Me.lblSugg.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblSugg.Name = "lblSugg"
-        Me.lblSugg.Size = New System.Drawing.Size(42, 13)
+        Me.lblSugg.Size = New System.Drawing.Size(76, 22)
         Me.lblSugg.TabIndex = 17
         Me.lblSugg.Text = "lblSugg"
         '
@@ -717,9 +719,9 @@ Partial Class Form1
         Me.panelBus.Controls.Add(Me.time_lbl)
         Me.panelBus.Controls.Add(Me.t_lbl)
         Me.panelBus.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelBus.Location = New System.Drawing.Point(0, 153)
+        Me.panelBus.Location = New System.Drawing.Point(0, 138)
         Me.panelBus.Name = "panelBus"
-        Me.panelBus.Size = New System.Drawing.Size(885, 383)
+        Me.panelBus.Size = New System.Drawing.Size(885, 398)
         Me.panelBus.TabIndex = 2
         '
         'lblInfoBus
