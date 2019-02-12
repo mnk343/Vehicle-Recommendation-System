@@ -7,6 +7,13 @@ Public Class newBooking
         Return Not String.IsNullOrEmpty(text)
     End Function
 
+   
+
+    Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
+        Me.Close()
+        dashboardCab.Show()
+    End Sub
+
     Private Sub newBooking_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         src_cb.Items.Add("IIT Guwahati")
@@ -25,11 +32,9 @@ Public Class newBooking
         day_cb.Items.Add("Tomorrow")
         day_cb.Items.Add("Day after Tomorrow")
 
-
     End Sub
 
     Private Sub load_btn_Click(sender As Object, e As EventArgs) Handles load_btn.Click
-
         Dim src As String = src_cb.Text
         Dim dest As String = des_cb.Text
 
@@ -152,7 +157,11 @@ Public Class newBooking
         End If
     End Sub
 
+
+
+
     Private Sub no_pass_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles no_pass.KeyPress, hour_tb.KeyPress, min_tb.KeyPress
+
 
         '97 - 122 = Ascii codes for simple letters
         '65 - 90  = Ascii codes for capital letters
@@ -166,3 +175,12 @@ Public Class newBooking
 
     End Sub
 End Class
+
+
+
+
+
+
+
+
+

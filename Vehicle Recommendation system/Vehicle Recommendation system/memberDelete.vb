@@ -23,7 +23,7 @@ Public Class memberDelete
             Dim number As Integer = 0
 
             number = cmd.ExecuteScalar()
-            MessageBox.Show(number)
+            'MessageBox.Show(number)
             cmd.Dispose()
             conn.Close()
 
@@ -35,7 +35,7 @@ Public Class memberDelete
             conn.Open()
 
             number += cmd.ExecuteScalar()
-            MessageBox.Show(number)
+            ' MessageBox.Show(number)
             cmd.Dispose()
             conn.Close()
 

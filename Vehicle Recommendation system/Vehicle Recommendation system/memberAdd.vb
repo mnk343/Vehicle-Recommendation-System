@@ -78,34 +78,31 @@ Public Class memberAdd
 
             Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
             Dim conn = New OleDbConnection(dbsource)
-
-            Dim querry As String = "SELECT Count(*) FROM CabData WHERE UserName =  '" + txtName.Text + "' ;"
-            Dim cmd As New OleDbCommand(querry, conn)
-
-            conn.Open()
-
-
             Dim number As Integer = 0
+            Dim querry As String
+            If vehicle.Text = "Cab Driver" Then
+                querry = "SELECT Count(*) FROM CabData WHERE UserName =  '" + txtName.Text + "' ;"
+                Dim cmd As New OleDbCommand(querry, conn)
+                conn.Open()
+                number += cmd.ExecuteScalar()
+                cmd.Dispose()
+                conn.Close()
+            ElseIf vehicle.Text = "E-Rickshaw" Then
+                querry = "SELECT Count(*) FROM [E-RickshawData] WHERE UserName =  '" + txtName.Text + "' ;"
+                Dim cmd = New OleDbCommand(querry, conn)
 
-            number = cmd.ExecuteScalar()
-            MessageBox.Show(number)
-            cmd.Dispose()
-            conn.Close()
+                conn.Open()
+
+                number += cmd.ExecuteScalar()
+                ' MessageBox.Show(number)
+                cmd.Dispose()
+                conn.Close()
+            End If
+           
 
             conn = New OleDbConnection(dbsource)
 
-            querry = "SELECT Count(*) FROM [E-RickshawData] WHERE UserName =  '" + txtName.Text + "' ;"
-            cmd = New OleDbCommand(querry, conn)
-
-            conn.Open()
-
-            number += cmd.ExecuteScalar()
-            MessageBox.Show(number)
-            cmd.Dispose()
-            conn.Close()
-
-
-
+            
             If number > 0 Then
                 MessageBox.Show("Username already exists. Kindly enter some other value.")
 
@@ -122,8 +119,9 @@ Public Class memberAdd
                 End If
 
                 querry = "INSERT INTO [" + addInfo + "] ( [UserName] , [Contact] , [Password]  ) VALUES ( ?,?,?)"
+                Dim cmd = New OleDbCommand(querry, conn)
 
-                MessageBox.Show(querry)
+                'MessageBox.Show(querry)
 
                 conn = New OleDbConnection(dbsource)
                 cmd = New OleDbCommand(querry, conn)
@@ -142,11 +140,11 @@ Public Class memberAdd
 
             End If
 
-        Else
+            Else
 
-            MessageBox.Show("Passwords should match")
+                MessageBox.Show("Passwords should match")
 
-        End If
+            End If
 
     End Sub
 

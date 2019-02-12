@@ -100,7 +100,9 @@ Public Class bookingPart2
         ElseIf CInt(min_tb.Text) > 59 Then
             MessageBox.Show("Minute must be less than 60")
         ElseIf day_cb.Text = "" Then
-            MessageBox.Show("Select passenger")
+            MessageBox.Show("Select day")
+        ElseIf no_pass.Text = "" Or CInt(no_pass.Text) = 0 Then
+            MessageBox.Show("Enter a proper number of passengers")
         ElseIf String.Compare(day_cb.Text, "Today") = 0 And ((CInt(hour_tb.Text) < h) Or (CInt(hour_tb.Text) = h And CInt(min_tb.Text <= m))) Then
             MessageBox.Show("Time selected has already been passed")
 
@@ -142,7 +144,7 @@ Public Class bookingPart2
 
                 If numofpassengers <= CInt(seater) Then
                     querry = "UPDATE Booking SET [Source] = '" + src_cb.Text + "', [Destination] = '" + des_cb.Text + "' , [Occupancy] = " + no_pass.Text + ", [Hour] = " + hour_tb.Text + ", [Minute]= " + min_tb.Text + ", [Day] = '" + dat + "' Where [BookingID] = " + updateBooking.bid_lbl.Text + " ;"
-                    MessageBox.Show(querry)
+                    'MessageBox.Show(querry)
                     conn = New OleDbConnection(dbsource)
                     Dim cmdup As New OleDbCommand(querry, conn)
 
@@ -170,4 +172,45 @@ Public Class bookingPart2
         End If
     End Sub
 
+    Private Sub back_btn_Click(sender As Object, e As EventArgs) Handles back_btn.Click
+        updateBooking.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub no_pass_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles no_pass.KeyPress, hour_tb.KeyPress, min_tb.KeyPress
+
+
+        '97 - 122 = Ascii codes for simple letters
+        '65 - 90  = Ascii codes for capital letters
+        '48 - 57  = Ascii codes for numbers
+
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+
+    End Sub
+
+
+    Private Sub delete_btn_Click(sender As Object, e As EventArgs) Handles delete_btn.Click
+        Dim querry As String = "DELETE From [Booking] Where [BookingID]= " + updateBooking.bid_lbl.Text + " ;"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
+        Dim conn As New OleDbConnection(dbsource)
+        Dim cmd As New OleDbCommand(querry, conn)
+
+        Try
+            conn.Open()
+            cmd.ExecuteNonQuery()
+            cmd.Dispose()
+            conn.Close()
+            MessageBox.Show("Deleted")
+            updateBooking.Close()
+            dashboardCab.Show()
+            Me.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 End Class

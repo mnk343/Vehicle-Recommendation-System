@@ -36,10 +36,13 @@ Partial Class bookingPart2
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.load_btn = New System.Windows.Forms.Button()
+        Me.back_btn = New System.Windows.Forms.Button()
+        Me.delete_btn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'day_cb
         '
+        Me.day_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.day_cb.FormattingEnabled = True
         Me.day_cb.Location = New System.Drawing.Point(121, 280)
         Me.day_cb.Margin = New System.Windows.Forms.Padding(2)
@@ -124,6 +127,7 @@ Partial Class bookingPart2
         '
         'des_cb
         '
+        Me.des_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.des_cb.FormattingEnabled = True
         Me.des_cb.Location = New System.Drawing.Point(527, 47)
         Me.des_cb.Margin = New System.Windows.Forms.Padding(2)
@@ -133,6 +137,7 @@ Partial Class bookingPart2
         '
         'src_cb
         '
+        Me.src_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.src_cb.FormattingEnabled = True
         Me.src_cb.Location = New System.Drawing.Point(170, 44)
         Me.src_cb.Margin = New System.Windows.Forms.Padding(2)
@@ -170,11 +175,31 @@ Partial Class bookingPart2
         Me.load_btn.Text = "Update"
         Me.load_btn.UseVisualStyleBackColor = True
         '
+        'back_btn
+        '
+        Me.back_btn.Location = New System.Drawing.Point(638, 311)
+        Me.back_btn.Name = "back_btn"
+        Me.back_btn.Size = New System.Drawing.Size(57, 23)
+        Me.back_btn.TabIndex = 69
+        Me.back_btn.Text = "Back"
+        Me.back_btn.UseVisualStyleBackColor = True
+        '
+        'delete_btn
+        '
+        Me.delete_btn.Location = New System.Drawing.Point(418, 310)
+        Me.delete_btn.Name = "delete_btn"
+        Me.delete_btn.Size = New System.Drawing.Size(76, 32)
+        Me.delete_btn.TabIndex = 70
+        Me.delete_btn.Text = "Delete"
+        Me.delete_btn.UseVisualStyleBackColor = True
+        '
         'bookingPart2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(788, 378)
+        Me.Controls.Add(Me.delete_btn)
+        Me.Controls.Add(Me.back_btn)
         Me.Controls.Add(Me.day_cb)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -209,4 +234,6 @@ Partial Class bookingPart2
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents load_btn As System.Windows.Forms.Button
+    Friend WithEvents back_btn As System.Windows.Forms.Button
+    Friend WithEvents delete_btn As System.Windows.Forms.Button
 End Class

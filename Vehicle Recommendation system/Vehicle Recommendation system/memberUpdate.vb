@@ -128,7 +128,7 @@ Public Class memberUpdate
 
         ' [Password] = '" + txtPassword.Text + "' AND
 
-        MessageBox.Show(querry)
+        ' MessageBox.Show(querry)
 
         Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
 
