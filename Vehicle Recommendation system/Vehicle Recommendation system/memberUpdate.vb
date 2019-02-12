@@ -51,7 +51,7 @@ Public Class memberUpdate
                     While reader.Read()
 
                         Panel2.Show()
-                        'txtPassword.Text = CStr(reader(4))
+                        txtPassword.Text = CStr(reader(4))
                         txtContactNo.Text = CStr(reader(2))
                         City.Checked = CStr(reader(5))
                         shillong.Checked = CStr(reader(6))
@@ -120,7 +120,7 @@ Public Class memberUpdate
 
     Private Sub update_Click(sender As Object, e As EventArgs) Handles update.Click
 
-        Dim querry As String = " Update [CabData] Set  [Contact] ='" + CStr(txtContactNo.Text) + "' "
+        Dim querry As String = " Update [CabData] Set [Password]= '" + txtPassword.Text + "' AND  [Contact] ='" + CStr(txtContactNo.Text) + "' "
 
         querry += " , [City] = " + CStr(City.Checked) + " , [Shillong] = " + CStr(shillong.Checked) + " , [Gangtok] = "
         querry += CStr(gangtok.Checked) + " , [Tawang] = " + CStr(tawang.Checked) + " , [CityTrips] = " + CStr(txtCityTrips.Text)
