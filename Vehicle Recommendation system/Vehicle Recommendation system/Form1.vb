@@ -1,6 +1,8 @@
 ﻿Imports System.Net.Mail
 Imports System.Text
 Imports System.Math
+Imports System.Data.OleDb
+Imports System.Data
 
 
 Public Class Form1
@@ -40,6 +42,22 @@ Public Class Form1
         outstation_panel.Hide()
         outcampus_panel.Hide()
         emergency_panel.Hide()
+
+        'MessageBox.Show(DateTime.Now.ToString("MM/dd/yyyy"))
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
+        Dim conn = New OleDbConnection(dbsource)
+        Dim querry As String
+
+        querry = " DELETE * FROM [Booking] WHERE [Day] < #" + DateTime.Now.ToString("MM/dd/yyyy") + "# ; "
+        conn = New OleDbConnection(dbsource)
+        Dim cmd As New OleDbCommand(querry, conn)
+        conn.Open()
+        cmd.ExecuteNonQuery()
+        cmd.Dispose()
+        conn.Close()
+        MessageBox.Show(querry)
+
+
 
 
     End Sub
