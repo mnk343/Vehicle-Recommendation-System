@@ -643,9 +643,9 @@ Partial Class Form1
         Me.panelERickshaw.Controls.Add(Me.e_fullData_dgv)
         Me.panelERickshaw.Controls.Add(Me.e_dgv)
         Me.panelERickshaw.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelERickshaw.Location = New System.Drawing.Point(0, 130)
+        Me.panelERickshaw.Location = New System.Drawing.Point(0, -238)
         Me.panelERickshaw.Name = "panelERickshaw"
-        Me.panelERickshaw.Size = New System.Drawing.Size(885, 389)
+        Me.panelERickshaw.Size = New System.Drawing.Size(885, 369)
         Me.panelERickshaw.TabIndex = 0
         '
         'doubleClick
@@ -719,9 +719,9 @@ Partial Class Form1
         Me.panelBus.Controls.Add(Me.time_lbl)
         Me.panelBus.Controls.Add(Me.t_lbl)
         Me.panelBus.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelBus.Location = New System.Drawing.Point(0, 519)
+        Me.panelBus.Location = New System.Drawing.Point(0, 131)
         Me.panelBus.Name = "panelBus"
-        Me.panelBus.Size = New System.Drawing.Size(885, 17)
+        Me.panelBus.Size = New System.Drawing.Size(885, 405)
         Me.panelBus.TabIndex = 2
         '
         'lblInfoBus
