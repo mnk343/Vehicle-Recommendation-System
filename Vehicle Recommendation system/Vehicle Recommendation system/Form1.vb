@@ -5,7 +5,8 @@ Imports System.Math
 
 Public Class Form1
     Private Access As New DBControl
-
+    Dim bs As Integer
+    Dim ch As Integer
     Dim driver As String = "Temp"
     Dim check As Integer
     Dim NoPassengers As Integer
@@ -31,7 +32,8 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        ch = 0
+        bs = 0
         panelERickshaw.Hide()
         panelBus.Hide()
         incampus_panel.Hide()
@@ -310,98 +312,105 @@ Public Class Form1
 
     Private Sub erickshaw_Click(sender As Object, e As EventArgs) Handles erickshaw.Click
 
-
         Access.ExecQuery("SELECT UserName,Contact FROM [E-RickshawData] WHERE Status=TRUE")
         If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
 
-        panelERickshaw.Show()
-        panelBus.Hide()
+        
+        If ch > 0 Then
+            panelERickshaw.Show()
+            panelBus.Hide()
 
-        ' FILL DATAGRID
-        e_dgv.DataSource = Access.DBDT
-
-
-
-        Access.ExecQuery("SELECT Latitude,Longitude,UserName FROM [E-RickshawData] WHERE Status=TRUE")
-        If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
-
-        ' FILL DATAGRID
-        e_fullData_dgv.DataSource = Access.DBDT
-
-        Dim min As Double = 1000000
-        Dim lat1 As Double = 26.192824   ' Of User
-        Dim lon1 As Double = 91.695249   ' Of User 
-        Dim R As Double = 6371
-
-        Dim driver As String = "Temp"
-        Dim row_of_driver As Integer = 0
+        Else
+            panelERickshaw.Show()
+            panelBus.Hide()
+            ch += 1
+            ' FILL DATAGRID
+            e_dgv.DataSource = Access.DBDT
 
 
-        Dim newCol As New DataGridViewTextBoxColumn
 
-        newCol.HeaderText = "Distance"
-        newCol.Name = "Distance"
-        newCol.Visible = True
-        newCol.Width = 80
+            Access.ExecQuery("SELECT Latitude,Longitude,UserName FROM [E-RickshawData] WHERE Status=TRUE")
+            If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
 
-        e_dgv.Columns.Add(newCol)
+            ' FILL DATAGRID
+            e_fullData_dgv.DataSource = Access.DBDT
 
-        For row_index As Integer = 0 To e_fullData_dgv.RowCount - 1
+            Dim min As Double = 1000000
+            Dim lat1 As Double = 26.192824   ' Of User
+            Dim lon1 As Double = 91.695249   ' Of User 
+            Dim R As Double = 6371
+
+            Dim driver As String = "Temp"
+            Dim row_of_driver As Integer = 0
 
 
-            Dim lat2 As Double = e_fullData_dgv.Rows(row_index).Cells(0).Value
-            Dim lon2 As Double = e_fullData_dgv.Rows(row_index).Cells(1).Value
+            Dim newCol As New DataGridViewTextBoxColumn
 
-            Dim dlat As Double = (lat2 - lat1) * (Math.PI / 180)
-            Dim dLon As Double = (lon2 - lon1) * (Math.PI / 180)
-            Dim a As Double = Math.Sin(dlat / 2) * Math.Sin(dlat / 2) +
-                                Math.Cos((lat2) * (Math.PI / 180)) * Math.Cos((lat2) * (Math.PI / 180)) *
-                                Math.Sin(dLon / 2) * Math.Sin(dLon / 2)
+            newCol.HeaderText = "Distance"
+            newCol.Name = "Distance"
+            newCol.Visible = True
+            newCol.Width = 80
 
-            Dim d As Double = R * 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a))
-            d *= 1000
-            d = Math.Round(d, 3)
-            Dim distance As String = CStr(d)
-            distance += " m"
+            e_dgv.Columns.Add(newCol)
 
-            If (row_index <= e_dgv.RowCount - 1) Then
-                e_dgv.Rows(row_index).Cells(2).Value = distance
+            For row_index As Integer = 0 To e_fullData_dgv.RowCount - 1
+
+
+                Dim lat2 As Double = e_fullData_dgv.Rows(row_index).Cells(0).Value
+                Dim lon2 As Double = e_fullData_dgv.Rows(row_index).Cells(1).Value
+
+                Dim dlat As Double = (lat2 - lat1) * (Math.PI / 180)
+                Dim dLon As Double = (lon2 - lon1) * (Math.PI / 180)
+                Dim a As Double = Math.Sin(dlat / 2) * Math.Sin(dlat / 2) +
+                                    Math.Cos((lat2) * (Math.PI / 180)) * Math.Cos((lat2) * (Math.PI / 180)) *
+                                    Math.Sin(dLon / 2) * Math.Sin(dLon / 2)
+
+                Dim d As Double = R * 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a))
+                d *= 1000
+                d = Math.Round(d, 3)
+                Dim distance As String = CStr(d)
+                distance += " m"
+
+                If (row_index <= e_dgv.RowCount - 1) Then
+                    e_dgv.Rows(row_index).Cells(2).Value = distance
+                End If
+
+                If d < min Then
+                    min = d
+                    driver = e_dgv.Rows(row_index).Cells(0).Value
+
+                    row_of_driver = row_index
+                End If
+
+
+            Next
+            If row_of_driver >= 0 And row_of_driver < e_dgv.RowCount Then
+                Dim sug As String = "Closest Driver from you is " + driver + " at distance " + e_dgv.Rows(row_of_driver).Cells(2).Value + " meters"
+                lblSugg.Text = sug
+
+
+                e_dgv.BorderStyle = BorderStyle.None
+                e_dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
+                e_dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+                e_dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
+                e_dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
+
+
+                e_dgv.EnableHeadersVisualStyles = False
+                e_dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+                e_dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72)
+                e_dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
+                e_dgv.RowTemplate.Height = 22
+                e_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
+                e_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
+
+
+
+
+                e_dgv.Rows(row_of_driver).DefaultCellStyle.BackColor = Color.Red
+                e_dgv.Rows(row_of_driver).DefaultCellStyle.ForeColor = Color.White
             End If
 
-            If d < min Then
-                min = d
-                driver = e_dgv.Rows(row_index).Cells(0).Value
-
-                row_of_driver = row_index
-            End If
-
-
-        Next
-        If row_of_driver >= 0 And row_of_driver < e_dgv.RowCount Then
-            Dim sug As String = "Closest Driver from you is " + driver + " at distance " + e_dgv.Rows(row_of_driver).Cells(2).Value + " meters"
-            lblSugg.Text = sug
-
-
-            e_dgv.BorderStyle = BorderStyle.None
-            e_dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249)
-            e_dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-            e_dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise
-            e_dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke
-
-
-            e_dgv.EnableHeadersVisualStyles = False
-            e_dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-            e_dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72)
-            e_dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White
-            e_dgv.RowTemplate.Height = 22
-            e_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
-            e_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
-
-
-
-
-            e_dgv.Rows(row_of_driver).DefaultCellStyle.BackColor = Color.Red
-            e_dgv.Rows(row_of_driver).DefaultCellStyle.ForeColor = Color.White
         End If
 
     End Sub
@@ -445,18 +454,23 @@ Public Class Form1
     Private Sub bus_Click(sender As Object, e As EventArgs) Handles bus.Click
 
         time_lbl.Text = DateTime.Now.ToShortTimeString
+        If bs > 0 Then
 
-        s_cb.Items.Add("E Type")
-        s_cb.Items.Add("Admin")
-        s_cb.Items.Add("Kameng")
-        s_cb.Items.Add("Core 4")
-        s_cb.Items.Add("Core 1")
-        s_cb.Items.Add("Dhansari")
+        Else
+            bs += 1
 
-        de_cb.Items.Add("Admin")
-        de_cb.Items.Add("Hospital")
-        de_cb.Items.Add("Core 1")
-        de_cb.Items.Add("KV")
+            s_cb.Items.Add("E Type")
+            s_cb.Items.Add("Admin")
+            s_cb.Items.Add("Kameng")
+            s_cb.Items.Add("Core 4")
+            s_cb.Items.Add("Core 1")
+            s_cb.Items.Add("Dhansari")
+
+            de_cb.Items.Add("Admin")
+            de_cb.Items.Add("Hospital")
+            de_cb.Items.Add("Core 1")
+            de_cb.Items.Add("KV")
+        End If
 
         panelBus.Show()
         panelERickshaw.Hide()

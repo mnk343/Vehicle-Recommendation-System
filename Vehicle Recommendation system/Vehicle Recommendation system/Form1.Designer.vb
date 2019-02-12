@@ -263,7 +263,7 @@ Partial Class Form1
         Me.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.login_btn.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.login_btn.ForeColor = System.Drawing.Color.White
-        Me.login_btn.Location = New System.Drawing.Point(891, 19)
+        Me.login_btn.Location = New System.Drawing.Point(852, 19)
         Me.login_btn.Name = "login_btn"
         Me.login_btn.Size = New System.Drawing.Size(86, 36)
         Me.login_btn.TabIndex = 8
@@ -274,7 +274,7 @@ Partial Class Form1
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(844, 19)
+        Me.PictureBox1.Location = New System.Drawing.Point(805, 19)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(41, 36)
         Me.PictureBox1.TabIndex = 0
@@ -643,9 +643,9 @@ Partial Class Form1
         Me.panelERickshaw.Controls.Add(Me.e_fullData_dgv)
         Me.panelERickshaw.Controls.Add(Me.e_dgv)
         Me.panelERickshaw.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.panelERickshaw.Location = New System.Drawing.Point(0, -238)
+        Me.panelERickshaw.Location = New System.Drawing.Point(0, -239)
         Me.panelERickshaw.Name = "panelERickshaw"
-        Me.panelERickshaw.Size = New System.Drawing.Size(885, 369)
+        Me.panelERickshaw.Size = New System.Drawing.Size(885, 370)
         Me.panelERickshaw.TabIndex = 0
         '
         'doubleClick
