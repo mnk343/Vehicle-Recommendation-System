@@ -26,7 +26,8 @@ Public Class bookingPart2
 
         Dim bookid = updateBooking.bid_lbl.Text
         Dim querry As String = "Select * From [Booking] Where [BookingID]= " + bookid + ";"
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
+        Dim path As String = My.Application.Info.DirectoryPath + "\Vehicle Recommendation System Database.accdb"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path
         Dim conn As New OleDbConnection(dbsource)
         Dim cmd As New OleDbCommand(querry, conn)
         conn.Open()
@@ -66,7 +67,8 @@ Public Class bookingPart2
         Dim seater As String = ""
         Dim username = loginForm.TextBox1.Text
         Dim querry As String = "Select * From [CabData] Where [UserName]= '" + username + "';"
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
+        Dim path As String = My.Application.Info.DirectoryPath + "\Vehicle Recommendation System Database.accdb"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path
         Dim conn As New OleDbConnection(dbsource)
         Dim cmd As New OleDbCommand(querry, conn)
         conn.Open()
@@ -195,8 +197,9 @@ Public Class bookingPart2
 
     Private Sub delete_btn_Click(sender As Object, e As EventArgs) Handles delete_btn.Click
         Dim querry As String = "DELETE From [Booking] Where [BookingID]= " + updateBooking.bid_lbl.Text + " ;"
-        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
-        Dim conn As New OleDbConnection(dbsource)
+        Dim path As String = My.Application.Info.DirectoryPath + "\Vehicle Recommendation System Database.accdb"
+        Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path
+       Dim conn As New OleDbConnection(dbsource)
         Dim cmd As New OleDbCommand(querry, conn)
 
         Try

@@ -3,8 +3,10 @@ Imports System.Text
 Imports System.Math
 
 Public Class dashboardERick
-    Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
-    Private Access As New DBControl
+
+    Dim path As String = My.Application.Info.DirectoryPath + "\Vehicle Recommendation System Database.accdb"
+    Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path
+   Private Access As New DBControl
 
     Private Sub dashboardERick_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

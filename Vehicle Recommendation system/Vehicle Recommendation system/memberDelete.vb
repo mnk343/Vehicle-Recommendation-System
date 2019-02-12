@@ -13,7 +13,9 @@ Public Class memberDelete
             MessageBox.Show("Kindly enter a name")
 
         Else
-            Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
+
+            Dim path As String = My.Application.Info.DirectoryPath + "\Vehicle Recommendation System Database.accdb"
+            Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path
             Dim conn = New OleDbConnection(dbsource)
 
             Dim querry As String = "SELECT Count(*) FROM CabData WHERE UserName =  '" + txtName.Text + "' ;"

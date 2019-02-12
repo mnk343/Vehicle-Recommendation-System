@@ -2,8 +2,8 @@
 
 Public Class E_RickshawUpdate
     Dim cmdUpdate As New OleDbCommand
-    Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
-
+    Dim path As String = My.Application.Info.DirectoryPath + "\Vehicle Recommendation System Database.accdb"
+    Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path
     Private Sub E_RickshawUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         usertxt.Text = loginForm.TextBox1.Text
         Dim username As String = usertxt.Text
@@ -21,7 +21,6 @@ Public Class E_RickshawUpdate
         End While
         cmd.Dispose()
         conn.Close()
-
     End Sub
 
     Private Sub no_pass_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles lat_txt.KeyPress, long_txt.KeyPress

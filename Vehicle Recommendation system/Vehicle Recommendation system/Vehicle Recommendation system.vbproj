@@ -249,11 +249,6 @@
     <Compile Include="updateData.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vehicle_Recommendation_System_DatabaseDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Booking1.resx">
@@ -355,22 +350,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="Vehicle_Recommendation_System_DatabaseDataSet.xsc">
-      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Vehicle_Recommendation_System_DatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Vehicle_Recommendation_System_DatabaseDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Vehicle_Recommendation_System_DatabaseDataSet.xss">
-      <DependentUpon>Vehicle_Recommendation_System_DatabaseDataSet.xsd</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Vehicle Recommendation System Database.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

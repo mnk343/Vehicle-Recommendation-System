@@ -2,9 +2,10 @@
 
 Public Class DBControl
     ' CREATE YOUR DB CONNECTION
-    Private DBCon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" & _
-                                          "Data Source=Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'")
+    Dim path As String = My.Application.Info.DirectoryPath + "\Vehicle Recommendation System Database.accdb"
 
+    Private DBCon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" & _
+                                        "Data Source=" + path)
     ' PREPARE DB COMMAND
     Private DBCmd As OleDbCommand
 

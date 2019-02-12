@@ -25,7 +25,9 @@ Public Class changePassword
             password = TextBox3.Text
 
             Dim querry As String = "Select Password from Cabdata where UserName = '" + username + "';"
-            Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
+
+            Dim path As String = My.Application.Info.DirectoryPath + "\Vehicle Recommendation System Database.accdb"
+            Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path
             Dim conn As New OleDbConnection(dbsource)
             conn.Open()
             Dim cmd As New OleDbCommand(querry, conn)
