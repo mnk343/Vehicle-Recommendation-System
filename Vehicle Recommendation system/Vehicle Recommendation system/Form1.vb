@@ -488,6 +488,8 @@ Public Class Form1
             de_cb.Items.Add("Hospital")
             de_cb.Items.Add("Core 1")
             de_cb.Items.Add("KV")
+            de_cb.Items.Add("Dhansiri")
+
         End If
 
         panelBus.Show()
