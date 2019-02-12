@@ -104,7 +104,8 @@ Public Class loginForm
                 password = TextBox2.Text
 
                 Dim querry As String = "Select Password from [E-RickshawData] where UserName = '" + username + "';"
-                Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\Lenovo\Desktop\buffer\Vehicle-Recommendation-System\Vehicle-Recommendation-System-Database.accdb'"
+                Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source='C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation System Database.accdb'"
+
                 Dim conn As New OleDbConnection(dbsource)
                 conn.Open()
                 Dim cmd As New OleDbCommand(querry, conn)

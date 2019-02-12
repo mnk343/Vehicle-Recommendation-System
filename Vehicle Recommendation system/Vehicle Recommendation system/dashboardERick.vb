@@ -57,5 +57,11 @@ Public Class dashboardERick
 
         End If
     End Sub
+
+    Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
+        loginForm.Show()
+        Me.Close()
+
+    End Sub
 End Class
 

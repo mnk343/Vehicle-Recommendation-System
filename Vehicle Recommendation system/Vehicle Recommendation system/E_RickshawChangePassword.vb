@@ -56,5 +56,12 @@ Public Class E_RickshawChangePassword
         Me.Hide()
         E_RickshawUpdate.Show()
     End Sub
+
+    Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
+        E_RickshawUpdate.Show()
+
+        Me.Close()
+
+    End Sub
 End Class
 

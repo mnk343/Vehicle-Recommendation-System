@@ -28,6 +28,7 @@ Partial Class dashboardERick
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.back = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -36,7 +37,7 @@ Partial Class dashboardERick
         Me.chduty.AutoSize = True
         Me.chduty.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
         Me.chduty.ForeColor = System.Drawing.Color.MediumBlue
-        Me.chduty.Location = New System.Drawing.Point(198, 292)
+        Me.chduty.Location = New System.Drawing.Point(211, 284)
         Me.chduty.Margin = New System.Windows.Forms.Padding(2)
         Me.chduty.Name = "chduty"
         Me.chduty.Size = New System.Drawing.Size(117, 33)
@@ -48,10 +49,10 @@ Partial Class dashboardERick
         '
         Me.profile.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
         Me.profile.ForeColor = System.Drawing.Color.MediumBlue
-        Me.profile.Location = New System.Drawing.Point(110, 197)
+        Me.profile.Location = New System.Drawing.Point(39, 197)
         Me.profile.Margin = New System.Windows.Forms.Padding(2)
         Me.profile.Name = "profile"
-        Me.profile.Size = New System.Drawing.Size(321, 38)
+        Me.profile.Size = New System.Drawing.Size(301, 38)
         Me.profile.TabIndex = 31
         Me.profile.Text = "UPDATE PROFILE"
         Me.profile.UseVisualStyleBackColor = True
@@ -60,7 +61,7 @@ Partial Class dashboardERick
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
-        Me.Label2.Location = New System.Drawing.Point(239, 136)
+        Me.Label2.Location = New System.Drawing.Point(211, 136)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(64, 29)
@@ -89,11 +90,24 @@ Partial Class dashboardERick
         Me.Label1.TabIndex = 28
         Me.Label1.Text = "Hi"
         '
+        'back
+        '
+        Me.back.Font = New System.Drawing.Font("Microsoft Sans Serif", 17.8!)
+        Me.back.ForeColor = System.Drawing.Color.MediumBlue
+        Me.back.Location = New System.Drawing.Point(380, 197)
+        Me.back.Margin = New System.Windows.Forms.Padding(2)
+        Me.back.Name = "back"
+        Me.back.Size = New System.Drawing.Size(154, 38)
+        Me.back.TabIndex = 33
+        Me.back.Text = "Home"
+        Me.back.UseVisualStyleBackColor = True
+        '
         'dashboardERick
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(573, 360)
+        Me.Controls.Add(Me.back)
         Me.Controls.Add(Me.chduty)
         Me.Controls.Add(Me.profile)
         Me.Controls.Add(Me.Label2)
@@ -111,4 +125,5 @@ Partial Class dashboardERick
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents back As System.Windows.Forms.Button
 End Class
