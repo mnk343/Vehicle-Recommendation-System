@@ -80,6 +80,8 @@ Public Class newBooking
             MessageBox.Show("Select Day")
         ElseIf no_pass.Text = "" Then
             MessageBox.Show("Select No of Passengers")
+        ElseIf CInt(no_pass.Text) = 0 Then
+            MessageBox.Show("Number of passenger cannot be zero")
         ElseIf String.Compare(day_cb.Text, "Today") = 0 And ((CInt(hour_tb.Text) < h) Or (CInt(hour_tb.Text) = h And CInt(min_tb.Text <= m))) Then
             MessageBox.Show("Time selected has already been passed")
 

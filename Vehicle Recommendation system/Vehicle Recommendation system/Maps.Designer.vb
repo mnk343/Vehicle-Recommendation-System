@@ -205,6 +205,10 @@ Partial Class Maps
         '
         'NewBooking_dgv
         '
+        Me.NewBooking_dgv.AllowUserToAddRows = False
+        Me.NewBooking_dgv.AllowUserToDeleteRows = False
+        Me.NewBooking_dgv.AllowUserToResizeColumns = False
+        Me.NewBooking_dgv.AllowUserToResizeRows = False
         Me.NewBooking_dgv.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(49, Byte), Integer))
         Me.NewBooking_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.NewBooking_dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically

@@ -316,17 +316,18 @@ Public Class Form1
         If NotEmpty(Access.Exception) Then MsgBox(Access.Exception) : Exit Sub
 
         
-        If ch > 0 Then
             panelERickshaw.Show()
             panelBus.Hide()
-
-        Else
-            panelERickshaw.Show()
-            panelBus.Hide()
-            ch += 1
             ' FILL DATAGRID
-            e_dgv.DataSource = Access.DBDT
+        e_dgv.DataSource = Nothing
+        e_fullData_dgv.DataSource = Nothing
+        e_dgv.Columns.Clear()
+        e_dgv.Rows.Clear()
+        e_fullData_dgv.Rows.Clear()
+        e_fullData_dgv.Columns.Clear()
 
+
+        e_dgv.DataSource = Access.DBDT
 
 
             Access.ExecQuery("SELECT Latitude,Longitude,UserName FROM [E-RickshawData] WHERE Status=TRUE")
@@ -411,7 +412,7 @@ Public Class Form1
                 e_dgv.Rows(row_of_driver).DefaultCellStyle.ForeColor = Color.White
             End If
 
-        End If
+
 
     End Sub
 

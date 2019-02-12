@@ -34,6 +34,7 @@ Public Class Maps
         Panel3.Hide()
         Panel4.Hide()
 
+
         Try
             Dim query As New StringBuilder
             Me.WindowState = FormWindowState.Maximized
@@ -233,6 +234,8 @@ Public Class Maps
                 End If
             End If
 
+
+
         Next
 
 
@@ -254,6 +257,13 @@ Public Class Maps
             NewBooking_dgv.Hide()
             nb_noDatalbl.Show()
         End If
+
+        NewBooking_dgv.Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
+        NewBooking_dgv.Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
+        NewBooking_dgv.Columns(2).SortMode = DataGridViewColumnSortMode.NotSortable
+        NewBooking_dgv.Columns(3).SortMode = DataGridViewColumnSortMode.NotSortable
+        NewBooking_dgv.Columns(4).SortMode = DataGridViewColumnSortMode.NotSortable
+
     End Sub
 
     Private Sub Booking_Click(sender As Object, e As EventArgs) Handles Booking.Click
