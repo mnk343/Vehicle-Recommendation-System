@@ -27,8 +27,8 @@ Partial Class updateBooking
         Me.book_dgv = New System.Windows.Forms.DataGridView()
         Me.back = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.dc_lbl = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.dc_lbl = New System.Windows.Forms.Label()
         CType(Me.book_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -91,15 +91,6 @@ Partial Class updateBooking
         Me.Panel1.Size = New System.Drawing.Size(535, 303)
         Me.Panel1.TabIndex = 27
         '
-        'dc_lbl
-        '
-        Me.dc_lbl.AutoSize = True
-        Me.dc_lbl.Location = New System.Drawing.Point(39, 36)
-        Me.dc_lbl.Name = "dc_lbl"
-        Me.dc_lbl.Size = New System.Drawing.Size(297, 13)
-        Me.dc_lbl.TabIndex = 4
-        Me.dc_lbl.Text = "*Double Click on the cell to update the coresponding booking"
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -108,6 +99,15 @@ Partial Class updateBooking
         Me.Label1.Size = New System.Drawing.Size(103, 13)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "No Bookings till now"
+        '
+        'dc_lbl
+        '
+        Me.dc_lbl.AutoSize = True
+        Me.dc_lbl.Location = New System.Drawing.Point(39, 36)
+        Me.dc_lbl.Name = "dc_lbl"
+        Me.dc_lbl.Size = New System.Drawing.Size(297, 13)
+        Me.dc_lbl.TabIndex = 4
+        Me.dc_lbl.Text = "*Double Click on the cell to update the coresponding booking"
         '
         'updateBooking
         '

@@ -58,15 +58,17 @@ Public Class updateBooking
         row_index = e.RowIndex
         If row_index >= 0 Then
             Dim row As DataGridViewRow = book_dgv.Rows([row_index])
+            If (row.Cells(0).Value.ToString = "") Then
+            Else
 
-            Dim bid As String = row.Cells(0).Value.ToString
-            bid_lbl.Text = bid
-            'MessageBox.Show(bid_lbl.Text)
-            bookingPart2.Show()
+                Dim bid As String = row.Cells(0).Value.ToString
+                bid_lbl.Text = bid
+                'MessageBox.Show(bid_lbl.Text)
+                bookingPart2.Show()
 
-            Me.Hide()
+                Me.Hide()
+            End If
         End If
-
     End Sub
 
     Private Sub profile_Click(sender As Object, e As EventArgs) Handles back.Click
