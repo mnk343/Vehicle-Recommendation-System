@@ -120,7 +120,7 @@ Public Class Maps
 
             showDist.Text = CStr(distance)
             CalculateFare(distance)
-            money.Text = fare
+            money.Text = CStr(fare)
 
             query.Append("https://bing.com/maps/default.aspx?rtp=adr.")
 
@@ -207,25 +207,30 @@ Public Class Maps
 
         For row_index As Integer = 0 To NewBooking_dgv.RowCount - 1
 
+            If (CInt(NewBooking_dgv.Rows(row_index).Cells(3).Value) = 0) Then
 
-            If (row_index < NewBooking_dgv.RowCount) Then
-                Dim factor As Integer = 1
+            Else
+                If (row_index < NewBooking_dgv.RowCount) Then
+                    Dim factor As Decimal = 1
 
-                Dim totFare = CDec(money.Text)
+                    Dim totFare = CDec(money.Text)
 
-                If NewBooking_dgv.Rows(row_index).Cells(3).Value = 0 Then
+                    If NewBooking_dgv.Rows(row_index).Cells(3).Value = 0 Then
 
-                ElseIf CInt(NewBooking_dgv.Rows(row_index).Cells(3).Value) >= 6 Then
-                    factor = 1.5
-                ElseIf CInt(NewBooking_dgv.Rows(row_index).Cells(3).Value) >= 8 Then
-                    factor = 2.5
-                Else
-                    factor = 1
+                    ElseIf CInt(NewBooking_dgv.Rows(row_index).Cells(3).Value) >= 8 Then
+                        factor = 2.5
+                    ElseIf CInt(NewBooking_dgv.Rows(row_index).Cells(3).Value) >= 6 Then
+                        factor = 1.5
+                    Else
+                        factor = 1
 
+                    End If
+
+                    totFare *= factor
+                    ' MessageBox.Show(factor)
+                    ' MessageBox.Show(totFare)
+                    NewBooking_dgv.Rows(row_index).Cells(5).Value = CStr(totFare)
                 End If
-
-                totFare *= factor
-                NewBooking_dgv.Rows(row_index).Cells(5).Value = totFare
             End If
 
         Next
@@ -329,31 +334,30 @@ Public Class Maps
 
                 Else
 
-                    Dim factor As Integer = 1
+                    Dim factor As Decimal = 1
 
                     Dim totFare = CDec(money.Text)
 
                     If CInt(Share_dgv.Rows(row_index).Cells(4).Value) >= 6 Then
                         factor = 1.5
-                    ElseIf CInt(Share_dgv.Rows(row_index).Cells(4).Value) >= 8 Then
+                    End If
+
+                    If CInt(Share_dgv.Rows(row_index).Cells(4).Value) >= 8 Then
                         factor = 2.5
                     Else
                         factor = 1
-
                     End If
 
                     totFare *= factor
-                    MessageBox.Show((Share_dgv.Rows(row_index).Cells(4).Value))
                     totFare /= CInt((Share_dgv.Rows(row_index).Cells(4).Value))
                     totFare *= CInt(cab_info.no_pass.Text)
 
-
                     If CInt(Share_dgv.Rows(row_index).Cells(4).Value) >= 6 Then
-                        factor = 1.25
-                    ElseIf CInt(Share_dgv.Rows(row_index).Cells(4).Value) >= 8 Then
                         factor = 1.5
-                    Else
-                        factor = 1
+                    End If
+
+                    If CInt(Share_dgv.Rows(row_index).Cells(4).Value) >= 8 Then
+                        factor = 2.5
                     End If
 
                     If (totFare < 200) Then
@@ -361,7 +365,7 @@ Public Class Maps
                     End If
 
                     Share_dgv.Rows(row_index).Cells(12).Value = totFare
-                End If
+                    End If
             End If
 
 
@@ -433,6 +437,10 @@ Public Class Maps
     Private Sub back_Click(sender As Object, e As EventArgs) Handles back.Click
         cab_info.Show()
         Me.Close()
+
+    End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
 
     End Sub
 End Class

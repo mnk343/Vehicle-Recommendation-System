@@ -32,15 +32,15 @@ Partial Class Maps
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.back = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.nb_noDatalbl = New System.Windows.Forms.Label()
         Me.hidLabel = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.NewBooking_FullData_dgv = New System.Windows.Forms.DataGridView()
         Me.NewBooking_dgv = New System.Windows.Forms.DataGridView()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.sc_noDatalbl = New System.Windows.Forms.Label()
         Me.date_lbl = New System.Windows.Forms.Label()
         Me.Share_dgv = New System.Windows.Forms.DataGridView()
-        Me.sc_noDatalbl = New System.Windows.Forms.Label()
-        Me.nb_noDatalbl = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -162,6 +162,17 @@ Partial Class Maps
         Me.Panel3.Size = New System.Drawing.Size(890, 283)
         Me.Panel3.TabIndex = 13
         '
+        'nb_noDatalbl
+        '
+        Me.nb_noDatalbl.AutoSize = True
+        Me.nb_noDatalbl.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nb_noDatalbl.ForeColor = System.Drawing.Color.White
+        Me.nb_noDatalbl.Location = New System.Drawing.Point(511, 132)
+        Me.nb_noDatalbl.Name = "nb_noDatalbl"
+        Me.nb_noDatalbl.Size = New System.Drawing.Size(189, 22)
+        Me.nb_noDatalbl.TabIndex = 13
+        Me.nb_noDatalbl.Text = "No bookings till now"
+        '
         'hidLabel
         '
         Me.hidLabel.AutoSize = True
@@ -217,6 +228,17 @@ Partial Class Maps
         Me.Panel4.Size = New System.Drawing.Size(904, 283)
         Me.Panel4.TabIndex = 12
         '
+        'sc_noDatalbl
+        '
+        Me.sc_noDatalbl.AutoSize = True
+        Me.sc_noDatalbl.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sc_noDatalbl.ForeColor = System.Drawing.Color.White
+        Me.sc_noDatalbl.Location = New System.Drawing.Point(282, 132)
+        Me.sc_noDatalbl.Name = "sc_noDatalbl"
+        Me.sc_noDatalbl.Size = New System.Drawing.Size(211, 22)
+        Me.sc_noDatalbl.TabIndex = 6
+        Me.sc_noDatalbl.Text = "No Share cabs till Now"
+        '
         'date_lbl
         '
         Me.date_lbl.AutoSize = True
@@ -238,24 +260,6 @@ Partial Class Maps
         Me.Share_dgv.RowTemplate.Height = 24
         Me.Share_dgv.Size = New System.Drawing.Size(559, 145)
         Me.Share_dgv.TabIndex = 4
-        '
-        'sc_noDatalbl
-        '
-        Me.sc_noDatalbl.AutoSize = True
-        Me.sc_noDatalbl.Location = New System.Drawing.Point(282, 132)
-        Me.sc_noDatalbl.Name = "sc_noDatalbl"
-        Me.sc_noDatalbl.Size = New System.Drawing.Size(115, 13)
-        Me.sc_noDatalbl.TabIndex = 6
-        Me.sc_noDatalbl.Text = "No Share cabs till Now"
-        '
-        'nb_noDatalbl
-        '
-        Me.nb_noDatalbl.AutoSize = True
-        Me.nb_noDatalbl.Location = New System.Drawing.Point(580, 131)
-        Me.nb_noDatalbl.Name = "nb_noDatalbl"
-        Me.nb_noDatalbl.Size = New System.Drawing.Size(102, 13)
-        Me.nb_noDatalbl.TabIndex = 13
-        Me.nb_noDatalbl.Text = "No bookings till now"
         '
         'Maps
         '
