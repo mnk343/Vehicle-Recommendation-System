@@ -133,7 +133,6 @@ C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendati
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.rickshaw_map.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.toCampus.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle Recommendation system.vbproj.GenerateResource.Cache
-C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Booking.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Share.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.CabMap.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.Booking1.resources
@@ -181,3 +180,6 @@ C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation syst
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.newBooking.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.updateBooking.resources
 C:\Users\mayan\Desktop\Vehicle-Recommendation-System\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.updateData.resources
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.dashboardERick.resources
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.E_RickshawChangePassword.resources
+C:\Users\mayan\Desktop\Vehicle-Recommendation-System - Copy\Vehicle Recommendation system\Vehicle Recommendation system\obj\Debug\Vehicle_Recommendation_system.E_RickshawUpdate.resources

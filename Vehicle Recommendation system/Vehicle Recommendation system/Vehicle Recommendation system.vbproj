@@ -106,6 +106,12 @@
     <Compile Include="dashboardCab.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dashboardERick.Designer.vb">
+      <DependentUpon>dashboardERick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardERick.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dashboardStaff.Designer.vb">
       <DependentUpon>dashboardStaff.vb</DependentUpon>
     </Compile>
@@ -117,6 +123,18 @@
       <DependentUpon>emergencyService.vb</DependentUpon>
     </Compile>
     <Compile Include="emergencyService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_RickshawChangePassword.Designer.vb">
+      <DependentUpon>E_RickshawChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="E_RickshawChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="E_RickshawUpdate.Designer.vb">
+      <DependentUpon>E_RickshawUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="E_RickshawUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -256,11 +274,20 @@
     <EmbeddedResource Include="dashboardCab.resx">
       <DependentUpon>dashboardCab.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dashboardERick.resx">
+      <DependentUpon>dashboardERick.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashboardStaff.resx">
       <DependentUpon>dashboardStaff.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="emergencyService.resx">
       <DependentUpon>emergencyService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_RickshawChangePassword.resx">
+      <DependentUpon>E_RickshawChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="E_RickshawUpdate.resx">
+      <DependentUpon>E_RickshawUpdate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
