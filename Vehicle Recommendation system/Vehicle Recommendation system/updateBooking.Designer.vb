@@ -28,6 +28,7 @@ Partial Class updateBooking
         Me.back = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dc_lbl = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.book_dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -82,6 +83,7 @@ Partial Class updateBooking
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.dc_lbl)
         Me.Panel1.Controls.Add(Me.book_dgv)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -97,6 +99,15 @@ Partial Class updateBooking
         Me.dc_lbl.Size = New System.Drawing.Size(297, 13)
         Me.dc_lbl.TabIndex = 4
         Me.dc_lbl.Text = "*Double Click on the cell to update the coresponding booking"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(163, 153)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(103, 13)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "No Bookings till now"
         '
         'updateBooking
         '
@@ -123,4 +134,5 @@ Partial Class updateBooking
     Friend WithEvents back As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents dc_lbl As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

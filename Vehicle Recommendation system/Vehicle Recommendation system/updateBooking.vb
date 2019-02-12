@@ -41,7 +41,12 @@ Public Class updateBooking
         book_dgv.RowTemplate.Height = 22
         book_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
         book_dgv.DefaultCellStyle.Padding.Bottom.Equals(4)
+        Label1.Hide()
 
+        If book_dgv.RowCount = 1 Then
+            book_dgv.Hide()
+            Label1.Show()
+        End If
 
 
     End Sub
